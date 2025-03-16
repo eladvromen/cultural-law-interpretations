@@ -1,0 +1,25 @@
+TODO
+## determination extraction-
+we have the relevant data sources. now, we need to start and inspect different ways we could extract them.
+
+
+- examine Asylex repo, if useful
+- look for open source solution
+- start with simple methodes
+- move to NN methodes - legal BERT? 
+- move to payed API from SOTA models
+- create manual benchmark...
+
+
+
+
+
+
+
+
+
+DONE
+1. need to understand exactly the differences between full text and all sentense and decide which one we will use.
+- if we want legal reasoning, full text is crucial. 
+2. understand what to do with the duplicated desionID by year and how to distinct them -
+ - sthrough away

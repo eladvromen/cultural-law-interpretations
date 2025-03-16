@@ -1,0 +1,72 @@
+﻿# Python
+__pycache__/
+*.py[cod]
+*.class
+*.so
+.Python
+env/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
+.ipynb_checkpoints
+*.pyc
+
+# Virtual Environment
+venv/
+ENV/
+.env
+
+# Data (we might want to exclude large datasets)
+*.csv
+*.tsv
+*.jsonl
+*.hdf5
+*.h5
+
+# Raw text data (big!)
+*.txt
+*.tar
+*.zip
+
+# Specific data folders (adjust if names differ)
+data/
+asylex_data/
+clean_data/
+processed_data/
+unused_data/
+
+
+# Model checkpoints (might be large)
+*.pt
+*.ckpt
+*.bin
+*.model
+*.pth
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Logs
+logs/
+*.log
+wandb/
+
+# OS
+.DS_Store
+Thumbs.db
+
+
