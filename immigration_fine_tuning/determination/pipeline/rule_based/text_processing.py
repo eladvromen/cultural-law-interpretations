@@ -607,6 +607,7 @@ class DatasetProcessor:
         # Create new columns for preprocessed data
         df['cleaned_text'] = None
         df['case_metadata'] = None
+        df['general_metadata'] = None  # New column for CA IRB metadata
 
         # Create columns for key section categories
         essential_categories = [
@@ -678,9 +679,127 @@ class DatasetProcessor:
                 docs_per_sec = (batch_idx + 1) * batch_size / elapsed
                 print(f"Processed {min((batch_idx + 1) * batch_size, total_rows)} documents in {elapsed:.2f}s ({docs_per_sec:.2f} docs/sec)")
         
+        # After all regular processing is done, extract general metadata
+        self._extract_general_metadata(df)
+        
         self._print_statistics(df, essential_categories)
         
         return df
+    
+    def _extract_general_metadata(self, df: pd.DataFrame) -> None:
+        """
+        Extract general metadata and suspected first case paragraph by finding text before/after 
+        first occurrence of "(CA IRB)". This runs after all other processing to avoid 
+        interference with pattern matching.
+        """
+        # Initialize counters for statistics
+        ca_irb_found_count = 0
+        extracted_sentence_counts = []
+        
+        print("\nExtracting general metadata and suspected first case paragraph...")
+        for idx in tqdm(range(len(df)), desc="Scanning for (CA IRB)"):
+            row = df.iloc[idx]
+            
+            # Skip rows with missing text
+            if pd.isna(row[self.text_column]) or not isinstance(row[self.text_column], str):
+                continue
+            
+            # Get the original text for scanning
+            original_text = row[self.text_column]
+            
+            # Split into sentences (simple heuristic split on periods followed by spaces)
+            sentences = re.split(r'(?<=[.!?])\s+', original_text)
+            
+            # Limit to first 50 sentences for search
+            first_sentences = sentences[:50]
+            
+            # Scan for "(CA IRB)"
+            found_idx = -1
+            for i, sentence in enumerate(first_sentences):
+                if "(CA IRB)" in sentence:
+                    found_idx = i
+                    ca_irb_found_count += 1
+                    break
+            
+            # Process if "(CA IRB)" was found
+            if found_idx >= 0:
+                # Split the sentence containing "(CA IRB)" at the exact position
+                ca_irb_sentence = sentences[found_idx]
+                split_pos = ca_irb_sentence.find("(CA IRB)")
+                
+                before_ca_irb = ca_irb_sentence[:split_pos].strip()
+                from_ca_irb = ca_irb_sentence[split_pos:].strip()
+                
+                # 1. Extract all sentences from beginning to just before "(CA IRB)"
+                prefix_sentences = sentences[:found_idx]
+                if before_ca_irb:  # Add the part before (CA IRB) if it exists
+                    general_metadata = " ".join(prefix_sentences + [before_ca_irb]).strip()
+                else:
+                    general_metadata = " ".join(prefix_sentences).strip()
+                
+                df.at[idx, 'general_metadata'] = general_metadata
+                extracted_sentence_counts.append(len(prefix_sentences) + (1 if before_ca_irb else 0))
+                
+                # 2. Extract suspected first case paragraph ((CA IRB) and after + 7 more sentences)
+                next_sentences = sentences[found_idx+1:found_idx+8]  # Get 7 sentences after the (CA IRB) sentence
+                suspected_first_para = from_ca_irb + " " + " ".join(next_sentences).strip()
+                df.at[idx, 'suspected_first_case_paragraph'] = suspected_first_para.strip()
+                
+                # 3. Remove all sentences up to and including the part before "(CA IRB)"
+                if 'cleaned_text' in df.columns and not pd.isna(row['cleaned_text']):
+                    # Get cleaned text
+                    cleaned_text = row['cleaned_text']
+                    
+                    # Try to find the general metadata text in the cleaned text
+                    if general_metadata and general_metadata in cleaned_text:
+                        new_text = cleaned_text.replace(general_metadata, '', 1).strip()
+                        
+                        # If the remaining text starts with the (CA IRB) part, it worked properly
+                        if new_text.startswith(from_ca_irb):
+                            df.at[idx, 'cleaned_text'] = new_text
+                        else:
+                            # Fall back to simpler approach - look for (CA IRB) in the text
+                            ca_irb_pos = cleaned_text.find("(CA IRB)")
+                            if ca_irb_pos > 0:
+                                df.at[idx, 'cleaned_text'] = cleaned_text[ca_irb_pos:].strip()
+                    else:
+                        # Fall back to simpler approach - look for (CA IRB) in the text
+                        ca_irb_pos = cleaned_text.find("(CA IRB)")
+                        if ca_irb_pos > 0:
+                            df.at[idx, 'cleaned_text'] = cleaned_text[ca_irb_pos:].strip()
+        
+        # Calculate and display statistics
+        not_found_count = len(df) - ca_irb_found_count
+        print(f"\nGeneral Metadata Statistics:")
+        print(f"  Documents with (CA IRB) found: {ca_irb_found_count} ({ca_irb_found_count/len(df):.1%})")
+        print(f"  Documents without (CA IRB) in first 50 sentences: {not_found_count} ({not_found_count/len(df):.1%})")
+        
+        if extracted_sentence_counts:
+            avg_sentences = sum(extracted_sentence_counts) / len(extracted_sentence_counts)
+            print(f"  Average sentences extracted: {avg_sentences:.2f}")
+            
+            # Plot histogram if matplotlib is available
+            try:
+                import matplotlib.pyplot as plt
+                plt.figure(figsize=(10, 6))
+                plt.hist(extracted_sentence_counts, bins=range(1, max(extracted_sentence_counts) + 2))
+                plt.xlabel('Number of Sentences Extracted')
+                plt.ylabel('Frequency')
+                plt.title('Distribution of Sentences Extracted for General Metadata')
+                plt.tight_layout()
+                
+                # Save plot
+                plot_path = Path(__file__).parent / "general_metadata_histogram.png"
+                plt.savefig(plot_path)
+                print(f"  Histogram saved to {plot_path}")
+                
+                # Display if in interactive environment
+                try:
+                    plt.show()
+                except:
+                    pass
+            except ImportError:
+                print("  Could not generate histogram: matplotlib not available")
     
     @staticmethod
     def _print_statistics(df: pd.DataFrame, essential_categories: List[str]) -> None:
@@ -688,7 +807,8 @@ class DatasetProcessor:
         # Calculate statistics
         stats = {
             'total_documents': len(df),
-            'documents_with_metadata': df['case_metadata'].notna().sum()
+            'documents_with_metadata': df['case_metadata'].notna().sum(),
+            'documents_with_general_metadata': df['general_metadata'].notna().sum()
         }
         
         # Add stats for each essential section category
