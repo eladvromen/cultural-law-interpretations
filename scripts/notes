@@ -1,24 +1,33 @@
 TODO
 ## determination extraction-
-we have the relevant data sources. now, we need to start and inspect different ways we could extract them.
 
+### schedule:
+#### Tuseday
+start building spesific sentence rule based extractions.
+utulize knowledge from train of explicit sentences. 
 
-- examine Asylex repo, if useful
+#### Wednesday 
+- need to add decopmosed explicit determination extraction. 
+- need to add rule based post tuning
+#### Thursday
+- need to decsied on the exact preprocessing approach. I think that the low recall high prescion will be used as benchmark and for text that is not in the extracted sections. than more neuanced methods will be used.
+ - wrapp up rule based.
+ - create benchmark eval for performances. 
+ - decsied what are the train\validation\test splits. 
+ - wrap rule based code nicely. 
+
+### further plans
 - look for open source solution
 - start with simple methodes
-- move to NN methodes - legal BERT? 
+   - move to NN methodes - legal BERT? 
 - move to payed API from SOTA models
 - create manual benchmark...
 
+### NOTES TO THINK OF
+- there are 2 types of cases- first and re appeals which have some differences in structure.
+-need to add metadata from enroched(include descion label) to processed. maybe merge later
 
-
-
-
-
-
-
-
-DONE
+### DONE
 1. need to understand exactly the differences between full text and all sentense and decide which one we will use.
 - if we want legal reasoning, full text is crucial. 
 2. understand what to do with the duplicated desionID by year and how to distinct them -

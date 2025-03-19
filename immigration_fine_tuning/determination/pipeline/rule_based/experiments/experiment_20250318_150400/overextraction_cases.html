@@ -1,0 +1,2537 @@
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title>Over-Extraction Analysis</title>
+        <style>
+            body { font-family: Arial, sans-serif; margin: 20px; }
+            h1 { color: #2c3e50; }
+            .case { margin-bottom: 30px; border: 1px solid #ddd; padding: 15px; border-radius: 5px; }
+            .case-header { background-color: #f8f9fa; padding: 10px; margin-bottom: 15px; }
+            .extracted { background-color: #e8f4f8; padding: 10px; margin: 10px 0; border-left: 4px solid #3498db; }
+            .expected { background-color: #f8f4e8; padding: 10px; margin: 10px 0; border-left: 4px solid #f39c12; }
+            .extra { background-color: #e8f8ec; padding: 10px; margin: 10px 0; border-left: 4px solid #2ecc71; }
+            .case-text { background-color: #f9f9f9; padding: 15px; border: 1px solid #eee; 
+                         height: 200px; overflow: auto; font-family: monospace; white-space: pre-wrap; }
+            .metrics { font-weight: bold; color: #e74c3c; }
+            .comparison { display: flex; flex-wrap: wrap; gap: 20px; }
+            .comparison-column { flex: 1; min-width: 300px; }
+            .nav { position: sticky; top: 0; background: white; padding: 10px; border-bottom: 1px solid #ddd; }
+            .legend { margin: 10px 0 20px 0; padding: 10px; background-color: #f8f9fa; border-radius: 5px; }
+            .legend span { margin-right: 20px; }
+        </style>
+    </head>
+    <body>
+        <div class="nav">
+            <h1>Over-Extraction Cases in Determination Analysis</h1>
+            <div class="legend">
+                <span style="color: #3498db;">■</span> All Extracted
+                <span style="color: #f39c12;">■</span> Expected (Benchmark)
+                <span style="color: #2ecc71;">■</span> Extra (Not in Benchmark)
+            </div>
+        </div>
+        <p>These cases had significantly more extracted determinations than expected in the benchmark.</p>
+    
+        <div class="case" id="case-1">
+            <div class="case-header">
+                <h2>Case 1: ID 97992</h2>
+                <p class="metrics">Expected: 3 | Extracted: 6 | 
+                   Extra: 3 | Ratio: 2.00</p>
+            </div>
+            
+            <div class="comparison">
+                <div class="comparison-column">
+                    <h3>Expected Determinations (1)</h3>
+        
+                <div class="expected">
+                    <p>["['claimants are not persons in need of protection']", "['claimants are not convention refugees']", "['neither convention refugees nor persons in need of protection']"]</p>
+                </div>
+                
+                </div>
+                <div class="comparison-column">
+                    <h3>Extra Determinations (6)</h3>
+        
+                <div class="extra">
+                    <p><strong>Score:</strong> 20.0 | <strong>Match type:</strong> direct_pattern</p>
+                    <p>:       DETERMINATION   [7] The panel finds that the claimants  have not satisfied the burden of establishing a serious  possibility of persecution for a Convention ground, or that they would personally be subjected, on a  balance of probabilities, to a danger of torture, or to a risk to life or a risk of cruel and unus ual  treatment or punishment.</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 20.0 | <strong>Match type:</strong> direct_pattern</p>
+                    <p>Therefore, the panel finds that the claimants are neither Convention  refugees nor persons in need of protection pursuant to sections 96 and 97(1) of the IRPA.</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 20.0 | <strong>Match type:</strong> direct_pattern</p>
+                    <p>:       reliable and probative, it must also satisfy the Board, on a balance of probabilities, that state  protection is inadequate.9    [14]  In view of these principles, the panel finds that the claimants have not provided the requisite  clear and convincing evidence that, on a balance of probabilities, state protection in the Czech  Republic is inadequate.</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 20.0 | <strong>Match type:</strong> direct_pattern</p>
+                    <p>The panel finds that the claimants, considering  their particular circumstances includ ing their education levels and sophistication , would have  recourse available upon return to the Czech Republic , if the police were to refuse to respond or if  the claimants were to  believe that their complaints were not being taken seriously.</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 20.0 | <strong>Match type:</strong> direct_pattern</p>
+                    <p>If the claimants were to be denied protection upon return, the panel finds that the  claimants have legal redress  to address their complai nts.</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 20.0 | <strong>Match type:</strong> direct_pattern</p>
+                    <p>[58]  Based on the totality of the evidence adduced, therefore, the panel finds that the claimants  have not satisfied the burden by providing clear and convincing evidence that, on a balan ce of  probabilities, adequate state protection would not be reasonably forthcoming if the claimants should  need it upon return.</p>
+                </div>
+                
+                </div>
+            </div>
+        
+            <div>
+                <h3>All Extracted Determinations (6)</h3>
+        
+                <div class="extracted">
+                    <p><strong>Score:</strong> 20.0 | <strong>Match type:</strong> direct_pattern</p>
+                    <p>:       DETERMINATION   [7] The panel finds that the claimants  have not satisfied the burden of establishing a serious  possibility of persecution for a Convention ground, or that they would personally be subjected, on a  balance of probabilities, to a danger of torture, or to a risk to life or a risk of cruel and unus ual  treatment or punishment.</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 20.0 | <strong>Match type:</strong> direct_pattern</p>
+                    <p>Therefore, the panel finds that the claimants are neither Convention  refugees nor persons in need of protection pursuant to sections 96 and 97(1) of the IRPA.</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 20.0 | <strong>Match type:</strong> direct_pattern</p>
+                    <p>:       reliable and probative, it must also satisfy the Board, on a balance of probabilities, that state  protection is inadequate.9    [14]  In view of these principles, the panel finds that the claimants have not provided the requisite  clear and convincing evidence that, on a balance of probabilities, state protection in the Czech  Republic is inadequate.</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 20.0 | <strong>Match type:</strong> direct_pattern</p>
+                    <p>The panel finds that the claimants, considering  their particular circumstances includ ing their education levels and sophistication , would have  recourse available upon return to the Czech Republic , if the police were to refuse to respond or if  the claimants were to  believe that their complaints were not being taken seriously.</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 20.0 | <strong>Match type:</strong> direct_pattern</p>
+                    <p>If the claimants were to be denied protection upon return, the panel finds that the  claimants have legal redress  to address their complai nts.</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 20.0 | <strong>Match type:</strong> direct_pattern</p>
+                    <p>[58]  Based on the totality of the evidence adduced, therefore, the panel finds that the claimants  have not satisfied the burden by providing clear and convincing evidence that, on a balan ce of  probabilities, adequate state protection would not be reasonably forthcoming if the claimants should  need it upon return.</p>
+                </div>
+                
+            </div>
+            
+            <h3>Case Text (first portion):</h3>
+            <div class="case-text">RPD.15.7 (February 12, 2009)
+
+Disponible en français
+
+
+
+
+
+rivate Proceeding / Huis clos
+
+Reasons and Decision  Motifs et décision
+
+
+
+Claimant(s) [REDACTED]
+
+(a.k.a. [REDACTED] )
+
+[REDACTED]
+
+[REDACTED]
+
+[REDACTED] XX
+
+(a.k.a. [REDACTED] ) Demandeur(e)(s) d’asile
+
+
+
+
+
+Date(s) of Hearing JULY 11, 2011
+
+SEPTEMBER 27, 2011 Date(s) de l’audience
+
+
+
+
+
+Place of Hearing TORONTO, ONTARIO Lieu de l’audience
+
+
+
+
+
+Date of Decision DECEMBER 21 , 2011 Date de la décision
+
+
+
+
+
+Panel S.S. KULAR Tribunal
+
+
+
+
+
+Counsel for the
+
+demandeur(e)(s) d’asile
+
+
+
+
+
+Tribunal Officer N/A Agent(e) de tribunal
+
+
+
+
+
+Designated
+
+Representative(s) [REDACTED]
+
+(a.k.a. [REDACTED] ) Représentant(e)(s) désigné(e)(s)
+
+
+
+
+
+Counsel for the
+
+Minister N/A Conseil du ministre
+
+
+
+2011 CanLII 97992 (CA IRB)
+
+RPD File No. :
+
+
+
+[1] The claimants, [REDACTED] (the claimant) and his common -law partner , [REDACTED]
+
+[REDACTED] (the female claimant), and their son , [REDACTED] (the minor -aged son) and daughter ,
+
+[REDACTED] (the minor -aged daughter), all citizens of the Czech R epublic and the
+
+Slovak Republic, seek refugee protection pursuant to sections 96 and 97(1) of the Immigration and
+
+Refugee Protection Act1 (the IRPA).
+
+[2] The claimants’ identities as citizens of both the Czech Republic and the Slovak Republic
+
+have been establi shed through their testimonies, documentation filed by the claimants,2 and
+
+documents received from Citizenship and Immigration Canada (CIC).3
+
+ALLEGATIONS
+
+[3] The claimants allege that , as Roma , they will be discriminated against, harassed and even
+
+harmed simpl y because of their race, in both the Slovak Republic and the Czech Republic.
+
+[4] The claimants narrated several acts of discrimination against them and their family. For
+
+example , they had to attend special schools. While living within the Czech community, th ey were
+
+subject to threats including a threatening note attached to a rock that was thrown into their home
+
+through a window in 2009 .
+
+[5] Further details rega...</div>
+        </div>
+        
+        <div class="case" id="case-2">
+            <div class="case-header">
+                <h2>Case 2: ID 97384</h2>
+                <p class="metrics">Expected: 3 | Extracted: 6 | 
+                   Extra: 3 | Ratio: 2.00</p>
+            </div>
+            
+            <div class="comparison">
+                <div class="comparison-column">
+                    <h3>Expected Determinations (1)</h3>
+        
+                <div class="expected">
+                    <p>["['claimant is not a person in need of protection']", "['negative']", "['claimant is not a convention refugee and not a person in need of protection', 'rejects the claim']"]</p>
+                </div>
+                
+                </div>
+                <div class="comparison-column">
+                    <h3>Extra Determinations (6)</h3>
+        
+                <div class="extra">
+                    <p><strong>Score:</strong> 20.0 | <strong>Match type:</strong> direct_pattern</p>
+                    <p>DETERMINATION [3] After considering the totality of the evi dence, the panel determines that the claimant is not a Convention refugee, pursuant to section 96 of the IRPA, nor is she a person in need of protection pursuant to section 97 of the IRPA.</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 20.0 | <strong>Match type:</strong> direct_pattern</p>
+                    <p>The panel finds that the claimant has not est ablished that, on a balance of probability, her husband was targeted because of his political a ffiliation or that by extension she was targeted as his wife.</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 20.0 | <strong>Match type:</strong> direct_pattern</p>
+                    <p>The panel determines that the claimant embellished her viva voce testimony and that there is no credible evidence anyone ever came looking for her husband.</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 20.0 | <strong>Match type:</strong> direct_pattern</p>
+                    <p>It is natural to  try to find a reason behind a loved one’s death; however, the panel determines that the claimant  has failed to establish a link between her son’s death and grounds for protection.</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 20.0 | <strong>Match type:</strong> direct_pattern</p>
+                    <p>The panel determines that the claimant’s behaviour of taking care of business matters is not in line with someone in hiding.</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 20.0 | <strong>Match type:</strong> direct_pattern</p>
+                    <p>The panel finds that the claimant’s return to Nigeria for a month demonstrates a lack of subjective fear and that there is no credible evidence she was in hiding, if she went to resign from her work at the XXXXX.</p>
+                </div>
+                
+                </div>
+            </div>
+        
+            <div>
+                <h3>All Extracted Determinations (6)</h3>
+        
+                <div class="extracted">
+                    <p><strong>Score:</strong> 20.0 | <strong>Match type:</strong> direct_pattern</p>
+                    <p>DETERMINATION [3] After considering the totality of the evi dence, the panel determines that the claimant is not a Convention refugee, pursuant to section 96 of the IRPA, nor is she a person in need of protection pursuant to section 97 of the IRPA.</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 20.0 | <strong>Match type:</strong> direct_pattern</p>
+                    <p>The panel finds that the claimant has not est ablished that, on a balance of probability, her husband was targeted because of his political a ffiliation or that by extension she was targeted as his wife.</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 20.0 | <strong>Match type:</strong> direct_pattern</p>
+                    <p>The panel determines that the claimant embellished her viva voce testimony and that there is no credible evidence anyone ever came looking for her husband.</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 20.0 | <strong>Match type:</strong> direct_pattern</p>
+                    <p>It is natural to  try to find a reason behind a loved one’s death; however, the panel determines that the claimant  has failed to establish a link between her son’s death and grounds for protection.</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 20.0 | <strong>Match type:</strong> direct_pattern</p>
+                    <p>The panel determines that the claimant’s behaviour of taking care of business matters is not in line with someone in hiding.</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 20.0 | <strong>Match type:</strong> direct_pattern</p>
+                    <p>The panel finds that the claimant’s return to Nigeria for a month demonstrates a lack of subjective fear and that there is no credible evidence she was in hiding, if she went to resign from her work at the XXXXX.</p>
+                </div>
+                
+            </div>
+            
+            <h3>Case Text (first portion):</h3>
+            <div class="case-text">RPD.15.7 (February 12, 2009) Disponible en français
+
+
+
+rivate Proceeding / Huis clos
+
+Reasons and Decision − Motifs et décision
+
+
+
+Claimant(s) [REDACTED] [REDACTED] [REDACTED] Demandeur(e)(s) d’asile Date(s) of Hearing November 26, 2009 Date(s) de l’audience Place of Hearing Toronto, Ontario Lieu de l’audience Date of Decision January 7, 2010 Date de la décision Panel Sudabeh Mashkuri Tribunal Counsel for the Claimant(s) Stella Ir[REDACTED]) du / de la / des demandeur(e)(s) d’asile Barrister, Solicitor & Notary Public Tribunal Officer N/A Agent(e) de tribunal Designated Representative(s) Représentant(e)(s) désigné(e)(s) Counsel for the Minister Conseil du ministre
+
+
+
+2010 CanLII 97384 (CA IRB)
+
+RPD File No. :
+
+[1] [REDACTED], a citizen of the Federal Republic of Nigeria (hereinafter referred to as Nigeria), claims refugee protection pursuant to sections 96 and 97(1) of the Immigration and Refugee Protection Act (IRPA).
+
+1 ALLEGATIONS [2] The claimant alleges the following. The claimant met her husband, [REDACTED] in 1983 and married him in 1987. She had four children with her husband. Her husband became involved in politics in 19XX and became a member of the Democratic Alternative Party (DAP). The “community” mostly supported the Advance Party. In March 2004, the claimant’s “community” in [REDACTED] was in turmoil because of the elections. The claimant alleges that her husband disappear ed in 2004 after being accused of killing a well-known member of the community. The claimant felt threatened and left Nigeria for England in [REDACTED] 2004. The children of the claimant remained in Nigeria with her sister and attended school. The claimant returned to Nigeria in 20XXbecause her son died of food poisoning and returned to England after a m onth. The claimant did not claim asylum in the United Kingdom (UK) during her three years of residency and on May 21, 2007 entered Canada with a false passport. Once her false passport was detected by the Canadian official at the air...</div>
+        </div>
+        
+        <div class="case" id="case-3">
+            <div class="case-header">
+                <h2>Case 3: ID 77802</h2>
+                <p class="metrics">Expected: 3 | Extracted: 6 | 
+                   Extra: 3 | Ratio: 2.00</p>
+            </div>
+            
+            <div class="comparison">
+                <div class="comparison-column">
+                    <h3>Expected Determinations (1)</h3>
+        
+                <div class="expected">
+                    <p>["['claimant is not a convention refugee']", "['claimant is not a convention refugee']", "['claimant is not a convention refugee nor is he a person in need of protection', 'rejects his claim for refugee protection']"]</p>
+                </div>
+                
+                </div>
+                <div class="comparison-column">
+                    <h3>Extra Determinations (6)</h3>
+        
+                <div class="extra">
+                    <p><strong>Score:</strong> 20.0 | <strong>Match type:</strong> direct_pattern</p>
+                    <p>Having considered the totality of the evid ence, the panel finds that the claimant has not rebutted the presumption of state prot ection and is not a Convention refugee nor a person in need of protection.</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 20.0 | <strong>Match type:</strong> direct_pattern</p>
+                    <p>The panel finds that the claimant did not make any dilige nt or bona fide attempt to seek protection in his country of origin before travelling abroad for asylum.</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 20.0 | <strong>Match type:</strong> direct_pattern</p>
+                    <p>After careful consideration of all the evid ence and because of the reasons set out above, the panel finds that the claimant doe s not have a well-founded fear of persecution by reason of any of the enumerated grounds.</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 20.0 | <strong>Match type:</strong> direct_pattern</p>
+                    <p>The panel therefore finds that the claimant is not a Convention refugee.</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 20.0 | <strong>Match type:</strong> direct_pattern</p>
+                    <p>Having found that the claimant is not a Convention refugee, the panel also considered the applicability of sections 97(1)(a ) and 97(1)(b) of the Act, and finds that no evidence was adduced that would support a finding that the claimant faces a danger of torture.</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 20.0 | <strong>Match type:</strong> direct_pattern</p>
+                    <p>2005 CanLII 77802 (CA IRB) TA4-16824    13 CONCLUSION  For these reasons, the Refugee Protection Di vision determines that the claimant is not a Convention refugee nor is he a person in need of protection and therefore, rejects his claim for refugee protection.</p>
+                </div>
+                
+                </div>
+            </div>
+        
+            <div>
+                <h3>All Extracted Determinations (6)</h3>
+        
+                <div class="extracted">
+                    <p><strong>Score:</strong> 20.0 | <strong>Match type:</strong> direct_pattern</p>
+                    <p>Having considered the totality of the evid ence, the panel finds that the claimant has not rebutted the presumption of state prot ection and is not a Convention refugee nor a person in need of protection.</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 20.0 | <strong>Match type:</strong> direct_pattern</p>
+                    <p>The panel finds that the claimant did not make any dilige nt or bona fide attempt to seek protection in his country of origin before travelling abroad for asylum.</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 20.0 | <strong>Match type:</strong> direct_pattern</p>
+                    <p>After careful consideration of all the evid ence and because of the reasons set out above, the panel finds that the claimant doe s not have a well-founded fear of persecution by reason of any of the enumerated grounds.</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 20.0 | <strong>Match type:</strong> direct_pattern</p>
+                    <p>The panel therefore finds that the claimant is not a Convention refugee.</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 20.0 | <strong>Match type:</strong> direct_pattern</p>
+                    <p>Having found that the claimant is not a Convention refugee, the panel also considered the applicability of sections 97(1)(a ) and 97(1)(b) of the Act, and finds that no evidence was adduced that would support a finding that the claimant faces a danger of torture.</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 20.0 | <strong>Match type:</strong> direct_pattern</p>
+                    <p>2005 CanLII 77802 (CA IRB) TA4-16824    13 CONCLUSION  For these reasons, the Refugee Protection Di vision determines that the claimant is not a Convention refugee nor is he a person in need of protection and therefore, rejects his claim for refugee protection.</p>
+                </div>
+                
+            </div>
+            
+            <h3>Case Text (first portion):</h3>
+            <div class="case-text">IN PRIVATE HUIS CLOS
+
+TA4-16824
+
+CLAIMANT(S) DEMANDEUR(S)
+
+[REDACTED] [REDACTED] [REDACTED] [REDACTED]
+
+
+
+DATE(S) OF HEARING DATE(S) DE L’AUDIENCE
+
+September 28, 2005
+
+
+
+DATE OF DECISION DATE DE LA DÉCISION
+
+October 26, 2005
+
+C O R A M C O R A M
+
+M. Freilich
+
+FOR THE CLAIMANT(S) POUR LE(S) DEMANDEUR(S)
+
+Loftus Cuddy
+
+REFUGEE PROTECTION OFFICER AGENT DE PROTECTION DES RÉFUGIÉS
+
+Nil
+
+DESIGNATED REPRESENTATIVE REPRÉSENTANT DÉSIGNÉ
+
+Nil
+
+MINISTER’S COUNSEL CONSEIL DE LA MINISTRE
+
+Nil
+
+2005 CanLII 77802 (CA IRB)
+
+
+
+TA4-16824 These are the reasons for the negative decision of the Refugee Protection Division (RPD) with respect to the claim of [REDACTED] [REDACTED] [REDACTED] [REDACTED] (the claimant), a 23-year-old citizen of Mexico.
+
+1 The hearing for this claim was held pursuant to subsection 170(b) of the Immigration and Refugee Protection Act
+
+2 (IRPA). The claimant alleged that he has a well-found ed fear of persecution if he were to return to Mexico by reason of his sexual orientation. In addition, he claims to be a person in need of protection by reason of either, a danger of torture within the meaning of Article 1 of the Convention Against Torture or to a risk to his life or to a risk of cruel and unusual treatment or punishment. ISSUES AND DETERMINATION
+
+The determinative issue in this claim is whether the claimant has a well-founded fear of persecution in Mexico by reason of a Convention ground, including whether the claimant has rebutted the presumption of state protection. Having considered the totality of the evid ence, the panel finds that the claimant has not rebutted the presumption of state prot ection and is not a Convention refugee nor a person in need of protection.
+
+
+
+1 Exhibit R/A-2, certified true copy of the claimant’s Mexican passport.
+
+2 Immigration and Refugee Protection Act , S.C. 2001, c. 27.
+
+2005 CanLII 77802 (CA IRB)
+
+TA4-16824
+
+2 ALLEGATIONS
+
+The claimant’s testimony of past events going to the basis of his fear is contained in his narrativ...</div>
+        </div>
+        
+        <div class="case" id="case-4">
+            <div class="case-header">
+                <h2>Case 4: ID 61233</h2>
+                <p class="metrics">Expected: 3 | Extracted: 6 | 
+                   Extra: 3 | Ratio: 2.00</p>
+            </div>
+            
+            <div class="comparison">
+                <div class="comparison-column">
+                    <h3>Expected Determinations (1)</h3>
+        
+                <div class="expected">
+                    <p>["['claimant is not a convention refugee and not a person in need of protection']", "['claimant is not a convention refugee']", "['negative']"]</p>
+                </div>
+                
+                </div>
+                <div class="comparison-column">
+                    <h3>Extra Determinations (6)</h3>
+        
+                <div class="extra">
+                    <p><strong>Score:</strong> 20.0 | <strong>Match type:</strong> direct_pattern</p>
+                    <p>Based on the lack of credibility of the documents, the Panel finds that the claimant has failed to establish the issue of affiliation surrounding her membership in the AEUP.</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 20.0 | <strong>Match type:</strong> direct_pattern</p>
+                    <p>Based on th e claimant’s failure to claim for refugee protection in Japan and her delay in departing Ethiopia from the time of the commencement of the alleged fear, the Panel finds that the claimant has failed to establish the element of subjective fear.</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 20.0 | <strong>Match type:</strong> direct_pattern</p>
+                    <p>The Panel finds that the claimant  was not an active member of the AEUP or the CUD, and that the events related to he r alleged membership and political involvement did not occur.</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 20.0 | <strong>Match type:</strong> direct_pattern</p>
+                    <p>Therefore, the Panel conc ludes that the claimant is not a Convention refugee.</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 20.0 | <strong>Match type:</strong> direct_pattern</p>
+                    <p>Since the Panel concludes that XXXXX XXXXX XXXXX has not suffered serious harm while in Ethiopia and that she does not face a serious possibility of serious harm should she return to that country, the Panel concludes that the claimant is not a person in need of protection pursuant to section 97(1)(a) and (b) of the IRPA, as there is no risk to her life, or of cruel and unusual treatment or punishment, or a danger, believed on substantial grounds to exist, of torture, upon returning to Ethiopia.</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 20.0 | <strong>Match type:</strong> direct_pattern</p>
+                    <p>2006 CanLII 61233 (CA IRB) TA5-13270     10 Conclusion  The Panel determines that the claimant  is not a Convention refugee and not a person in need of protection in accordance with sections 96 and 97(1)(a) and (b) of the IRPA.</p>
+                </div>
+                
+                </div>
+            </div>
+        
+            <div>
+                <h3>All Extracted Determinations (6)</h3>
+        
+                <div class="extracted">
+                    <p><strong>Score:</strong> 20.0 | <strong>Match type:</strong> direct_pattern</p>
+                    <p>Based on the lack of credibility of the documents, the Panel finds that the claimant has failed to establish the issue of affiliation surrounding her membership in the AEUP.</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 20.0 | <strong>Match type:</strong> direct_pattern</p>
+                    <p>Based on th e claimant’s failure to claim for refugee protection in Japan and her delay in departing Ethiopia from the time of the commencement of the alleged fear, the Panel finds that the claimant has failed to establish the element of subjective fear.</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 20.0 | <strong>Match type:</strong> direct_pattern</p>
+                    <p>The Panel finds that the claimant  was not an active member of the AEUP or the CUD, and that the events related to he r alleged membership and political involvement did not occur.</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 20.0 | <strong>Match type:</strong> direct_pattern</p>
+                    <p>Therefore, the Panel conc ludes that the claimant is not a Convention refugee.</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 20.0 | <strong>Match type:</strong> direct_pattern</p>
+                    <p>Since the Panel concludes that XXXXX XXXXX XXXXX has not suffered serious harm while in Ethiopia and that she does not face a serious possibility of serious harm should she return to that country, the Panel concludes that the claimant is not a person in need of protection pursuant to section 97(1)(a) and (b) of the IRPA, as there is no risk to her life, or of cruel and unusual treatment or punishment, or a danger, believed on substantial grounds to exist, of torture, upon returning to Ethiopia.</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 20.0 | <strong>Match type:</strong> direct_pattern</p>
+                    <p>2006 CanLII 61233 (CA IRB) TA5-13270     10 Conclusion  The Panel determines that the claimant  is not a Convention refugee and not a person in need of protection in accordance with sections 96 and 97(1)(a) and (b) of the IRPA.</p>
+                </div>
+                
+            </div>
+            
+            <h3>Case Text (first portion):</h3>
+            <div class="case-text">IN PRIVATE HUIS CLOS
+
+TA5-13270
+
+CLAIMANT(S) DEMANDEUR(S)
+
+[REDACTED] [REDACTED] [REDACTED]
+
+
+
+DATE(S) OF HEARING DATE(S) DE L’AUDIENCE
+
+16 March 2006
+
+
+
+DATE OF DECISION DATE DE LA DÉCISION
+
+28 July 2006
+
+CORAM CORAM
+
+E. Joanne Sajtos
+
+FOR THE CLAIMANT(S) POUR LE(S) DEMANDEUR(S)
+
+Paul VanderVennen Barrister and Solicitor
+
+REFUGEE PROTECTION OFFICER AGENT DE PROTECTION DES RÉFUGIÉS
+
+W. Kawun
+
+DESIGNATED REPRESENTATIVE REPRÉSENTANT DÉSIGNÉ
+
+
+
+MINISTER’S COUNSEL CONSEIL DU MINISTRE
+
+
+
+2006 CanLII 61233 (CA IRB)
+
+
+
+2006 CanLII 61233 (CA IRB)
+
+TA5-13270
+
+[REDACTED] [REDACTED] [REDACTED], a citizen of Ethiopia,
+
+1 claims Convention refugee status by reason of her political opinion. The claimant claims that due to her participation in the All Ethiopian Unity Party (AEUP) and the Coalition for Unity and Democracy (CUD), also known as KINIJIT, she is be ing targeted by the Ethiopian police and government security forces. She is also claiming that she is a person in need of protection in accordance with section 97(1)(a) and (b) of the Immigration and Refugee Protection Act (IRPA). Claimant’s Allegations The claimant is a professional [REDACTED]. She was hired by a Japanese company to work and compete as a [REDACTED] in Japan from [REDACTED] 2004 until [REDACTED] 2005. The claimant returned to Ethiopian at the conclusion of her employment with the Japanese company. The claimant was a member of the AEUP and, prior to going to Japan, her participation was limited to attending two pa rty meetings. Upon her return from Japan and prior to the election of May 2005, sh e attended two meetings of the CUD and contributed money to the party.
+
+2
+
+
+
+1 Exhibit R-2, Information received from Citizenship and Immigration Canada (CIC), includes an Ethiopian passport and Birth Certificate for the claimant.
+
+2 Exhibit C-1, Personal Information Form (PIF), question 31, p. 1.
+
+2006 CanLII 61233 (CA IRB)
+
+TA5-13270
+
+2 After the elections, the CUD believed that the results were fraudulently reporte...</div>
+        </div>
+        
+        <div class="case" id="case-5">
+            <div class="case-header">
+                <h2>Case 5: ID 60037</h2>
+                <p class="metrics">Expected: 3 | Extracted: 6 | 
+                   Extra: 3 | Ratio: 2.00</p>
+            </div>
+            
+            <div class="comparison">
+                <div class="comparison-column">
+                    <h3>Expected Determinations (1)</h3>
+        
+                <div class="expected">
+                    <p>["['claimant is not a convention refugee']", "['claimant is not a convention refugee']", "['claimant is not a convention refugee nor is she a person in need of protection', 'rejects her claim for refugee protection']"]</p>
+                </div>
+                
+                </div>
+                <div class="comparison-column">
+                    <h3>Extra Determinations (6)</h3>
+        
+                <div class="extra">
+                    <p><strong>Score:</strong> 20.0 | <strong>Match type:</strong> direct_pattern</p>
+                    <p>2005 CanLII 60037 (CA IRB) TA4-04286    2Having considered the totality of the evid ence, the panel finds that the claimant has not rebutted the presumption of state prot ection and is neither a Convention refugee nor a person in need of protection.</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 20.0 | <strong>Match type:</strong> direct_pattern</p>
+                    <p>The panel finds that the claimant did not make any diligent or bona fide attempt to seek protection in her country of origin regarding the attack by her sister, the threats by her brother or the alleged attack by the two men on her boyfriend before travelling abroad for asylum.</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 20.0 | <strong>Match type:</strong> direct_pattern</p>
+                    <p>After careful consideration of all the evid ence and because of the reasons set out above, the panel finds that the claimant doe s not have a well-founded fear of persecution by reason of any of the enumerated grounds.</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 20.0 | <strong>Match type:</strong> direct_pattern</p>
+                    <p>Given that the panel finds that adequate state protection would be available to the cl aimant in Poland, the panel therefore finds that the claimant is not a Convention refugee.</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 20.0 | <strong>Match type:</strong> direct_pattern</p>
+                    <p>Having found that the claimant is not a Convention refugee, the panel also considered the applicability of sections 97(1)(a ) and 97(1)(b) of the Act, and finds that no evidence was adduced that would support a finding that the claimant faces a danger of torture.</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 20.0 | <strong>Match type:</strong> direct_pattern</p>
+                    <p>2005 CanLII 60037 (CA IRB) TA4-04286    12 CONCLUSION  For these reasons, the Refugee Protection Di vision determines that the claimant is not a Convention refugee nor is she a person in  need of protection and therefore, rejects her claim for refugee protection.</p>
+                </div>
+                
+                </div>
+            </div>
+        
+            <div>
+                <h3>All Extracted Determinations (6)</h3>
+        
+                <div class="extracted">
+                    <p><strong>Score:</strong> 20.0 | <strong>Match type:</strong> direct_pattern</p>
+                    <p>2005 CanLII 60037 (CA IRB) TA4-04286    2Having considered the totality of the evid ence, the panel finds that the claimant has not rebutted the presumption of state prot ection and is neither a Convention refugee nor a person in need of protection.</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 20.0 | <strong>Match type:</strong> direct_pattern</p>
+                    <p>The panel finds that the claimant did not make any diligent or bona fide attempt to seek protection in her country of origin regarding the attack by her sister, the threats by her brother or the alleged attack by the two men on her boyfriend before travelling abroad for asylum.</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 20.0 | <strong>Match type:</strong> direct_pattern</p>
+                    <p>After careful consideration of all the evid ence and because of the reasons set out above, the panel finds that the claimant doe s not have a well-founded fear of persecution by reason of any of the enumerated grounds.</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 20.0 | <strong>Match type:</strong> direct_pattern</p>
+                    <p>Given that the panel finds that adequate state protection would be available to the cl aimant in Poland, the panel therefore finds that the claimant is not a Convention refugee.</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 20.0 | <strong>Match type:</strong> direct_pattern</p>
+                    <p>Having found that the claimant is not a Convention refugee, the panel also considered the applicability of sections 97(1)(a ) and 97(1)(b) of the Act, and finds that no evidence was adduced that would support a finding that the claimant faces a danger of torture.</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 20.0 | <strong>Match type:</strong> direct_pattern</p>
+                    <p>2005 CanLII 60037 (CA IRB) TA4-04286    12 CONCLUSION  For these reasons, the Refugee Protection Di vision determines that the claimant is not a Convention refugee nor is she a person in  need of protection and therefore, rejects her claim for refugee protection.</p>
+                </div>
+                
+            </div>
+            
+            <h3>Case Text (first portion):</h3>
+            <div class="case-text">IN PRIVATE HUIS CLOS
+
+TA4-04286
+
+CLAIMANT(S) DEMANDEUR(S)
+
+[REDACTED] [REDACTED] [REDACTED] [REDACTED] [REDACTED] [REDACTED]
+
+
+
+DATE(S) OF HEARING DATE(S) DE L’AUDIENCE
+
+May 24, 2005
+
+
+
+DATE OF DECISION DATE DE LA DÉCISION
+
+June 15, 2005
+
+C O R A M C O R A M
+
+M. Freilich
+
+FOR THE CLAIMANT(S) POUR LE(S) DEMANDEUR(S)
+
+Benj[REDACTED] and Solicitor
+
+REFUGEE PROTECTION OFFICER AGENT DE PROTECTION DES RÉFUGIÉS
+
+Nil
+
+DESIGNATED REPRESENTATIVE REPRÉSENTANT DÉSIGNÉ
+
+Nil
+
+MINISTER’S COUNSEL CONSEIL DE LA MINISTRE
+
+Nil
+
+2005 CanLII 60037 (CA IRB)
+
+
+
+TA4-04286 These are the reasons for the negative decision of the Refugee Protection Division (RPD) with respect to the claim of [REDACTED] [REDACTED] (the claimant), a 24-year-old citizen of Poland.
+
+1 The hearing for this claim was held pursuant to subsection 170(b) of the Immigration and Refugee Protection Act
+
+2 (IRPA). The claimant alleged that she has a well-found ed fear of persecution if she were to return to Poland by reason of her membership in a particular social group, that is, a person who has been targeted by family member s because of her desire to marry a man of another faith. In addition, she claims to be a person in need of protection by reason of either a danger of torture within the meaning of Article 1 of the Convention Against Torture or to a risk to her life or to a risk of cruel and unusual treatment or punishment. At the hearing, the claimant’s husband [REDACTED] was called as a witness in support of the claimant. ISSUES AND DETERMINATION
+
+The determinative issue in this claim is whether the claimant has a well-founded fear of persecution in Poland by reason of a Convention ground including whether the claimant has rebutted the presumption of state protection.
+
+
+
+1 Exhibit R/A-2, information provided by Citizensh ip and Immigration Canada (CIC), certified true copy of the claimant’s Polish passport.
+
+2 Immigration and Refugee Protection Act , S.C. 2001, c. 27.
+
+2005 CanLII 60037 (CA IRB)
+
+TA4-04286
+
+2Having ...</div>
+        </div>
+        
+        <div class="case" id="case-6">
+            <div class="case-header">
+                <h2>Case 6: ID 80042</h2>
+                <p class="metrics">Expected: 3 | Extracted: 6 | 
+                   Extra: 3 | Ratio: 2.00</p>
+            </div>
+            
+            <div class="comparison">
+                <div class="comparison-column">
+                    <h3>Expected Determinations (1)</h3>
+        
+                <div class="expected">
+                    <p>["['302 (c.a.']", "['claimant is not a person in need of protection']", "['claimant is not a convention refugee and is not a person in need of protection']"]</p>
+                </div>
+                
+                </div>
+                <div class="comparison-column">
+                    <h3>Extra Determinations (6)</h3>
+        
+                <div class="extra">
+                    <p><strong>Score:</strong> 20.0 | <strong>Match type:</strong> direct_pattern</p>
+                    <p>The RPD considered all the claimant’s evid ence to determine whether the claimant is a person in need of protection.</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 20.0 | <strong>Match type:</strong> direct_pattern</p>
+                    <p>Accordingly, the claimant is not a person in need of protection.</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 20.0 | <strong>Match type:</strong> exact</p>
+                    <p>302 (C.A.).</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 20.0 | <strong>Match type:</strong> direct_pattern</p>
+                    <p>Person in Need of Protection The RPD considered all the claimant’s evid ence to determine whether the claimant is a person in need of protection.</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 20.0 | <strong>Match type:</strong> direct_pattern</p>
+                    <p>Therefore, the claimant is not a person in need of protection.</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 20.0 | <strong>Match type:</strong> direct_pattern</p>
+                    <p>Conclusion For all the foregoing reasons, the Refugee Protection Division determines that the claimant is not a Convention refugee and is  not a person in need of protection.</p>
+                </div>
+                
+                </div>
+            </div>
+        
+            <div>
+                <h3>All Extracted Determinations (6)</h3>
+        
+                <div class="extracted">
+                    <p><strong>Score:</strong> 20.0 | <strong>Match type:</strong> direct_pattern</p>
+                    <p>The RPD considered all the claimant’s evid ence to determine whether the claimant is a person in need of protection.</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 20.0 | <strong>Match type:</strong> direct_pattern</p>
+                    <p>Accordingly, the claimant is not a person in need of protection.</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 20.0 | <strong>Match type:</strong> exact</p>
+                    <p>302 (C.A.).</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 20.0 | <strong>Match type:</strong> direct_pattern</p>
+                    <p>Person in Need of Protection The RPD considered all the claimant’s evid ence to determine whether the claimant is a person in need of protection.</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 20.0 | <strong>Match type:</strong> direct_pattern</p>
+                    <p>Therefore, the claimant is not a person in need of protection.</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 20.0 | <strong>Match type:</strong> direct_pattern</p>
+                    <p>Conclusion For all the foregoing reasons, the Refugee Protection Division determines that the claimant is not a Convention refugee and is  not a person in need of protection.</p>
+                </div>
+                
+            </div>
+            
+            <h3>Case Text (first portion):</h3>
+            <div class="case-text">IMMIGRATION AND REFUGEE BOARD LA COMMISSION DE L’IMMIGRATION (REFUGEE PROTECTION DIVISION) ET DU STATUT DE RÉFUGIÉ
+
+
+
+IN PRIVATE HUIS CLOS
+
+TA5-11533
+
+CLAIMANT(S) DEMANDEUR(S)
+
+[REDACTED] [REDACTED]
+
+
+
+DATE(S) OF HEARING DATE(S) DE L’AUDIENCE
+
+16 May 2006
+
+DATE OF DECISION DATE DE LA DÉCISION
+
+04 July 2006
+
+C O R A M C O R A M
+
+Steve Ellis
+
+FOR THE CLAIMANT(S) POUR LE(S) DEMANDEUR(S)
+
+[REDACTED] Barrister& Solicitor
+
+REFUGEE PROTECTION OFFICER AGENT DE PROTECTION DES RÉFUGIÉS
+
+Nil
+
+DESIGNATED REPRESENTATIVE REPRÉSENTANT DÉSIGNÉ
+
+
+
+MINISTER’S COUNSEL CONSEIL DE LA MINISTRE
+
+
+
+2006 CanLII 80042 (CA IRB)
+
+TA5-11533
+
+These are the reasons with respect to the claim made by [REDACTED] [REDACTED] to be a Convention refugee and a person in need of protection. The claimant is a 42-year-old married, male citizen of the People’s Republic of China (hereinafter referred to as China). The claimant fears returning to China due to his involvement in an underground Christian church. Allegations The claimant was a long distance truck dr iver in China. In mid- [REDACTED] 2004, the claimant’s partner and he transported goods to [REDACTED] at night. When they were on a slope he could not slow down the truck because something went wrong with the brakes. The claimant was in a panic and at this crucial time his partner murmured, which he could hear clearly. The claimant was angry with him because he seemed not to worry as he tried his best to stop the truck, and finall y he turned the wheel to the rock close to the hill and the truck stopped. After the truck stopped, the claimant’s pa rtner said, “Thank God.” The claimant was very curious why he did not worry and hi s partner told him that he was praying to God for help and God protected them. He also said that he was a Christian and talked to the claimant about God, who is almighty. When they were off work, his friend, [REDACTED], came to him and talked to him about his religion and God’s love, as well as some stories about [REDACTED]. Th...</div>
+        </div>
+        
+        <div class="case" id="case-7">
+            <div class="case-header">
+                <h2>Case 7: ID 94155</h2>
+                <p class="metrics">Expected: 3 | Extracted: 6 | 
+                   Extra: 3 | Ratio: 2.00</p>
+            </div>
+            
+            <div class="comparison">
+                <div class="comparison-column">
+                    <h3>Expected Determinations (1)</h3>
+        
+                <div class="expected">
+                    <p>["['negative']", "['claimant is not a convention refugee']", "['claimant is neither a convention refugee', 'nor is he a person in need of protection', 'refugee protection division rejects the claim']"]</p>
+                </div>
+                
+                </div>
+                <div class="comparison-column">
+                    <h3>Extra Determinations (6)</h3>
+        
+                <div class="extra">
+                    <p><strong>Score:</strong> 20.0 | <strong>Match type:</strong> direct_pattern</p>
+                    <p>DETERMINA TION   [13]  The  Panel  finds that the claimant, XXXXXXXXXXXXX , is not a Convention refugee  pursuant to s.</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 20.0 | <strong>Match type:</strong> direct_pattern</p>
+                    <p>:     Persona l Identity and Credibility   [15]  The  Panel  finds that the claimant has not established his personal or national identity.</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 20.0 | <strong>Match type:</strong> direct_pattern</p>
+                    <p>Political Identity  and Cre dibility   [18]  The Panel  finds that the claimant has not established his political identity.</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 20.0 | <strong>Match type:</strong> direct_pattern</p>
+                    <p>The Panel  gives no evidentiary weight to the card given  that it has no security features, there is no envelope, and the Panel  finds that the claimant’s  testimony regarding the issuance of the card to be not credible.</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 20.0 | <strong>Match type:</strong> direct_pattern</p>
+                    <p>[22]  The Panel  finds  that the claimant provided no trustworthy original identity  documents.</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 20.0 | <strong>Match type:</strong> direct_pattern</p>
+                    <p>Thus, the Panel  finds that the  claimant has not  discharged the burden of establishing  his identity  as set out in section 106 of the IRPA .</p>
+                </div>
+                
+                </div>
+            </div>
+        
+            <div>
+                <h3>All Extracted Determinations (6)</h3>
+        
+                <div class="extracted">
+                    <p><strong>Score:</strong> 20.0 | <strong>Match type:</strong> direct_pattern</p>
+                    <p>DETERMINA TION   [13]  The  Panel  finds that the claimant, XXXXXXXXXXXXX , is not a Convention refugee  pursuant to s.</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 20.0 | <strong>Match type:</strong> direct_pattern</p>
+                    <p>:     Persona l Identity and Credibility   [15]  The  Panel  finds that the claimant has not established his personal or national identity.</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 20.0 | <strong>Match type:</strong> direct_pattern</p>
+                    <p>Political Identity  and Cre dibility   [18]  The Panel  finds that the claimant has not established his political identity.</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 20.0 | <strong>Match type:</strong> direct_pattern</p>
+                    <p>The Panel  gives no evidentiary weight to the card given  that it has no security features, there is no envelope, and the Panel  finds that the claimant’s  testimony regarding the issuance of the card to be not credible.</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 20.0 | <strong>Match type:</strong> direct_pattern</p>
+                    <p>[22]  The Panel  finds  that the claimant provided no trustworthy original identity  documents.</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 20.0 | <strong>Match type:</strong> direct_pattern</p>
+                    <p>Thus, the Panel  finds that the  claimant has not  discharged the burden of establishing  his identity  as set out in section 106 of the IRPA .</p>
+                </div>
+                
+            </div>
+            
+            <h3>Case Text (first portion):</h3>
+            <div class="case-text">RPD.15.7 (February 12, 2009)
+
+Disponible en français
+
+
+
+
+
+rivate Proceeding / Huis clos
+
+Reasons and Decision  Motifs et décision
+
+
+
+Claimant(s) [REDACTED] Demandeur(e)(s) d’asile
+
+
+
+
+
+Date(s) o f Hearing February 9, 2012 Date(s) de l’audience
+
+
+
+
+
+Place of Hearing Toronto, Ontario Lieu de l’audience
+
+
+
+
+
+Date of Decision February 16, 2012 Date de la décision
+
+
+
+
+
+Panel L. Mason Tribunal
+
+
+
+
+
+Counsel for the
+
+demandeur(e)(s) d’asile
+
+
+
+
+
+Tribunal Officer N/A Agent(e) de tribunal
+
+
+
+
+
+Designated
+
+Representative(s) N/A Représentant(e)(s) désigné(e)(s)
+
+
+
+
+
+Counsel for the
+
+Minister N/A Conseil du ministre
+
+
+
+
+
+2012 CanLII 94155 (CA IRB)
+
+RPD File No. :
+
+[1] [REDACTED] seeks refugee protection pursuant to sections 96 and 97(1) of the
+
+Immigration and Refugee Protection Act (IRPA )1.
+
+Allegations
+
+[2] The claimant alleges the following.
+
+[3] He was born on [REDACTED] , 19XX in [REDACTED] , Uganda. He has never married.
+
+[4] The claimant joined the Forum for Democratic Change (FDC), the major opposition
+
+political party, in [REDACTED] 2005. In [REDACTED] 2009 he was elected to the position of XX XX [REDACTED]
+
+in his constituency. Between 2 005 and 2006 the claimant was arrested and detained about [REDACTED]
+
+times for participating in demonstrations against the National Resistance Movement (NRM), the
+
+political party in power.
+
+[5] The claimant was very active in the run up to the February 18, 2011 elec tion. NRM cadre
+
+subjected him to various forms of intimidation, harassment and threats. On April 11, 2011 a
+
+number of opposition members of parliament were arrested and charged. On [REDACTED] , 2011 the
+
+claimant took part in a protest against these arrests. During the protest he was arrested and detained
+
+at [REDACTED] in [REDACTED] . He was brutally tortured and accused of trying to overthrow the
+
+government. He was released on [REDACTED] , 2011 with a warning that if he were caught again he
+
+would be killed. On [REDACTED] , 20 11 the claimant received a telephone c...</div>
+        </div>
+        
+        <div class="case" id="case-8">
+            <div class="case-header">
+                <h2>Case 8: ID 85871</h2>
+                <p class="metrics">Expected: 3 | Extracted: 6 | 
+                   Extra: 3 | Ratio: 2.00</p>
+            </div>
+            
+            <div class="comparison">
+                <div class="comparison-column">
+                    <h3>Expected Determinations (1)</h3>
+        
+                <div class="expected">
+                    <p>["['302 (c.a.']", "['refugee protection division, therefore, rejects his claim for refugee protection']", "['neither a convention refugee nor a person in need of protection']"]</p>
+                </div>
+                
+                </div>
+                <div class="comparison-column">
+                    <h3>Extra Determinations (6)</h3>
+        
+                <div class="extra">
+                    <p><strong>Score:</strong> 20.0 | <strong>Match type:</strong> exact</p>
+                    <p>302 (C.A.).</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 20.0 | <strong>Match type:</strong> direct_pattern</p>
+                    <p>The panel finds that the claimant has fabricated his story about being targeted by PAN for th e purpose of his refugee protection claim.</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 20.0 | <strong>Match type:</strong> direct_pattern</p>
+                    <p>The panel finds that the claimant has fabricated his story about XXXXX and XXXXXXXXXXX and being targeted as a result.</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 20.0 | <strong>Match type:</strong> direct_pattern</p>
+                    <p>Based on the totality of the evidence adduced, because of a number of credibility issues, the panel finds that the claimant’s evidence is not  credible or trustworthy in areas central and material to his claim.</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 20.0 | <strong>Match type:</strong> direct_pattern</p>
+                    <p>The panel finds that the claimant has not met the burden of establishing “clear and convincing” proof of a lack of state protection for individuals like him in Mexico.</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 20.0 | <strong>Match type:</strong> direct_pattern</p>
+                    <p>Therefore, the panel finds that the claimant, living in a democracy, simply did not reasonably exhaust any course of  action open to him in obtaining state protection in Mexico, and, therefore, he has not discharged  the onus of showing clear and convincing proof of the state’s inability or unwillingness to protect him.</p>
+                </div>
+                
+                </div>
+            </div>
+        
+            <div>
+                <h3>All Extracted Determinations (6)</h3>
+        
+                <div class="extracted">
+                    <p><strong>Score:</strong> 20.0 | <strong>Match type:</strong> exact</p>
+                    <p>302 (C.A.).</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 20.0 | <strong>Match type:</strong> direct_pattern</p>
+                    <p>The panel finds that the claimant has fabricated his story about being targeted by PAN for th e purpose of his refugee protection claim.</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 20.0 | <strong>Match type:</strong> direct_pattern</p>
+                    <p>The panel finds that the claimant has fabricated his story about XXXXX and XXXXXXXXXXX and being targeted as a result.</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 20.0 | <strong>Match type:</strong> direct_pattern</p>
+                    <p>Based on the totality of the evidence adduced, because of a number of credibility issues, the panel finds that the claimant’s evidence is not  credible or trustworthy in areas central and material to his claim.</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 20.0 | <strong>Match type:</strong> direct_pattern</p>
+                    <p>The panel finds that the claimant has not met the burden of establishing “clear and convincing” proof of a lack of state protection for individuals like him in Mexico.</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 20.0 | <strong>Match type:</strong> direct_pattern</p>
+                    <p>Therefore, the panel finds that the claimant, living in a democracy, simply did not reasonably exhaust any course of  action open to him in obtaining state protection in Mexico, and, therefore, he has not discharged  the onus of showing clear and convincing proof of the state’s inability or unwillingness to protect him.</p>
+                </div>
+                
+            </div>
+            
+            <h3>Case Text (first portion):</h3>
+            <div class="case-text">RPD.15.7 (October 2007) Disponible en français
+
+
+
+rivate Proceeding / Huis clos
+
+Reasons and Decision − Motifs et décision
+
+Claimant(s)
+
+[REDACTED] [REDACTED] [REDACTED] [REDACTED] Demandeur(e)(s) d’asile
+
+
+
+
+
+
+
+Date(s) of Hearing 25 AUGUST 2008 Date(s) de l’audience
+
+
+
+
+
+
+
+Place of Hearing TORONTO Lieu de l’audience
+
+
+
+
+
+
+
+Date of Decision 28 AUGUST 2008 Date de la décision
+
+
+
+
+
+
+
+Panel S. Alidina Tribunal
+
+
+
+
+
+
+
+Counsel for the Claimant(s) Meli[REDACTED]) du / de la / des demandeur(e)(s) d’asile
+
+Barrister and Solicitor
+
+
+
+
+
+Tribunal Officer n/a Agent(e) des tribunaux
+
+
+
+
+
+
+
+Designated Representative(s) n/a Représentant(e)(s) désigné(e)(s)
+
+
+
+
+
+
+
+Counsel for the Minister n/a Conseil du ministre
+
+
+
+
+
+
+
+2008 CanLII 85871 (CA IRB)
+
+, a citizen of Mexico, claims refugee protection pursuant to sections 96, 97(1)(a) and 97(1)(b) of the Immigration and Refugee Protection Act (IRPA). ALLEGATIONS:
+
+The claimant alleges that he worked as a [REDACTED] for various local [REDACTED] and [REDACTED]. He used [REDACTED] to express his concerns about the political climate in Mexico. Because he made [REDACTED], which the ruling National Action Party (PAN) felt were offensive to their government, he was targeted by [REDACTED] [REDACTED] [REDACTED], a local leader and a [REDACTED] [REDACTED] [REDACTED] [REDACTED] PAN. The claimant was threatened and warned by [REDACTED] not to [REDACTED] [REDACTED] that were offensive to PAN. Because the claimant continued to draw, circulate to the public and [REDACTED] his [REDACTED], he was attacked by [REDACTED] and his accomplices in Mexico City. He was thre atened to be killed if he continued [REDACTED] his [REDACTED] because they were derogatory to the PAN. ANALYSIS:
+
+The determinative issues in this case are cred ibility, state protection and internal flight alternative. In making this assessment, the pa nel considered the claimant’s oral and written testimony, the representations of the counsel and a ll of the documentary evidence provided at ...</div>
+        </div>
+        
+        <div class="case" id="case-9">
+            <div class="case-header">
+                <h2>Case 9: ID 75934</h2>
+                <p class="metrics">Expected: 3 | Extracted: 6 | 
+                   Extra: 3 | Ratio: 2.00</p>
+            </div>
+            
+            <div class="comparison">
+                <div class="comparison-column">
+                    <h3>Expected Determinations (1)</h3>
+        
+                <div class="expected">
+                    <p>["['claimant is not aconvention refugee']", "['claimant is not a convention refugee nor is she a person in need of protection', 'rejects her claim for refugee protection']", "['claimant is not a convention refugee']"]</p>
+                </div>
+                
+                </div>
+                <div class="comparison-column">
+                    <h3>Extra Determinations (6)</h3>
+        
+                <div class="extra">
+                    <p><strong>Score:</strong> 20.0 | <strong>Match type:</strong> direct_pattern</p>
+                    <p>The panel finds that the claimant has not rebutted the presumption of state protection and she is not a Convention refugee, as she does not have a well-founded f ear of persecution for a Convention ground in Hungary.</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 20.0 | <strong>Match type:</strong> direct_pattern</p>
+                    <p>Having considered the totality of the evid ence the panel finds that the claimant is not a person in need of protection in that her removal to Hungary would not subject her personally to a risk to her life or to a risk of cruel and unus ual treatment or punishment, and that there are no substantial grounds to believe that her remova l to Hungary will subject her personally to a danger of torture.</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 20.0 | <strong>Match type:</strong> direct_pattern</p>
+                    <p>The panel finds that the claimant did not report any of the incidents of domestic violence to the authorities in Hungary.</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 20.0 | <strong>Match type:</strong> direct_pattern</p>
+                    <p>After careful cons ideration of all the evidence and because of the reasons set out above, the panel finds that the claimant does not have a well-founded fear of persecution by reason of any of the enumerated gr ounds.</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 20.0 | <strong>Match type:</strong> direct_pattern</p>
+                    <p>Given that the panel finds that adequate state protection would be available to the claimant in Hungary the panel therefore finds that the claimant is not a Convention refugee.</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 20.0 | <strong>Match type:</strong> direct_pattern</p>
+                    <p>/ N° de dossier de la SPR :  TA6-13204   10  CONCLUSION  For these reasons, the Refugee Protection Divisi on determines that the claimant is not a Convention refugee nor is she a person in need of  protection and therefore, rejects her claim for refugee protection.</p>
+                </div>
+                
+                </div>
+            </div>
+        
+            <div>
+                <h3>All Extracted Determinations (6)</h3>
+        
+                <div class="extracted">
+                    <p><strong>Score:</strong> 20.0 | <strong>Match type:</strong> direct_pattern</p>
+                    <p>The panel finds that the claimant has not rebutted the presumption of state protection and she is not a Convention refugee, as she does not have a well-founded f ear of persecution for a Convention ground in Hungary.</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 20.0 | <strong>Match type:</strong> direct_pattern</p>
+                    <p>Having considered the totality of the evid ence the panel finds that the claimant is not a person in need of protection in that her removal to Hungary would not subject her personally to a risk to her life or to a risk of cruel and unus ual treatment or punishment, and that there are no substantial grounds to believe that her remova l to Hungary will subject her personally to a danger of torture.</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 20.0 | <strong>Match type:</strong> direct_pattern</p>
+                    <p>The panel finds that the claimant did not report any of the incidents of domestic violence to the authorities in Hungary.</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 20.0 | <strong>Match type:</strong> direct_pattern</p>
+                    <p>After careful cons ideration of all the evidence and because of the reasons set out above, the panel finds that the claimant does not have a well-founded fear of persecution by reason of any of the enumerated gr ounds.</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 20.0 | <strong>Match type:</strong> direct_pattern</p>
+                    <p>Given that the panel finds that adequate state protection would be available to the claimant in Hungary the panel therefore finds that the claimant is not a Convention refugee.</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 20.0 | <strong>Match type:</strong> direct_pattern</p>
+                    <p>/ N° de dossier de la SPR :  TA6-13204   10  CONCLUSION  For these reasons, the Refugee Protection Divisi on determines that the claimant is not a Convention refugee nor is she a person in need of  protection and therefore, rejects her claim for refugee protection.</p>
+                </div>
+                
+            </div>
+            
+            <h3>Case Text (first portion):</h3>
+            <div class="case-text">RPD.15.7 (October 2007) Disponible en français
+
+
+
+rivate Proceeding / Huis clos
+
+Reasons and Decision − Motifs et décision
+
+Claimant(s)
+
+[REDACTED] [REDACTED] Demandeur(e)(s) d’asile
+
+
+
+
+
+
+
+Date(s) of Hearing March 4, 2008 Date(s) de l’audience
+
+
+
+
+
+
+
+Place of Hearing TORONTO Lieu de l’audience
+
+
+
+
+
+
+
+Date of Decision April 16, 2008 Date de la décision
+
+
+
+
+
+
+
+Panel M. Freilich Tribunal
+
+
+
+
+
+
+
+Counsel for the Claimant(s) Gea[REDACTED] and Solicitor Conseil(s) du / de la / des demandeur(e)(s) d’asile
+
+
+
+
+
+
+
+Tribunal Officer Agent(e) des tribunaux
+
+
+
+
+
+
+
+Designated Representative(s) Représentant(e)(s) désigné(e)(s)
+
+
+
+
+
+
+
+Counsel for the Minister Conseil du ministre
+
+
+
+
+
+
+
+2008 CanLII 75934 (CA IRB)
+
+hese are the reasons for the negative decisi on of the Refugee Protection Division (RPD) with respect to the claim of [REDACTED] [REDACTED] (the claimant), a 29 year-old citizen of Hungary.
+
+1 The claimant claims protection pursuant to sections 96 and 97 of the Immigration and Refugee Protection Act (IRPA).
+
+2 The claimant alleged that she has a well-founded fear of persecution if she were to return to Hungary by reason of her membership in a pa rticular social group, that is, a woman who has been subjected to domestic violence. In addition, sh e claims to be a person in need of protection. Counsel’s written submissions received Marc h 18, 2008 were taken into consideration before the panel rendered its decision. ISSUES AND DETERMINATION
+
+The determinative issue in this claim is st ate protection. The panel finds that the claimant has not rebutted the presumption of state protection and she is not a Convention refugee, as she does not have a well-founded f ear of persecution for a Convention ground in Hungary. Having considered the totality of the evid ence the panel finds that the claimant is not a person in need of protection in that her removal to Hungary would not subject her personally to a risk to her life or to a risk of cruel and unus ual treatment or punishment, a...</div>
+        </div>
+        
+        <div class="case" id="case-10">
+            <div class="case-header">
+                <h2>Case 10: ID 100620</h2>
+                <p class="metrics">Expected: 3 | Extracted: 6 | 
+                   Extra: 3 | Ratio: 2.00</p>
+            </div>
+            
+            <div class="comparison">
+                <div class="comparison-column">
+                    <h3>Expected Determinations (1)</h3>
+        
+                <div class="expected">
+                    <p>["['appeal is allowed']", "['removal order is set aside.the', 'appellant has not lost his permanent resident status']", "['appeal is allowed']"]</p>
+                </div>
+                
+                </div>
+                <div class="comparison-column">
+                    <h3>Extra Determinations (6)</h3>
+        
+                <div class="extra">
+                    <p><strong>Score:</strong> 20.0 | <strong>Match type:</strong> direct_pattern</p>
+                    <p>The appeal is allowed .</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 20.0 | <strong>Match type:</strong> direct_pattern</p>
+                    <p>To allow this appeal, the appellant must prove  on a balance of probabilities that, taking  into account the best interests of a child directly affected  by the decision, sufficient humanitarian and compassionate considerations warrant special relief  in light of all the circumstances of the case.11 The panel has considered the factors involved,12 is  cognizant of the immigration objectives,13 and took into account additional evidence that was not  before the Immigration Division.14                                                    9 IRPA , s.</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 20.0 | <strong>Match type:</strong> exact</p>
+                    <p>302 ( C.A.</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 20.0 | <strong>Match type:</strong> direct_pattern</p>
+                    <p>[19]  The panel finds that the appellant did not attempt  to conceal information .</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 20.0 | <strong>Match type:</strong> direct_pattern</p>
+                    <p>The panel finds that the appellant was not purposively  trying to misrepresent h imself or any of h is information.</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 20.0 | <strong>Match type:</strong> direct_pattern</p>
+                    <p>Conclusion   [33]  The panel finds that the appellant has met his onus and provided sufficient evidence of  humanitarian and compassionate grounds, in all the circumstances of this case, to find in his  favour.</p>
+                </div>
+                
+                </div>
+            </div>
+        
+            <div>
+                <h3>All Extracted Determinations (6)</h3>
+        
+                <div class="extracted">
+                    <p><strong>Score:</strong> 20.0 | <strong>Match type:</strong> direct_pattern</p>
+                    <p>The appeal is allowed .</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 20.0 | <strong>Match type:</strong> direct_pattern</p>
+                    <p>To allow this appeal, the appellant must prove  on a balance of probabilities that, taking  into account the best interests of a child directly affected  by the decision, sufficient humanitarian and compassionate considerations warrant special relief  in light of all the circumstances of the case.11 The panel has considered the factors involved,12 is  cognizant of the immigration objectives,13 and took into account additional evidence that was not  before the Immigration Division.14                                                    9 IRPA , s.</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 20.0 | <strong>Match type:</strong> exact</p>
+                    <p>302 ( C.A.</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 20.0 | <strong>Match type:</strong> direct_pattern</p>
+                    <p>[19]  The panel finds that the appellant did not attempt  to conceal information .</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 20.0 | <strong>Match type:</strong> direct_pattern</p>
+                    <p>The panel finds that the appellant was not purposively  trying to misrepresent h imself or any of h is information.</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 20.0 | <strong>Match type:</strong> direct_pattern</p>
+                    <p>Conclusion   [33]  The panel finds that the appellant has met his onus and provided sufficient evidence of  humanitarian and compassionate grounds, in all the circumstances of this case, to find in his  favour.</p>
+                </div>
+                
+            </div>
+            
+            <h3>Case Text (first portion):</h3>
+            <div class="case-text">Immigration and
+
+Refugee Board of Canada
+
+Immigration Appeal Division
+
+
+
+Commission de l’immigration
+
+Section d’appel de l’immigration
+
+
+
+
+
+
+
+IAD File No. / No de dossier de la SAI: TA9 -05903
+
+Client ID No. / No ID client: 4460 -9579
+
+
+
+Reasons and Decision  Motifs et décision
+
+
+
+REMOVAL ORDER
+
+
+
+
+
+Appellant(s) [REDACTED] Appelant(e)(s)
+
+
+
+
+
+
+
+
+
+
+
+Respondent The Minist er of Public Safety and Emergency Preparedness Intimé(e)
+
+
+
+
+
+Date(s) and Place of Hearing October 2, 2013 Date(s) et lieu de l’audience
+
+Toronto, Ontario
+
+
+
+
+
+Date of Decision October 22, 2013 Date de la décision
+
+
+
+
+
+
+
+Panel D[REDACTED] Tribunal
+
+
+
+
+
+
+
+Counsel for the
+
+Appellant(s) [REDACTED] Conseil(s) [REDACTED] /
+
+[REDACTED])
+
+Barrister and Solicitor
+
+
+
+
+
+Counsel for the Minister [REDACTED] Conseil du ministre
+
+
+
+2013 CanLII 100620 (CA IRB)
+
+IAD File No. / No de dossier de la SAI: TA9 -05903
+
+Client ID No. / No ID client: 4460 -9579
+
+
+
+
+
+1
+
+
+
+REASONS FOR DECISION
+
+Introduction and Issue
+
+[1] This is an appeal pursuant to section 63( 2) of the Immigration and Refugee Protection
+
+Act1 (IRPA ) of a removal order b ased on IRPA s. 40(1)(a) made against the appellant .
+
+[2] The appellant does not contest the validity of the officer’s decision ; the issue is w hether
+
+the appellant has proven that there are grounds to warrant special relief.
+
+Decision
+
+[3] Having considered the evide nce and submissions, the panel finds that the exclusion order
+
+is valid and that the appellant has proven on a balance of probabilities that the appeal warrants
+
+special relief. The appeal is allowed .
+
+Background
+
+[4] The Immigration Division held an Admissibility Hearing and on March 16 , 20 09 issued
+
+an Exclusion Order against the appellant ,2 with reasons,3 based on withholding information
+
+concerning h is marriage. The appellant appeals from that Order.4
+
+[5] The appellant testified and filed four exhibit s of documentary evidence ; his girlfriend also
+
+testified. The respondent filed one exhibit , consisting of th...</div>
+        </div>
+        
+        <div class="case" id="case-11">
+            <div class="case-header">
+                <h2>Case 11: ID 100645</h2>
+                <p class="metrics">Expected: 3 | Extracted: 6 | 
+                   Extra: 3 | Ratio: 2.00</p>
+            </div>
+            
+            <div class="comparison">
+                <div class="comparison-column">
+                    <h3>Expected Determinations (1)</h3>
+        
+                <div class="expected">
+                    <p>["['dismissing the appeal']", "['appeal is brought']", "['appeal is allowed']"]</p>
+                </div>
+                
+                </div>
+                <div class="comparison-column">
+                    <h3>Extra Determinations (6)</h3>
+        
+                <div class="extra">
+                    <p><strong>Score:</strong> 20.0 | <strong>Match type:</strong> direct_pattern</p>
+                    <p>(1) To allow an appeal, the Immigration Appeal Divisi on must be satisfied  that, at the time that the appeal is disposed of,   (a) the decision appealed is wrong in law or fact or mixed law and fact;   (b) a principle of natural justice has not been observed; or   (c) other than in the case of an appeal by the Mini ster, taking into account the  best interests of a child directly affected by the decision, sufficient  humanitarian and compassionate considerations warrant special relief in light   of all the circumstances of the case.</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 20.0 | <strong>Match type:</strong> direct_pattern</p>
+                    <p>The  appeal is allowed .</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 20.0 | <strong>Match type:</strong> direct_pattern</p>
+                    <p>In a case  where the appellant's changed financial circumstances bring him above the Low   Income Cut -Off over the 12 months preceding the date of hearing, but the  appellant is otherwise unsympathetic, the appropriate response of the Appeal  Division might well be to dismiss the appeal, leaving a new sponsorship as the  only option for the appell ant.</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 20.0 | <strong>Match type:</strong> direct_pattern</p>
+                    <p>[26]  The respondent is correct that there is little or no hardship that would attach to dismissing  the appeal.</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 20.0 | <strong>Match type:</strong> direct_pattern</p>
+                    <p>XXXXXXX had going for him was that he was hard working and he l oved his parents , but his appeal  was allowed on these factors ; that is , pure family reunification.</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 20.0 | <strong>Match type:</strong> direct_pattern</p>
+                    <p>[32]  The appeal is allowed.</p>
+                </div>
+                
+                </div>
+            </div>
+        
+            <div>
+                <h3>All Extracted Determinations (6)</h3>
+        
+                <div class="extracted">
+                    <p><strong>Score:</strong> 20.0 | <strong>Match type:</strong> direct_pattern</p>
+                    <p>(1) To allow an appeal, the Immigration Appeal Divisi on must be satisfied  that, at the time that the appeal is disposed of,   (a) the decision appealed is wrong in law or fact or mixed law and fact;   (b) a principle of natural justice has not been observed; or   (c) other than in the case of an appeal by the Mini ster, taking into account the  best interests of a child directly affected by the decision, sufficient  humanitarian and compassionate considerations warrant special relief in light   of all the circumstances of the case.</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 20.0 | <strong>Match type:</strong> direct_pattern</p>
+                    <p>The  appeal is allowed .</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 20.0 | <strong>Match type:</strong> direct_pattern</p>
+                    <p>In a case  where the appellant's changed financial circumstances bring him above the Low   Income Cut -Off over the 12 months preceding the date of hearing, but the  appellant is otherwise unsympathetic, the appropriate response of the Appeal  Division might well be to dismiss the appeal, leaving a new sponsorship as the  only option for the appell ant.</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 20.0 | <strong>Match type:</strong> direct_pattern</p>
+                    <p>[26]  The respondent is correct that there is little or no hardship that would attach to dismissing  the appeal.</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 20.0 | <strong>Match type:</strong> direct_pattern</p>
+                    <p>XXXXXXX had going for him was that he was hard working and he l oved his parents , but his appeal  was allowed on these factors ; that is , pure family reunification.</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 20.0 | <strong>Match type:</strong> direct_pattern</p>
+                    <p>[32]  The appeal is allowed.</p>
+                </div>
+                
+            </div>
+            
+            <h3>Case Text (first portion):</h3>
+            <div class="case-text">Immigration and
+
+Refugee Board of Canada
+
+Immigration Appeal Division
+
+
+
+Commission de l’immigration
+
+Section d’appel de l’immigration
+
+
+
+
+
+
+
+IAD File No. / No de dossier de la SAI: TB1 -11210
+
+Client ID No. / No ID client: 2603 -1426
+
+
+
+Reasons and Decision  Motifs et décision
+
+
+
+SPONSORSHIP
+
+
+
+
+
+Appellant(s) [REDACTED] Appelant(e)(s)
+
+
+
+
+
+
+
+
+
+
+
+Respondent The Mi nister of Citizenship and Immigration Intimé(e)
+
+
+
+
+
+Date(s) and Place of Hearing May 31, 2013 Date(s) et lieu de l’audience
+
+Toronto, Ontario
+
+
+
+
+
+Date of Decision August 21, 2013 Date de la décision
+
+
+
+
+
+
+
+Panel [REDACTED] Tribunal
+
+
+
+
+
+
+
+Counsel for the
+
+Appellant(s) [REDACTED] Conseil(s) [REDACTED]) /
+
+[REDACTED])
+
+
+
+
+
+
+
+Counsel for the Minister [REDACTED] Conseil du ministre
+
+
+
+2013 CanLII 100644 (CA IRB)
+
+IAD File No. / No de dossier de la SAI: TB1 -11210
+
+Client ID No. / No ID client: 2603 -1426
+
+
+
+
+
+REASONS FOR DECISION
+
+
+
+[1] The appellant, [REDACTED], appeals from the refusal to grant a permanent resident
+
+visa to his mother [REDACTED] (the applicant) from Vietnam. The applicant was denied a
+
+visa because a visa officer at the High Commission of Canada in Singapore determined that her
+
+sponsor, the appellant, did not have sufficient income to satisfy the Minimum Necessary Income
+
+(MNI) under section 133(1)(j)(i) of the Immigration and Refugee Protection Regulations (the
+
+Regulations ).
+
+
+
+[2] The appellant is a citizen of Canada who became permanent resident of Canada in April
+
+1990. The appellant was born in Vietnam in 1961 and when he was six years old his father died
+
+and it was left to his mother, the applicant, to raise him and his two older sisters. The appellant
+
+testified at his hearing on May 31, 2013 that he had the best mother, who laboured in the rice
+
+fields, but despite her efforts the family was very poor. The appe llant testified that in 1986 he
+
+was separated from his family when he, along with others, fled the hardship in Vietnam for the
+
+relative security of life in Cambodia a...</div>
+        </div>
+        
+        <div class="case" id="case-12">
+            <div class="case-header">
+                <h2>Case 12: ID 46075</h2>
+                <p class="metrics">Expected: 3 | Extracted: 6 | 
+                   Extra: 3 | Ratio: 2.00</p>
+            </div>
+            
+            <div class="comparison">
+                <div class="comparison-column">
+                    <h3>Expected Determinations (1)</h3>
+        
+                <div class="expected">
+                    <p>["['dismiss the appeal']", "['appeal isallowedand']", "['appeal is allowed']"]</p>
+                </div>
+                
+                </div>
+                <div class="comparison-column">
+                    <h3>Extra Determinations (6)</h3>
+        
+                <div class="extra">
+                    <p><strong>Score:</strong> 20.0 | <strong>Match type:</strong> direct_pattern</p>
+                    <p>/Dossier  : TA4-07866   Client ID  :   2697 -4498   2     DECISION     [4] The panel finds that the appellant has breached the conditions of hi s stay.</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 20.0 | <strong>Match type:</strong> direct_pattern</p>
+                    <p>[12]  The panel finds that the appellant’s criminal record is serious and this factor weighs  considerably against him.</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 20.0 | <strong>Match type:</strong> direct_pattern</p>
+                    <p>There is no reason to continue the stay or  to dismiss the appeal.</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 20.0 | <strong>Match type:</strong> direct_pattern</p>
+                    <p>[35]  The removal order is cancelled, the appeal is allowed and the removal order is set aside.</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 20.0 | <strong>Match type:</strong> direct_pattern</p>
+                    <p>NOTICE OF DECISION     The stay of the removal order is cancelled, the appeal is allowed  and the removal order is  set asi de.</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 18.0 | <strong>Match type:</strong> phrase_match</p>
+                    <p>However, the  panel further finds that taking under consideration the best interests of a child directly affected  by the decision, there are sufficient humanitarian and compassionate grounds .</p>
+                </div>
+                
+                </div>
+            </div>
+        
+            <div>
+                <h3>All Extracted Determinations (6)</h3>
+        
+                <div class="extracted">
+                    <p><strong>Score:</strong> 20.0 | <strong>Match type:</strong> direct_pattern</p>
+                    <p>/Dossier  : TA4-07866   Client ID  :   2697 -4498   2     DECISION     [4] The panel finds that the appellant has breached the conditions of hi s stay.</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 20.0 | <strong>Match type:</strong> direct_pattern</p>
+                    <p>[12]  The panel finds that the appellant’s criminal record is serious and this factor weighs  considerably against him.</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 20.0 | <strong>Match type:</strong> direct_pattern</p>
+                    <p>There is no reason to continue the stay or  to dismiss the appeal.</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 20.0 | <strong>Match type:</strong> direct_pattern</p>
+                    <p>[35]  The removal order is cancelled, the appeal is allowed and the removal order is set aside.</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 20.0 | <strong>Match type:</strong> direct_pattern</p>
+                    <p>NOTICE OF DECISION     The stay of the removal order is cancelled, the appeal is allowed  and the removal order is  set asi de.</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 18.0 | <strong>Match type:</strong> phrase_match</p>
+                    <p>However, the  panel further finds that taking under consideration the best interests of a child directly affected  by the decision, there are sufficient humanitarian and compassionate grounds .</p>
+                </div>
+                
+            </div>
+            
+            <h3>Case Text (first portion):</h3>
+            <div class="case-text">IMMIGRATION AND REFUGEE BOARD
+
+(IMMIGRATION APPEAL DIVISION)
+
+COMMISSION DE L’IMMIGRATION
+
+(SECTION D’APPEL DE L’IMMIGRATION)
+
+
+
+IAD File No./Dossier : TA4-07866
+
+Client ID : 2656 -7643
+
+
+
+Reasons and Decision  Motifs et décision
+
+
+
+REMO VAL ORDER
+
+
+
+
+
+Appellant(s) Appelant (s)
+
+MORTIMER BASIL DE SANTOS
+
+
+
+
+
+
+
+Respondent Intimé
+
+The Minister of Public Safety and Emergency Preparedness
+
+
+
+
+
+Date(s) and Place Date(s) et Lieu de
+
+of Hearing l’audience
+
+April 19, 2012
+
+Toronto, Ontario
+
+
+
+Date of Decision Date de la Décision
+
+April 27, 2012
+
+
+
+Panel Tribunal
+
+[REDACTED]
+
+[REDACTED]
+
+V. Zanfir
+
+
+
+
+
+Appellant’s Counsel Conseil de l ’appelant(s)
+
+Not Represente d
+
+
+
+
+
+
+
+
+
+Minister’s Counsel Co[REDACTED]
+
+
+
+
+
+2012 CanLII 46075 (CA IRB)
+
+IAD File No. /Dossier : TA4-07866
+
+Client ID : 2697 -4498
+
+1
+
+
+
+Reasons for Decision
+
+
+
+INTRODUCTION
+
+
+
+[1] These are the reasons for the decision of an Oral Reconsideration of a two -year stay of
+
+removal granted to Mort[REDACTED] (the appellant) by Immigration Appeal
+
+Division (IAD) Member [REDACTED]. The stay of removal was extended a further three -
+
+year term by Member [REDACTED] on December 19, 2008 . The stay of removal was also
+
+reviewed and continued by Member [REDACTED] on July 28, 2010.
+
+
+
+[2] This oral review comes as a result of an application made by the Canadian Border
+
+Services Agency (CBSA) on the basis that the appellan t had breached his stay, by not havin g
+
+complied with conditions [11 ] and [16] of his stay of removal. Condition [11] required the
+
+appellant to attend an alcohol rehabilitation program at the Scarborough Hospital Community
+
+Mental Health Addiction Program or Alcoholics Anonymous and provide written evidence of
+
+enrolment and attendance by December 17, 2010. Condition [16] required the appellant to pay
+
+back any outstanding fines or at least provide evidence of payments being made pursuant to a
+
+payment agreement.
+
+
+
+ISSUE
+
+
+
+[3] Has the appellant breached the conditions of his stay and if so, are there s...</div>
+        </div>
+        
+        <div class="case" id="case-13">
+            <div class="case-header">
+                <h2>Case 13: ID 47372</h2>
+                <p class="metrics">Expected: 3 | Extracted: 6 | 
+                   Extra: 3 | Ratio: 2.00</p>
+            </div>
+            
+            <div class="comparison">
+                <div class="comparison-column">
+                    <h3>Expected Determinations (1)</h3>
+        
+                <div class="expected">
+                    <p>["['appeal is allowed']", "['appeal is allowed']", "['appeals are allowed']"]</p>
+                </div>
+                
+                </div>
+                <div class="comparison-column">
+                    <h3>Extra Determinations (6)</h3>
+        
+                <div class="extra">
+                    <p><strong>Score:</strong> 20.0 | <strong>Match type:</strong> direct_pattern</p>
+                    <p>Each appellant thus bears an onus of establishing that, taking into account the best interests of a child or children directly affected by the decision, sufficient humanitarian and compassionate considerations exist which warrant special relief in light of all the circumstances of the case.</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 20.0 | <strong>Match type:</strong> direct_pattern</p>
+                    <p>[6] Notwithstanding the validity of a removal order, the Appeal Division has the discretion to allow an appeal, and must be satisfied that each appellant has met her requisite onus to establish on a balance of probabilities that when taking into account the best interests of a child directly affected by the decision, sufficient humanitarian  and compassionate considerations warrant special relief in light of all the circumstances of the case.</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 20.0 | <strong>Match type:</strong> direct_pattern</p>
+                    <p>/Dossier : VA5-01971 / 72 7   affected by the decision, sufficient humanitarian  and compassionate considerations warrant special relief in light of all the circumstances of this case.</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 20.0 | <strong>Match type:</strong> direct_pattern</p>
+                    <p>[24] The appeal is allowed without the imposition of any stay conditions.</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 20.0 | <strong>Match type:</strong> direct_pattern</p>
+                    <p>The appeals are allowed.</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 20.0 | <strong>Match type:</strong> direct_pattern</p>
+                    <p>NOTICE OF DECISION  The appeal is allowed for each appellant.</p>
+                </div>
+                
+                </div>
+            </div>
+        
+            <div>
+                <h3>All Extracted Determinations (6)</h3>
+        
+                <div class="extracted">
+                    <p><strong>Score:</strong> 20.0 | <strong>Match type:</strong> direct_pattern</p>
+                    <p>Each appellant thus bears an onus of establishing that, taking into account the best interests of a child or children directly affected by the decision, sufficient humanitarian and compassionate considerations exist which warrant special relief in light of all the circumstances of the case.</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 20.0 | <strong>Match type:</strong> direct_pattern</p>
+                    <p>[6] Notwithstanding the validity of a removal order, the Appeal Division has the discretion to allow an appeal, and must be satisfied that each appellant has met her requisite onus to establish on a balance of probabilities that when taking into account the best interests of a child directly affected by the decision, sufficient humanitarian  and compassionate considerations warrant special relief in light of all the circumstances of the case.</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 20.0 | <strong>Match type:</strong> direct_pattern</p>
+                    <p>/Dossier : VA5-01971 / 72 7   affected by the decision, sufficient humanitarian  and compassionate considerations warrant special relief in light of all the circumstances of this case.</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 20.0 | <strong>Match type:</strong> direct_pattern</p>
+                    <p>[24] The appeal is allowed without the imposition of any stay conditions.</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 20.0 | <strong>Match type:</strong> direct_pattern</p>
+                    <p>The appeals are allowed.</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 20.0 | <strong>Match type:</strong> direct_pattern</p>
+                    <p>NOTICE OF DECISION  The appeal is allowed for each appellant.</p>
+                </div>
+                
+            </div>
+            
+            <h3>Case Text (first portion):</h3>
+            <div class="case-text">IMMIGRATION AND REFUGEE BOARD OF CANADA IMMIGRATION APPEAL DIVISION
+
+COMMISSION DE L’IMMIGRATION ET DU STATUT DE RÉFUGIÉ DU CANADA SECTION D’APPEL DE L’IMMIGRATION
+
+
+
+IAD File No. / N
+
+o de dossier de la SAI : VA5-01971 / 72 Client ID no. / N
+
+o ID client : 3446-7971
+
+Reasons and Decision − Motifs et décision
+
+
+
+Removal Order
+
+Appellant(s) Appelant(s)
+
+CHI-FANG YEH Y
+
+EH-FAN TIAU
+
+Respondent Intimé
+
+Minister of Public Safety and Emergency Preparedness Ministre de la Sécurité publique et de la Protection civile Canada
+
+Date(s) and Place Date(s) et Lieu de of Hearing l’audience
+
+November 16, 2006 Vancouver, BC
+
+Date of Decision Date de la Décision
+
+March 16, 2007
+
+
+
+Panel Tribunal
+
+[REDACTED]
+
+Appellant’s Counsel Conseil de l’appelant(s)
+
+[REDACTED]
+
+Minister’s Counsel Conseil de l’intimé
+
+[REDACTED]
+
+
+
+
+
+2007 CanLII 47372 (CA IRB)
+
+IAD File No. /Dossier : VA5-01971 / 72
+
+Reasons for Decision
+
+[1] [REDACTED] (the “primary appellant ”), and her daughter [REDACTED] (cumulatively, the “appellants”) appeal the removal orders made against them on August 16, 2005 by Minister’s Delegate [REDACTED] in Cana da that they each have individually not complied with the residency obligati on as articulated in section 28 of the Immigration and Refugee Protection Act (the “Act”).
+
+1 [2] The primary appellant, on behalf of both appell ants, does not challenge the legal validity of the removal order on their residency obligations, but seeks discretionary relief on their appeal, pursuant to subsection 63(4) of the Act. Each appellant thus bears an onus of establishing that, taking into account the best interests of a child or children directly affected by the decision, sufficient humanitarian and compassionate considerations exist which warrant special relief in light of all the circumstances of the case. [3] Both appellants testified at the appeal. [REDACTED], also referred to as [REDACTED], 16 years of age at hearing and still a minor, testified first solely in English. The primary app...</div>
+        </div>
+        
+        <div class="case" id="case-14">
+            <div class="case-header">
+                <h2>Case 14: ID 67372</h2>
+                <p class="metrics">Expected: 3 | Extracted: 6 | 
+                   Extra: 3 | Ratio: 2.00</p>
+            </div>
+            
+            <div class="comparison">
+                <div class="comparison-column">
+                    <h3>Expected Determinations (1)</h3>
+        
+                <div class="expected">
+                    <p>["['appeal isallowed']", "['appeal is allowed']", "['appellant has not lost his permanent resident status']"]</p>
+                </div>
+                
+                </div>
+                <div class="comparison-column">
+                    <h3>Extra Determinations (6)</h3>
+        
+                <div class="extra">
+                    <p><strong>Score:</strong> 20.0 | <strong>Match type:</strong> direct_pattern</p>
+                    <p>In terms of documentation, the Minister provided the record and written submissions asking that th e appeal be dismissed.</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 20.0 | <strong>Match type:</strong> direct_pattern</p>
+                    <p>Therefore, the appeal is allowed.</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 20.0 | <strong>Match type:</strong> direct_pattern</p>
+                    <p>/Dossier : TA5-05130 6   directly affected by this decision, there are sufficient humanitarian and compassionate considerations to warrant granting special relief in all the circumstances of this case.</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 20.0 | <strong>Match type:</strong> direct_pattern</p>
+                    <p>[21] The appeal is allowed.</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 20.0 | <strong>Match type:</strong> direct_pattern</p>
+                    <p>(Edited for grammar and syntax)      NOTICE OF DECISION   The appeal is allowed .</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 20.0 | <strong>Match type:</strong> direct_pattern</p>
+                    <p>The Immigra tion Appeal Division finds that the appellant has not lost his permanent resident status.</p>
+                </div>
+                
+                </div>
+            </div>
+        
+            <div>
+                <h3>All Extracted Determinations (6)</h3>
+        
+                <div class="extracted">
+                    <p><strong>Score:</strong> 20.0 | <strong>Match type:</strong> direct_pattern</p>
+                    <p>In terms of documentation, the Minister provided the record and written submissions asking that th e appeal be dismissed.</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 20.0 | <strong>Match type:</strong> direct_pattern</p>
+                    <p>Therefore, the appeal is allowed.</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 20.0 | <strong>Match type:</strong> direct_pattern</p>
+                    <p>/Dossier : TA5-05130 6   directly affected by this decision, there are sufficient humanitarian and compassionate considerations to warrant granting special relief in all the circumstances of this case.</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 20.0 | <strong>Match type:</strong> direct_pattern</p>
+                    <p>[21] The appeal is allowed.</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 20.0 | <strong>Match type:</strong> direct_pattern</p>
+                    <p>(Edited for grammar and syntax)      NOTICE OF DECISION   The appeal is allowed .</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 20.0 | <strong>Match type:</strong> direct_pattern</p>
+                    <p>The Immigra tion Appeal Division finds that the appellant has not lost his permanent resident status.</p>
+                </div>
+                
+            </div>
+            
+            <h3>Case Text (first portion):</h3>
+            <div class="case-text">IMMIGRATION AND REFUGEE BOARD (IMMIGRATION APPEAL DIVISION)
+
+COMMISSION DE L’IMMIGRATION ET DU STATUT DE RÉFUGIÉ (SECTION D’APPEL DE L’IMMIGRATION)
+
+
+
+IAD File No./Dossier :
+
+TA5-05130
+
+Reasons and Decision − Motifs et décision
+
+
+
+RESIDENCY OBLIGATION
+
+
+
+Appellant(s) Appelant(s)
+
+VAMA[REDACTED]
+
+Respondent Intimé
+
+The Minister of Citizenship and Immigration Le Ministre de la Citoyenneté et de l’Immigration
+
+Date(s) and Place Date(s) et Lieu de of Hearing l’audience
+
+April 16, 2007 Toronto, Ontario
+
+
+
+Date of Decision Date de la Décision
+
+April 16, 2007
+
+
+
+Panel Tribunal
+
+D. Collison
+
+Appellant’s Counsel Conseil de l’appelant(s)
+
+Raja Kanagarayar (a.k.a. Kanagara)
+
+Minister’s Counsel Conseil de l’intimé
+
+
+
+2007 CanLII 67372 (CA IRB)
+
+IAD File No. /Dossier : TA5-05130 1
+
+Oral Reasons for Decision
+
+Introduction [1] These are the reasons in the appeal, pursuan t to subsection 63(4) of the Immigration and
+
+Refugee Protection Act (IRPA ) of Vama[REDACTED] (the appellant). He is appealing the visa officer’s determination that he is in breach of his residency obligation. [2] On March 10, 2005, a visa officer determined that the appellant had failed to comply with the residency obligations set out in section 28 of IRPA
+
+. As a result, the appellant was found to be inadmissible to Canada pursuant to subsection 41(b) of IRPA
+
+. The officer also found that the appellant had not satisfied the requirement s of paragraphs 31(3)(a) and (b) of IRPA
+
+, and therefore, his application for a travel document was refused. [3] Specifically, the appellant had failed to reside in Canada for at least 730 days in the five years preceding the date of his application, that is, from March 10, 2000 to March 10, 2005. The officer was also not satisfied, pursu ant to paragraph 28(2)(c) of IRPA,
+
+that sufficient and humanitarian and compassionate considerations, ta king into account the best interest of a child directly affected of the determination, justified retention of permanent residence status ...</div>
+        </div>
+        
+    <script>
+        // Add a simple navigation for jumping between cases
+        document.addEventListener('DOMContentLoaded', function() {
+            const nav = document.querySelector('.nav');
+            const navContent = document.createElement('div');
+            navContent.style.marginTop = '10px';
+            
+            for (let i = 1; i <= 14; i++) {
+                const link = document.createElement('a');
+                link.href = '#case-' + i;
+                link.textContent = 'Case ' + i;
+                link.style.marginRight = '15px';
+                link.style.textDecoration = 'none';
+                link.style.padding = '5px 10px';
+                link.style.backgroundColor = '#f8f9fa';
+                link.style.borderRadius = '5px';
+                navContent.appendChild(link);
+            }
+            
+            nav.appendChild(navContent);
+        });
+    </script>
+    </body>
+    </html>
+    

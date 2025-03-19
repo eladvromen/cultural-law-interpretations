@@ -5,7 +5,7 @@ import json
 from pathlib import Path
 
 # Path to your data directory
-data_dir = r"C:\Users\shil6369\cultural-law-interpretations\immigration_fine_tuning\data\asylex_data"
+data_dir = Path(__file__).parent.parent.parent / "data" / "asylex_data"
 
 # Output file for the structure information
 output_file = os.path.join(data_dir, "dataset_structure.json")

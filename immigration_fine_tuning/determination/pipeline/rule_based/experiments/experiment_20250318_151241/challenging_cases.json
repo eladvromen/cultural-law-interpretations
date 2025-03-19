@@ -1,0 +1,451 @@
+{
+  "analysis_summary": {
+    "total_challenging_cases": 20,
+    "max_cases_shown": 20
+  },
+  "challenging_cases": [
+    {
+      "case_id": "134307",
+      "expected_count": 6,
+      "extracted_count": 0,
+      "ratio": 0.0,
+      "extracted_determinations": [],
+      "expected_determinations": [
+        "[\"['appeal is dismissed']\", \"['appellant has not lost his permanent resident status']\", \"['appeal is dismissed']\", \"['appeal is dismissed']\", \"['appeal is allowed for diego gabriel cruz.the']\", \"['appeal is allowed', 'appeal is dismissed']\"]"
+      ],
+      "missing_determinations": [
+        "[\"['appeal is dismissed']\", \"['appellant has not lost his permanent resident status']\", \"['appeal is dismissed']\", \"['appeal is dismissed']\", \"['appeal is allowed for diego gabriel cruz.the']\", \"['appeal is allowed', 'appeal is dismissed']\"]"
+      ],
+      "case_text": "\n"
+    },
+    {
+      "case_id": "146969",
+      "expected_count": 9,
+      "extracted_count": 3,
+      "ratio": 0.3333333333333333,
+      "extracted_determinations": [
+        {
+          "text": "I find that the appeal has been abandoned.",
+          "score": 20,
+          "match_type": "pattern"
+        },
+        {
+          "text": "The Appellant has abandoned her appeal   [12]  I have not heard enough evidence to determine  whether the appeal should be dismissed on  its merits.",
+          "score": 20,
+          "match_type": "pattern"
+        },
+        {
+          "text": "11.24)  Available in French  NOTICE OF DECISION   The appellant\u2019s application dated November 3, 2021, requesting to withdraw her appeal is  dismissed.",
+          "score": 15,
+          "match_type": "pattern"
+        }
+      ],
+      "expected_determinations": [
+        "[\"['application for withdrawal is dismissed']\", \"['application to withdraw the appeal is an abuse of process']\", \"['appeal is dismissed']\", \"['appeal be dismissed']\", \"['appeal should be dismissed']\", \"['appeal has been abandoned']\", \"['appeal has been abandoned']\", \"['dismiss the appellant\u2019s application']\", \"['appeal is determined']\"]"
+      ],
+      "missing_determinations": [
+        "[\"['application for withdrawal is dismissed']\", \"['application to withdraw the appeal is an abuse of process']\", \"['appeal is dismissed']\", \"['appeal be dismissed']\", \"['appeal should be dismissed']\", \"['appeal has been abandoned']\", \"['appeal has been abandoned']\", \"['dismiss the appellant\u2019s application']\", \"['appeal is determined']\"]"
+      ],
+      "case_text": "IAD.34.01 (2021. 11.24 )\n\nAvailable in French Immigration and\n\nRefugee Board of Canada\n\n\n\nImmigration Appeal Division\n\nCommission de l\u2019immigration\n\n\n\nSection d\u2019appel de l\u2019immigration\n\nIAD File No. / No de dossier de la SAI : TC0 -07994\n\nClient ID No. / No ID client: 56219577\n\n\n\nReasons and Decision \uf02d Motifs et d\u00e9cision\n\nResidency Obligation Appeal\n\n\n\nAppellant [s] Veroni[REDACTED]\n\nAppelant [e][s]\n\nand et\n\nRespondent Minister of Citizenship and Immigration Intim\u00e9 [e]\n\n\n\nDate [s] of Hearing In Chambers\n\nDate(s) de l\u2019audience\n\n\n\nPlace of Hearing Toronto, O ntario\n\nLieu de l\u2019audience\n\n\n\n\n\nDate of Decision December 1, 2021\n\n\n\nPanel [REDACTED]\n\n\n\nTribunal\n\n\n\nCounsel for the\n\nAppellant [s] [REDACTED]\n\nBarrister & Solicitor Conseil de\n\nl\u2019appelant(e)/ des\n\nappelant(e)s\n\n\n\nDesignated Representative [s] N/A\n\nRepr\u00e9sentant(e)(s)\n\nd\u00e9sign\u00e9(e)(s)\n\n\n\nCounsel for the Minister [REDACTED]\n\nConseil du\n\n(de la) ministre\n\n\n\n2021 CanLII 146969 (CA IRB)\n\n2021 CanLII 146969 (CA IRB)\n\nIAD File No. / No de dossier de la SAI : TC0 -07994\n\nClient ID No. / No ID client: 56219577\n\n\n\n1\n\nIAD.34.01 (2021. 11.24)\n\nAvailable in French REASONS FOR DECISION\n\nOVERVIEW\n\n[1] The Appellant, Veroni[REDACTED], is a citizen of Trinidad and Tobago. She\n\nbecame a permanent resident of Canada in 2012. After landing in Canada, the A ppellant stayed\n\nhere for about two months. She returned to Trinidad and Tobago to wrap up her affairs. Later, her\n\nparents became ill, which prevented her from retuning back to Canada sooner.\n\n[2] In 2020, the Appellant applied for a Permanent Resident Travel D ocument to return to\n\nCanada, but the visa officer refused her application. The Appellant did not respect her residency\n\nobligations to be present in Canada in the relevant five -year period for at least 730 days.1 In the\n\nrelevant five -year period, she was pr esent for only 136 days.\n\n[3] The Appellant appealed the visa officer\u2019s decision to the Immigration Appeal Division. She\n\nadmitted that the visa officer \u2019s decision is l..."
+    },
+    {
+      "case_id": "30522",
+      "expected_count": 11,
+      "extracted_count": 5,
+      "ratio": 0.45454545454545453,
+      "extracted_determinations": [
+        {
+          "text": "But, if the appeal is dismissed and Mr.",
+          "score": 20,
+          "match_type": "pattern"
+        },
+        {
+          "text": "If her father\u2019s and her brother\u2019s  appeals are dismissed she will continue living her life in Canada as she has been.",
+          "score": 20,
+          "match_type": "pattern"
+        },
+        {
+          "text": "[3] The appellants, do n ot challenge the legal validity of the removal order but argue that the  appeal s should be allowed on the basis that sufficient humanitarian and compassionate  considerations warrant special relief, in light of all the circumstances of the case, taking into  account the best interests of any child directly affected by the decision.",
+          "score": 15,
+          "match_type": "pattern"
+        },
+        {
+          "text": "/ N\u00b0 de dossier de la S AI : MB4 -03412   MB5 -04579       9 Neither appellants would suffer  undue hardship if the appeals were  dismissed  and t he best  interest of a child would  not be compromised   [18]  XXXXXXXXXXXXXXXXX testified that the impact of him being removed from Canada would  be catastrophic to him and his family.",
+          "score": 15,
+          "match_type": "pattern"
+        },
+        {
+          "text": "I concluded the appellant would not suffer undue hardship if the appeal is  dismissed.",
+          "score": 15,
+          "match_type": "pattern"
+        }
+      ],
+      "expected_determinations": [
+        "[\"['appeal is dismissed']\", \"['appeal is allowed']\", \"['appeal is dismissed']\", \"['appeal is dismissed']\", \"['appeals were dismissed']\", \"['appeal of garo dermosessian isallowedin file mb4-03412']\", \"['removal order isset aside']\", \"['appeals are dismissed']\", \"['appeals are dismissed']\", \"['appeal is dismissed']\", \"['appellant has not lost his permanent resident status']\"]"
+      ],
+      "missing_determinations": [
+        "[\"['appeal is dismissed']\", \"['appeal is allowed']\", \"['appeal is dismissed']\", \"['appeal is dismissed']\", \"['appeals were dismissed']\", \"['appeal of garo dermosessian isallowedin file mb4-03412']\", \"['removal order isset aside']\", \"['appeals are dismissed']\", \"['appeals are dismissed']\", \"['appeal is dismissed']\", \"['appellant has not lost his permanent resident status']\"]"
+      ],
+      "case_text": "IAD.34.1 (04.2013)\n\nDisponible en fran\u00e7ais\n\n\n\n\n\nImmigration and\n\nRefugee Board of Canada\n\n\n\nImmigration Appeal Division\n\n\n\nCommission de l\u2019immigration\n\n\n\nSection d\u2019appel de l\u2019immigration\n\nIAD File No. / N\u00b0 de dossier de la SAI : MB4 -03412\n\nMB5 -04579\n\nClient ID No. / No ID client : 6070 -1357\n\n6070 -1290\n\n\n\nReasons and Decision \uf02d Motifs et d\u00e9cision\n\n\n\nREMOVAL ORDER (MB4 -03412 / [REDACTED])\n\nRESIDENCY OBLIGATION (MB5 -04579 / Al[REDACTED])\n\n\n\n\n\nAppellant(s) [REDACTED]\n\nAl[REDACTED] Appelant(e)(s)\n\n\n\nand et\n\n\n\nRespondent The Minister of Public Safety\n\nand Emergency Preparedness\n\nand\n\nThe Minister of Citizenship and Immigration Intim\u00e9(e)\n\n\n\nDate(s) of Hearing October 4, 2017\n\nJanuary 22, 2018 Date(s) [REDACTED]\n\n\n\nPlace of Hearing Heard by telephone in Lebanon on both dates\n\n(Appellant Al[REDACTED] in file MB5 -04579)\n\nand\n\nMontr\u00e9al, Quebec (Appellant [REDACTED] in\n\nfile MB4 -03412), (Respondent and (IAD) Lieu de l\u2019audience\n\n\n\nDate of Decision February 1 4, 2018 Date de la d\u00e9cision\n\n\n\nPanel Me [REDACTED] Tribunal\n\n\n\nCounsel for the\n\nAppellant(s) Me [REDACTED] Conseil(s) de\n\nl\u2019appelant(e) / des\n\nappelant(e)(s)\n\n\n\nDesignated\n\nRepresentative(s) N/A Repr\u00e9sentant(e)(s)\n\nd\u00e9sign\u00e9(e)(s)\n\n\n\n\n\nCounsel for the Minister Jean [REDACTED][Written submissions] Conseil du ministre\n\n2018 CanLII 30522 (CA IRB)\n\nIAD File No. / N\u00b0 de dossier de la S AI : MB4 -03412\n\nMB5 -04579\n\n\n\n\n\n2\n\nREASONS FOR DECISION\n\n\n\nINTRODUCTION\n\n[1] These are the reasons for the decision in the appeals of [REDACTED] (MB4 -\n\n03412) and Ale[REDACTED] (MB5 -04579) (herein collectively referred as the\n\nappellants) from decisions made because of their failure to comply with the residency obligation\n\nset out in the Immigration and Refugee Protection Act1 (the Act ). The hearings were joined and\n\nheard simultaneously with the consent of the parties . Ale[REDACTED] was not present ,\n\nhe appeared via his counsel. He did not testify and he adopt ed the testimony of his father. The\n\nMinister\u2019s representative was not prese..."
+    },
+    {
+      "case_id": "136710",
+      "expected_count": 6,
+      "extracted_count": 1,
+      "ratio": 0.16666666666666666,
+      "extracted_determinations": [
+        {
+          "text": "This appeal is dismissed.",
+          "score": 20,
+          "match_type": "pattern"
+        }
+      ],
+      "expected_determinations": [
+        "[\"['appeals are allowed']\", \"['rpd\u2019s determination is set aside']\", \"['substitute my determination', 'appellants are convention refugees']\", \"['neither a refugee nor a person in need of protection']\", \"['confirm the decision of the rpd', 'is neither a convention refugee nor a person in need of protection']\", \"['appeal is dismissed']\"]"
+      ],
+      "missing_determinations": [
+        "[\"['appeals are allowed']\", \"['rpd\u2019s determination is set aside']\", \"['substitute my determination', 'appellants are convention refugees']\", \"['neither a refugee nor a person in need of protection']\", \"['confirm the decision of the rpd', 'is neither a convention refugee nor a person in need of protection']\", \"['appeal is dismissed']\"]"
+      ],
+      "case_text": "Immigration and Refugee\n\nBoard of Canada\n\nRefugee Appeal Division Commission de l\u2019immigration\n\nSection d\u2019appel des r\u00e9fugi\u00e9s\n\n\n\nRAD.25.02 ( April 04 , 2019 )\n\nDisponible en fran\u00e7ais\n\n\n\nRAD File / Dossier de la SAR : TB9 -19840\n\nTB9 -19841 / TB9 -19842 / TB9 -19843\n\n\n\nPrivate Proceeding / Huis clos\n\n\n\nReasons and decision \uf02d Motifs et d\u00e9cision\n\n\n\nPerson s who are the\n\nsubject of the appeal [REDACTED] [REDACTED] [REDACTED] [REDACTED]\n\n[REDACTED] [REDACTED] [REDACTED] [REDACTED]\n\n[REDACTED] [REDACTED] Personne s en cause\n\n\n\nAppeal considered /\n\nheard at Toronto, ON Appel instruit /\n\nentendu \u00e0\n\n\n\nDate of decision October 8, 2019 Date de la d\u00e9cision\n\n\n\nPanel [REDACTED] Tribunal\n\n\n\nCounsel for the person s\n\nwho are the subject of the\n\nappeal [REDACTED] Conseil des\n\npersonne s en cause\n\n\n\nDesignated representative [REDACTED] [REDACTED] Repr\u00e9sentant(e)\n\nd\u00e9sign \u00e9(e)\n\n\n\nCounsel for the Minister N/A Conseil du ministre\n\n\n\n\n\n2019 CanLII 136710 (CA IRB)\n\nRAD File / Dossier de la SAR : TB9 -19840\n\nTB9 -19841 / TB9 -19842 / TB9 -19843\n\n\n\nRAD.25.02 ( April 04, 201 9)\n\nDisponible en fran\u00e7ais 2\n\nREASONS FOR DECISION\n\nINTRODUCTION\n\n[1] [REDACTED] [REDACTED] (the \u201cPrincipal Appellant\u201d), [REDACTED] [REDACTED] (the \u201cSpousal Appellant\u201d),\n\nand [REDACTED] [REDACTED] [REDACTED] (the \u201cFirst Minor Appellant\u201d) are citizens of Nigeria . [REDACTED] [REDACTED]\n\n[REDACTED] (the \u201cSecond Minor Appellant\u201d) is a citizen of both Niger ia and the United States (US).\n\nAll of the Appellants are appealing a decision of the Refugee Protection Division (RPD) denying\n\ntheir claims for refugee protection.\n\n[2] The Principal Appellant is the mother and the Designated Representative (DR) of the\n\nMinor Ap pellants. The Spousal Appellant is married to the Principal Appellant and is the father\n\nof the Minor Appellants.\n\nDETERMINATION\n\n[3] The Appeals of the Principal Appellant, Spousal Appellant and First Minor Appellant are\n\nallowed. The Appeal of the Second Minor A ppellant is dismissed.\n\nBACKGROUND\n\n[4] The Princip..."
+    },
+    {
+      "case_id": "150689",
+      "expected_count": 6,
+      "extracted_count": 1,
+      "ratio": 0.16666666666666666,
+      "extracted_determinations": [
+        {
+          "text": "The appeal is allowed with respect to the claims of the  Principal Appellant, Ms.",
+          "score": 20,
+          "match_type": "pattern"
+        }
+      ],
+      "expected_determinations": [
+        "[\"['neither a convention refugee nor a person in need of protection.the', 'appeal with respect to her claim is dismissed']\", \"['confirm the rpd\u2019s decision']\", \"['appeal is allowed']\", \"['i disagree with the rpd\u2019s decision on the claims made by the principal appellant, his wife']\", \"['negative decisions on their claims are set aside']\", \"['rpd\u2019s decision on xxxx claim is confirmed']\"]"
+      ],
+      "missing_determinations": [
+        "[\"['neither a convention refugee nor a person in need of protection.the', 'appeal with respect to her claim is dismissed']\", \"['confirm the rpd\u2019s decision']\", \"['appeal is allowed']\", \"['i disagree with the rpd\u2019s decision on the claims made by the principal appellant, his wife']\", \"['negative decisions on their claims are set aside']\", \"['rpd\u2019s decision on xxxx claim is confirmed']\"]"
+      ],
+      "case_text": "Immigration and Refugee\n\nBoard of Canada\n\nRefugee Appeal Division Commission de l\u2019immigration\n\nSection d\u2019appel des r\u00e9fugi\u00e9s\n\n\n\nRAD.25.02 ( January, 2020)\n\nDisponible en fran\u00e7ais\n\n\n\nRAD File / Dossier de la SAR : TB9 -34721\n\nTB9 -34722 / TB9 -34723 / TB9 -34724\n\n\n\nPrivate Proceeding / Huis clos\n\n\n\nReasons and decision \uf02d Motifs et d\u00e9cision\n\n\n\nPerson s who are the subject\n\nof the appeal [REDACTED] [REDACTED] [REDACTED] [REDACTED] [REDACTED]\n\n[REDACTED] [REDACTED] [REDACTED] [REDACTED] [REDACTED]\n\n[REDACTED] [REDACTED] [REDACTED] [REDACTED] [REDACTED]\n\n[REDACTED] [REDACTED] Personne s en cause\n\n\n\nAppeal considered / heard at Toronto, ON Appel instruit /\n\nentendu \u00e0\n\n\n\nDate of decision February 24, 2021 Date de la d\u00e9cision\n\n\n\nPanel [REDACTED] Tribunal\n\n\n\nCounsel for the person s who\n\nare the subject of the appeal [REDACTED] (Sina) Ogunleye Conseil des personne s\n\nen cause\n\n\n\nDesignated representative [REDACTED] [REDACTED] [REDACTED] [REDACTED] Repr\u00e9sentant(e)\n\nd\u00e9sign \u00e9(e)\n\n\n\nCounsel for the Minister N/A Conseil du ministre\n\n\n\n\n\n2021 CanLII 150689 (CA IRB)\n\nRAD File / Dossier de la SAR : TB9 -34721\n\nTB9 -34722 / TB9 -34723 / TB9 -34724\n\n\n\nRAD.25.02 ( January , 20 20)\n\nDisponible en fran\u00e7ais 2\n\nREASONS FOR DECISION\n\nOVERVIEW\n\n[1] The Appellants are [REDACTED] [REDACTED] [REDACTED] [REDACTED] (\u201cthe Principal Appellant \u201d), his wife\n\n[REDACTED] [REDACTED] [REDACTED] [REDACTED] (\u201cMs. [REDACTED] [REDACTED] [REDACTED] \u201d), their minor son [REDACTED] [REDACTED]\n\n[REDACTED] [REDACTED] (\u201c[REDACTED] \u201d), and their minor daughter [REDACTED] [REDACTED] [REDACTED] [REDACTED] [REDACTED]\n\n(\u201c[REDACTED] \u201d). The Principal Appellant, Ms. [REDACTED] [REDACTED] [REDACTED] , and [REDACTED] are Nigerian\n\ncitizens. [REDACTED] was born in the United States and is therefore an American citizen. The\n\nAppellants fear political persecution in Nigeria due to the Principal Appellant\u2019s involvement i n\n\nthe All Progressives Congress (\u201cAPC\u201d) . The Appellants fear that members of the People\u2019 s\n\nDemocratic Part..."
+    },
+    {
+      "case_id": "53826",
+      "expected_count": 6,
+      "extracted_count": 1,
+      "ratio": 0.16666666666666666,
+      "extracted_determinations": [
+        {
+          "text": "(1)  To stay a removal order, the Immigration Appeal Division must be satisfied, taking into account the best interests of a child directly affected by the decision, that sufficient humanitarian and compassionate considerations warrant special relief in light of all the circumstances of the case.",
+          "score": 20,
+          "match_type": "pattern"
+        }
+      ],
+      "expected_determinations": [
+        "[\"['stay of the removal order is cancelled', 'appeal is terminated']\", \"['iad has lost its jurisdiction']\", \"['appeal is terminated']\", \"['stay of the removal order is cancelled', 'appeal is terminated']\", \"['appeal is terminated']\", \"['appeal is terminated']\"]"
+      ],
+      "missing_determinations": [
+        "[\"['stay of the removal order is cancelled', 'appeal is terminated']\", \"['iad has lost its jurisdiction']\", \"['appeal is terminated']\", \"['stay of the removal order is cancelled', 'appeal is terminated']\", \"['appeal is terminated']\", \"['appeal is terminated']\"]"
+      ],
+      "case_text": "IAD.34.1 (October 2007) Disponible en fran\u00e7ais\n\n\n\nImmigration and Refugee Board of Canada\n\n\n\nImmigration Appeal Division\n\n\n\n\n\nSection d\u2019appel de l\u2019immigration\n\n\n\nIAD File No. / N\n\no de dossier de la SAI : TA7-05084 Client ID No. / N\n\no ID client : 2437-0296\n\n\n\nReasons and Decision \u2212 Motifs et d\u00e9cision\n\nRemoval Order\n\nAppellant(s) Appelant(s)\n\nOR[REDACTED]\n\nRespondent Intim\u00e9\n\nThe Minister of Public Safety and Emergency Preparedness Le ministre de la S\u00e9curit\u00e9 publique et de la Protection civile\n\nDate(s) and Place Date(s) et Lieu de of Hearing l\u2019audience\n\nApril 13, 2011 Toronto, Ontario\n\nDate of Decision Date de la D\u00e9cision\n\nApril 13, 2011 May 27, 2011 \u2013 signed reasons\n\nPanel Tribunal\n\n[REDACTED]\n\n\n\nAppellant\u2019s Counsel Conseil de l\u2019appelant(s)\n\nNot Represented Minister\u2019s Counsel Conseil de l\u2019intim\u00e9\n\n[REDACTED]\n\n2011 CanLII 53826 (CA IRB)\n\nIAD File No. / No de dossier de la SAI : TA7-05084 Client ID No. / N\n\no ID client : 2437-0296 1\n\nReasons for Decision\n\n\n\n[1] On May 8, 2008 Member [REDACTED] of the Immigration Appeal Division (IAD) granted Or[REDACTED] (the appellant) a stay (on conditions) of the deportation order issued against him on May 7, 2007. The stay was gr anted to the appellant based on the written recommendation of the respondent. The duration of the stay was for one year and it included 12 conditions. [2] On February 25, 2010 Member [REDACTED] of the IAD extended the stay for another six months because the appellant did not obtain his passport. Minister\u2019s counsel at that time consented to the extension of the stay in order to allow the appellant to obtain his passport. [3] On November 2, 2010 the stay was further extended. On December 9, 2010 the appellant was sent a Notice of Reconsideration and on March 7, 2011 the Minister submitted a written statement indicating that the appellant had not complied with his stay and pointed to further criminality, his failure to obtain a passport and his failure to provide a Statement of Compliance. [4] At today\u2019s hear..."
+    },
+    {
+      "case_id": "60833",
+      "expected_count": 6,
+      "extracted_count": 1,
+      "ratio": 0.16666666666666666,
+      "extracted_determinations": [
+        {
+          "text": "The Appeal Division orders that its order signed on January 28, 2002 be cancelled and the appeal be dismissed.",
+          "score": 20,
+          "match_type": "pattern"
+        }
+      ],
+      "expected_determinations": [
+        "[\"['\u2026]\u201d']\", \"['appeal is discontinued']\", \"['\u2026]\u201d']\", \"['appeal terminated']\", \"['appeal is discontinued']\", \"['\u2026]\u201d']\"]"
+      ],
+      "missing_determinations": [
+        "[\"['\u2026]\u201d']\", \"['appeal is discontinued']\", \"['\u2026]\u201d']\", \"['appeal terminated']\", \"['appeal is discontinued']\", \"['\u2026]\u201d']\"]"
+      ],
+      "case_text": "Immigration and Refugee Board Immigration Appeal Division\n\nCommission de l'immigration et du statut de r\u00e9fugi\u00e9Section d\u2019appel de l\u2019immigration\n\nIAD File No / No. Dossier de la SAI : MA1-03234 Client ID / No ID Client : 2596-5786\n\nReasons and Decision \u2212 Motifs et d\u00e9cision Removal Order Appeal\n\nAppellant(s) Appelant(s)\n\n[REDACTED] NGUYEN\n\nRespondent Intim\u00e9\n\nThe Minister of Citizenship and Immigration Le minist[REDACTED] et de l'Immigration\n\nDate(s) of Hearing Date(s) de l'audience\n\nApril 27, 2006\n\nMontreal\n\nDate of decision Date de la d\u00e9cision\n\nApril 27, 2006 Reasons signed on: May 2, 2006\n\nPanel Tribunal\n\nMe [REDACTED]\n\nAppellant's Counsel Con[REDACTED])\n\nMe [REDACTED]\n\nMinister's Counsel [REDACTED]\n\n[REDACTED]\n\nYou can obtain the translation of thes e reasons for decision in the other official language by writing to the Editing and Translation Services Directorate of the IRB at the following address: 344 Slater Street, 14th Floor, Ottawa, Ontario K1A 0K1, by e-mail to translation@irb.gc.ca\n\nou par t\u00e9l\u00e9copie au (613) 947-3213.\n\n2006 CanLII 60833 (CA IRB)\n\nIAD File No / No. Dossier de la SAI : MA1-03234 Client ID / No ID Client : 2596-5786 1\n\nOral Reasons for Decision\n\n[1] This is the decision in the appeal by [REDACTED] (the appellant) from a deportation order made against him on November 16, 2000 following his conviction for trafficking narcotics on April 26, 1996 where he received a sentence of 3 years\u2019 imprisonment. [2] This deportation order was stayed by the Immigrat ion Appeal Division\u2019s Member [REDACTED] on December 10, 2001. At that time, following a recommendation by the Minister\u2019s counsel and taking into account different humanitarian and compassionate factors, Member [REDACTED] concluded that such a stay was warranted. I will quote from th e Member\u2019s decision on page 2.\n\n\u201c[\u2026] The evidence on record confirms th e appellant\u2019s testimony on this point (that the time during which he was involved in criminal activities was very brief ). In the Assessment for dec..."
+    },
+    {
+      "case_id": "69758",
+      "expected_count": 7,
+      "extracted_count": 2,
+      "ratio": 0.2857142857142857,
+      "extracted_determinations": [
+        {
+          "text": "If the decision is correct in law, are there sufficient humanitarian and compassionate considerations, taking into account the best interests of a child directly affected by the decision, to warrant special relief in all the circumstances of the case?",
+          "score": 20,
+          "match_type": "pattern"
+        },
+        {
+          "text": "The panel also finds, in relation to the principal appellan t\u2019s wife and son, XXXXXXXXXX, taking into account the best interests of a child directly affected by the decision, there are sufficient humanitarian and compassionate considerations to warrant special relief in all the circumstances of this case.",
+          "score": 20,
+          "match_type": "pattern"
+        }
+      ],
+      "expected_determinations": [
+        "[\"['removal orders are set aside']\", \"['appeals of his wife']\", \"['appeal of the principal appellant, toni elias bougharios, is allowed in law']\", \"['appeal must be allowed in law']\", \"['appeals are allowed']\", \"['appellants have not lost their permanent resident status']\", \"['sufficient humanitarian and compassionate considerations']\"]"
+      ],
+      "missing_determinations": [
+        "[\"['removal orders are set aside']\", \"['appeals of his wife']\", \"['appeal of the principal appellant, toni elias bougharios, is allowed in law']\", \"['appeal must be allowed in law']\", \"['appeals are allowed']\", \"['appellants have not lost their permanent resident status']\", \"['sufficient humanitarian and compassionate considerations']\"]"
+      ],
+      "case_text": "IAD.34.1 (October 2007) Disponible en fran\u00e7ais\n\n\n\nIMMIGRATION AND REFUGEE BOARD (IMMIGRATION APPEAL DIVISION)\n\nCOMMISSION DE L\u2019IMMIGRATION ET DU STATUT DE R\u00c9FUGI\u00c9 (SECTION D\u2019APPEL DE L\u2019IMMIGRATION)\n\n\n\n\n\nIAD File No./Dossier: TA6-12600 TA6-12601 TA6-12602\n\nReasons and Decision \u2212 Motifs et d\u00e9cision\n\n\n\nRemoval Order\n\nAppellant(s) Appelant(s)\n\nT[REDACTED] ABIR NABIH DIB ROUKOS E[REDACTED]\n\nRespondent Intim\u00e9\n\nThe Minister of Public Safety and Emergency Preparedness Le Ministre de la S\u00e9curit\u00e9 Publique et de la Protection Civile\n\nDate(s) and Place Date(s) et Lieu de of Hearing l\u2019audience\n\nDecember 20, 2007 Toronto, Ontario\n\nDate of Decision Date de la D\u00e9cision\n\nDecember 20, 2007\n\nPanel Tribunal\n\nD. Collison\n\nAppellant\u2019s Counsel Conseil de l\u2019appelant(s)\n\nJ. Norris Ormston Barrister and Solicitor\n\nMinister\u2019s Counsel Conseil de l[REDACTED]\n\n\n\n\n\n2007 CanLII 69758 (CA IRB)\n\nIAD File No. /Dossier: TA6-12600 TA6-12601 TA6-12602\n\n\n\n1\n\n\n\nREASONS FOR DECISION\n\nIntroduction [1] These are the reasons for the decision in the appeal, pursuant to subsection 63(3) of the Immigration and Refugee Protection Act\n\n(IRPA ) of T[REDACTED] (the principal appellant), his wife, [REDACTED] (the appellant) and E[REDACTED] (the minor appellant). They are appealing the de termination by the Minister\u2019s Delegate, made on September 27, 2006, to issue a departure orders against them as a persons described in subsection 41(b) of IRPA\n\n, because the Minister\u2019s Delegate was satisfied, on a balance of probabilities, there were grounds to believe that the appellants were permanent residents who were inadmissible to Canada for failing to comp ly with the residency obligation contained in section 28 of IRPA\n\n. [2] Specifically, the appellants had failed to reside in Canada for at least 730 days in the five- year period immediately after they became permanent residents, which was on March 27, 2003. The Minister\u2019s Delegate was also not sati sfied, pursuant to section 28(2)(c) of IRPA\n\n, that there were sufficient ..."
+    },
+    {
+      "case_id": "77228",
+      "expected_count": 8,
+      "extracted_count": 3,
+      "ratio": 0.375,
+      "extracted_determinations": [
+        {
+          "text": "If the decision is correct in law, are there sufficient humanitarian and compassionate considerations, taking into account th e best interests of a child directly affected by the decision, to warrant special relief in light of all the circumstances of the case?",
+          "score": 20,
+          "match_type": "pattern"
+        },
+        {
+          "text": "The removal order is set aside.",
+          "score": 20,
+          "match_type": "pattern"
+        },
+        {
+          "text": "The Immigration Appeal Division finds that the appellant has not lost his permanent resident status.",
+          "score": 20,
+          "match_type": "pattern"
+        }
+      ],
+      "expected_determinations": [
+        "[\"['appeal of the principal appellant']\", \"['appeal of alap rajeshkumar shah isallowed']\", \"['appeal of xitij rajeshkumar shah is declaredabandonedpursuant tosubsection 168(1)of theimmigration and refugee protection act']\", \"['removal order is set aside']\", \"['appeals of the principal appellant']\", \"['appeal of the elder son, xitij rajeshkumar shah, is declared abandoned']\", \"['appellant has not lost his permanent resident status']\", \"['appeal of the younger son, alap rajeshkumar shah, is dismissed', 'sufficient humanitarian and compassionate considerations']\"]"
+      ],
+      "missing_determinations": [
+        "[\"['appeal of the principal appellant']\", \"['appeal of alap rajeshkumar shah isallowed']\", \"['appeal of xitij rajeshkumar shah is declaredabandonedpursuant tosubsection 168(1)of theimmigration and refugee protection act']\", \"['removal order is set aside']\", \"['appeals of the principal appellant']\", \"['appeal of the elder son, xitij rajeshkumar shah, is declared abandoned']\", \"['appellant has not lost his permanent resident status']\", \"['appeal of the younger son, alap rajeshkumar shah, is dismissed', 'sufficient humanitarian and compassionate considerations']\"]"
+      ],
+      "case_text": "IAD File No. / N\n\no de dossier de la SAI: TA6-00954 TA6-00955 TA6-00956 TA6-00957 Client ID No. / N\n\no ID client: 2590-0315 25900316 25900318 25900317\n\n\n\n\n\nReasons and Decision \u2212 Motifs et d\u00e9cision\n\n\n\nREMOVAL ORDER\n\n\n\nAppellant(s) [REDACTED] SHAH JAYSHREE R[REDACTED] [REDACTED] XI[REDACTED] Appelant(e)(s) Respondent\n\nThe Minister of Public Safety and Emergency Preparedness Intim\u00e9(e)\n\nDate(s) and Place of Hearing April 30, 2008 Date(s) et lieu de l\u2019audience Toronto, Ontario Date of Decision December 22, 2008 Date de la d\u00e9cision Panel D. Collison Tribunal Counsel for the Appellant(s) [REDACTED] Conseil(s) de l\u2019appelant(e) / des appelant(e)(s) Barrister and Solicitor Counsel for the Minister [REDACTED] Conseil du ministre\n\n2008 CanLII 77228 (CA IRB)\n\nIAD File No. / No de dossier de la SAI: Client ID No. / N\n\no ID client:\n\n2\n\n\n\nReasons for Decision\n\nIntroduction [1] These are the reasons for the decision in the appeals of Rajes[REDACTED] (the principal appellant), his wife, Jayshr[REDACTED], and his sons, Xi[REDACTED] and A[REDACTED], pursuant to subsection 63(3) of the Immigration and\n\nRefugee Protection Act (IRPA ), from departure orders made against them by Immigration Division Member [REDACTED] on January 18, 2006. The Immigration Division Member found the appellants were described in subsections 41(b) and 27(2) of IRPA\n\nas permanent residents who are inadmissible to Canada for failing to comply with conditions imposed under the former Immigration Regulations\n\n(the former Regulations) . 41. Non-compliance with Act \u2013 A person is inadmissible for failing to comply with this Act (b) in the case of a permanent resident, through failing to comply with subsection 27(2) or section 28. 27(2) Conditions \u2013 A permanent resident must comply with any conditions imposed under the regulations. Background [2] The principal appellant is 53 years old; his wife is 50 years old; his son, [REDACTED] is 27 years old and his son, [REDACTED] is 22 years old. They are all citizens of India...."
+    },
+    {
+      "case_id": "77270",
+      "expected_count": 5,
+      "extracted_count": 0,
+      "ratio": 0.0,
+      "extracted_determinations": [],
+      "expected_determinations": [
+        "[\"['appellant has not lost her permanent resident status']\", \"['removal order is set aside']\", \"['appeal is allowed']\", \"['sufficient humanitarian and compassionate factors']\", \"['appeal is allowed']\"]"
+      ],
+      "missing_determinations": [
+        "[\"['appellant has not lost her permanent resident status']\", \"['removal order is set aside']\", \"['appeal is allowed']\", \"['sufficient humanitarian and compassionate factors']\", \"['appeal is allowed']\"]"
+      ],
+      "case_text": "\n"
+    },
+    {
+      "case_id": "95778",
+      "expected_count": 7,
+      "extracted_count": 2,
+      "ratio": 0.2857142857142857,
+      "extracted_determinations": [
+        {
+          "text": "This appeal is dismissed.",
+          "score": 20,
+          "match_type": "pattern"
+        },
+        {
+          "text": "This appeal is  dismissed.",
+          "score": 15,
+          "match_type": "pattern"
+        }
+      ],
+      "expected_determinations": [
+        "[\"['rad finds that the rpd\u2019s finding in this regard is reasonable under the circumstances']\", \"['rad finds that the rpd\u2019s finding in this regard was pre-emptive']\", \"['rad finds that the rpd\u2019s finding in this regard is not reasonable']\", \"['rad finds that the rpd\u2019s finding in this regard is reasonable']\", \"['rad confirms the decision of the rpd', 'appellant is neither a convention refugee nor a person in need of protection']\", \"['appeal is dismissed']\", \"['neither a convention refugee nor a person in need of protection']\"]"
+      ],
+      "missing_determinations": [
+        "[\"['rad finds that the rpd\u2019s finding in this regard is reasonable under the circumstances']\", \"['rad finds that the rpd\u2019s finding in this regard was pre-emptive']\", \"['rad finds that the rpd\u2019s finding in this regard is not reasonable']\", \"['rad finds that the rpd\u2019s finding in this regard is reasonable']\", \"['rad confirms the decision of the rpd', 'appellant is neither a convention refugee nor a person in need of protection']\", \"['appeal is dismissed']\", \"['neither a convention refugee nor a person in need of protection']\"]"
+      ],
+      "case_text": "RAD.2 5.02 (April 9, 2013 )\n\nDisponible en fran\u00e7ais\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nRAD File No. / N\u00b0 de dossier de la SAR : TB3 -08650\n\n\n\n\n\nPrivate Proceeding / Huis clos\n\n\n\n\n\nReasons and decision \uf02d Motifs et d\u00e9cision\n\n\n\n\n\n\n\nPerson(s) who is(are)\n\nthe subject of the appeal [REDACTED] [REDACTED] Personne(s) en cause\n\n\n\n\n\nAppeal considered / heard a t Toronto, Ontario Appel instruit \u00e0\n\n\n\n\n\nDate of decision February 19, 2014 Date de la d\u00e9cision\n\n\n\n\n\nPanel L. Favreau Tribunal\n\n\n\n\n\nCounsel for the person(s) who\n\nis(are)the subject of the appeal [REDACTED]\n\nen cause\n\n\n\n\n\nDesignated Representative(s) N/A Repr\u00e9sentant(e)(s) d\u00e9sign\u00e9(e)(s)\n\n\n\n\n\nCounsel for the Minister N/A Conseil du (de la) ministre\n\n\n\n2014 CanLII 95778 (CA IRB)\n\nRAD File No. / N\u00b0 de dossier de la S AR :\n\n\n\nReasons and Decision\n\n[1] [REDACTED] [REDACTED] (the Appellant), a citizen of China, appe als a decision of the Refugee\n\nProtection Division (RPD) denying her claim for refugee protection. She has not submitte d new\n\nevidence in support of her appeal. The Appellant asks that the Refugee Appeal Division (RAD)\n\nset aside the decision of the RPD and s ubstitute a decision with its own determination that the\n\nAppellant is a Convention refugee or a person in need of protection. In the alternative, the\n\nAppellant requests that the RAD refer the matter back to the RPD with a differently -constituted\n\npanel.\n\nDE TERMINATION\n\n[2] Pursuant to Section 111(1)(a) of the Immigration and Refugee Protection Act (IRPA), t he\n\nRAD confirms the decision of the RPD that the Appellant is neither a Convention refugee nor a\n\nperson in need of protection. This appeal is dismissed.\n\nBackg round\n\n[3] The [REDACTED] nt alleged in his Basis of Claim (BoC) form that he is a first class martial arts\n\nathlete and that he has competed on a state and national level in China. He was introduced to the\n\npractice of Falun Gong by a classmate in [REDACTED] 2010. He bega n to practice Falun Gong in an\n\nattempt to find a solution to a debilitating ankle injury..."
+    },
+    {
+      "case_id": "105890",
+      "expected_count": 5,
+      "extracted_count": 1,
+      "ratio": 0.2,
+      "extracted_determinations": [
+        {
+          "text": "The appeals are allowed.",
+          "score": 10,
+          "match_type": "pattern"
+        }
+      ],
+      "expected_determinations": [
+        "[\"['rad finds that its positive decision in regard to these claims']\", \"['appeals are allowed']\", \"['appellants are somali citizens']\", \"['request for an oral hearing is dismissed']\", \"['rad sets aside the determination of the rpd', 'appellants are convention refugees']\"]"
+      ],
+      "missing_determinations": [
+        "[\"['rad finds that its positive decision in regard to these claims']\", \"['appeals are allowed']\", \"['appellants are somali citizens']\", \"['request for an oral hearing is dismissed']\", \"['rad sets aside the determination of the rpd', 'appellants are convention refugees']\"]"
+      ],
+      "case_text": "RAD.2 5.02 (June 23, 2014 )\n\n\n\n\n\nImmigration and\n\nRefugee Board of Canada\n\n\n\nRefugee Appeal Division\n\nCommission de l\u2019immigration\n\n\n\nSection d\u2019appel des r\u00e9fugi\u00e9s\n\n\n\n\n\n\n\n\n\nRAD File No. / N\u00b0 de dossier de la SAR : TB4 -03139\n\nTB4 -03140\n\n\n\nPrivate Proceeding / Huis clos\n\n\n\n\n\nRedetermination of the Appeal\n\nReasons and decision \uf02d Motifs et d\u00e9cision\n\n\n\n\n\nPerson(s) who is(are)\n\nthe subject of the appeal [REDACTED] [REDACTED] [REDACTED] [REDACTED]\n\n[REDACTED] [REDACTED] [REDACTED] Personne(s) en cause\n\n\n\n\n\nAppeal considered / heard at Toronto, Ontario Appel instruit \u00e0\n\n\n\n\n\nDate of decision September 30, 2015 Date de la d\u00e9cision\n\n\n\n\n\nPanel [REDACTED] Tribunal\n\n\n\n\n\n\n\nCounsel for the person(s) who\n\nis(are)the subject of the appeal [REDACTED]\n\npersonne(s) en cause\n\n\n\n\n\nDesignated Representative(s) N/A Repr\u00e9sentant(e)(s) d\u00e9sign\u00e9(e)(s)\n\n\n\n\n\nCounsel for the Minister N/A Conseil du ministre\n\n\n\n2015 CanLII 105890 (CA IRB)\n\nRAD F ile No. / N\u00b0 de dossier de la SA R :\n\nREASONS FOR DECISION\n\n[1] [REDACTED] [REDACTED] [REDACTED] (the Appellant) and [REDACTED] [REDACTED] [REDACTED] (the minor Appellant),\n\nwho claim to be citizens of Somalia, appeal a decision of the Refugee Protection Division (RPD)\n\ndenying their claims for refugee protection. They have submitted new evidence in support of their\n\nclaims and they have requested an oral hearing. The Appellants further request that the Refugee\n\nAppeal Division (RAD) find that they are Convention refugees. Alternatively the Appellants\n\nrequest that the matter be remitted to the RPD for reconsideration by a differently -constituted\n\npanel.\n\nDETE RMINATION\n\n[2] Pursuant to section 111(1)(b) of the Immigration and Refugee Protection Act (IRPA), The\n\nRAD sets aside the determination of the RPD and substitutes its decision that t he Appellants are\n\nConvention re fugees. The appeals are allowed.\n\nBACKGROUND\n\n[3] The Appellant alleges she and the minor Appellant are members of the minority [REDACTED]\n\nclan who used to live in [REDACTED] , Somalia...."
+    },
+    {
+      "case_id": "107173",
+      "expected_count": 5,
+      "extracted_count": 1,
+      "ratio": 0.2,
+      "extracted_determinations": [
+        {
+          "text": "This appeal is dismissed.",
+          "score": 20,
+          "match_type": "pattern"
+        }
+      ],
+      "expected_determinations": [
+        "[\"['rad confirms the decision of the rpd', 'dismisses the appeal']\", \"['rad agrees with these findings']\", \"['rad disagrees']\", \"['appellant is neither a convention refugee nor a person in need of protection']\", \"['rad disagrees']\"]"
+      ],
+      "missing_determinations": [
+        "[\"['rad confirms the decision of the rpd', 'dismisses the appeal']\", \"['rad agrees with these findings']\", \"['rad disagrees']\", \"['appellant is neither a convention refugee nor a person in need of protection']\", \"['rad disagrees']\"]"
+      ],
+      "case_text": "RAD.2 5.02 (June 23, 2014 )\n\n\n\n\n\nImmigration and\n\nRefugee Board of Canada\n\n\n\nRefugee Appeal Division\n\nCommission de l\u2019immigration\n\n\n\nSection d\u2019appel des r\u00e9fugi\u00e9s\n\n\n\n\n\n\n\n\n\nRAD File No. / N\u00b0 de dossier de la SAR : TB5 -12127\n\n\n\nPrivate Proceeding / Huis clos\n\n\n\n\n\nReasons and decision \uf02d Motifs et d\u00e9cision\n\n\n\n\n\nPerson(s) who is(are)\n\nthe subject of the appeal [REDACTED] [REDACTED] [REDACTED] [REDACTED] (a.k.a.\n\n[REDACTED] [REDACTED] [REDACTED] [REDACTED] )\n\n(a.k.a. [REDACTED] [REDACTED] [REDACTED] ) Personne(s) en cause\n\n\n\n\n\nAppeal considered / heard at Toronto, Ontario Appel instruit \u00e0\n\n\n\n\n\nDate of decision March 18, 2016 Date de la d\u00e9cision\n\n\n\n\n\nPanel M. Pettinella Tribunal\n\n\n\n\n\n\n\nCounsel for the person(s) who\n\nis(are)the subject of the appeal Stella I Anaele Conseil(s) du (de la/des)\n\npersonne(s) en cause\n\n\n\n\n\nDesignated Representative(s) [REDACTED] [REDACTED] [REDACTED] Repr\u00e9sentant(e)(s) d\u00e9sign\u00e9(e)(s)\n\n\n\n\n\nCounsel for the Minister N/A Conseil du ministre\n\n\n\n\n\n\n\n2016 CanLII 107173 (CA IRB)\n\nRAD F ile No. / N\u00b0 de dossier de la SA R :\n\nREASONS FOR DECISION\n\n[1] [REDACTED] [REDACTED] [REDACTED] (Appellant) appeals a decision of the Refugee Protection Division\n\n(RPD) denying her claim for refugee protection. [REDACTED] [REDACTED] [REDACTED] is the designated\n\nrepresentative for the Appellant as the [REDACTED] lant is a minor. The Appellant has not submitted new\n\nevidence in support of her appeal and does not request an oral hearing. She asks the Refugee\n\nAppeal Division (RAD) to set aside the decision of the RPD and substitute its own determination.\n\nIn the altern ative, the Appellants ask the RAD return the matter to a differently -constituted panel\n\nof the RPD for re -determination.\n\nDETERMINATION\n\n[2] Pursuant to section 111(1)(a) of the Immigration and Refugee Protection Act (IRPA), the\n\nRAD confirms the decision of the RPD that the Appellant is neither a Convention refugee nor a\n\nperson in need of protection. This appeal is dismissed.\n\nBackground\n\n[3] The Appellant..."
+    },
+    {
+      "case_id": "108705",
+      "expected_count": 5,
+      "extracted_count": 1,
+      "ratio": 0.2,
+      "extracted_determinations": [
+        {
+          "text": "This appeal is  dismissed.",
+          "score": 15,
+          "match_type": "pattern"
+        }
+      ],
+      "expected_determinations": [
+        "[\"['rad finds that the rpd did not err in its decision']\", \"['appellants are neither convention refugees, nor persons in need of protection']\", \"['rad confirms the decision of the rpd', 'are neither\\\\xa0 convention refugees nor persons in need of protection']\", \"['appeal is dismissed']\", \"['appeals must also fail']\"]"
+      ],
+      "missing_determinations": [
+        "[\"['rad finds that the rpd did not err in its decision']\", \"['appellants are neither convention refugees, nor persons in need of protection']\", \"['rad confirms the decision of the rpd', 'are neither\\\\xa0 convention refugees nor persons in need of protection']\", \"['appeal is dismissed']\", \"['appeals must also fail']\"]"
+      ],
+      "case_text": "RAD.2 5.02 (June 23, 2014 )\n\n\n\n\n\nImmigration and\n\nRefugee Board of Canada\n\n\n\nRefugee Appeal Division\n\nCommission de l\u2019immigration\n\n\n\nSection d\u2019appel des r\u00e9fugi\u00e9s\n\n\n\n\n\n\n\n\n\nRAD File No. / N\u00b0 de dossier de la SAR : TB5 -04124\n\nTB5 -04125\n\nTB5 -04126\n\nTB5 -04127\n\n\n\nPrivate Proceeding / Huis clos\n\n\n\n\n\nReasons and decision \uf02d Motifs et d\u00e9cision\n\n\n\n\n\nPerson(s) who is(are)\n\nthe subject of the appeal [REDACTED] [REDACTED] [REDACTED]\n\n[REDACTED] [REDACTED] [REDACTED]\n\n[REDACTED] [REDACTED] [REDACTED] Personne(s) en cause\n\n\n\n\n\nAppeal considered / heard at Toronto, Ontario Appel instruit \u00e0\n\n\n\n\n\nDate of decision July 2, 2015 Date de la d\u00e9cision\n\n\n\n\n\nPanel [REDACTED] r Tribunal\n\n\n\n\n\nCounsel for the person(s) who\n\nis(are)the subject of the appeal [REDACTED] Conseil(s) du (de la/des)\n\npersonne(s) en cause\n\n\n\n\n\nDesignated Representative(s) [REDACTED] [REDACTED] Repr\u00e9sentant(e)(s) d\u00e9sign\u00e9(e)(s)\n\n\n\n\n\nCounsel for the Minister N/A Conseil du ministre\n\n2015 CanLII 108705 (CA IRB)\n\n\n\nREASONS FOR DECISION\n\n[1] [REDACTED] (the principal Appellant), [REDACTED] , his spouse, and his two sons , the\n\nminor Appellants, [REDACTED] and [REDACTED] , are citizens of China. They appeal a\n\ndecision of the Refugee Protection Div ision (RPD) denying their claim for refugee protection.\n\nThe Appellants have submitted new evidence in support of their appeal. The Appellants ask that\n\nthe Refugee Appeal Division (RAD) quash the decision of the RPD based on errors of law and\n\nfact, and decl are them to be Protected Persons , pursuant to section 111(1)(b) of the IRPA. The\n\nAppellants further request that a hearing be held by the RAD under section 110(6) of the IRPA.\n\n[2] For the RPD refugee hearing, the principal Appellant was designated, according to section\n\n167(2) of the Immigration and Refugee Protection Act, as the representative for the two minor\n\nAppellant s, his sons. The RAD will sustain this designation.\n\n[3] The princip al Appellant\u2019s BOC narrative is relied on by his wife and the two minor\n\nAppe lla..."
+    },
+    {
+      "case_id": "114303",
+      "expected_count": 5,
+      "extracted_count": 1,
+      "ratio": 0.2,
+      "extracted_determinations": [
+        {
+          "text": "CONCLUSION   [27]  In accordance with paragraph 111(1)(a) of the IRPA, I dismiss the appeal.",
+          "score": 10,
+          "match_type": "pattern"
+        }
+      ],
+      "expected_determinations": [
+        "[\"['dismiss the appeal']\", \"['nor a person in need of protection']\", \"['adopt them as my own']\", \"['confirm the determination of the rpd']\", \"['neither a convention refugee nor a person in need of protection']\"]"
+      ],
+      "missing_determinations": [
+        "[\"['dismiss the appeal']\", \"['nor a person in need of protection']\", \"['adopt them as my own']\", \"['confirm the determination of the rpd']\", \"['neither a convention refugee nor a person in need of protection']\"]"
+      ],
+      "case_text": "Immigration and Refugee\n\nBoard of Canada\n\nRefugee Appeal Division Commission de l\u2019immigration\n\nSection d\u2019appel des r\u00e9fugi\u00e9s\n\n\n\nRAD.25.02 (September 18, 2018)\n\nDisponible en fran\u00e7ais\n\n\n\nRAD File / Dossier de la SAR : MB8 -23965\n\n\n\n\n\nPrivate Proceeding / Huis clos\n\n\n\nReasons and decision \uf02d Motifs et d\u00e9cision\n\n\n\nPerson(s) who is(are) the\n\nsubject of the appeal [REDACTED] [REDACTED]\n\n\n\nPersonne(s) en cause\n\n\n\nAppeal considered / heard\n\nat Montreal, QC\n\n\n\nAppel instruit / entendu\n\n\u00e0\n\n\n\nDate of decision May 09 2019\n\n\n\n\n\nPanel Me [REDACTED]\n\n\n\nTribunal\n\n\n\nCounsel for the person(s)\n\nwho is(are) the subject of\n\nthe appeal Me [REDACTED] Mianata Conseil(s) (de la/des)\n\npersonne(s) en cause\n\nN/A\n\nDesignated representative\n\n\n\nRepr\u00e9sentant(e)\n\n[REDACTED])\n\n\n\nCounsel for the Minister N/A Conseil du ministre\n\n\n\n\n\n2019 CanLII 114303 (CA IRB)\n\nRAD File / Dossier de la SAR : MB8 -23965\n\n\n\n\n\n\n\nRAD.25.02 (September 18, 2018)\n\nDisponible en fran\u00e7ais 2\n\nREASONS FOR DECISION\n\nOVERVIEW\n\n[1] [REDACTED] is a citizen of Haiti who is appeal ing a decision of the Ref ugee Protection\n\nDivision (RPD) rejecting his claim for refugee protection.\n\n[2] Mr. [REDACTED] alleges that he fears for his life at the hands of the son s of a woman who\n\naccused his mother of [REDACTED] or the woman \u2019s being possessed by demons. The son s\n\nallegedly killed Mr. [REDACTED] sister either in 2010 or 2011. Mr. [REDACTED] left Haiti for Brazil in June\n\n2013 . He obtained permanent resident status in Brazil but ended up leavin g in June 2016 due to\n\nthe mistreatme nt of Haitians in Brazil. Mr. [REDACTED] traveled to the United States and ended up\n\ncrossing the border into Canada in [REDACTED] 2017. By the time of the RPD hearing in this case,\n\nmore than two years had passed since Mr. [REDACTED] departure from Brazil.\n\n[3] The Minister inter vened in this case to argue that Mr. [REDACTED] was excluded from\n\nprotection under Article 1E of the Convention Relating to the Status of Refugees (Convention)\n\nand s. 98 of the Imm..."
+    },
+    {
+      "case_id": "116352",
+      "expected_count": 5,
+      "extracted_count": 1,
+      "ratio": 0.2,
+      "extracted_determinations": [
+        {
+          "text": "The appeal is allowed .",
+          "score": 20,
+          "match_type": "pattern"
+        }
+      ],
+      "expected_determinations": [
+        "[\"['302 (c.a.)']\", \"['rpd determination must be set aside']\", \"['appeal is allowed']\", \"['appellant is recognized as a refugee']\", \"['rpd determination is set aside']\"]"
+      ],
+      "missing_determinations": [
+        "[\"['302 (c.a.)']\", \"['rpd determination must be set aside']\", \"['appeal is allowed']\", \"['appellant is recognized as a refugee']\", \"['rpd determination is set aside']\"]"
+      ],
+      "case_text": "Immigration and Refugee\n\nBoard of Canada\n\nRefugee Appeal Division Commission de l\u2019immigration\n\nSection d\u2019appel des r\u00e9fugi\u00e9s\n\n\n\n\n\nRAD.25.02 ( September 18, 2018)\n\nDisponible en fran \u00e7ais\n\n\n\n\n\nRAD File No. / No de d ossier de la SAR : MB7 -04735\n\n\n\nPrivate Proceeding / Huis clos\n\n\n\nReasons and decision \uf02d Motifs et d\u00e9cision\n\n\n\nPerson who is the subject of\n\nthe appeal [REDACTED] [REDACTED] [REDACTED] [REDACTED] Personne en cause\n\n\n\nAppeal considered at\n\nOttawa, Ontario Appel instruit \u00e0\n\n\n\nDate of decision May 6, 2019 Date de la d\u00e9cision\n\n\n\nPanel [REDACTED] Tribunal\n\n\n\nCounsel for the person who is\n\nthe subject of the appeal Me [REDACTED] Mianata Conseil de la\n\npersonne en cause\n\n\n\nDesignated representative N/A Repr\u00e9sentant(e) d\u00e9sign\u00e9(e)\n\n\n\nCounsel for the Minister N/A Conseil du ministre\n\n\n\n\n\n2019 CanLII 116352 (CA IRB)\n\nRAD File No. / No de d ossier de la SAR : MB7 -04735\n\n\n\n\n\n\n\n\n\nRAD.25.02 (September 18, 2018)\n\nDisponible en fran \u00e7ais 2\n\nREASONS FOR DECISION\n\nOVERVIEW\n\n[1] The appellant , [REDACTED] [REDACTED] [REDACTED] [REDACTED] , a citizen of Congo -Brazzaville , is\n\nappealing against a decision of the Refugee Protection Division (RPD) rejecting his refugee\n\nprotection claim . He argue d that his life was in danger because he was being sought by the\n\nCongolese police for his involvement in the electio n campaign of a defeated candidate during the\n\n2016 presidential election . The RPD found that the appellant was not credible and that he was\n\nnot involved in the presidential campaign. The appellant is contesting that finding on the grounds\n\nthat the RPD gave too much weight to peripheral aspects of the record when assessing his\n\ncredibility. Furthermore, he argues that there was a breach of procedural fairness during the\n\nhearing because the panel repeatedly interrupted his lawyer when she was trying to speak .\n\n[2] Having listened to the entire recording of the RPD hearing, I am of the opinion that the\n\npanel\u2019s interventions were justified. However, I conclude tha..."
+    },
+    {
+      "case_id": "121482",
+      "expected_count": 6,
+      "extracted_count": 2,
+      "ratio": 0.3333333333333333,
+      "extracted_determinations": [
+        {
+          "text": "The appeal is dismissed.",
+          "score": 20,
+          "match_type": "pattern"
+        },
+        {
+          "text": "CONCLUSION   [31]  The appeal is dismissed.",
+          "score": 20,
+          "match_type": "pattern"
+        }
+      ],
+      "expected_determinations": [
+        "[\"['rad confirms the rpd\u2019s determination', 'thatxxxx xxxxis a person described in article\\\\xa01e of the convention', 'not a convention refugee or a person in need of protection']\", \"['neither a refugee nor a person in need of protection']\", \"['neither a convention refugee nor a person in need of protection']\", \"['rad confirms the rpd\u2019s determination', 'thatxxxx xxxxxxxxis neither a refugee nor a person in need of protection']\", \"['rpd\u2019s determination is correct']\", \"['appellant is a person described in article\\\\xa01e of the convention on refugees', 'neither a convention refugee nor a person in need of protection']\"]"
+      ],
+      "missing_determinations": [
+        "[\"['rad confirms the rpd\u2019s determination', 'thatxxxx xxxxis a person described in article\\\\xa01e of the convention', 'not a convention refugee or a person in need of protection']\", \"['neither a refugee nor a person in need of protection']\", \"['neither a convention refugee nor a person in need of protection']\", \"['rad confirms the rpd\u2019s determination', 'thatxxxx xxxxxxxxis neither a refugee nor a person in need of protection']\", \"['rpd\u2019s determination is correct']\", \"['appellant is a person described in article\\\\xa01e of the convention on refugees', 'neither a convention refugee nor a person in need of protection']\"]"
+      ],
+      "case_text": "Immigration and Refugee\n\nBoard of Canada\n\nRefugee Appeal Division Commission de l\u2019immigration\n\nSection d\u2019appel des r\u00e9fugi\u00e9s\n\n\n\nRAD.25.02 (January 2020)\n\nDisponible en fran\u00e7ais\n\n\n\nRAD File No. / No de dossier de la SAR : MB9 -09564\n\nMB9 -09565\n\n\n\nPrivate Proceeding / Huis clos\n\n\n\nReasons and Decision \uf02d Motifs et d\u00e9cision\n\n\n\nPersons who are the subject\n\nof the appeal [REDACTED] [REDACTED]\n\n[REDACTED] [REDACTED] Personnes en cause\n\n\n\nAppeal considered / heard at Montr \u00e9al, Q uebec Appel instruit / entendu \u00e0\n\n\n\nDate of decision March 9, 2020 Date de la d\u00e9cision\n\n\n\nPanel Me Agn\u00e8s Connat Tribunal\n\n\n\nCounsel for the persons who\n\nare the subject of the appeal J[REDACTED] Conseil des personnes en\n\ncause\n\n\n\nDesignated representative [REDACTED] [REDACTED] Repr\u00e9sentant(e) d\u00e9sign\u00e9(e)\n\n\n\nCounsel for the Minister N/A Conseil du ministre\n\n\n\n\n\n2020 CanLII 121482 (CA IRB)\n\nRAD File No. / No de dossier de la SAR : MB9 -09564\n\nMB9 -09565\n\n\n\nRAD.25.02 (January 2020)\n\nDisponible en fran\u00e7ais 2\n\nREASONS FOR DECISION\n\nOVERVIEW\n\n[1] [REDACTED] [REDACTED] ([REDACTED] ) is a citizen of Haiti. Her minor son [REDACTED] [REDACTED] [REDACTED]\n\n[REDACTED] [REDACTED] is a citizen of Brazil.\n\n[2] The appellant fears a dangerous criminal and his family in Haiti who raped her with\n\ntwo accomplices in [REDACTED] 2009. While she was hiding in [REDACTED] [REDACTED] [REDACTED] [REDACTED] [REDACTED]\n\nin [REDACTED] 2010, four armed criminals entered her aunt\u2019s home looking for her and brutalized\n\nanother girl whom they mistook for her. She left for the Dominican Republic in [REDACTED] 2011, and\n\nin [REDACTED] 2014 she left for Brazil, where she joined her husband. She alle ges that she led a hard\n\nlife there and was the victim of [translation] \u201csystemic persecution\u201d from citizens frustrated by\n\ntheir presence. Her son [REDACTED] was born in Brazil on [REDACTED] [REDACTED] , 2015. She left Brazil with\n\nhim in [REDACTED] 2016 and stayed in the United States until [REDACTED] 2017 before seeking Canada\u2019s\n\nprotec..."
+    },
+    {
+      "case_id": "125054",
+      "expected_count": 5,
+      "extracted_count": 1,
+      "ratio": 0.2,
+      "extracted_determinations": [
+        {
+          "text": "DETERMINATION   [2] The appeal of the principal appellant is allowed.",
+          "score": 10,
+          "match_type": "pattern"
+        }
+      ],
+      "expected_determinations": [
+        "[\"['setting aside the rpd\u2019s decision with regards to her claim']\", \"['dismisses the minor appellant\u2019s appeal', 'is neither a convention refugee nor a person in need of protection']\", \"['rad therefore finds that the rpd\u2019s decision regarding her claim is correct']\", \"['rad finds that to be a denial of basic natural justice']\", \"['rad finds that it did']\"]"
+      ],
+      "missing_determinations": [
+        "[\"['setting aside the rpd\u2019s decision with regards to her claim']\", \"['dismisses the minor appellant\u2019s appeal', 'is neither a convention refugee nor a person in need of protection']\", \"['rad therefore finds that the rpd\u2019s decision regarding her claim is correct']\", \"['rad finds that to be a denial of basic natural justice']\", \"['rad finds that it did']\"]"
+      ],
+      "case_text": "Immigration and Refugee\n\nBoard of Canada\n\nRefugee Appeal Division Commission de l\u2019immigration\n\nSection d\u2019appel des r\u00e9fugi\u00e9s\n\n\n\nRAD.25.02 ( January, 2020)\n\nDisponible en fran\u00e7ais\n\n\n\nRAD File / Dossier de la SAR : TB9 -02253\n\nTB9 -02254\n\n\n\nPrivate Proceeding / Huis clos\n\n\n\nReasons and decision \uf02d Motifs et d\u00e9cision\n\n\n\nPerson s who are the\n\nsubject of the appeal [REDACTED] [REDACTED]\n\n(a.k.a [REDACTED] [REDACTED] [REDACTED] [REDACTED]\n\n[REDACTED] [REDACTED]\n\n(a.k.a. [REDACTED] [REDACTED] [REDACTED] [REDACTED] [REDACTED] )\n\nPersonne s en cause\n\n\n\nAppeal considered /\n\nheard at Toronto, ON Appel instruit /\n\nentendu \u00e0\n\n\n\nDate of decision July 27, 2020 Date de la d\u00e9cision\n\n\n\nPanel [REDACTED] Tribunal\n\n\n\nCounsel for the person s\n\nwho are the subject of the\n\nappeal [REDACTED] Conseil des\n\npersonne s en cause\n\n\n\nDesignated representative [REDACTED] [REDACTED] [REDACTED] Repr\u00e9sentant(e)\n\n[REDACTED])\n\n\n\nCounsel for the Minister N/A Conseil du ministre\n\n\n\n\n\n2020 CanLII 125054 (CA IRB)\n\nRAD File / Dossier de la SAR : TB9 -02253\n\nTB9 -02254\n\n\n\nRAD.25.02 ( January , 20 20)\n\nDisponible en fran\u00e7ais 2\n\nREASONS FOR DECISION\n\nOVERVIEW\n\n[1] This is the decision in the appeals of [REDACTED] [REDACTED] [REDACTED] (the principal appellant) and\n\n[REDACTED] [REDACTED] [REDACTED] [REDACTED] [REDACTED] (a.k.a. [REDACTED] [REDACTED] [REDACTED] -[REDACTED] ) (the minor\n\nappellant). They appeal the Refugee Protection Division (RPD) decision dated Decembe r 28,\n\n2018, rejecting their claims for refugee protection. They are requesting that the Refugee Appeal\n\nDivision (RAD) set aside the RPD\u2019s negative determination and find that they are Convention\n\nrefugees or persons in need of protection. In the alternative , they request that the RAD refer the\n\nmatter back to the RPD for redetermination by a differently constituted panel. They have\n\nrequested to submit new evidence and an oral hearing.\n\nDETERMINATION\n\n[2] The appeal of the principal appellant is allowed. The RAD fi nds the RPD\u2019s decision\n\nregardi..."
+    },
+    {
+      "case_id": "129852",
+      "expected_count": 5,
+      "extracted_count": 1,
+      "ratio": 0.2,
+      "extracted_determinations": [
+        {
+          "text": "/ No ID client:  64357693       IAD.99.ott (2017.10)   Disponible en fran\u00e7ais  7  NOTICE OF DECISION   The appeal is allowed.",
+          "score": 20,
+          "match_type": "pattern"
+        }
+      ],
+      "expected_determinations": [
+        "[\"['appellant has not lost his permanent resident status']\", \"['appeal dismissed']\", \"['appeal dismissed']\", \"['visa officer\u2019s decision is legally valid']\", \"['appeal is allowed']\"]"
+      ],
+      "missing_determinations": [
+        "[\"['appellant has not lost his permanent resident status']\", \"['appeal dismissed']\", \"['appeal dismissed']\", \"['visa officer\u2019s decision is legally valid']\", \"['appeal is allowed']\"]"
+      ],
+      "case_text": "IAD.99.ott (2017.10)\n\nDisponible en fran\u00e7ais\n\n\n\nImmigration and\n\nRefugee Board of Canada\n\n\n\nImmigration Appeal Division\n\n\n\nCommission de l\u2019immigration\n\n\n\nSection d\u2019appel de l\u2019immigration\n\n\n\nIAD File No. / No de dossier de la SAI: TB7 -10443\n\nClient ID No. / No ID client: 64357693\n\n\n\n\n\nReasons and Decision \uf02d Motifs et d\u00e9cision\n\n\n\nResidency Obligation Appeal\n\n\n\n\n\nAppellant(s) Moh[REDACTED] Appelant(e)(s)\n\n\n\nand et\n\nMinister of Citizenship and Immigration\n\nRespondent Le ministre de la Citoyennet\u00e9 et de l'Immigration Intim\u00e9(e)\n\n\n\n\n\nDate(s) of Hearing May 9, 2018 and September 11, 2018\n\nDate(s ) de l\u2019audience\n\n\n\nPlace of Hearing Toronto, Ontario\n\nLieu de l\u2019audience\n\n\n\nDate of Decision September 27, 2018 Date de la d\u00e9cision\n\n\n\n\n\nPanel [REDACTED]\n\n\n\nTribunal\n\n\n\nCounsel for the\n\nAppellant(s)\n\n[REDACTED] Conseil(s) de\n\nl\u2019appelant(e) / des\n\nappelant(e) s\n\n\n\n\n\nDesignated\n\nRepresentative(s) None\n\nRepr\u00e9sentant(e)(s)\n\nd\u00e9sign\u00e9(e)(s)\n\n\n\nCounsel for the Minister [REDACTED] Conseil du ministre\n\n\n\n2018 CanLII 138891 (CA IRB)\n\nIAD File No. / No de dossier de la SAI: TB7 -10443\n\nClient ID No. / No ID client: 64357693\n\n\n\n\n\nIAD.99.ott (2017.10)\n\nDisponible en fran\u00e7ais REASONS FOR DECISION\n\nINTRODUCTION\n\n[1] The appellant, Moha[REDACTED], appeals the decision of a v isa officer that he\n\nfailed to comply with the residency obligation for permanent residen ts, as set out in section 28 of\n\nthe Immigration and Refugee Protection Act (IRPA). The Officer determined that the appellant\n\nhad not been in Canada for 730 days in the 5 -year period under consideration, that being March\n\n15, 2012 to March 15, 2017.\n\n[2] The appellant brings his appeal pursuant to section 63(4) of the IRPA . He does not\n\nchallenge the legal validity of the Officer\u2019s decision but submits that humanitarian and\n\ncompass ionate considerations warrant special relief.\n\nBACKGROUND\n\n[3] The appellant immigrated to Canada from Iran under the Investor Program in June 2011.\n\nHe was accompanied by his wife and daughter , who were al..."
+    },
+    {
+      "case_id": "129997",
+      "expected_count": 5,
+      "extracted_count": 1,
+      "ratio": 0.2,
+      "extracted_determinations": [
+        {
+          "text": "This appeal  is dismissed.",
+          "score": 15,
+          "match_type": "pattern"
+        }
+      ],
+      "expected_determinations": [
+        "[\"['appeal is dismissed']\", \"['reject the appellant\u2019s argument']\", \"['appellant is not a convention refugee or a person in need of protection']\", \"['rad confirms the decision of the rpd', 'appellant is neither a convention refugee nor a person in need of protection']\", \"['appeal must be rejected']\"]"
+      ],
+      "missing_determinations": [
+        "[\"['appeal is dismissed']\", \"['reject the appellant\u2019s argument']\", \"['appellant is not a convention refugee or a person in need of protection']\", \"['rad confirms the decision of the rpd', 'appellant is neither a convention refugee nor a person in need of protection']\", \"['appeal must be rejected']\"]"
+      ],
+      "case_text": "RAD.25.02 (September 11, 2014)\n\nDisponible en fran\u00e7ais\n\n\n\nImmigration and Refugee\n\nBoard of Canada\n\nRefugee Appeal Division Commission de l\u2019immigration\n\nSection d\u2019appel des r\u00e9fugi\u00e9s\n\n\n\n\n\nRAD File / Dossier de la SAR : TB7 -12730\n\n\n\nPrivate Proceeding / Huis clos\n\n\n\n\n\nReasons and decision \uf02d Motifs et d\u00e9cision\n\n\n\nPerson(s) who is(are) the subject of\n\nthe appeal [REDACTED] [REDACTED] [REDACTED] [REDACTED] (a.k.a. [REDACTED]\n\n[REDACTED] [REDACTED] [REDACTED] Personne(s) en cause\n\n\n\nAppeal considered at Toronto, ON Appel instruit \u00e0\n\n\n\nDate of decision March 16, 2018 Date de la d\u00e9cision\n\n\n\nPanel G. Erauw Tribunal\n\n\n\nCounsel for the person(s) who\n\nis(are) the subject of the appeal [REDACTED] Conseil(s) (de la/des)\n\npersonne(s) en cause\n\n\n\nDesignated representative N/A Repr\u00e9sentant(e) d\u00e9sign\u00e9(e)\n\n\n\nCounsel for the Minister N/A Conseil du ministre\n\n2018 CanLII 129997 (CA IRB)\n\nRAD File / Dossier de la SAR : TB7 -12730\n\n\n\n\n\n1\n\nREASONS FOR DECISION\n\n[1] [REDACTED] [REDACTED] [REDACTED] (the \u201cAppellant\u201d) is alleging to be a citizen of Somalia and is\n\nappealing a decision of the Refugee Protection Division (RPD) denying his claim for refugee\n\nprotection. The Appellant is requesting that the Refugee Appeal Division (RAD) set aside the\n\nRPD\u2019s negative determination and find that he is a Convention refugee or a person in need of\n\nprotection. In the alternative, the Appellant requests the RAD refer the matter back to the RPD\n\nfor redetermination by a differently constituted panel. The Appellant has requested to submit\n\nnew evidence and has requested an oral hearing.\n\nDETERMINATION OF THE APPEAL\n\n[2] The RAD dismisses the appeal and confirms the decision of the RPD that the Appellant is\n\nneither a Convention refugee nor a person in need of protection, pursuant to paragraph 111(1)( a)\n\nof the Immigration and Refugee Protection Act (IRPA).1\n\nBackground\n\n[3] The Appellant alleges that he is a member of the Hawrarsame, which is a sub -clan of the\n\nDarod clan. He alleges he was frequently..."
+    }
+  ]
+}

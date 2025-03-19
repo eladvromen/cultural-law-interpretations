@@ -1,0 +1,2854 @@
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title>Determination Extraction Analysis</title>
+        <style>
+            body { font-family: Arial, sans-serif; margin: 20px; }
+            h1 { color: #2c3e50; }
+            .case { margin-bottom: 30px; border: 1px solid #ddd; padding: 15px; border-radius: 5px; }
+            .case-header { background-color: #f8f9fa; padding: 10px; margin-bottom: 15px; }
+            .extracted { background-color: #e8f4f8; padding: 10px; margin: 10px 0; border-left: 4px solid #3498db; }
+            .expected { background-color: #f8f4e8; padding: 10px; margin: 10px 0; border-left: 4px solid #f39c12; }
+            .missing { background-color: #f8e8e8; padding: 10px; margin: 10px 0; border-left: 4px solid #e74c3c; }
+            .case-text { background-color: #f9f9f9; padding: 15px; border: 1px solid #eee; 
+                         height: 200px; overflow: auto; font-family: monospace; white-space: pre-wrap; }
+            .metrics { font-weight: bold; color: #e74c3c; }
+            .comparison { display: flex; flex-wrap: wrap; gap: 20px; }
+            .comparison-column { flex: 1; min-width: 300px; }
+            .nav { position: sticky; top: 0; background: white; padding: 10px; border-bottom: 1px solid #ddd; }
+            .legend { margin: 10px 0 20px 0; padding: 10px; background-color: #f8f9fa; border-radius: 5px; }
+            .legend span { margin-right: 20px; }
+        </style>
+    </head>
+    <body>
+        <div class="nav">
+            <h1>Challenging Cases in Determination Extraction</h1>
+            <div class="legend">
+                <span style="color: #3498db;">■</span> Extracted
+                <span style="color: #f39c12;">■</span> Expected
+                <span style="color: #e74c3c;">■</span> Missing (Expected but not found)
+            </div>
+        </div>
+        <p>These cases had significantly fewer extracted determinations than expected.</p>
+    
+        <div class="case" id="case-1">
+            <div class="case-header">
+                <h2>Case 1: ID 134307</h2>
+                <p class="metrics">Expected: 6 | Extracted: 0 | 
+                   Ratio: 0.00</p>
+            </div>
+            
+            <div class="comparison">
+                <div class="comparison-column">
+                    <h3>Extracted Determinations (0)</h3>
+        <p>No determinations extracted.</p>
+                </div>
+                <div class="comparison-column">
+                    <h3>Missing Determinations (1)</h3>
+        
+                <div class="missing">
+                    <p>["['appeal is dismissed']", "['appellant has not lost his permanent resident status']", "['appeal is dismissed']", "['appeal is dismissed']", "['appeal is allowed for diego gabriel cruz.the']", "['appeal is allowed', 'appeal is dismissed']"]</p>
+                </div>
+                
+                </div>
+            </div>
+        
+            <div>
+                <h3>All Expected Determinations (1)</h3>
+        
+                <div class="expected">
+                    <p>["['appeal is dismissed']", "['appellant has not lost his permanent resident status']", "['appeal is dismissed']", "['appeal is dismissed']", "['appeal is allowed for diego gabriel cruz.the']", "['appeal is allowed', 'appeal is dismissed']"]</p>
+                </div>
+                
+            </div>
+            
+            <h3>Case Text (first portion):</h3>
+            <div class="case-text">
+</div>
+        </div>
+        
+        <div class="case" id="case-2">
+            <div class="case-header">
+                <h2>Case 2: ID 146969</h2>
+                <p class="metrics">Expected: 9 | Extracted: 3 | 
+                   Ratio: 0.33</p>
+            </div>
+            
+            <div class="comparison">
+                <div class="comparison-column">
+                    <h3>Extracted Determinations (3)</h3>
+        
+                <div class="extracted">
+                    <p><strong>Score:</strong> 20 | <strong>Match type:</strong> pattern</p>
+                    <p>I find that the appeal has been abandoned.</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 20 | <strong>Match type:</strong> pattern</p>
+                    <p>The Appellant has abandoned her appeal   [12]  I have not heard enough evidence to determine  whether the appeal should be dismissed on  its merits.</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 15 | <strong>Match type:</strong> pattern</p>
+                    <p>11.24)  Available in French  NOTICE OF DECISION   The appellant’s application dated November 3, 2021, requesting to withdraw her appeal is  dismissed.</p>
+                </div>
+                
+                </div>
+                <div class="comparison-column">
+                    <h3>Missing Determinations (1)</h3>
+        
+                <div class="missing">
+                    <p>["['application for withdrawal is dismissed']", "['application to withdraw the appeal is an abuse of process']", "['appeal is dismissed']", "['appeal be dismissed']", "['appeal should be dismissed']", "['appeal has been abandoned']", "['appeal has been abandoned']", "['dismiss the appellant’s application']", "['appeal is determined']"]</p>
+                </div>
+                
+                </div>
+            </div>
+        
+            <div>
+                <h3>All Expected Determinations (1)</h3>
+        
+                <div class="expected">
+                    <p>["['application for withdrawal is dismissed']", "['application to withdraw the appeal is an abuse of process']", "['appeal is dismissed']", "['appeal be dismissed']", "['appeal should be dismissed']", "['appeal has been abandoned']", "['appeal has been abandoned']", "['dismiss the appellant’s application']", "['appeal is determined']"]</p>
+                </div>
+                
+            </div>
+            
+            <h3>Case Text (first portion):</h3>
+            <div class="case-text">IAD.34.01 (2021. 11.24 )
+
+Available in French Immigration and
+
+Refugee Board of Canada
+
+
+
+Immigration Appeal Division
+
+Commission de l’immigration
+
+
+
+Section d’appel de l’immigration
+
+IAD File No. / No de dossier de la SAI : TC0 -07994
+
+Client ID No. / No ID client: 56219577
+
+
+
+Reasons and Decision  Motifs et décision
+
+Residency Obligation Appeal
+
+
+
+Appellant [s] Veroni[REDACTED]
+
+Appelant [e][s]
+
+and et
+
+Respondent Minister of Citizenship and Immigration Intimé [e]
+
+
+
+Date [s] of Hearing In Chambers
+
+Date(s) de l’audience
+
+
+
+Place of Hearing Toronto, O ntario
+
+Lieu de l’audience
+
+
+
+
+
+Date of Decision December 1, 2021
+
+
+
+Panel [REDACTED]
+
+
+
+Tribunal
+
+
+
+Counsel for the
+
+Appellant [s] [REDACTED]
+
+Barrister & Solicitor Conseil de
+
+l’appelant(e)/ des
+
+appelant(e)s
+
+
+
+Designated Representative [s] N/A
+
+Représentant(e)(s)
+
+désigné(e)(s)
+
+
+
+Counsel for the Minister [REDACTED]
+
+Conseil du
+
+(de la) ministre
+
+
+
+2021 CanLII 146969 (CA IRB)
+
+2021 CanLII 146969 (CA IRB)
+
+IAD File No. / No de dossier de la SAI : TC0 -07994
+
+Client ID No. / No ID client: 56219577
+
+
+
+1
+
+IAD.34.01 (2021. 11.24)
+
+Available in French REASONS FOR DECISION
+
+OVERVIEW
+
+[1] The Appellant, Veroni[REDACTED], is a citizen of Trinidad and Tobago. She
+
+became a permanent resident of Canada in 2012. After landing in Canada, the A ppellant stayed
+
+here for about two months. She returned to Trinidad and Tobago to wrap up her affairs. Later, her
+
+parents became ill, which prevented her from retuning back to Canada sooner.
+
+[2] In 2020, the Appellant applied for a Permanent Resident Travel D ocument to return to
+
+Canada, but the visa officer refused her application. The Appellant did not respect her residency
+
+obligations to be present in Canada in the relevant five -year period for at least 730 days.1 In the
+
+relevant five -year period, she was pr esent for only 136 days.
+
+[3] The Appellant appealed the visa officer’s decision to the Immigration Appeal Division. She
+
+admitted that the visa officer ’s decision is l...</div>
+        </div>
+        
+        <div class="case" id="case-3">
+            <div class="case-header">
+                <h2>Case 3: ID 30522</h2>
+                <p class="metrics">Expected: 11 | Extracted: 5 | 
+                   Ratio: 0.45</p>
+            </div>
+            
+            <div class="comparison">
+                <div class="comparison-column">
+                    <h3>Extracted Determinations (5)</h3>
+        
+                <div class="extracted">
+                    <p><strong>Score:</strong> 20 | <strong>Match type:</strong> pattern</p>
+                    <p>But, if the appeal is dismissed and Mr.</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 20 | <strong>Match type:</strong> pattern</p>
+                    <p>If her father’s and her brother’s  appeals are dismissed she will continue living her life in Canada as she has been.</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 15 | <strong>Match type:</strong> pattern</p>
+                    <p>[3] The appellants, do n ot challenge the legal validity of the removal order but argue that the  appeal s should be allowed on the basis that sufficient humanitarian and compassionate  considerations warrant special relief, in light of all the circumstances of the case, taking into  account the best interests of any child directly affected by the decision.</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 15 | <strong>Match type:</strong> pattern</p>
+                    <p>/ N° de dossier de la S AI : MB4 -03412   MB5 -04579       9 Neither appellants would suffer  undue hardship if the appeals were  dismissed  and t he best  interest of a child would  not be compromised   [18]  XXXXXXXXXXXXXXXXX testified that the impact of him being removed from Canada would  be catastrophic to him and his family.</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 15 | <strong>Match type:</strong> pattern</p>
+                    <p>I concluded the appellant would not suffer undue hardship if the appeal is  dismissed.</p>
+                </div>
+                
+                </div>
+                <div class="comparison-column">
+                    <h3>Missing Determinations (1)</h3>
+        
+                <div class="missing">
+                    <p>["['appeal is dismissed']", "['appeal is allowed']", "['appeal is dismissed']", "['appeal is dismissed']", "['appeals were dismissed']", "['appeal of garo dermosessian isallowedin file mb4-03412']", "['removal order isset aside']", "['appeals are dismissed']", "['appeals are dismissed']", "['appeal is dismissed']", "['appellant has not lost his permanent resident status']"]</p>
+                </div>
+                
+                </div>
+            </div>
+        
+            <div>
+                <h3>All Expected Determinations (1)</h3>
+        
+                <div class="expected">
+                    <p>["['appeal is dismissed']", "['appeal is allowed']", "['appeal is dismissed']", "['appeal is dismissed']", "['appeals were dismissed']", "['appeal of garo dermosessian isallowedin file mb4-03412']", "['removal order isset aside']", "['appeals are dismissed']", "['appeals are dismissed']", "['appeal is dismissed']", "['appellant has not lost his permanent resident status']"]</p>
+                </div>
+                
+            </div>
+            
+            <h3>Case Text (first portion):</h3>
+            <div class="case-text">IAD.34.1 (04.2013)
+
+Disponible en français
+
+
+
+
+
+Immigration and
+
+Refugee Board of Canada
+
+
+
+Immigration Appeal Division
+
+
+
+Commission de l’immigration
+
+
+
+Section d’appel de l’immigration
+
+IAD File No. / N° de dossier de la SAI : MB4 -03412
+
+MB5 -04579
+
+Client ID No. / No ID client : 6070 -1357
+
+6070 -1290
+
+
+
+Reasons and Decision  Motifs et décision
+
+
+
+REMOVAL ORDER (MB4 -03412 / [REDACTED])
+
+RESIDENCY OBLIGATION (MB5 -04579 / Al[REDACTED])
+
+
+
+
+
+Appellant(s) [REDACTED]
+
+Al[REDACTED] Appelant(e)(s)
+
+
+
+and et
+
+
+
+Respondent The Minister of Public Safety
+
+and Emergency Preparedness
+
+and
+
+The Minister of Citizenship and Immigration Intimé(e)
+
+
+
+Date(s) of Hearing October 4, 2017
+
+January 22, 2018 Date(s) [REDACTED]
+
+
+
+Place of Hearing Heard by telephone in Lebanon on both dates
+
+(Appellant Al[REDACTED] in file MB5 -04579)
+
+and
+
+Montréal, Quebec (Appellant [REDACTED] in
+
+file MB4 -03412), (Respondent and (IAD) Lieu de l’audience
+
+
+
+Date of Decision February 1 4, 2018 Date de la décision
+
+
+
+Panel Me [REDACTED] Tribunal
+
+
+
+Counsel for the
+
+Appellant(s) Me [REDACTED] Conseil(s) de
+
+l’appelant(e) / des
+
+appelant(e)(s)
+
+
+
+Designated
+
+Representative(s) N/A Représentant(e)(s)
+
+désigné(e)(s)
+
+
+
+
+
+Counsel for the Minister Jean [REDACTED][Written submissions] Conseil du ministre
+
+2018 CanLII 30522 (CA IRB)
+
+IAD File No. / N° de dossier de la S AI : MB4 -03412
+
+MB5 -04579
+
+
+
+
+
+2
+
+REASONS FOR DECISION
+
+
+
+INTRODUCTION
+
+[1] These are the reasons for the decision in the appeals of [REDACTED] (MB4 -
+
+03412) and Ale[REDACTED] (MB5 -04579) (herein collectively referred as the
+
+appellants) from decisions made because of their failure to comply with the residency obligation
+
+set out in the Immigration and Refugee Protection Act1 (the Act ). The hearings were joined and
+
+heard simultaneously with the consent of the parties . Ale[REDACTED] was not present ,
+
+he appeared via his counsel. He did not testify and he adopt ed the testimony of his father. The
+
+Minister’s representative was not prese...</div>
+        </div>
+        
+        <div class="case" id="case-4">
+            <div class="case-header">
+                <h2>Case 4: ID 136710</h2>
+                <p class="metrics">Expected: 6 | Extracted: 1 | 
+                   Ratio: 0.17</p>
+            </div>
+            
+            <div class="comparison">
+                <div class="comparison-column">
+                    <h3>Extracted Determinations (1)</h3>
+        
+                <div class="extracted">
+                    <p><strong>Score:</strong> 20 | <strong>Match type:</strong> pattern</p>
+                    <p>This appeal is dismissed.</p>
+                </div>
+                
+                </div>
+                <div class="comparison-column">
+                    <h3>Missing Determinations (1)</h3>
+        
+                <div class="missing">
+                    <p>["['appeals are allowed']", "['rpd’s determination is set aside']", "['substitute my determination', 'appellants are convention refugees']", "['neither a refugee nor a person in need of protection']", "['confirm the decision of the rpd', 'is neither a convention refugee nor a person in need of protection']", "['appeal is dismissed']"]</p>
+                </div>
+                
+                </div>
+            </div>
+        
+            <div>
+                <h3>All Expected Determinations (1)</h3>
+        
+                <div class="expected">
+                    <p>["['appeals are allowed']", "['rpd’s determination is set aside']", "['substitute my determination', 'appellants are convention refugees']", "['neither a refugee nor a person in need of protection']", "['confirm the decision of the rpd', 'is neither a convention refugee nor a person in need of protection']", "['appeal is dismissed']"]</p>
+                </div>
+                
+            </div>
+            
+            <h3>Case Text (first portion):</h3>
+            <div class="case-text">Immigration and Refugee
+
+Board of Canada
+
+Refugee Appeal Division Commission de l’immigration
+
+Section d’appel des réfugiés
+
+
+
+RAD.25.02 ( April 04 , 2019 )
+
+Disponible en français
+
+
+
+RAD File / Dossier de la SAR : TB9 -19840
+
+TB9 -19841 / TB9 -19842 / TB9 -19843
+
+
+
+Private Proceeding / Huis clos
+
+
+
+Reasons and decision  Motifs et décision
+
+
+
+Person s who are the
+
+subject of the appeal [REDACTED] [REDACTED] [REDACTED] [REDACTED]
+
+[REDACTED] [REDACTED] [REDACTED] [REDACTED]
+
+[REDACTED] [REDACTED] Personne s en cause
+
+
+
+Appeal considered /
+
+heard at Toronto, ON Appel instruit /
+
+entendu à
+
+
+
+Date of decision October 8, 2019 Date de la décision
+
+
+
+Panel [REDACTED] Tribunal
+
+
+
+Counsel for the person s
+
+who are the subject of the
+
+appeal [REDACTED] Conseil des
+
+personne s en cause
+
+
+
+Designated representative [REDACTED] [REDACTED] Représentant(e)
+
+désign é(e)
+
+
+
+Counsel for the Minister N/A Conseil du ministre
+
+
+
+
+
+2019 CanLII 136710 (CA IRB)
+
+RAD File / Dossier de la SAR : TB9 -19840
+
+TB9 -19841 / TB9 -19842 / TB9 -19843
+
+
+
+RAD.25.02 ( April 04, 201 9)
+
+Disponible en français 2
+
+REASONS FOR DECISION
+
+INTRODUCTION
+
+[1] [REDACTED] [REDACTED] (the “Principal Appellant”), [REDACTED] [REDACTED] (the “Spousal Appellant”),
+
+and [REDACTED] [REDACTED] [REDACTED] (the “First Minor Appellant”) are citizens of Nigeria . [REDACTED] [REDACTED]
+
+[REDACTED] (the “Second Minor Appellant”) is a citizen of both Niger ia and the United States (US).
+
+All of the Appellants are appealing a decision of the Refugee Protection Division (RPD) denying
+
+their claims for refugee protection.
+
+[2] The Principal Appellant is the mother and the Designated Representative (DR) of the
+
+Minor Ap pellants. The Spousal Appellant is married to the Principal Appellant and is the father
+
+of the Minor Appellants.
+
+DETERMINATION
+
+[3] The Appeals of the Principal Appellant, Spousal Appellant and First Minor Appellant are
+
+allowed. The Appeal of the Second Minor A ppellant is dismissed.
+
+BACKGROUND
+
+[4] The Princip...</div>
+        </div>
+        
+        <div class="case" id="case-5">
+            <div class="case-header">
+                <h2>Case 5: ID 150689</h2>
+                <p class="metrics">Expected: 6 | Extracted: 1 | 
+                   Ratio: 0.17</p>
+            </div>
+            
+            <div class="comparison">
+                <div class="comparison-column">
+                    <h3>Extracted Determinations (1)</h3>
+        
+                <div class="extracted">
+                    <p><strong>Score:</strong> 20 | <strong>Match type:</strong> pattern</p>
+                    <p>The appeal is allowed with respect to the claims of the  Principal Appellant, Ms.</p>
+                </div>
+                
+                </div>
+                <div class="comparison-column">
+                    <h3>Missing Determinations (1)</h3>
+        
+                <div class="missing">
+                    <p>["['neither a convention refugee nor a person in need of protection.the', 'appeal with respect to her claim is dismissed']", "['confirm the rpd’s decision']", "['appeal is allowed']", "['i disagree with the rpd’s decision on the claims made by the principal appellant, his wife']", "['negative decisions on their claims are set aside']", "['rpd’s decision on xxxx claim is confirmed']"]</p>
+                </div>
+                
+                </div>
+            </div>
+        
+            <div>
+                <h3>All Expected Determinations (1)</h3>
+        
+                <div class="expected">
+                    <p>["['neither a convention refugee nor a person in need of protection.the', 'appeal with respect to her claim is dismissed']", "['confirm the rpd’s decision']", "['appeal is allowed']", "['i disagree with the rpd’s decision on the claims made by the principal appellant, his wife']", "['negative decisions on their claims are set aside']", "['rpd’s decision on xxxx claim is confirmed']"]</p>
+                </div>
+                
+            </div>
+            
+            <h3>Case Text (first portion):</h3>
+            <div class="case-text">Immigration and Refugee
+
+Board of Canada
+
+Refugee Appeal Division Commission de l’immigration
+
+Section d’appel des réfugiés
+
+
+
+RAD.25.02 ( January, 2020)
+
+Disponible en français
+
+
+
+RAD File / Dossier de la SAR : TB9 -34721
+
+TB9 -34722 / TB9 -34723 / TB9 -34724
+
+
+
+Private Proceeding / Huis clos
+
+
+
+Reasons and decision  Motifs et décision
+
+
+
+Person s who are the subject
+
+of the appeal [REDACTED] [REDACTED] [REDACTED] [REDACTED] [REDACTED]
+
+[REDACTED] [REDACTED] [REDACTED] [REDACTED] [REDACTED]
+
+[REDACTED] [REDACTED] [REDACTED] [REDACTED] [REDACTED]
+
+[REDACTED] [REDACTED] Personne s en cause
+
+
+
+Appeal considered / heard at Toronto, ON Appel instruit /
+
+entendu à
+
+
+
+Date of decision February 24, 2021 Date de la décision
+
+
+
+Panel [REDACTED] Tribunal
+
+
+
+Counsel for the person s who
+
+are the subject of the appeal [REDACTED] (Sina) Ogunleye Conseil des personne s
+
+en cause
+
+
+
+Designated representative [REDACTED] [REDACTED] [REDACTED] [REDACTED] Représentant(e)
+
+désign é(e)
+
+
+
+Counsel for the Minister N/A Conseil du ministre
+
+
+
+
+
+2021 CanLII 150689 (CA IRB)
+
+RAD File / Dossier de la SAR : TB9 -34721
+
+TB9 -34722 / TB9 -34723 / TB9 -34724
+
+
+
+RAD.25.02 ( January , 20 20)
+
+Disponible en français 2
+
+REASONS FOR DECISION
+
+OVERVIEW
+
+[1] The Appellants are [REDACTED] [REDACTED] [REDACTED] [REDACTED] (“the Principal Appellant ”), his wife
+
+[REDACTED] [REDACTED] [REDACTED] [REDACTED] (“Ms. [REDACTED] [REDACTED] [REDACTED] ”), their minor son [REDACTED] [REDACTED]
+
+[REDACTED] [REDACTED] (“[REDACTED] ”), and their minor daughter [REDACTED] [REDACTED] [REDACTED] [REDACTED] [REDACTED]
+
+(“[REDACTED] ”). The Principal Appellant, Ms. [REDACTED] [REDACTED] [REDACTED] , and [REDACTED] are Nigerian
+
+citizens. [REDACTED] was born in the United States and is therefore an American citizen. The
+
+Appellants fear political persecution in Nigeria due to the Principal Appellant’s involvement i n
+
+the All Progressives Congress (“APC”) . The Appellants fear that members of the People’ s
+
+Democratic Part...</div>
+        </div>
+        
+        <div class="case" id="case-6">
+            <div class="case-header">
+                <h2>Case 6: ID 53826</h2>
+                <p class="metrics">Expected: 6 | Extracted: 1 | 
+                   Ratio: 0.17</p>
+            </div>
+            
+            <div class="comparison">
+                <div class="comparison-column">
+                    <h3>Extracted Determinations (1)</h3>
+        
+                <div class="extracted">
+                    <p><strong>Score:</strong> 20 | <strong>Match type:</strong> pattern</p>
+                    <p>(1)  To stay a removal order, the Immigration Appeal Division must be satisfied, taking into account the best interests of a child directly affected by the decision, that sufficient humanitarian and compassionate considerations warrant special relief in light of all the circumstances of the case.</p>
+                </div>
+                
+                </div>
+                <div class="comparison-column">
+                    <h3>Missing Determinations (1)</h3>
+        
+                <div class="missing">
+                    <p>["['stay of the removal order is cancelled', 'appeal is terminated']", "['iad has lost its jurisdiction']", "['appeal is terminated']", "['stay of the removal order is cancelled', 'appeal is terminated']", "['appeal is terminated']", "['appeal is terminated']"]</p>
+                </div>
+                
+                </div>
+            </div>
+        
+            <div>
+                <h3>All Expected Determinations (1)</h3>
+        
+                <div class="expected">
+                    <p>["['stay of the removal order is cancelled', 'appeal is terminated']", "['iad has lost its jurisdiction']", "['appeal is terminated']", "['stay of the removal order is cancelled', 'appeal is terminated']", "['appeal is terminated']", "['appeal is terminated']"]</p>
+                </div>
+                
+            </div>
+            
+            <h3>Case Text (first portion):</h3>
+            <div class="case-text">IAD.34.1 (October 2007) Disponible en français
+
+
+
+Immigration and Refugee Board of Canada
+
+
+
+Immigration Appeal Division
+
+
+
+
+
+Section d’appel de l’immigration
+
+
+
+IAD File No. / N
+
+o de dossier de la SAI : TA7-05084 Client ID No. / N
+
+o ID client : 2437-0296
+
+
+
+Reasons and Decision − Motifs et décision
+
+Removal Order
+
+Appellant(s) Appelant(s)
+
+OR[REDACTED]
+
+Respondent Intimé
+
+The Minister of Public Safety and Emergency Preparedness Le ministre de la Sécurité publique et de la Protection civile
+
+Date(s) and Place Date(s) et Lieu de of Hearing l’audience
+
+April 13, 2011 Toronto, Ontario
+
+Date of Decision Date de la Décision
+
+April 13, 2011 May 27, 2011 – signed reasons
+
+Panel Tribunal
+
+[REDACTED]
+
+
+
+Appellant’s Counsel Conseil de l’appelant(s)
+
+Not Represented Minister’s Counsel Conseil de l’intimé
+
+[REDACTED]
+
+2011 CanLII 53826 (CA IRB)
+
+IAD File No. / No de dossier de la SAI : TA7-05084 Client ID No. / N
+
+o ID client : 2437-0296 1
+
+Reasons for Decision
+
+
+
+[1] On May 8, 2008 Member [REDACTED] of the Immigration Appeal Division (IAD) granted Or[REDACTED] (the appellant) a stay (on conditions) of the deportation order issued against him on May 7, 2007. The stay was gr anted to the appellant based on the written recommendation of the respondent. The duration of the stay was for one year and it included 12 conditions. [2] On February 25, 2010 Member [REDACTED] of the IAD extended the stay for another six months because the appellant did not obtain his passport. Minister’s counsel at that time consented to the extension of the stay in order to allow the appellant to obtain his passport. [3] On November 2, 2010 the stay was further extended. On December 9, 2010 the appellant was sent a Notice of Reconsideration and on March 7, 2011 the Minister submitted a written statement indicating that the appellant had not complied with his stay and pointed to further criminality, his failure to obtain a passport and his failure to provide a Statement of Compliance. [4] At today’s hear...</div>
+        </div>
+        
+        <div class="case" id="case-7">
+            <div class="case-header">
+                <h2>Case 7: ID 60833</h2>
+                <p class="metrics">Expected: 6 | Extracted: 1 | 
+                   Ratio: 0.17</p>
+            </div>
+            
+            <div class="comparison">
+                <div class="comparison-column">
+                    <h3>Extracted Determinations (1)</h3>
+        
+                <div class="extracted">
+                    <p><strong>Score:</strong> 20 | <strong>Match type:</strong> pattern</p>
+                    <p>The Appeal Division orders that its order signed on January 28, 2002 be cancelled and the appeal be dismissed.</p>
+                </div>
+                
+                </div>
+                <div class="comparison-column">
+                    <h3>Missing Determinations (1)</h3>
+        
+                <div class="missing">
+                    <p>["['…]”']", "['appeal is discontinued']", "['…]”']", "['appeal terminated']", "['appeal is discontinued']", "['…]”']"]</p>
+                </div>
+                
+                </div>
+            </div>
+        
+            <div>
+                <h3>All Expected Determinations (1)</h3>
+        
+                <div class="expected">
+                    <p>["['…]”']", "['appeal is discontinued']", "['…]”']", "['appeal terminated']", "['appeal is discontinued']", "['…]”']"]</p>
+                </div>
+                
+            </div>
+            
+            <h3>Case Text (first portion):</h3>
+            <div class="case-text">Immigration and Refugee Board Immigration Appeal Division
+
+Commission de l'immigration et du statut de réfugiéSection d’appel de l’immigration
+
+IAD File No / No. Dossier de la SAI : MA1-03234 Client ID / No ID Client : 2596-5786
+
+Reasons and Decision − Motifs et décision Removal Order Appeal
+
+Appellant(s) Appelant(s)
+
+[REDACTED] NGUYEN
+
+Respondent Intimé
+
+The Minister of Citizenship and Immigration Le minist[REDACTED] et de l'Immigration
+
+Date(s) of Hearing Date(s) de l'audience
+
+April 27, 2006
+
+Montreal
+
+Date of decision Date de la décision
+
+April 27, 2006 Reasons signed on: May 2, 2006
+
+Panel Tribunal
+
+Me [REDACTED]
+
+Appellant's Counsel Con[REDACTED])
+
+Me [REDACTED]
+
+Minister's Counsel [REDACTED]
+
+[REDACTED]
+
+You can obtain the translation of thes e reasons for decision in the other official language by writing to the Editing and Translation Services Directorate of the IRB at the following address: 344 Slater Street, 14th Floor, Ottawa, Ontario K1A 0K1, by e-mail to translation@irb.gc.ca
+
+ou par télécopie au (613) 947-3213.
+
+2006 CanLII 60833 (CA IRB)
+
+IAD File No / No. Dossier de la SAI : MA1-03234 Client ID / No ID Client : 2596-5786 1
+
+Oral Reasons for Decision
+
+[1] This is the decision in the appeal by [REDACTED] (the appellant) from a deportation order made against him on November 16, 2000 following his conviction for trafficking narcotics on April 26, 1996 where he received a sentence of 3 years’ imprisonment. [2] This deportation order was stayed by the Immigrat ion Appeal Division’s Member [REDACTED] on December 10, 2001. At that time, following a recommendation by the Minister’s counsel and taking into account different humanitarian and compassionate factors, Member [REDACTED] concluded that such a stay was warranted. I will quote from th e Member’s decision on page 2.
+
+“[…] The evidence on record confirms th e appellant’s testimony on this point (that the time during which he was involved in criminal activities was very brief ). In the Assessment for dec...</div>
+        </div>
+        
+        <div class="case" id="case-8">
+            <div class="case-header">
+                <h2>Case 8: ID 69758</h2>
+                <p class="metrics">Expected: 7 | Extracted: 2 | 
+                   Ratio: 0.29</p>
+            </div>
+            
+            <div class="comparison">
+                <div class="comparison-column">
+                    <h3>Extracted Determinations (2)</h3>
+        
+                <div class="extracted">
+                    <p><strong>Score:</strong> 20 | <strong>Match type:</strong> pattern</p>
+                    <p>If the decision is correct in law, are there sufficient humanitarian and compassionate considerations, taking into account the best interests of a child directly affected by the decision, to warrant special relief in all the circumstances of the case?</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 20 | <strong>Match type:</strong> pattern</p>
+                    <p>The panel also finds, in relation to the principal appellan t’s wife and son, XXXXXXXXXX, taking into account the best interests of a child directly affected by the decision, there are sufficient humanitarian and compassionate considerations to warrant special relief in all the circumstances of this case.</p>
+                </div>
+                
+                </div>
+                <div class="comparison-column">
+                    <h3>Missing Determinations (1)</h3>
+        
+                <div class="missing">
+                    <p>["['removal orders are set aside']", "['appeals of his wife']", "['appeal of the principal appellant, toni elias bougharios, is allowed in law']", "['appeal must be allowed in law']", "['appeals are allowed']", "['appellants have not lost their permanent resident status']", "['sufficient humanitarian and compassionate considerations']"]</p>
+                </div>
+                
+                </div>
+            </div>
+        
+            <div>
+                <h3>All Expected Determinations (1)</h3>
+        
+                <div class="expected">
+                    <p>["['removal orders are set aside']", "['appeals of his wife']", "['appeal of the principal appellant, toni elias bougharios, is allowed in law']", "['appeal must be allowed in law']", "['appeals are allowed']", "['appellants have not lost their permanent resident status']", "['sufficient humanitarian and compassionate considerations']"]</p>
+                </div>
+                
+            </div>
+            
+            <h3>Case Text (first portion):</h3>
+            <div class="case-text">IAD.34.1 (October 2007) Disponible en français
+
+
+
+IMMIGRATION AND REFUGEE BOARD (IMMIGRATION APPEAL DIVISION)
+
+COMMISSION DE L’IMMIGRATION ET DU STATUT DE RÉFUGIÉ (SECTION D’APPEL DE L’IMMIGRATION)
+
+
+
+
+
+IAD File No./Dossier: TA6-12600 TA6-12601 TA6-12602
+
+Reasons and Decision − Motifs et décision
+
+
+
+Removal Order
+
+Appellant(s) Appelant(s)
+
+T[REDACTED] ABIR NABIH DIB ROUKOS E[REDACTED]
+
+Respondent Intimé
+
+The Minister of Public Safety and Emergency Preparedness Le Ministre de la Sécurité Publique et de la Protection Civile
+
+Date(s) and Place Date(s) et Lieu de of Hearing l’audience
+
+December 20, 2007 Toronto, Ontario
+
+Date of Decision Date de la Décision
+
+December 20, 2007
+
+Panel Tribunal
+
+D. Collison
+
+Appellant’s Counsel Conseil de l’appelant(s)
+
+J. Norris Ormston Barrister and Solicitor
+
+Minister’s Counsel Conseil de l[REDACTED]
+
+
+
+
+
+2007 CanLII 69758 (CA IRB)
+
+IAD File No. /Dossier: TA6-12600 TA6-12601 TA6-12602
+
+
+
+1
+
+
+
+REASONS FOR DECISION
+
+Introduction [1] These are the reasons for the decision in the appeal, pursuant to subsection 63(3) of the Immigration and Refugee Protection Act
+
+(IRPA ) of T[REDACTED] (the principal appellant), his wife, [REDACTED] (the appellant) and E[REDACTED] (the minor appellant). They are appealing the de termination by the Minister’s Delegate, made on September 27, 2006, to issue a departure orders against them as a persons described in subsection 41(b) of IRPA
+
+, because the Minister’s Delegate was satisfied, on a balance of probabilities, there were grounds to believe that the appellants were permanent residents who were inadmissible to Canada for failing to comp ly with the residency obligation contained in section 28 of IRPA
+
+. [2] Specifically, the appellants had failed to reside in Canada for at least 730 days in the five- year period immediately after they became permanent residents, which was on March 27, 2003. The Minister’s Delegate was also not sati sfied, pursuant to section 28(2)(c) of IRPA
+
+, that there were sufficient ...</div>
+        </div>
+        
+        <div class="case" id="case-9">
+            <div class="case-header">
+                <h2>Case 9: ID 77228</h2>
+                <p class="metrics">Expected: 8 | Extracted: 3 | 
+                   Ratio: 0.38</p>
+            </div>
+            
+            <div class="comparison">
+                <div class="comparison-column">
+                    <h3>Extracted Determinations (3)</h3>
+        
+                <div class="extracted">
+                    <p><strong>Score:</strong> 20 | <strong>Match type:</strong> pattern</p>
+                    <p>If the decision is correct in law, are there sufficient humanitarian and compassionate considerations, taking into account th e best interests of a child directly affected by the decision, to warrant special relief in light of all the circumstances of the case?</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 20 | <strong>Match type:</strong> pattern</p>
+                    <p>The removal order is set aside.</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 20 | <strong>Match type:</strong> pattern</p>
+                    <p>The Immigration Appeal Division finds that the appellant has not lost his permanent resident status.</p>
+                </div>
+                
+                </div>
+                <div class="comparison-column">
+                    <h3>Missing Determinations (1)</h3>
+        
+                <div class="missing">
+                    <p>["['appeal of the principal appellant']", "['appeal of alap rajeshkumar shah isallowed']", "['appeal of xitij rajeshkumar shah is declaredabandonedpursuant tosubsection 168(1)of theimmigration and refugee protection act']", "['removal order is set aside']", "['appeals of the principal appellant']", "['appeal of the elder son, xitij rajeshkumar shah, is declared abandoned']", "['appellant has not lost his permanent resident status']", "['appeal of the younger son, alap rajeshkumar shah, is dismissed', 'sufficient humanitarian and compassionate considerations']"]</p>
+                </div>
+                
+                </div>
+            </div>
+        
+            <div>
+                <h3>All Expected Determinations (1)</h3>
+        
+                <div class="expected">
+                    <p>["['appeal of the principal appellant']", "['appeal of alap rajeshkumar shah isallowed']", "['appeal of xitij rajeshkumar shah is declaredabandonedpursuant tosubsection 168(1)of theimmigration and refugee protection act']", "['removal order is set aside']", "['appeals of the principal appellant']", "['appeal of the elder son, xitij rajeshkumar shah, is declared abandoned']", "['appellant has not lost his permanent resident status']", "['appeal of the younger son, alap rajeshkumar shah, is dismissed', 'sufficient humanitarian and compassionate considerations']"]</p>
+                </div>
+                
+            </div>
+            
+            <h3>Case Text (first portion):</h3>
+            <div class="case-text">IAD File No. / N
+
+o de dossier de la SAI: TA6-00954 TA6-00955 TA6-00956 TA6-00957 Client ID No. / N
+
+o ID client: 2590-0315 25900316 25900318 25900317
+
+
+
+
+
+Reasons and Decision − Motifs et décision
+
+
+
+REMOVAL ORDER
+
+
+
+Appellant(s) [REDACTED] SHAH JAYSHREE R[REDACTED] [REDACTED] XI[REDACTED] Appelant(e)(s) Respondent
+
+The Minister of Public Safety and Emergency Preparedness Intimé(e)
+
+Date(s) and Place of Hearing April 30, 2008 Date(s) et lieu de l’audience Toronto, Ontario Date of Decision December 22, 2008 Date de la décision Panel D. Collison Tribunal Counsel for the Appellant(s) [REDACTED] Conseil(s) de l’appelant(e) / des appelant(e)(s) Barrister and Solicitor Counsel for the Minister [REDACTED] Conseil du ministre
+
+2008 CanLII 77228 (CA IRB)
+
+IAD File No. / No de dossier de la SAI: Client ID No. / N
+
+o ID client:
+
+2
+
+
+
+Reasons for Decision
+
+Introduction [1] These are the reasons for the decision in the appeals of Rajes[REDACTED] (the principal appellant), his wife, Jayshr[REDACTED], and his sons, Xi[REDACTED] and A[REDACTED], pursuant to subsection 63(3) of the Immigration and
+
+Refugee Protection Act (IRPA ), from departure orders made against them by Immigration Division Member [REDACTED] on January 18, 2006. The Immigration Division Member found the appellants were described in subsections 41(b) and 27(2) of IRPA
+
+as permanent residents who are inadmissible to Canada for failing to comply with conditions imposed under the former Immigration Regulations
+
+(the former Regulations) . 41. Non-compliance with Act – A person is inadmissible for failing to comply with this Act (b) in the case of a permanent resident, through failing to comply with subsection 27(2) or section 28. 27(2) Conditions – A permanent resident must comply with any conditions imposed under the regulations. Background [2] The principal appellant is 53 years old; his wife is 50 years old; his son, [REDACTED] is 27 years old and his son, [REDACTED] is 22 years old. They are all citizens of India....</div>
+        </div>
+        
+        <div class="case" id="case-10">
+            <div class="case-header">
+                <h2>Case 10: ID 77270</h2>
+                <p class="metrics">Expected: 5 | Extracted: 0 | 
+                   Ratio: 0.00</p>
+            </div>
+            
+            <div class="comparison">
+                <div class="comparison-column">
+                    <h3>Extracted Determinations (0)</h3>
+        <p>No determinations extracted.</p>
+                </div>
+                <div class="comparison-column">
+                    <h3>Missing Determinations (1)</h3>
+        
+                <div class="missing">
+                    <p>["['appellant has not lost her permanent resident status']", "['removal order is set aside']", "['appeal is allowed']", "['sufficient humanitarian and compassionate factors']", "['appeal is allowed']"]</p>
+                </div>
+                
+                </div>
+            </div>
+        
+            <div>
+                <h3>All Expected Determinations (1)</h3>
+        
+                <div class="expected">
+                    <p>["['appellant has not lost her permanent resident status']", "['removal order is set aside']", "['appeal is allowed']", "['sufficient humanitarian and compassionate factors']", "['appeal is allowed']"]</p>
+                </div>
+                
+            </div>
+            
+            <h3>Case Text (first portion):</h3>
+            <div class="case-text">
+</div>
+        </div>
+        
+        <div class="case" id="case-11">
+            <div class="case-header">
+                <h2>Case 11: ID 95778</h2>
+                <p class="metrics">Expected: 7 | Extracted: 2 | 
+                   Ratio: 0.29</p>
+            </div>
+            
+            <div class="comparison">
+                <div class="comparison-column">
+                    <h3>Extracted Determinations (2)</h3>
+        
+                <div class="extracted">
+                    <p><strong>Score:</strong> 20 | <strong>Match type:</strong> pattern</p>
+                    <p>This appeal is dismissed.</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 15 | <strong>Match type:</strong> pattern</p>
+                    <p>This appeal is  dismissed.</p>
+                </div>
+                
+                </div>
+                <div class="comparison-column">
+                    <h3>Missing Determinations (1)</h3>
+        
+                <div class="missing">
+                    <p>["['rad finds that the rpd’s finding in this regard is reasonable under the circumstances']", "['rad finds that the rpd’s finding in this regard was pre-emptive']", "['rad finds that the rpd’s finding in this regard is not reasonable']", "['rad finds that the rpd’s finding in this regard is reasonable']", "['rad confirms the decision of the rpd', 'appellant is neither a convention refugee nor a person in need of protection']", "['appeal is dismissed']", "['neither a convention refugee nor a person in need of protection']"]</p>
+                </div>
+                
+                </div>
+            </div>
+        
+            <div>
+                <h3>All Expected Determinations (1)</h3>
+        
+                <div class="expected">
+                    <p>["['rad finds that the rpd’s finding in this regard is reasonable under the circumstances']", "['rad finds that the rpd’s finding in this regard was pre-emptive']", "['rad finds that the rpd’s finding in this regard is not reasonable']", "['rad finds that the rpd’s finding in this regard is reasonable']", "['rad confirms the decision of the rpd', 'appellant is neither a convention refugee nor a person in need of protection']", "['appeal is dismissed']", "['neither a convention refugee nor a person in need of protection']"]</p>
+                </div>
+                
+            </div>
+            
+            <h3>Case Text (first portion):</h3>
+            <div class="case-text">RAD.2 5.02 (April 9, 2013 )
+
+Disponible en français
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+RAD File No. / N° de dossier de la SAR : TB3 -08650
+
+
+
+
+
+Private Proceeding / Huis clos
+
+
+
+
+
+Reasons and decision  Motifs et décision
+
+
+
+
+
+
+
+Person(s) who is(are)
+
+the subject of the appeal [REDACTED] [REDACTED] Personne(s) en cause
+
+
+
+
+
+Appeal considered / heard a t Toronto, Ontario Appel instruit à
+
+
+
+
+
+Date of decision February 19, 2014 Date de la décision
+
+
+
+
+
+Panel L. Favreau Tribunal
+
+
+
+
+
+Counsel for the person(s) who
+
+is(are)the subject of the appeal [REDACTED]
+
+en cause
+
+
+
+
+
+Designated Representative(s) N/A Représentant(e)(s) désigné(e)(s)
+
+
+
+
+
+Counsel for the Minister N/A Conseil du (de la) ministre
+
+
+
+2014 CanLII 95778 (CA IRB)
+
+RAD File No. / N° de dossier de la S AR :
+
+
+
+Reasons and Decision
+
+[1] [REDACTED] [REDACTED] (the Appellant), a citizen of China, appe als a decision of the Refugee
+
+Protection Division (RPD) denying her claim for refugee protection. She has not submitte d new
+
+evidence in support of her appeal. The Appellant asks that the Refugee Appeal Division (RAD)
+
+set aside the decision of the RPD and s ubstitute a decision with its own determination that the
+
+Appellant is a Convention refugee or a person in need of protection. In the alternative, the
+
+Appellant requests that the RAD refer the matter back to the RPD with a differently -constituted
+
+panel.
+
+DE TERMINATION
+
+[2] Pursuant to Section 111(1)(a) of the Immigration and Refugee Protection Act (IRPA), t he
+
+RAD confirms the decision of the RPD that the Appellant is neither a Convention refugee nor a
+
+person in need of protection. This appeal is dismissed.
+
+Backg round
+
+[3] The [REDACTED] nt alleged in his Basis of Claim (BoC) form that he is a first class martial arts
+
+athlete and that he has competed on a state and national level in China. He was introduced to the
+
+practice of Falun Gong by a classmate in [REDACTED] 2010. He bega n to practice Falun Gong in an
+
+attempt to find a solution to a debilitating ankle injury...</div>
+        </div>
+        
+        <div class="case" id="case-12">
+            <div class="case-header">
+                <h2>Case 12: ID 105890</h2>
+                <p class="metrics">Expected: 5 | Extracted: 1 | 
+                   Ratio: 0.20</p>
+            </div>
+            
+            <div class="comparison">
+                <div class="comparison-column">
+                    <h3>Extracted Determinations (1)</h3>
+        
+                <div class="extracted">
+                    <p><strong>Score:</strong> 10 | <strong>Match type:</strong> pattern</p>
+                    <p>The appeals are allowed.</p>
+                </div>
+                
+                </div>
+                <div class="comparison-column">
+                    <h3>Missing Determinations (1)</h3>
+        
+                <div class="missing">
+                    <p>["['rad finds that its positive decision in regard to these claims']", "['appeals are allowed']", "['appellants are somali citizens']", "['request for an oral hearing is dismissed']", "['rad sets aside the determination of the rpd', 'appellants are convention refugees']"]</p>
+                </div>
+                
+                </div>
+            </div>
+        
+            <div>
+                <h3>All Expected Determinations (1)</h3>
+        
+                <div class="expected">
+                    <p>["['rad finds that its positive decision in regard to these claims']", "['appeals are allowed']", "['appellants are somali citizens']", "['request for an oral hearing is dismissed']", "['rad sets aside the determination of the rpd', 'appellants are convention refugees']"]</p>
+                </div>
+                
+            </div>
+            
+            <h3>Case Text (first portion):</h3>
+            <div class="case-text">RAD.2 5.02 (June 23, 2014 )
+
+
+
+
+
+Immigration and
+
+Refugee Board of Canada
+
+
+
+Refugee Appeal Division
+
+Commission de l’immigration
+
+
+
+Section d’appel des réfugiés
+
+
+
+
+
+
+
+
+
+RAD File No. / N° de dossier de la SAR : TB4 -03139
+
+TB4 -03140
+
+
+
+Private Proceeding / Huis clos
+
+
+
+
+
+Redetermination of the Appeal
+
+Reasons and decision  Motifs et décision
+
+
+
+
+
+Person(s) who is(are)
+
+the subject of the appeal [REDACTED] [REDACTED] [REDACTED] [REDACTED]
+
+[REDACTED] [REDACTED] [REDACTED] Personne(s) en cause
+
+
+
+
+
+Appeal considered / heard at Toronto, Ontario Appel instruit à
+
+
+
+
+
+Date of decision September 30, 2015 Date de la décision
+
+
+
+
+
+Panel [REDACTED] Tribunal
+
+
+
+
+
+
+
+Counsel for the person(s) who
+
+is(are)the subject of the appeal [REDACTED]
+
+personne(s) en cause
+
+
+
+
+
+Designated Representative(s) N/A Représentant(e)(s) désigné(e)(s)
+
+
+
+
+
+Counsel for the Minister N/A Conseil du ministre
+
+
+
+2015 CanLII 105890 (CA IRB)
+
+RAD F ile No. / N° de dossier de la SA R :
+
+REASONS FOR DECISION
+
+[1] [REDACTED] [REDACTED] [REDACTED] (the Appellant) and [REDACTED] [REDACTED] [REDACTED] (the minor Appellant),
+
+who claim to be citizens of Somalia, appeal a decision of the Refugee Protection Division (RPD)
+
+denying their claims for refugee protection. They have submitted new evidence in support of their
+
+claims and they have requested an oral hearing. The Appellants further request that the Refugee
+
+Appeal Division (RAD) find that they are Convention refugees. Alternatively the Appellants
+
+request that the matter be remitted to the RPD for reconsideration by a differently -constituted
+
+panel.
+
+DETE RMINATION
+
+[2] Pursuant to section 111(1)(b) of the Immigration and Refugee Protection Act (IRPA), The
+
+RAD sets aside the determination of the RPD and substitutes its decision that t he Appellants are
+
+Convention re fugees. The appeals are allowed.
+
+BACKGROUND
+
+[3] The Appellant alleges she and the minor Appellant are members of the minority [REDACTED]
+
+clan who used to live in [REDACTED] , Somalia....</div>
+        </div>
+        
+        <div class="case" id="case-13">
+            <div class="case-header">
+                <h2>Case 13: ID 107173</h2>
+                <p class="metrics">Expected: 5 | Extracted: 1 | 
+                   Ratio: 0.20</p>
+            </div>
+            
+            <div class="comparison">
+                <div class="comparison-column">
+                    <h3>Extracted Determinations (1)</h3>
+        
+                <div class="extracted">
+                    <p><strong>Score:</strong> 20 | <strong>Match type:</strong> pattern</p>
+                    <p>This appeal is dismissed.</p>
+                </div>
+                
+                </div>
+                <div class="comparison-column">
+                    <h3>Missing Determinations (1)</h3>
+        
+                <div class="missing">
+                    <p>["['rad confirms the decision of the rpd', 'dismisses the appeal']", "['rad agrees with these findings']", "['rad disagrees']", "['appellant is neither a convention refugee nor a person in need of protection']", "['rad disagrees']"]</p>
+                </div>
+                
+                </div>
+            </div>
+        
+            <div>
+                <h3>All Expected Determinations (1)</h3>
+        
+                <div class="expected">
+                    <p>["['rad confirms the decision of the rpd', 'dismisses the appeal']", "['rad agrees with these findings']", "['rad disagrees']", "['appellant is neither a convention refugee nor a person in need of protection']", "['rad disagrees']"]</p>
+                </div>
+                
+            </div>
+            
+            <h3>Case Text (first portion):</h3>
+            <div class="case-text">RAD.2 5.02 (June 23, 2014 )
+
+
+
+
+
+Immigration and
+
+Refugee Board of Canada
+
+
+
+Refugee Appeal Division
+
+Commission de l’immigration
+
+
+
+Section d’appel des réfugiés
+
+
+
+
+
+
+
+
+
+RAD File No. / N° de dossier de la SAR : TB5 -12127
+
+
+
+Private Proceeding / Huis clos
+
+
+
+
+
+Reasons and decision  Motifs et décision
+
+
+
+
+
+Person(s) who is(are)
+
+the subject of the appeal [REDACTED] [REDACTED] [REDACTED] [REDACTED] (a.k.a.
+
+[REDACTED] [REDACTED] [REDACTED] [REDACTED] )
+
+(a.k.a. [REDACTED] [REDACTED] [REDACTED] ) Personne(s) en cause
+
+
+
+
+
+Appeal considered / heard at Toronto, Ontario Appel instruit à
+
+
+
+
+
+Date of decision March 18, 2016 Date de la décision
+
+
+
+
+
+Panel M. Pettinella Tribunal
+
+
+
+
+
+
+
+Counsel for the person(s) who
+
+is(are)the subject of the appeal Stella I Anaele Conseil(s) du (de la/des)
+
+personne(s) en cause
+
+
+
+
+
+Designated Representative(s) [REDACTED] [REDACTED] [REDACTED] Représentant(e)(s) désigné(e)(s)
+
+
+
+
+
+Counsel for the Minister N/A Conseil du ministre
+
+
+
+
+
+
+
+2016 CanLII 107173 (CA IRB)
+
+RAD F ile No. / N° de dossier de la SA R :
+
+REASONS FOR DECISION
+
+[1] [REDACTED] [REDACTED] [REDACTED] (Appellant) appeals a decision of the Refugee Protection Division
+
+(RPD) denying her claim for refugee protection. [REDACTED] [REDACTED] [REDACTED] is the designated
+
+representative for the Appellant as the [REDACTED] lant is a minor. The Appellant has not submitted new
+
+evidence in support of her appeal and does not request an oral hearing. She asks the Refugee
+
+Appeal Division (RAD) to set aside the decision of the RPD and substitute its own determination.
+
+In the altern ative, the Appellants ask the RAD return the matter to a differently -constituted panel
+
+of the RPD for re -determination.
+
+DETERMINATION
+
+[2] Pursuant to section 111(1)(a) of the Immigration and Refugee Protection Act (IRPA), the
+
+RAD confirms the decision of the RPD that the Appellant is neither a Convention refugee nor a
+
+person in need of protection. This appeal is dismissed.
+
+Background
+
+[3] The Appellant...</div>
+        </div>
+        
+        <div class="case" id="case-14">
+            <div class="case-header">
+                <h2>Case 14: ID 108705</h2>
+                <p class="metrics">Expected: 5 | Extracted: 1 | 
+                   Ratio: 0.20</p>
+            </div>
+            
+            <div class="comparison">
+                <div class="comparison-column">
+                    <h3>Extracted Determinations (1)</h3>
+        
+                <div class="extracted">
+                    <p><strong>Score:</strong> 15 | <strong>Match type:</strong> pattern</p>
+                    <p>This appeal is  dismissed.</p>
+                </div>
+                
+                </div>
+                <div class="comparison-column">
+                    <h3>Missing Determinations (1)</h3>
+        
+                <div class="missing">
+                    <p>["['rad finds that the rpd did not err in its decision']", "['appellants are neither convention refugees, nor persons in need of protection']", "['rad confirms the decision of the rpd', 'are neither\\xa0 convention refugees nor persons in need of protection']", "['appeal is dismissed']", "['appeals must also fail']"]</p>
+                </div>
+                
+                </div>
+            </div>
+        
+            <div>
+                <h3>All Expected Determinations (1)</h3>
+        
+                <div class="expected">
+                    <p>["['rad finds that the rpd did not err in its decision']", "['appellants are neither convention refugees, nor persons in need of protection']", "['rad confirms the decision of the rpd', 'are neither\\xa0 convention refugees nor persons in need of protection']", "['appeal is dismissed']", "['appeals must also fail']"]</p>
+                </div>
+                
+            </div>
+            
+            <h3>Case Text (first portion):</h3>
+            <div class="case-text">RAD.2 5.02 (June 23, 2014 )
+
+
+
+
+
+Immigration and
+
+Refugee Board of Canada
+
+
+
+Refugee Appeal Division
+
+Commission de l’immigration
+
+
+
+Section d’appel des réfugiés
+
+
+
+
+
+
+
+
+
+RAD File No. / N° de dossier de la SAR : TB5 -04124
+
+TB5 -04125
+
+TB5 -04126
+
+TB5 -04127
+
+
+
+Private Proceeding / Huis clos
+
+
+
+
+
+Reasons and decision  Motifs et décision
+
+
+
+
+
+Person(s) who is(are)
+
+the subject of the appeal [REDACTED] [REDACTED] [REDACTED]
+
+[REDACTED] [REDACTED] [REDACTED]
+
+[REDACTED] [REDACTED] [REDACTED] Personne(s) en cause
+
+
+
+
+
+Appeal considered / heard at Toronto, Ontario Appel instruit à
+
+
+
+
+
+Date of decision July 2, 2015 Date de la décision
+
+
+
+
+
+Panel [REDACTED] r Tribunal
+
+
+
+
+
+Counsel for the person(s) who
+
+is(are)the subject of the appeal [REDACTED] Conseil(s) du (de la/des)
+
+personne(s) en cause
+
+
+
+
+
+Designated Representative(s) [REDACTED] [REDACTED] Représentant(e)(s) désigné(e)(s)
+
+
+
+
+
+Counsel for the Minister N/A Conseil du ministre
+
+2015 CanLII 108705 (CA IRB)
+
+
+
+REASONS FOR DECISION
+
+[1] [REDACTED] (the principal Appellant), [REDACTED] , his spouse, and his two sons , the
+
+minor Appellants, [REDACTED] and [REDACTED] , are citizens of China. They appeal a
+
+decision of the Refugee Protection Div ision (RPD) denying their claim for refugee protection.
+
+The Appellants have submitted new evidence in support of their appeal. The Appellants ask that
+
+the Refugee Appeal Division (RAD) quash the decision of the RPD based on errors of law and
+
+fact, and decl are them to be Protected Persons , pursuant to section 111(1)(b) of the IRPA. The
+
+Appellants further request that a hearing be held by the RAD under section 110(6) of the IRPA.
+
+[2] For the RPD refugee hearing, the principal Appellant was designated, according to section
+
+167(2) of the Immigration and Refugee Protection Act, as the representative for the two minor
+
+Appellant s, his sons. The RAD will sustain this designation.
+
+[3] The princip al Appellant’s BOC narrative is relied on by his wife and the two minor
+
+Appe lla...</div>
+        </div>
+        
+        <div class="case" id="case-15">
+            <div class="case-header">
+                <h2>Case 15: ID 114303</h2>
+                <p class="metrics">Expected: 5 | Extracted: 1 | 
+                   Ratio: 0.20</p>
+            </div>
+            
+            <div class="comparison">
+                <div class="comparison-column">
+                    <h3>Extracted Determinations (1)</h3>
+        
+                <div class="extracted">
+                    <p><strong>Score:</strong> 10 | <strong>Match type:</strong> pattern</p>
+                    <p>CONCLUSION   [27]  In accordance with paragraph 111(1)(a) of the IRPA, I dismiss the appeal.</p>
+                </div>
+                
+                </div>
+                <div class="comparison-column">
+                    <h3>Missing Determinations (1)</h3>
+        
+                <div class="missing">
+                    <p>["['dismiss the appeal']", "['nor a person in need of protection']", "['adopt them as my own']", "['confirm the determination of the rpd']", "['neither a convention refugee nor a person in need of protection']"]</p>
+                </div>
+                
+                </div>
+            </div>
+        
+            <div>
+                <h3>All Expected Determinations (1)</h3>
+        
+                <div class="expected">
+                    <p>["['dismiss the appeal']", "['nor a person in need of protection']", "['adopt them as my own']", "['confirm the determination of the rpd']", "['neither a convention refugee nor a person in need of protection']"]</p>
+                </div>
+                
+            </div>
+            
+            <h3>Case Text (first portion):</h3>
+            <div class="case-text">Immigration and Refugee
+
+Board of Canada
+
+Refugee Appeal Division Commission de l’immigration
+
+Section d’appel des réfugiés
+
+
+
+RAD.25.02 (September 18, 2018)
+
+Disponible en français
+
+
+
+RAD File / Dossier de la SAR : MB8 -23965
+
+
+
+
+
+Private Proceeding / Huis clos
+
+
+
+Reasons and decision  Motifs et décision
+
+
+
+Person(s) who is(are) the
+
+subject of the appeal [REDACTED] [REDACTED]
+
+
+
+Personne(s) en cause
+
+
+
+Appeal considered / heard
+
+at Montreal, QC
+
+
+
+Appel instruit / entendu
+
+à
+
+
+
+Date of decision May 09 2019
+
+
+
+
+
+Panel Me [REDACTED]
+
+
+
+Tribunal
+
+
+
+Counsel for the person(s)
+
+who is(are) the subject of
+
+the appeal Me [REDACTED] Mianata Conseil(s) (de la/des)
+
+personne(s) en cause
+
+N/A
+
+Designated representative
+
+
+
+Représentant(e)
+
+[REDACTED])
+
+
+
+Counsel for the Minister N/A Conseil du ministre
+
+
+
+
+
+2019 CanLII 114303 (CA IRB)
+
+RAD File / Dossier de la SAR : MB8 -23965
+
+
+
+
+
+
+
+RAD.25.02 (September 18, 2018)
+
+Disponible en français 2
+
+REASONS FOR DECISION
+
+OVERVIEW
+
+[1] [REDACTED] is a citizen of Haiti who is appeal ing a decision of the Ref ugee Protection
+
+Division (RPD) rejecting his claim for refugee protection.
+
+[2] Mr. [REDACTED] alleges that he fears for his life at the hands of the son s of a woman who
+
+accused his mother of [REDACTED] or the woman ’s being possessed by demons. The son s
+
+allegedly killed Mr. [REDACTED] sister either in 2010 or 2011. Mr. [REDACTED] left Haiti for Brazil in June
+
+2013 . He obtained permanent resident status in Brazil but ended up leavin g in June 2016 due to
+
+the mistreatme nt of Haitians in Brazil. Mr. [REDACTED] traveled to the United States and ended up
+
+crossing the border into Canada in [REDACTED] 2017. By the time of the RPD hearing in this case,
+
+more than two years had passed since Mr. [REDACTED] departure from Brazil.
+
+[3] The Minister inter vened in this case to argue that Mr. [REDACTED] was excluded from
+
+protection under Article 1E of the Convention Relating to the Status of Refugees (Convention)
+
+and s. 98 of the Imm...</div>
+        </div>
+        
+        <div class="case" id="case-16">
+            <div class="case-header">
+                <h2>Case 16: ID 116352</h2>
+                <p class="metrics">Expected: 5 | Extracted: 1 | 
+                   Ratio: 0.20</p>
+            </div>
+            
+            <div class="comparison">
+                <div class="comparison-column">
+                    <h3>Extracted Determinations (1)</h3>
+        
+                <div class="extracted">
+                    <p><strong>Score:</strong> 20 | <strong>Match type:</strong> pattern</p>
+                    <p>The appeal is allowed .</p>
+                </div>
+                
+                </div>
+                <div class="comparison-column">
+                    <h3>Missing Determinations (1)</h3>
+        
+                <div class="missing">
+                    <p>["['302 (c.a.)']", "['rpd determination must be set aside']", "['appeal is allowed']", "['appellant is recognized as a refugee']", "['rpd determination is set aside']"]</p>
+                </div>
+                
+                </div>
+            </div>
+        
+            <div>
+                <h3>All Expected Determinations (1)</h3>
+        
+                <div class="expected">
+                    <p>["['302 (c.a.)']", "['rpd determination must be set aside']", "['appeal is allowed']", "['appellant is recognized as a refugee']", "['rpd determination is set aside']"]</p>
+                </div>
+                
+            </div>
+            
+            <h3>Case Text (first portion):</h3>
+            <div class="case-text">Immigration and Refugee
+
+Board of Canada
+
+Refugee Appeal Division Commission de l’immigration
+
+Section d’appel des réfugiés
+
+
+
+
+
+RAD.25.02 ( September 18, 2018)
+
+Disponible en fran çais
+
+
+
+
+
+RAD File No. / No de d ossier de la SAR : MB7 -04735
+
+
+
+Private Proceeding / Huis clos
+
+
+
+Reasons and decision  Motifs et décision
+
+
+
+Person who is the subject of
+
+the appeal [REDACTED] [REDACTED] [REDACTED] [REDACTED] Personne en cause
+
+
+
+Appeal considered at
+
+Ottawa, Ontario Appel instruit à
+
+
+
+Date of decision May 6, 2019 Date de la décision
+
+
+
+Panel [REDACTED] Tribunal
+
+
+
+Counsel for the person who is
+
+the subject of the appeal Me [REDACTED] Mianata Conseil de la
+
+personne en cause
+
+
+
+Designated representative N/A Représentant(e) désigné(e)
+
+
+
+Counsel for the Minister N/A Conseil du ministre
+
+
+
+
+
+2019 CanLII 116352 (CA IRB)
+
+RAD File No. / No de d ossier de la SAR : MB7 -04735
+
+
+
+
+
+
+
+
+
+RAD.25.02 (September 18, 2018)
+
+Disponible en fran çais 2
+
+REASONS FOR DECISION
+
+OVERVIEW
+
+[1] The appellant , [REDACTED] [REDACTED] [REDACTED] [REDACTED] , a citizen of Congo -Brazzaville , is
+
+appealing against a decision of the Refugee Protection Division (RPD) rejecting his refugee
+
+protection claim . He argue d that his life was in danger because he was being sought by the
+
+Congolese police for his involvement in the electio n campaign of a defeated candidate during the
+
+2016 presidential election . The RPD found that the appellant was not credible and that he was
+
+not involved in the presidential campaign. The appellant is contesting that finding on the grounds
+
+that the RPD gave too much weight to peripheral aspects of the record when assessing his
+
+credibility. Furthermore, he argues that there was a breach of procedural fairness during the
+
+hearing because the panel repeatedly interrupted his lawyer when she was trying to speak .
+
+[2] Having listened to the entire recording of the RPD hearing, I am of the opinion that the
+
+panel’s interventions were justified. However, I conclude tha...</div>
+        </div>
+        
+        <div class="case" id="case-17">
+            <div class="case-header">
+                <h2>Case 17: ID 121482</h2>
+                <p class="metrics">Expected: 6 | Extracted: 2 | 
+                   Ratio: 0.33</p>
+            </div>
+            
+            <div class="comparison">
+                <div class="comparison-column">
+                    <h3>Extracted Determinations (2)</h3>
+        
+                <div class="extracted">
+                    <p><strong>Score:</strong> 20 | <strong>Match type:</strong> pattern</p>
+                    <p>The appeal is dismissed.</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 20 | <strong>Match type:</strong> pattern</p>
+                    <p>CONCLUSION   [31]  The appeal is dismissed.</p>
+                </div>
+                
+                </div>
+                <div class="comparison-column">
+                    <h3>Missing Determinations (1)</h3>
+        
+                <div class="missing">
+                    <p>["['rad confirms the rpd’s determination', 'thatxxxx xxxxis a person described in article\\xa01e of the convention', 'not a convention refugee or a person in need of protection']", "['neither a refugee nor a person in need of protection']", "['neither a convention refugee nor a person in need of protection']", "['rad confirms the rpd’s determination', 'thatxxxx xxxxxxxxis neither a refugee nor a person in need of protection']", "['rpd’s determination is correct']", "['appellant is a person described in article\\xa01e of the convention on refugees', 'neither a convention refugee nor a person in need of protection']"]</p>
+                </div>
+                
+                </div>
+            </div>
+        
+            <div>
+                <h3>All Expected Determinations (1)</h3>
+        
+                <div class="expected">
+                    <p>["['rad confirms the rpd’s determination', 'thatxxxx xxxxis a person described in article\\xa01e of the convention', 'not a convention refugee or a person in need of protection']", "['neither a refugee nor a person in need of protection']", "['neither a convention refugee nor a person in need of protection']", "['rad confirms the rpd’s determination', 'thatxxxx xxxxxxxxis neither a refugee nor a person in need of protection']", "['rpd’s determination is correct']", "['appellant is a person described in article\\xa01e of the convention on refugees', 'neither a convention refugee nor a person in need of protection']"]</p>
+                </div>
+                
+            </div>
+            
+            <h3>Case Text (first portion):</h3>
+            <div class="case-text">Immigration and Refugee
+
+Board of Canada
+
+Refugee Appeal Division Commission de l’immigration
+
+Section d’appel des réfugiés
+
+
+
+RAD.25.02 (January 2020)
+
+Disponible en français
+
+
+
+RAD File No. / No de dossier de la SAR : MB9 -09564
+
+MB9 -09565
+
+
+
+Private Proceeding / Huis clos
+
+
+
+Reasons and Decision  Motifs et décision
+
+
+
+Persons who are the subject
+
+of the appeal [REDACTED] [REDACTED]
+
+[REDACTED] [REDACTED] Personnes en cause
+
+
+
+Appeal considered / heard at Montr éal, Q uebec Appel instruit / entendu à
+
+
+
+Date of decision March 9, 2020 Date de la décision
+
+
+
+Panel Me Agnès Connat Tribunal
+
+
+
+Counsel for the persons who
+
+are the subject of the appeal J[REDACTED] Conseil des personnes en
+
+cause
+
+
+
+Designated representative [REDACTED] [REDACTED] Représentant(e) désigné(e)
+
+
+
+Counsel for the Minister N/A Conseil du ministre
+
+
+
+
+
+2020 CanLII 121482 (CA IRB)
+
+RAD File No. / No de dossier de la SAR : MB9 -09564
+
+MB9 -09565
+
+
+
+RAD.25.02 (January 2020)
+
+Disponible en français 2
+
+REASONS FOR DECISION
+
+OVERVIEW
+
+[1] [REDACTED] [REDACTED] ([REDACTED] ) is a citizen of Haiti. Her minor son [REDACTED] [REDACTED] [REDACTED]
+
+[REDACTED] [REDACTED] is a citizen of Brazil.
+
+[2] The appellant fears a dangerous criminal and his family in Haiti who raped her with
+
+two accomplices in [REDACTED] 2009. While she was hiding in [REDACTED] [REDACTED] [REDACTED] [REDACTED] [REDACTED]
+
+in [REDACTED] 2010, four armed criminals entered her aunt’s home looking for her and brutalized
+
+another girl whom they mistook for her. She left for the Dominican Republic in [REDACTED] 2011, and
+
+in [REDACTED] 2014 she left for Brazil, where she joined her husband. She alle ges that she led a hard
+
+life there and was the victim of [translation] “systemic persecution” from citizens frustrated by
+
+their presence. Her son [REDACTED] was born in Brazil on [REDACTED] [REDACTED] , 2015. She left Brazil with
+
+him in [REDACTED] 2016 and stayed in the United States until [REDACTED] 2017 before seeking Canada’s
+
+protec...</div>
+        </div>
+        
+        <div class="case" id="case-18">
+            <div class="case-header">
+                <h2>Case 18: ID 125054</h2>
+                <p class="metrics">Expected: 5 | Extracted: 1 | 
+                   Ratio: 0.20</p>
+            </div>
+            
+            <div class="comparison">
+                <div class="comparison-column">
+                    <h3>Extracted Determinations (1)</h3>
+        
+                <div class="extracted">
+                    <p><strong>Score:</strong> 10 | <strong>Match type:</strong> pattern</p>
+                    <p>DETERMINATION   [2] The appeal of the principal appellant is allowed.</p>
+                </div>
+                
+                </div>
+                <div class="comparison-column">
+                    <h3>Missing Determinations (1)</h3>
+        
+                <div class="missing">
+                    <p>["['setting aside the rpd’s decision with regards to her claim']", "['dismisses the minor appellant’s appeal', 'is neither a convention refugee nor a person in need of protection']", "['rad therefore finds that the rpd’s decision regarding her claim is correct']", "['rad finds that to be a denial of basic natural justice']", "['rad finds that it did']"]</p>
+                </div>
+                
+                </div>
+            </div>
+        
+            <div>
+                <h3>All Expected Determinations (1)</h3>
+        
+                <div class="expected">
+                    <p>["['setting aside the rpd’s decision with regards to her claim']", "['dismisses the minor appellant’s appeal', 'is neither a convention refugee nor a person in need of protection']", "['rad therefore finds that the rpd’s decision regarding her claim is correct']", "['rad finds that to be a denial of basic natural justice']", "['rad finds that it did']"]</p>
+                </div>
+                
+            </div>
+            
+            <h3>Case Text (first portion):</h3>
+            <div class="case-text">Immigration and Refugee
+
+Board of Canada
+
+Refugee Appeal Division Commission de l’immigration
+
+Section d’appel des réfugiés
+
+
+
+RAD.25.02 ( January, 2020)
+
+Disponible en français
+
+
+
+RAD File / Dossier de la SAR : TB9 -02253
+
+TB9 -02254
+
+
+
+Private Proceeding / Huis clos
+
+
+
+Reasons and decision  Motifs et décision
+
+
+
+Person s who are the
+
+subject of the appeal [REDACTED] [REDACTED]
+
+(a.k.a [REDACTED] [REDACTED] [REDACTED] [REDACTED]
+
+[REDACTED] [REDACTED]
+
+(a.k.a. [REDACTED] [REDACTED] [REDACTED] [REDACTED] [REDACTED] )
+
+Personne s en cause
+
+
+
+Appeal considered /
+
+heard at Toronto, ON Appel instruit /
+
+entendu à
+
+
+
+Date of decision July 27, 2020 Date de la décision
+
+
+
+Panel [REDACTED] Tribunal
+
+
+
+Counsel for the person s
+
+who are the subject of the
+
+appeal [REDACTED] Conseil des
+
+personne s en cause
+
+
+
+Designated representative [REDACTED] [REDACTED] [REDACTED] Représentant(e)
+
+[REDACTED])
+
+
+
+Counsel for the Minister N/A Conseil du ministre
+
+
+
+
+
+2020 CanLII 125054 (CA IRB)
+
+RAD File / Dossier de la SAR : TB9 -02253
+
+TB9 -02254
+
+
+
+RAD.25.02 ( January , 20 20)
+
+Disponible en français 2
+
+REASONS FOR DECISION
+
+OVERVIEW
+
+[1] This is the decision in the appeals of [REDACTED] [REDACTED] [REDACTED] (the principal appellant) and
+
+[REDACTED] [REDACTED] [REDACTED] [REDACTED] [REDACTED] (a.k.a. [REDACTED] [REDACTED] [REDACTED] -[REDACTED] ) (the minor
+
+appellant). They appeal the Refugee Protection Division (RPD) decision dated Decembe r 28,
+
+2018, rejecting their claims for refugee protection. They are requesting that the Refugee Appeal
+
+Division (RAD) set aside the RPD’s negative determination and find that they are Convention
+
+refugees or persons in need of protection. In the alternative , they request that the RAD refer the
+
+matter back to the RPD for redetermination by a differently constituted panel. They have
+
+requested to submit new evidence and an oral hearing.
+
+DETERMINATION
+
+[2] The appeal of the principal appellant is allowed. The RAD fi nds the RPD’s decision
+
+regardi...</div>
+        </div>
+        
+        <div class="case" id="case-19">
+            <div class="case-header">
+                <h2>Case 19: ID 129852</h2>
+                <p class="metrics">Expected: 5 | Extracted: 1 | 
+                   Ratio: 0.20</p>
+            </div>
+            
+            <div class="comparison">
+                <div class="comparison-column">
+                    <h3>Extracted Determinations (1)</h3>
+        
+                <div class="extracted">
+                    <p><strong>Score:</strong> 20 | <strong>Match type:</strong> pattern</p>
+                    <p>/ No ID client:  64357693       IAD.99.ott (2017.10)   Disponible en français  7  NOTICE OF DECISION   The appeal is allowed.</p>
+                </div>
+                
+                </div>
+                <div class="comparison-column">
+                    <h3>Missing Determinations (1)</h3>
+        
+                <div class="missing">
+                    <p>["['appellant has not lost his permanent resident status']", "['appeal dismissed']", "['appeal dismissed']", "['visa officer’s decision is legally valid']", "['appeal is allowed']"]</p>
+                </div>
+                
+                </div>
+            </div>
+        
+            <div>
+                <h3>All Expected Determinations (1)</h3>
+        
+                <div class="expected">
+                    <p>["['appellant has not lost his permanent resident status']", "['appeal dismissed']", "['appeal dismissed']", "['visa officer’s decision is legally valid']", "['appeal is allowed']"]</p>
+                </div>
+                
+            </div>
+            
+            <h3>Case Text (first portion):</h3>
+            <div class="case-text">IAD.99.ott (2017.10)
+
+Disponible en français
+
+
+
+Immigration and
+
+Refugee Board of Canada
+
+
+
+Immigration Appeal Division
+
+
+
+Commission de l’immigration
+
+
+
+Section d’appel de l’immigration
+
+
+
+IAD File No. / No de dossier de la SAI: TB7 -10443
+
+Client ID No. / No ID client: 64357693
+
+
+
+
+
+Reasons and Decision  Motifs et décision
+
+
+
+Residency Obligation Appeal
+
+
+
+
+
+Appellant(s) Moh[REDACTED] Appelant(e)(s)
+
+
+
+and et
+
+Minister of Citizenship and Immigration
+
+Respondent Le ministre de la Citoyenneté et de l'Immigration Intimé(e)
+
+
+
+
+
+Date(s) of Hearing May 9, 2018 and September 11, 2018
+
+Date(s ) de l’audience
+
+
+
+Place of Hearing Toronto, Ontario
+
+Lieu de l’audience
+
+
+
+Date of Decision September 27, 2018 Date de la décision
+
+
+
+
+
+Panel [REDACTED]
+
+
+
+Tribunal
+
+
+
+Counsel for the
+
+Appellant(s)
+
+[REDACTED] Conseil(s) de
+
+l’appelant(e) / des
+
+appelant(e) s
+
+
+
+
+
+Designated
+
+Representative(s) None
+
+Représentant(e)(s)
+
+désigné(e)(s)
+
+
+
+Counsel for the Minister [REDACTED] Conseil du ministre
+
+
+
+2018 CanLII 138891 (CA IRB)
+
+IAD File No. / No de dossier de la SAI: TB7 -10443
+
+Client ID No. / No ID client: 64357693
+
+
+
+
+
+IAD.99.ott (2017.10)
+
+Disponible en français REASONS FOR DECISION
+
+INTRODUCTION
+
+[1] The appellant, Moha[REDACTED], appeals the decision of a v isa officer that he
+
+failed to comply with the residency obligation for permanent residen ts, as set out in section 28 of
+
+the Immigration and Refugee Protection Act (IRPA). The Officer determined that the appellant
+
+had not been in Canada for 730 days in the 5 -year period under consideration, that being March
+
+15, 2012 to March 15, 2017.
+
+[2] The appellant brings his appeal pursuant to section 63(4) of the IRPA . He does not
+
+challenge the legal validity of the Officer’s decision but submits that humanitarian and
+
+compass ionate considerations warrant special relief.
+
+BACKGROUND
+
+[3] The appellant immigrated to Canada from Iran under the Investor Program in June 2011.
+
+He was accompanied by his wife and daughter , who were al...</div>
+        </div>
+        
+        <div class="case" id="case-20">
+            <div class="case-header">
+                <h2>Case 20: ID 129997</h2>
+                <p class="metrics">Expected: 5 | Extracted: 1 | 
+                   Ratio: 0.20</p>
+            </div>
+            
+            <div class="comparison">
+                <div class="comparison-column">
+                    <h3>Extracted Determinations (1)</h3>
+        
+                <div class="extracted">
+                    <p><strong>Score:</strong> 15 | <strong>Match type:</strong> pattern</p>
+                    <p>This appeal  is dismissed.</p>
+                </div>
+                
+                </div>
+                <div class="comparison-column">
+                    <h3>Missing Determinations (1)</h3>
+        
+                <div class="missing">
+                    <p>["['appeal is dismissed']", "['reject the appellant’s argument']", "['appellant is not a convention refugee or a person in need of protection']", "['rad confirms the decision of the rpd', 'appellant is neither a convention refugee nor a person in need of protection']", "['appeal must be rejected']"]</p>
+                </div>
+                
+                </div>
+            </div>
+        
+            <div>
+                <h3>All Expected Determinations (1)</h3>
+        
+                <div class="expected">
+                    <p>["['appeal is dismissed']", "['reject the appellant’s argument']", "['appellant is not a convention refugee or a person in need of protection']", "['rad confirms the decision of the rpd', 'appellant is neither a convention refugee nor a person in need of protection']", "['appeal must be rejected']"]</p>
+                </div>
+                
+            </div>
+            
+            <h3>Case Text (first portion):</h3>
+            <div class="case-text">RAD.25.02 (September 11, 2014)
+
+Disponible en français
+
+
+
+Immigration and Refugee
+
+Board of Canada
+
+Refugee Appeal Division Commission de l’immigration
+
+Section d’appel des réfugiés
+
+
+
+
+
+RAD File / Dossier de la SAR : TB7 -12730
+
+
+
+Private Proceeding / Huis clos
+
+
+
+
+
+Reasons and decision  Motifs et décision
+
+
+
+Person(s) who is(are) the subject of
+
+the appeal [REDACTED] [REDACTED] [REDACTED] [REDACTED] (a.k.a. [REDACTED]
+
+[REDACTED] [REDACTED] [REDACTED] Personne(s) en cause
+
+
+
+Appeal considered at Toronto, ON Appel instruit à
+
+
+
+Date of decision March 16, 2018 Date de la décision
+
+
+
+Panel G. Erauw Tribunal
+
+
+
+Counsel for the person(s) who
+
+is(are) the subject of the appeal [REDACTED] Conseil(s) (de la/des)
+
+personne(s) en cause
+
+
+
+Designated representative N/A Représentant(e) désigné(e)
+
+
+
+Counsel for the Minister N/A Conseil du ministre
+
+2018 CanLII 129997 (CA IRB)
+
+RAD File / Dossier de la SAR : TB7 -12730
+
+
+
+
+
+1
+
+REASONS FOR DECISION
+
+[1] [REDACTED] [REDACTED] [REDACTED] (the “Appellant”) is alleging to be a citizen of Somalia and is
+
+appealing a decision of the Refugee Protection Division (RPD) denying his claim for refugee
+
+protection. The Appellant is requesting that the Refugee Appeal Division (RAD) set aside the
+
+RPD’s negative determination and find that he is a Convention refugee or a person in need of
+
+protection. In the alternative, the Appellant requests the RAD refer the matter back to the RPD
+
+for redetermination by a differently constituted panel. The Appellant has requested to submit
+
+new evidence and has requested an oral hearing.
+
+DETERMINATION OF THE APPEAL
+
+[2] The RAD dismisses the appeal and confirms the decision of the RPD that the Appellant is
+
+neither a Convention refugee nor a person in need of protection, pursuant to paragraph 111(1)( a)
+
+of the Immigration and Refugee Protection Act (IRPA).1
+
+Background
+
+[3] The Appellant alleges that he is a member of the Hawrarsame, which is a sub -clan of the
+
+Darod clan. He alleges he was frequently...</div>
+        </div>
+        
+    <script>
+        // Add a simple navigation for jumping between cases
+        document.addEventListener('DOMContentLoaded', function() {
+            const nav = document.querySelector('.nav');
+            const navContent = document.createElement('div');
+            navContent.style.marginTop = '10px';
+            
+            for (let i = 1; i <= 20; i++) {
+                const link = document.createElement('a');
+                link.href = '#case-' + i;
+                link.textContent = 'Case ' + i;
+                link.style.marginRight = '15px';
+                link.style.textDecoration = 'none';
+                link.style.padding = '5px 10px';
+                link.style.backgroundColor = '#f8f9fa';
+                link.style.borderRadius = '5px';
+                navContent.appendChild(link);
+            }
+            
+            nav.appendChild(navContent);
+        });
+    </script>
+    </body>
+    </html>
+    
