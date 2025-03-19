@@ -1,0 +1,59 @@
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title>Over-Extraction Analysis</title>
+        <style>
+            body { font-family: Arial, sans-serif; margin: 20px; }
+            h1 { color: #2c3e50; }
+            .case { margin-bottom: 30px; border: 1px solid #ddd; padding: 15px; border-radius: 5px; }
+            .case-header { background-color: #f8f9fa; padding: 10px; margin-bottom: 15px; }
+            .extracted { background-color: #e8f4f8; padding: 10px; margin: 10px 0; border-left: 4px solid #3498db; }
+            .expected { background-color: #f8f4e8; padding: 10px; margin: 10px 0; border-left: 4px solid #f39c12; }
+            .extra { background-color: #e8f8ec; padding: 10px; margin: 10px 0; border-left: 4px solid #2ecc71; }
+            .case-text { background-color: #f9f9f9; padding: 15px; border: 1px solid #eee; 
+                         height: 200px; overflow: auto; font-family: monospace; white-space: pre-wrap; }
+            .metrics { font-weight: bold; color: #e74c3c; }
+            .comparison { display: flex; flex-wrap: wrap; gap: 20px; }
+            .comparison-column { flex: 1; min-width: 300px; }
+            .nav { position: sticky; top: 0; background: white; padding: 10px; border-bottom: 1px solid #ddd; }
+            .legend { margin: 10px 0 20px 0; padding: 10px; background-color: #f8f9fa; border-radius: 5px; }
+            .legend span { margin-right: 20px; }
+        </style>
+    </head>
+    <body>
+        <div class="nav">
+            <h1>Over-Extraction Cases in Determination Analysis</h1>
+            <div class="legend">
+                <span style="color: #3498db;">■</span> All Extracted
+                <span style="color: #f39c12;">■</span> Expected (Benchmark)
+                <span style="color: #2ecc71;">■</span> Extra (Not in Benchmark)
+            </div>
+        </div>
+        <p>These cases had significantly more extracted determinations than expected in the benchmark.</p>
+    
+    <script>
+        // Add a simple navigation for jumping between cases
+        document.addEventListener('DOMContentLoaded', function() {
+            const nav = document.querySelector('.nav');
+            const navContent = document.createElement('div');
+            navContent.style.marginTop = '10px';
+            
+            for (let i = 1; i <= 0; i++) {
+                const link = document.createElement('a');
+                link.href = '#case-' + i;
+                link.textContent = 'Case ' + i;
+                link.style.marginRight = '15px';
+                link.style.textDecoration = 'none';
+                link.style.padding = '5px 10px';
+                link.style.backgroundColor = '#f8f9fa';
+                link.style.borderRadius = '5px';
+                navContent.appendChild(link);
+            }
+            
+            nav.appendChild(navContent);
+        });
+    </script>
+    </body>
+    </html>
+    

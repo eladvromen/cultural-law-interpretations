@@ -1,0 +1,2157 @@
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title>Determination Extraction Analysis</title>
+        <style>
+            body { font-family: Arial, sans-serif; margin: 20px; }
+            h1 { color: #2c3e50; }
+            .case { margin-bottom: 30px; border: 1px solid #ddd; padding: 15px; border-radius: 5px; }
+            .case-header { background-color: #f8f9fa; padding: 10px; margin-bottom: 15px; }
+            .extracted { background-color: #e8f4f8; padding: 10px; margin: 10px 0; border-left: 4px solid #3498db; }
+            .expected { background-color: #f8f4e8; padding: 10px; margin: 10px 0; border-left: 4px solid #f39c12; }
+            .missing { background-color: #f8e8e8; padding: 10px; margin: 10px 0; border-left: 4px solid #e74c3c; }
+            .case-text { background-color: #f9f9f9; padding: 15px; border: 1px solid #eee; 
+                         height: 200px; overflow: auto; font-family: monospace; white-space: pre-wrap; }
+            .metrics { font-weight: bold; color: #e74c3c; }
+            .comparison { display: flex; flex-wrap: wrap; gap: 20px; }
+            .comparison-column { flex: 1; min-width: 300px; }
+            .nav { position: sticky; top: 0; background: white; padding: 10px; border-bottom: 1px solid #ddd; }
+            .legend { margin: 10px 0 20px 0; padding: 10px; background-color: #f8f9fa; border-radius: 5px; }
+            .legend span { margin-right: 20px; }
+        </style>
+    </head>
+    <body>
+        <div class="nav">
+            <h1>Challenging Cases in Determination Extraction</h1>
+            <div class="legend">
+                <span style="color: #3498db;">■</span> Extracted
+                <span style="color: #f39c12;">■</span> Expected
+                <span style="color: #e74c3c;">■</span> Missing (Expected but not found)
+            </div>
+        </div>
+        <p>These cases had significantly fewer extracted determinations than expected.</p>
+    
+        <div class="case" id="case-1">
+            <div class="case-header">
+                <h2>Case 1: ID 127702</h2>
+                <p class="metrics">Expected: 10 | Extracted: 1 | 
+                   Ratio: 0.10</p>
+            </div>
+            
+            <div class="comparison">
+                <div class="comparison-column">
+                    <h3>Extracted Determinations (1)</h3>
+        
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>The appeal is, therefore, allowed.</p>
+                </div>
+                
+                </div>
+                <div class="comparison-column">
+                    <h3>Missing Determinations (1)</h3>
+        
+                <div class="missing">
+                    <p>["['appeal is dismissed']", "['appeal is dismissed']", "['appeal is allowed']", "['appeal is not allowed']", "['appeal is not allowed']", "['appellant has not lost his permanent resident status']", "['appeal is, therefore, allowed']", "['appeal is allowed.the']", "['appeal is dismissed']", "['appeal was dismissed']"]</p>
+                </div>
+                
+                </div>
+            </div>
+        
+            <div>
+                <h3>All Expected Determinations (1)</h3>
+        
+                <div class="expected">
+                    <p>["['appeal is dismissed']", "['appeal is dismissed']", "['appeal is allowed']", "['appeal is not allowed']", "['appeal is not allowed']", "['appellant has not lost his permanent resident status']", "['appeal is, therefore, allowed']", "['appeal is allowed.the']", "['appeal is dismissed']", "['appeal was dismissed']"]</p>
+                </div>
+                
+            </div>
+            
+            <h3>Case Text (first portion):</h3>
+            <div class="case-text">(CA IRB)
+
+IAD File No. / No de dossier de la SAI: TB7 -14765
+
+Client ID No. / No ID client: 6324 -3906
+
+
+
+
+
+
+
+
+
+REASONS FOR DECISION
+
+
+
+INTRODUCTION
+
+[1] A permanent resident (“PR”) of Canada is required to be physically present in Canada for
+
+at least 730 days in a five year period, or fall into one of the exceptions permitted in Canada’s
+
+legislation. [REDACTED] (“the appellant”) is a 54 year old ci tizen of the Philippines who
+
+became a PR of Canada on June 16, 2012. The appellant applied for a permanent resident travel
+
+document (“PRTD”) on March 23, 2017 in Makati City, Philippines. His application was refused
+
+on June 9, 2017, as he did not meet the requirements of section 28 of the Immigration and
+
+Refugee Protection Act1 (hereinafter “the Act ”). The visa officer noted that in the five year period
+
+before March 23, 2017 (“the period”), the appellant was physically present in Canada for 135
+
+days. The ap pellant appealed the decision of the visa officer on August 8, 2017, and this is the
+
+decision in his appeal.
+
+
+
+HEARING
+
+
+
+1 Immigration and Refugee Protection Act, S.C. 2001, c. 27 .
+
+2018 CanLII 127702 (CA IRB)
+
+IAD File No. / No de dossier de la SAI: TB7 -14765
+
+Client ID No. / No ID client: 6324 -3906
+
+
+
+
+
+
+
+2
+
+[2] At the hearing, the appellant was present over the telephone. He did not have counsel,
+
+and his wife initially indicated that she wanted t o represent him, but after some discussion, she
+
+agreed that it would be best if she provided evidence as a witness instead of questioning him. As
+
+a result, the panel and the Minister's counsel questioned the applicant at length. The panel and
+
+Minister's counsel also questioned the appellant's two children, both adults now, and his wife.
+
+Everything was interpreted to the appellant over the telephone, and after the submissions were
+
+done, he indicated that he had not heard any of the submissions provided by the Minister's
+
+counsel. As a result, the parties agreed that the appellant's wife would be provide...</div>
+        </div>
+        
+        <div class="case" id="case-2">
+            <div class="case-header">
+                <h2>Case 2: ID 146969</h2>
+                <p class="metrics">Expected: 9 | Extracted: 0 | 
+                   Ratio: 0.00</p>
+            </div>
+            
+            <div class="comparison">
+                <div class="comparison-column">
+                    <h3>Extracted Determinations (0)</h3>
+        <p>No determinations extracted.</p>
+                </div>
+                <div class="comparison-column">
+                    <h3>Missing Determinations (1)</h3>
+        
+                <div class="missing">
+                    <p>["['application for withdrawal is dismissed']", "['application to withdraw the appeal is an abuse of process']", "['appeal is dismissed']", "['appeal be dismissed']", "['appeal should be dismissed']", "['appeal has been abandoned']", "['appeal has been abandoned']", "['dismiss the appellant’s application']", "['appeal is determined']"]</p>
+                </div>
+                
+                </div>
+            </div>
+        
+            <div>
+                <h3>All Expected Determinations (1)</h3>
+        
+                <div class="expected">
+                    <p>["['application for withdrawal is dismissed']", "['application to withdraw the appeal is an abuse of process']", "['appeal is dismissed']", "['appeal be dismissed']", "['appeal should be dismissed']", "['appeal has been abandoned']", "['appeal has been abandoned']", "['dismiss the appellant’s application']", "['appeal is determined']"]</p>
+                </div>
+                
+            </div>
+            
+            <h3>Case Text (first portion):</h3>
+            <div class="case-text">(CA IRB)
+
+2021 CanLII 146969 (CA IRB)
+
+IAD File No. / No de dossier de la SAI : TC0 -07994
+
+Client ID No. / No ID client: 56219577
+
+
+
+1
+
+IAD.34.01 (2021. 11.24)
+
+Available in French REASONS FOR DECISION
+
+OVERVIEW
+
+[1] The Appellant, Veroni[REDACTED], is a citizen of Trinidad and Tobago. She
+
+became a permanent resident of Canada in 2012. After landing in Canada, the A ppellant stayed
+
+here for about two months. She returned to Trinidad and Tobago to wrap up her affairs. Later, her
+
+parents became ill, which prevented her from retuning back to Canada sooner.
+
+[2] In 2020, the Appellant applied for a Permanent Resident Travel D ocument to return to
+
+Canada, but the visa officer refused her application. The Appellant did not respect her residency
+
+obligations to be present in Canada in the relevant five -year period for at least 730 days.1 In the
+
+relevant five -year period, she was pr esent for only 136 days.
+
+[3] The Appellant appealed the visa officer’s decision to the Immigration Appeal Division. She
+
+admitted that the visa officer ’s decision is legally valid. She is relying on humanitarian and
+
+compassionate reasons for the appeal to be allowed.
+
+[4] The Appellant’s hearing was scheduled for three hours on June 18, 2021. I heard testimony
+
+from the Appellant, but we were not able to finish the hearing that day. I adjourned the matter for
+
+November 8, 2021, for a full day , to continue the hearing.
+
+[5] In a letter dated November 3, 2021, the Appellant asked to withdraw her appeal. The
+
+Minister submits that the withdrawal of the appeal is an abuse of process and asks that the appeal
+
+be dismissed.2
+
+[6] The issues are:
+
+ Is the Appellan t’s application to withdraw her appeal an abuse of process?
+
+ If I determine the withdrawal is an abuse of process , should the appeal be
+
+dismissed on its merits or abandoned ?
+
+[7] The Appellant’s application to withdraw her appeal is an abuse of process. I dismi ss the
+
+Appellant’s application. I find that the appeal has been...</div>
+        </div>
+        
+        <div class="case" id="case-3">
+            <div class="case-header">
+                <h2>Case 3: ID 30522</h2>
+                <p class="metrics">Expected: 11 | Extracted: 2 | 
+                   Ratio: 0.18</p>
+            </div>
+            
+            <div class="comparison">
+                <div class="comparison-column">
+                    <h3>Extracted Determinations (2)</h3>
+        
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>The removal order is 
+set aside .</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>The appeal of XXXXXXXXXXXXXXXXXXXX an in file MB5 -04579 is dismissed .</p>
+                </div>
+                
+                </div>
+                <div class="comparison-column">
+                    <h3>Missing Determinations (1)</h3>
+        
+                <div class="missing">
+                    <p>["['appeal is dismissed']", "['appeal is allowed']", "['appeal is dismissed']", "['appeal is dismissed']", "['appeals were dismissed']", "['appeal of garo dermosessian isallowedin file mb4-03412']", "['removal order isset aside']", "['appeals are dismissed']", "['appeals are dismissed']", "['appeal is dismissed']", "['appellant has not lost his permanent resident status']"]</p>
+                </div>
+                
+                </div>
+            </div>
+        
+            <div>
+                <h3>All Expected Determinations (1)</h3>
+        
+                <div class="expected">
+                    <p>["['appeal is dismissed']", "['appeal is allowed']", "['appeal is dismissed']", "['appeal is dismissed']", "['appeals were dismissed']", "['appeal of garo dermosessian isallowedin file mb4-03412']", "['removal order isset aside']", "['appeals are dismissed']", "['appeals are dismissed']", "['appeal is dismissed']", "['appellant has not lost his permanent resident status']"]</p>
+                </div>
+                
+            </div>
+            
+            <h3>Case Text (first portion):</h3>
+            <div class="case-text">(CA IRB)
+
+IAD File No. / N° de dossier de la S AI : MB4 -03412
+
+MB5 -04579
+
+
+
+
+
+2
+
+REASONS FOR DECISION
+
+
+
+INTRODUCTION
+
+[1] These are the reasons for the decision in the appeals of [REDACTED] (MB4 -
+
+03412) and Ale[REDACTED] (MB5 -04579) (herein collectively referred as the
+
+appellants) from decisions made because of their failure to comply with the residency obligation
+
+set out in the Immigration and Refugee Protection Act1 (the Act ). The hearings were joined and
+
+heard simultaneously with the consent of the parties . Ale[REDACTED] was not present ,
+
+he appeared via his counsel. He did not testify and he adopt ed the testimony of his father. The
+
+Minister’s representative was not present at these hearings and filed written submissions.
+
+[2] Section 28 of the Act requires a permanent resident to physically be present in Canada for
+
+at least 730 days in the five -year perio d immediately prior to an assessment, which in the case of
+
+[REDACTED] was prior his arriv al at the Canadian border in August 2014 and in the case
+
+of [REDACTED] re this was prior to his application for a travel document in June 2015.
+
+[3] The appellants, do n ot challenge the legal validity of the removal order but argue that the
+
+appeal s should be allowed on the basis that sufficient humanitarian and compassionate
+
+considerations warrant special relief, in light of all the circumstances of the case, taking into
+
+account the best interests of any child directly affected by the decision.
+
+[4] I have considered the testimony of the appellant [REDACTED] and his son [REDACTED],
+
+the record and the documents filed by the appellants ,2 the respondent ’s written submissions and
+
+the submissions of the appellants.
+
+
+
+
+
+1 Immigration and Refugee Protection Act (S.C. 2001, c. 27 ), as amended.
+
+2 Exhibits A -1 to A -2 in file MB4 -03412 .
+
+2018 CanLII 30522 (CA IRB)
+
+IAD File No. / N° de dossier de la S AI : MB4 -03412
+
+MB5 -04579
+
+
+
+
+
+3 DECISION
+
+[5] The appellants did not dispute the legal validity o...</div>
+        </div>
+        
+        <div class="case" id="case-4">
+            <div class="case-header">
+                <h2>Case 4: ID 19120</h2>
+                <p class="metrics">Expected: 8 | Extracted: 0 | 
+                   Ratio: 0.00</p>
+            </div>
+            
+            <div class="comparison">
+                <div class="comparison-column">
+                    <h3>Extracted Determinations (0)</h3>
+        <p>No determinations extracted.</p>
+                </div>
+                <div class="comparison-column">
+                    <h3>Missing Determinations (1)</h3>
+        
+                <div class="missing">
+                    <p>["['appellant has not lost her permanent resident status']", "['appeal was dismissed']", "['sufficient humanitarian and compassionate considerations']", "['appeal is dismissed']", "['appeal was dismissed']", "['appeal is allowed.the']", "['appeal is dismissed']", "['appeal is dismissed']"]</p>
+                </div>
+                
+                </div>
+            </div>
+        
+            <div>
+                <h3>All Expected Determinations (1)</h3>
+        
+                <div class="expected">
+                    <p>["['appellant has not lost her permanent resident status']", "['appeal was dismissed']", "['sufficient humanitarian and compassionate considerations']", "['appeal is dismissed']", "['appeal was dismissed']", "['appeal is allowed.the']", "['appeal is dismissed']", "['appeal is dismissed']"]</p>
+                </div>
+                
+            </div>
+            
+            <h3>Case Text (first portion):</h3>
+            <div class="case-text">(CA IRB)
+
+IAD Fil e No. / N° de dossier de la SAI : VB6 -00510
+
+
+
+
+
+
+
+REASONS FOR DECISION
+
+
+
+[1] These are the reasons and de cision of the Immigration Appeal Division (the “IAD”) in
+
+the appeal by [REDACTED] (the “appellant”) from a determination made against her on
+
+February 4, 2016. The appellant was found to have failed to comply with the residency
+
+obligation of section 28 of the Immigration and Refugee Protection Act (the “ Act ”),1 more
+
+particularly that the appellant had not resided in Canada for at least 730 days in the five -year
+
+period immediately before February 1, 2016.
+
+
+
+ISSUE
+
+
+
+[2] The appellant did not challenge the lega l validity of the determination. The appellant
+
+became a permanent resident of Canada, at the age of 25, in April 2009. She was a dependant of
+
+her parents. The appellant conceded that she was not physically present in Canada in the five -
+
+year period February 1, 2011 to Janu ary 31 , 2016. The appellant asked that I exercise my
+
+discretionary jurisdiction and allow the appeal on humanitarian and compassionate
+
+considerations.
+
+
+
+[3] The relevant paragraph of s ection 28 of the Act reads as follows:
+
+
+
+28(1) A permanent res ident must comply with a residency obligation with respect to
+
+every five -year period.
+
+(2) The following provisions govern the residency obligation under subsection (1):
+
+(a) a permanent resident complies with the residency obligation with
+
+respect to a five -year period if, on each of a total of at least 730 days in that
+
+five -year period, they are
+
+(i) physically present in Canada,…
+
+
+
+1 Immigration and Refugee Protection Act, S.C. 2001, c.27.
+
+2017 CanLII 19120 (CA IRB)
+
+IAD File No. / No de dossier de la SAI : VB6 -00510
+
+
+
+
+
+
+
+
+
+[4] The test to be applied in the exercise of discretionary jurisdiction is that the IAD must be
+
+satisfied at the time the appeal is disposed of, taking into account the best interests of a child
+
+directly affected by the decision, there are sufficient humanitarian and compa...</div>
+        </div>
+        
+        <div class="case" id="case-5">
+            <div class="case-header">
+                <h2>Case 5: ID 86312</h2>
+                <p class="metrics">Expected: 8 | Extracted: 0 | 
+                   Ratio: 0.00</p>
+            </div>
+            
+            <div class="comparison">
+                <div class="comparison-column">
+                    <h3>Extracted Determinations (0)</h3>
+        <p>No determinations extracted.</p>
+                </div>
+                <div class="comparison-column">
+                    <h3>Missing Determinations (1)</h3>
+        
+                <div class="missing">
+                    <p>["['appeal is allowed forjin zhang']", "['appeals are dismissed']", "['appellant has not lost her permanent resident status']", "['appeal were not allowed']", "['appeal is dismissed']", "['appeal of jin zhang is allowed']", "['sufficient humanitarian and compassionate reasons']", "['appeal of jin zhang is allowed']"]</p>
+                </div>
+                
+                </div>
+            </div>
+        
+            <div>
+                <h3>All Expected Determinations (1)</h3>
+        
+                <div class="expected">
+                    <p>["['appeal is allowed forjin zhang']", "['appeals are dismissed']", "['appellant has not lost her permanent resident status']", "['appeal were not allowed']", "['appeal is dismissed']", "['appeal of jin zhang is allowed']", "['sufficient humanitarian and compassionate reasons']", "['appeal of jin zhang is allowed']"]</p>
+                </div>
+                
+            </div>
+            
+            <h3>Case Text (first portion):</h3>
+            <div class="case-text">(CA IRB)
+
+IAD File No. / No de dossier de la SAI : VB3 -01412 / VB3 -01414 / VB3 -01413
+
+REASONS FOR DECISI ON
+
+
+
+[1] These are the reasons and decision of the Immigration Appeal Division (the “IAD”) in
+
+the appeal by [REDACTED] (the “ principal a ppellant”) , his wife [REDACTED] and his
+
+daughter [REDACTED] from a determination made against them on May 3, 2013. The a ppel lant s
+
+were found to have failed to comply with the residency obligation of section 28 of the
+
+Immigration and Refugee Protection Act (the “ Act ”),1 more particularly that the appellant s had
+
+not resided in Canada for at least 730 days in the five -year period immediately before February
+
+27, 2013.
+
+
+
+ISSUE
+
+
+
+[2] The appellant s did not challenge the legal validity of the determination . The appellants
+
+became permanent residents of Canada in August 2001. The appellants were not physically
+
+present in Canada in the five -year period between February 28, 2008 and February 27, 2013. The
+
+appellants asked that I exercise my discretionary jurisdiction and allow the appeals on
+
+humanitarian and compassionate considerations.
+
+
+
+[3] The relevant paragraph of s ection 28 of the Act reads as follows:
+
+
+
+28 (1) “A permanent resident must comply with a residency obligation with
+
+respect to every five -year period.
+
+(2) The following provisions govern the residency obligation under subsection (1):
+
+(a) a permanent resident complies with the residency obli gation with
+
+respect to a five -year period if, on each of a total of at least 730 days
+
+in that five -year period, they are
+
+(i) physically present in Canada,… ”
+
+
+
+[4] The test to be applied in the exercise of discretionary jurisdiction is that the IAD must be
+
+satis fied at the time the appeal is disposed of, taking into account the best interests of a child
+
+directly affected by the decision, there are sufficient humanitarian and compassionate
+
+considerations that warrant special relief in light of all the circumstance s of the case. Prior
+
+
+
+1 Immig...</div>
+        </div>
+        
+        <div class="case" id="case-6">
+            <div class="case-header">
+                <h2>Case 6: ID 128375</h2>
+                <p class="metrics">Expected: 9 | Extracted: 2 | 
+                   Ratio: 0.22</p>
+            </div>
+            
+            <div class="comparison">
+                <div class="comparison-column">
+                    <h3>Extracted Determinations (2)</h3>
+        
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>The removal order is set aside.</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>The appeal for Appellant  QC is dismissed.</p>
+                </div>
+                
+                </div>
+                <div class="comparison-column">
+                    <h3>Missing Determinations (1)</h3>
+        
+                <div class="missing">
+                    <p>["['removal order is set aside']", "['appeal were to be dismissed']", "['appeal were to be dismissed']", "['appeal for appellant nc is allowed']", "['appeal were to be dismissed']", "['appeal be dismissed']", "['sufficient humanitarian and compassionate considerations']", "['appeal be dismissed']", "['appeal were to be dismissed']"]</p>
+                </div>
+                
+                </div>
+            </div>
+        
+            <div>
+                <h3>All Expected Determinations (1)</h3>
+        
+                <div class="expected">
+                    <p>["['removal order is set aside']", "['appeal were to be dismissed']", "['appeal were to be dismissed']", "['appeal for appellant nc is allowed']", "['appeal were to be dismissed']", "['appeal be dismissed']", "['sufficient humanitarian and compassionate considerations']", "['appeal be dismissed']", "['appeal were to be dismissed']"]</p>
+                </div>
+                
+            </div>
+            
+            <h3>Case Text (first portion):</h3>
+            <div class="case-text">(CA IRB)
+
+
+
+
+
+
+
+2019 CanLII 128375 (CA IRB)
+
+IAD Fil e No. / N° de dossier de la SAI : VB8 -03842/VB8 -03847
+
+
+
+
+
+
+
+REASONS FOR DECISION
+
+
+
+[1] These are the reasons and decision of the I mmigration Appeal Division ( IAD) i n an appeal
+
+by N[REDACTED] ( Appellant NC ) and [REDACTED] Ma CANEO (Appellant QC) from
+
+exclusion order s made against them . The exclusion order s were made pursuant to paragraph
+
+40(1)(a) of the Immigration and Refugee Protection Act (IRPA ).1
+
+
+
+
+
+BACKGROUND
+
+
+
+[2] Appellant NC is a 53 year old citizen of the Philippines who came to Canada in 2004 as a
+
+live -in caregiver. In approximately 2008 she was given a work permit in Canada. On
+
+March 20, 2013 she became a permanent resident of Canada.
+
+
+
+[3] [REDACTED] is a 26 year old citizen of th e Philippines. She is the daughter of Appellant
+
+NC. She was sponsored by Appellant NC and became a permanent resident of Canada on May
+
+31, 201 3.
+
+
+
+[4] Appellant XX has a daughter who was born on August 24, 2012, [REDACTED] CANEO
+
+(NKC) . At the time of landing , neither Appellant NC nor Appellant QC declared the child as a
+
+dependent.
+
+
+
+[5] On June 27, 2013, Appellant NC submitted an application to add her granddaughter as a
+
+dependent. As Appellant NC was already landed the application was refused.
+
+
+
+[6] On December 20, 20 13 Appellant QC applied to sponsor her daughter to Canada. A
+
+procedural fairness letter was sent to Appellant QC asking why she did not declare her daughter.
+
+
+
+2019 CanLII 128375 (CA IRB)
+
+IAD File No. / No de dossier de la SAI : VB8 -03842/VB8 -03847
+
+
+
+
+
+
+
+
+
+[7] A Section 44 referral was made alleging that both Appellant NC and Appellant QC are
+
+inadmissible for misrepresentation per paragraph 40(1)(a) of the IRPA . The Immigration Division
+
+(ID) determined that paragraph 40(1)(a) of the IRPA applies to Appellant s’ cases and exclusion
+
+orders were issued against both Appellants.
+
+
+
+
+
+ISSUE
+
+
+
+[8] The Appellant s do not cha llenge the legal validity of the finding of misrepr...</div>
+        </div>
+        
+        <div class="case" id="case-7">
+            <div class="case-header">
+                <h2>Case 7: ID 138832</h2>
+                <p class="metrics">Expected: 8 | Extracted: 1 | 
+                   Ratio: 0.12</p>
+            </div>
+            
+            <div class="comparison">
+                <div class="comparison-column">
+                    <h3>Extracted Determinations (1)</h3>
+        
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>The removal order is set aside.</p>
+                </div>
+                
+                </div>
+                <div class="comparison-column">
+                    <h3>Missing Determinations (1)</h3>
+        
+                <div class="missing">
+                    <p>["['appeal be dismissed']", "['appeal to be dismissed']", "['appeal isallowed']", "['appeal were dismissed']", "['appeal is dismissed']", "['removal order is set aside']", "['appeal be dismissed']", "['appellant has not lost his permanent resident status']"]</p>
+                </div>
+                
+                </div>
+            </div>
+        
+            <div>
+                <h3>All Expected Determinations (1)</h3>
+        
+                <div class="expected">
+                    <p>["['appeal be dismissed']", "['appeal to be dismissed']", "['appeal isallowed']", "['appeal were dismissed']", "['appeal is dismissed']", "['removal order is set aside']", "['appeal be dismissed']", "['appellant has not lost his permanent resident status']"]</p>
+                </div>
+                
+            </div>
+            
+            <h3>Case Text (first portion):</h3>
+            <div class="case-text">(CA IRB)
+
+IAD File No. / N° de dossier de la SAI : MB5 -05773
+
+
+
+
+
+2
+
+
+
+REASONS FOR DECISION
+
+
+
+INTRODUCTION
+
+[1] This is the decision concerning the appeal filed by [REDACTED] (the appellant), a
+
+citizen of Algeria, against a decision made at the St -Bernard -de-Lacolle port of entry on
+
+November 25, 2015, by an immigration officer who concluded that the appellant, under
+
+section 28 of the Immigration and Refugee Protection Act1 (the Act) , did not reside in Canada for
+
+at least 730 days during the five -year period from November 2010 to November 2015. I n fact,
+
+the appellant appears to have been completely absent from Canada during this period.
+
+[2] The appellant is not challenging the legal validity of the decision but is asking the panel
+
+to take into consideration the various humanitarian and compassionate considerations present in
+
+his case . Considering the evidence in its entirety, the panel finds that the officer’s decision is
+
+valid in law.
+
+[3] Typically i n this type of case , the panel is guided by the case law that has been
+
+developed , particularly since [REDACTED] .2 In making its decision, t he panel will consider various
+
+factors, of which the follow ing is not an exhaustive list: the extent of non -compliance with the
+
+residency obligation; the degree of establishment in Canada; reasons for departure and for the
+
+lengthy stay abroad; reasonable attempts to return to Canada; ties to Canada, including the
+
+appellant’s family members in Canada ; hardship and dislocation that would be caused to the
+
+appellant and his family members in Canada were the appeal to be dismissed ; the best interests
+
+of any minor child directly affected by this decision ; and any other r elevant factor.
+
+
+
+1 Immigration and Refugee Protection Act , S.C. 2001, c. 27, amended.
+
+2 Bufete Arce, [REDACTED] v. Canada (The Minister of Citizenship and Immigration) , (VA2 -02515),
+
+[REDACTED], June 16, 2003.
+
+2018 CanLII 138832 (CA IRB)
+
+IAD File No. / N° de dossier de la SAI : MB5...</div>
+        </div>
+        
+        <div class="case" id="case-8">
+            <div class="case-header">
+                <h2>Case 8: ID 142896</h2>
+                <p class="metrics">Expected: 7 | Extracted: 0 | 
+                   Ratio: 0.00</p>
+            </div>
+            
+            <div class="comparison">
+                <div class="comparison-column">
+                    <h3>Extracted Determinations (0)</h3>
+        <p>No determinations extracted.</p>
+                </div>
+                <div class="comparison-column">
+                    <h3>Missing Determinations (1)</h3>
+        
+                <div class="missing">
+                    <p>["['allow the principal appellant’s appeal']", "['dismiss their appeals']", "['appeals are dismissed']", "['appeal is allowed']", "['appellant is a convention refugee or a person in need of protection']", "['dismiss the minor appellants’ appeals']", "['confirm the determination of the rpd']"]</p>
+                </div>
+                
+                </div>
+            </div>
+        
+            <div>
+                <h3>All Expected Determinations (1)</h3>
+        
+                <div class="expected">
+                    <p>["['allow the principal appellant’s appeal']", "['dismiss their appeals']", "['appeals are dismissed']", "['appeal is allowed']", "['appellant is a convention refugee or a person in need of protection']", "['dismiss the minor appellants’ appeals']", "['confirm the determination of the rpd']"]</p>
+                </div>
+                
+            </div>
+            
+            <h3>Case Text (first portion):</h3>
+            <div class="case-text">(CA IRB)
+
+RAD F ile No. / N° de dossier de la SA R : TB7 -06891
+
+TB7 -06892
+
+TB7 -06893
+
+
+
+REASONS FOR DECISION
+
+[1] [REDACTED] [REDACTED] (a.k.a. [REDACTED] [REDACTED] [REDACTED] [REDACTED] , the principal Appellant) and her
+
+minor daughters [REDACTED] [REDACTED] (a.k.a. [REDACTED] [REDACTED] [REDACTED] ) and [REDACTED] [REDACTED] (a.k.a. [REDACTED]
+
+[REDACTED] [REDACTED] ), the minor Appellants , citizens of Nigeria, appeal a decision of the Refugee
+
+Protection Division (RPD) denying their claims for refugee protection. The principal Appellant
+
+has agreed to act as the D esignated Representative for her minor daughters with respect to thei r
+
+claims. They have not submitted any new evidence in support of their claims but have requested
+
+an oral hearing. The Appellants request that the Refugee Appeal Division (RAD) set aside the
+
+determination of the RPD and find that they are Convention refugee s or persons in need of
+
+protection or, in the alternative, to refer the matter back to the RPD.
+
+DETERMINATION
+
+[2] Pursuant to sub section 111(1)(c) of the Immigration and Refugee Protection Act (IRPA),
+
+the RAD refers the principal Appellant’s claim back to the RPD for re -determination. The
+
+principal Appellant’s appeal is allowed.
+
+[3] Pursuant to sub section 11 1(1)(a) of the IRPA, the RAD confirms the determination of the
+
+RPD regarding the minor Appellant s’ claims. These appeals are dismissed.
+
+BACKGROUND
+
+[4] The principal Appellant alleged before the RPD that she fears for her safety on the basis of
+
+her sexual orientation if she has to return to her home country of Nigeria. She claims that she is a
+
+bisexual woman. She also alleges that her childr en may be impacted as a result by possibly being
+
+removed from her custody, and also alleges that there is a possibility that she and/or her children
+
+may be subject to female genital mutilation (FGM) if they return to Nigeria.
+
+[5] The Appellant reports that she is a bisexual wom an and that she has had a number of
+
+c...</div>
+        </div>
+        
+        <div class="case" id="case-9">
+            <div class="case-header">
+                <h2>Case 9: ID 60041</h2>
+                <p class="metrics">Expected: 7 | Extracted: 0 | 
+                   Ratio: 0.00</p>
+            </div>
+            
+            <div class="comparison">
+                <div class="comparison-column">
+                    <h3>Extracted Determinations (0)</h3>
+        <p>No determinations extracted.</p>
+                </div>
+                <div class="comparison-column">
+                    <h3>Missing Determinations (1)</h3>
+        
+                <div class="missing">
+                    <p>["['claimant is neither a convention refugee nor a person in need of protection']", "['reject this explanation']", "['reject the claimant’s explanations']", "['refugee protection division therefore rejects his claim']", "['negative']", "['claimant is neither a convention refugee nor a person in need of protection']", "['reject the claimant’s explanation']"]</p>
+                </div>
+                
+                </div>
+            </div>
+        
+            <div>
+                <h3>All Expected Determinations (1)</h3>
+        
+                <div class="expected">
+                    <p>["['claimant is neither a convention refugee nor a person in need of protection']", "['reject this explanation']", "['reject the claimant’s explanations']", "['refugee protection division therefore rejects his claim']", "['negative']", "['claimant is neither a convention refugee nor a person in need of protection']", "['reject the claimant’s explanation']"]</p>
+                </div>
+                
+            </div>
+            
+            <h3>Case Text (first portion):</h3>
+            <div class="case-text">(CA IRB)
+
+TA4-09616
+
+[REDACTED] [REDACTED] (the claimant) is a citizen of the People's Republic of China. He claims to have a well-founded fear of persecution at the hands of the Communist regime and in particular, the Public Security Bureau, by reason of his political opinion as a Falun Gong practitioner. In addition, he claims to be a person in need of protection because he would be subjected personally to a risk to his life or to a risk of cruel and unusual treatment or punishment or to a dange r of torture in the People's Republic of China. ALLEGATIONS: The claimant alleges that he started to practice Falun Gong in [REDACTED] 2003 in order to improve his health. The claimant stated that on [REDACTED], 2003, the Public Security Bureau raided his Falun Gong practice group. The claimant stated that he was not present at the time but was advised to go into hiding, which he did. The claimant indicated that he learned, while in hiding, that the Public Security Bureau had come to his home, looking to arrest him. The claimant made arrangements to leave the country and arrived in Canada on [REDACTED], 2003. DETERMINATION: I find that the claimant is neither a Convention refugee nor a person in need of protection.
+
+2005 CanLII 60041 (CA IRB)
+
+TA4-09616
+
+2 ANALYSIS: Identity: The claimant’s oral testimony, the supporting documentation
+
+1 filed and the RCMP report
+
+2 establish his identity as a national of the People's Republic of China. I find that the Public Security Bureau is not, nor has ever been, interested in arresting the claimant. The claimant maintained that the Public Security Bureau went to his home on more than one occasion, looking to arrest him. The claimant stated that he left the People's Republic of China with his own genuine passport via the Beijing Airport. It was put to the claimant that the country documentation
+
+3 indicates that there are a number of security checks at the Beijing Airpor t and that there is a computer system to check names. The claima...</div>
+        </div>
+        
+        <div class="case" id="case-10">
+            <div class="case-header">
+                <h2>Case 10: ID 63750</h2>
+                <p class="metrics">Expected: 8 | Extracted: 1 | 
+                   Ratio: 0.12</p>
+            </div>
+            
+            <div class="comparison">
+                <div class="comparison-column">
+                    <h3>Extracted Determinations (1)</h3>
+        
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>The appeal of HXXXXXXXXXXXXXXXXXXXX  is dismissed.</p>
+                </div>
+                
+                </div>
+                <div class="comparison-column">
+                    <h3>Missing Determinations (1)</h3>
+        
+                <div class="missing">
+                    <p>["['sufficient humanitarian and compassionate considerations']", "['appeal is denied']", "['appeal is dismissed']", "['appeal is dismissed']", "['appellants have not lost their permanent resident status']", "['appeals are allowed']", "['appeals ofjasrriet mahal and arjoi mehr mahalare allowed.the']", "['appeals of arjoi mehr mahal and jasrriet mahal are dismissed']"]</p>
+                </div>
+                
+                </div>
+            </div>
+        
+            <div>
+                <h3>All Expected Determinations (1)</h3>
+        
+                <div class="expected">
+                    <p>["['sufficient humanitarian and compassionate considerations']", "['appeal is denied']", "['appeal is dismissed']", "['appeal is dismissed']", "['appellants have not lost their permanent resident status']", "['appeals are allowed']", "['appeals ofjasrriet mahal and arjoi mehr mahalare allowed.the']", "['appeals of arjoi mehr mahal and jasrriet mahal are dismissed']"]</p>
+                </div>
+                
+            </div>
+            
+            <h3>Case Text (first portion):</h3>
+            <div class="case-text">(CA IRB)
+
+IAD Fil e No. / N° de dossier de la SAI : VB5 -03572/VB5 -03573/VB6 -01168
+
+
+
+
+
+
+
+REASONS FOR DECISION
+
+
+
+[1] These are the reasons and decision of the Immigration Appeal Division (the “IAD”) in
+
+the appeal s by [REDACTED], [REDACTED] and Ha[REDACTED] (the
+
+“appellants”) from a decision made outside Canada against them . The appellants were found to
+
+have failed to comply with the residency obligation of section 28 of the Immigration and
+
+Refugee Protection Act (the “ Act ”),1 more particul arly that the appellants had not resided in
+
+Canada for at least 730 days in the five -year period under review.
+
+
+
+[2] The appellants were represented by counsel. [REDACTED] (M rs. [REDACTED]) was the
+
+designated representative for her minor daughter [REDACTED]. [REDACTED] was present in person.
+
+Her husband, the appellant H[REDACTED] (Mr. [REDACTED]) appeared by telephone. Both
+
+adult appellants testified. The Minister’s counsel did not appear but he provided materials2 and
+
+written submissions. The Minister ’s po sition is that the appellants have not complied with their
+
+residency obligation and have not shown on a balance of probabilities, considering the best
+
+interests of a child, that sufficient humanitarian and compassionate factors exist in order to
+
+warrant th e IAD’s granting of discretionary relief.
+
+
+
+ISSUE
+
+
+
+[3] The appellants did not challenge the legal validity of the determination. The review
+
+period for M rs. [REDACTED] and her daughter is from July 10, 2010 to July 9, 2015 (their application
+
+for a travel document was received July 9, 2015). The review period for Mr. [REDACTED] is from
+
+January 16, 2011 to January 15, 2016. There is a dispute over the number of days Mrs. [REDACTED]
+
+was in the country with her daughter but the evidence suggests they were in Canada between 198
+
+and 227 days during the review period. Mr. [REDACTED] was in Canada for 85 days during the review
+
+period. They concede they were not physically present in Canada for the requ...</div>
+        </div>
+        
+        <div class="case" id="case-11">
+            <div class="case-header">
+                <h2>Case 11: ID 69758</h2>
+                <p class="metrics">Expected: 7 | Extracted: 0 | 
+                   Ratio: 0.00</p>
+            </div>
+            
+            <div class="comparison">
+                <div class="comparison-column">
+                    <h3>Extracted Determinations (0)</h3>
+        <p>No determinations extracted.</p>
+                </div>
+                <div class="comparison-column">
+                    <h3>Missing Determinations (1)</h3>
+        
+                <div class="missing">
+                    <p>["['removal orders are set aside']", "['appeals of his wife']", "['appeal of the principal appellant, toni elias bougharios, is allowed in law']", "['appeal must be allowed in law']", "['appeals are allowed']", "['appellants have not lost their permanent resident status']", "['sufficient humanitarian and compassionate considerations']"]</p>
+                </div>
+                
+                </div>
+            </div>
+        
+            <div>
+                <h3>All Expected Determinations (1)</h3>
+        
+                <div class="expected">
+                    <p>["['removal orders are set aside']", "['appeals of his wife']", "['appeal of the principal appellant, toni elias bougharios, is allowed in law']", "['appeal must be allowed in law']", "['appeals are allowed']", "['appellants have not lost their permanent resident status']", "['sufficient humanitarian and compassionate considerations']"]</p>
+                </div>
+                
+            </div>
+            
+            <h3>Case Text (first portion):</h3>
+            <div class="case-text">(CA IRB)
+
+IAD File No. /Dossier: TA6-12600 TA6-12601 TA6-12602
+
+
+
+1
+
+
+
+REASONS FOR DECISION
+
+Introduction [1] These are the reasons for the decision in the appeal, pursuant to subsection 63(3) of the Immigration and Refugee Protection Act
+
+(IRPA ) of T[REDACTED] (the principal appellant), his wife, [REDACTED] (the appellant) and E[REDACTED] (the minor appellant). They are appealing the de termination by the Minister’s Delegate, made on September 27, 2006, to issue a departure orders against them as a persons described in subsection 41(b) of IRPA
+
+, because the Minister’s Delegate was satisfied, on a balance of probabilities, there were grounds to believe that the appellants were permanent residents who were inadmissible to Canada for failing to comp ly with the residency obligation contained in section 28 of IRPA
+
+. [2] Specifically, the appellants had failed to reside in Canada for at least 730 days in the five- year period immediately after they became permanent residents, which was on March 27, 2003. The Minister’s Delegate was also not sati sfied, pursuant to section 28(2)(c) of IRPA
+
+, that there were sufficient humanitarian and compassionate c onsiderations, taking into account the best interests of a child directly affected by the determination, to justify retention of permanent resident status and overcome the breach of the residency obligations. Background
+
+
+
+[3] The principal appellant is 44 years old. He was born on July 18, 1963 in Kuwait, but he is a citizen of Lebanon. His wife is 38 years old and a citizen of Lebanon. His son, E[REDACTED], is 9 years old and a citizen of Le banon. There is a second son, [REDACTED], who is 7 years old. He is not an appellant in this appeal. [4] The family came to Canada as permanent re sidents on March 27, 2003. They left Canada and returned to Kuwait on April 12, 2003, when the principal appellant’s wife became ill in Canada with bronchial asthma. The principal appellant returned on March 2, 2006 and remained
+
+2007 Ca...</div>
+        </div>
+        
+        <div class="case" id="case-12">
+            <div class="case-header">
+                <h2>Case 12: ID 84060</h2>
+                <p class="metrics">Expected: 7 | Extracted: 0 | 
+                   Ratio: 0.00</p>
+            </div>
+            
+            <div class="comparison">
+                <div class="comparison-column">
+                    <h3>Extracted Determinations (0)</h3>
+        <p>No determinations extracted.</p>
+                </div>
+                <div class="comparison-column">
+                    <h3>Missing Determinations (1)</h3>
+        
+                <div class="missing">
+                    <p>["['appellant has lost his permanent resident status']", "['appeal is dismissed']", "['appeal be dismissed']", "['appeal is dismissed']", "['appeal is dismissed']", "['appeal is dismissed']", "['immigration appeal division therefore orders your departure from canada']"]</p>
+                </div>
+                
+                </div>
+            </div>
+        
+            <div>
+                <h3>All Expected Determinations (1)</h3>
+        
+                <div class="expected">
+                    <p>["['appellant has lost his permanent resident status']", "['appeal is dismissed']", "['appeal be dismissed']", "['appeal is dismissed']", "['appeal is dismissed']", "['appeal is dismissed']", "['immigration appeal division therefore orders your departure from canada']"]</p>
+                </div>
+                
+            </div>
+            
+            <h3>Case Text (first portion):</h3>
+            <div class="case-text">(CA IRB)
+
+IAD File No. / No de dossier de la SAI: TB5 -00041
+
+Client ID No. / No ID client: 3372 -3592
+
+
+
+
+
+
+
+REASONS FOR DECISION
+
+
+
+
+
+INTRODUCTION
+
+[1] These are the reasons for the decision in th e appeal by [REDACTED] (“a ppellant”)
+
+from a negative determination made by an immigration officer that the Appellant did not comply
+
+with the residency obligation prescribed in section 28 of the Immigration and Refugee Protection
+
+Act (IRPA ).
+
+[2] Section 28 of IRPA states:
+
+28. (1) Residency obligation --A permanent resident must comply with a residency
+
+obligation with respect to every five -year period.
+
+
+
+(2) Application --The following provisions govern the residency obligation under
+
+subsection (1):
+
+(a) a permanent resident complies with the residency obligation with respect
+
+to a five -year period if, on each of a total of at least 730 days in that five -year
+
+period, they are
+
+(i) physically present i n Canada, ...
+
+[3] Section 28 of IRPA requires a permanent resident of Canada to be physically present in
+
+Canada for at least 730 days in the five -year period immediately prior to their application for a
+
+travel document. The visa of ficer determined that the a ppellant was physically present in Canada
+
+for only 104 days during the five year period preceding June 26, 2014, the date of his application
+
+for a travel document.1
+
+
+
+1 Record, CAIPS notes.
+
+2016 CanLII 84060 (CA IRB)
+
+IAD File No. / No de dos sier de la SAI: TB5 -00041
+
+Client ID No. / No ID client: 3372 -3592
+
+
+
+
+
+2
+
+ISSUES AND DECISION
+
+[4] The a ppellant is not challenging the legal validity of the visa officer’s refusal and is
+
+relying on the panel’s jurisdiction to grant special relief on humanitarian and compassionate
+
+(H&C ) grounds under subsection 67(1)( c) of IRPA .2
+
+[5] The a ppellants appeared and gave sworn testimony at the de novo Immigration Appeal
+
+Division ( IAD ) hearing. After consideration of his oral testimony and the documentary evidence,
+
+I find that there are in sufficient H...</div>
+        </div>
+        
+        <div class="case" id="case-13">
+            <div class="case-header">
+                <h2>Case 13: ID 95778</h2>
+                <p class="metrics">Expected: 7 | Extracted: 0 | 
+                   Ratio: 0.00</p>
+            </div>
+            
+            <div class="comparison">
+                <div class="comparison-column">
+                    <h3>Extracted Determinations (0)</h3>
+        <p>No determinations extracted.</p>
+                </div>
+                <div class="comparison-column">
+                    <h3>Missing Determinations (1)</h3>
+        
+                <div class="missing">
+                    <p>["['rad finds that the rpd’s finding in this regard is reasonable under the circumstances']", "['rad finds that the rpd’s finding in this regard was pre-emptive']", "['rad finds that the rpd’s finding in this regard is not reasonable']", "['rad finds that the rpd’s finding in this regard is reasonable']", "['rad confirms the decision of the rpd', 'appellant is neither a convention refugee nor a person in need of protection']", "['appeal is dismissed']", "['neither a convention refugee nor a person in need of protection']"]</p>
+                </div>
+                
+                </div>
+            </div>
+        
+            <div>
+                <h3>All Expected Determinations (1)</h3>
+        
+                <div class="expected">
+                    <p>["['rad finds that the rpd’s finding in this regard is reasonable under the circumstances']", "['rad finds that the rpd’s finding in this regard was pre-emptive']", "['rad finds that the rpd’s finding in this regard is not reasonable']", "['rad finds that the rpd’s finding in this regard is reasonable']", "['rad confirms the decision of the rpd', 'appellant is neither a convention refugee nor a person in need of protection']", "['appeal is dismissed']", "['neither a convention refugee nor a person in need of protection']"]</p>
+                </div>
+                
+            </div>
+            
+            <h3>Case Text (first portion):</h3>
+            <div class="case-text">(CA IRB)
+
+RAD File No. / N° de dossier de la S AR :
+
+
+
+Reasons and Decision
+
+[1] [REDACTED] [REDACTED] (the Appellant), a citizen of China, appe als a decision of the Refugee
+
+Protection Division (RPD) denying her claim for refugee protection. She has not submitte d new
+
+evidence in support of her appeal. The Appellant asks that the Refugee Appeal Division (RAD)
+
+set aside the decision of the RPD and s ubstitute a decision with its own determination that the
+
+Appellant is a Convention refugee or a person in need of protection. In the alternative, the
+
+Appellant requests that the RAD refer the matter back to the RPD with a differently -constituted
+
+panel.
+
+DE TERMINATION
+
+[2] Pursuant to Section 111(1)(a) of the Immigration and Refugee Protection Act (IRPA), t he
+
+RAD confirms the decision of the RPD that the Appellant is neither a Convention refugee nor a
+
+person in need of protection. This appeal is dismissed.
+
+Backg round
+
+[3] The [REDACTED] nt alleged in his Basis of Claim (BoC) form that he is a first class martial arts
+
+athlete and that he has competed on a state and national level in China. He was introduced to the
+
+practice of Falun Gong by a classmate in [REDACTED] 2010. He bega n to practice Falun Gong in an
+
+attempt to find a solution to a debilitating ankle injury that left him unable to walk . Although
+
+initially sceptical, h e experienced an improvement in his health shortly after commencing the
+
+practice and became a true believe r of [REDACTED] . Since his introduction to Falun Gong in
+
+[REDACTED] 2010, he has been practicing every day and has been participating in weekly study
+
+sessions. In [REDACTED] , 2012 , he was invited to come to Canada to referee a martial arts competition
+
+and to share his experiences with other martial arts enthusiasts. While in Canada he discretely
+
+participated in Falun Gong activities in a park. On [REDACTED] [REDACTED] , 2012, in a telephone call from
+
+China, he was notified by his father that his classmate had been arre...</div>
+        </div>
+        
+        <div class="case" id="case-14">
+            <div class="case-header">
+                <h2>Case 14: ID 102407</h2>
+                <p class="metrics">Expected: 6 | Extracted: 0 | 
+                   Ratio: 0.00</p>
+            </div>
+            
+            <div class="comparison">
+                <div class="comparison-column">
+                    <h3>Extracted Determinations (0)</h3>
+        <p>No determinations extracted.</p>
+                </div>
+                <div class="comparison-column">
+                    <h3>Missing Determinations (1)</h3>
+        
+                <div class="missing">
+                    <p>["['302 (c.a.']", "['appellant has not lost his permanent resident status']", "['removal order is set aside', 'appellant has not lost his permanent resident status']", "['appeal was dismissed']", "['appeal is allowed.the']", "['appeal is allowed']"]</p>
+                </div>
+                
+                </div>
+            </div>
+        
+            <div>
+                <h3>All Expected Determinations (1)</h3>
+        
+                <div class="expected">
+                    <p>["['302 (c.a.']", "['appellant has not lost his permanent resident status']", "['removal order is set aside', 'appellant has not lost his permanent resident status']", "['appeal was dismissed']", "['appeal is allowed.the']", "['appeal is allowed']"]</p>
+                </div>
+                
+            </div>
+            
+            <h3>Case Text (first portion):</h3>
+            <div class="case-text">(CA IRB)
+
+IAD File No. / No de dossier de la SAI: TB4 -06224
+
+Client ID No. / No ID client: 5413 -9681
+
+
+
+
+
+
+
+REASONS FOR DECISION
+
+INTRODUCTION
+
+[1] These are the reasons in the appeal of Prince D[REDACTED] (appellant) from a
+
+determination of a visa officer in Canada concerning his failure to comply with the residency
+
+obligation set out in the Immigration and Refugee Protection Act (IRPA ).1
+
+[2] Section 28 of the IRPA requires a permanent resident to be physically present in Canada
+
+for at least 730 days in the five -year period immediately before he applies for a travel document.
+
+An immigration officer found that the appellant had spent insufficient time in Canada and would
+
+be unable to comply with the legislation .
+
+[3] The visa officer also held that there were insufficient humanitarian and compassionate
+
+(H&C) considerations, taking into account the best interests of the child, to justify the breach of
+
+the residency obligation and the appellant’s retention of his permanent resident status.
+
+ISSUE
+
+[4] The appellant does not challenge the legal validity of the visa off icer’s decision but
+
+argues that the appeal should be allowed on the basis that sufficient H&C considerations exist to
+
+warrant special relief in light of all the circumstances of the case.
+
+DECISION
+
+[5] Having considered the evidence and submissions, the panel has come to the conclusion
+
+that the officer’s determination of the contravention of the residency obligation is valid in law .
+
+[6] The panel further finds that there are sufficient H&C considerations to warrant special
+
+relief, in light of all the circumstances of the case.
+
+
+
+
+
+1 IRPA , S.C. 2001, c. 27.
+
+2016 CanLII 102407 (CA IRB)
+
+IAD File No. / No de dossier de la SAI: TB4 -06224
+
+Client ID No. / No ID client: 5413 -9681
+
+
+
+
+
+2
+
+BACKGROUND
+
+[7] The appellant became a permanent resident of Canada in September 2008. He left Canada
+
+seven days after landing and returned to his post of employment in Dubai, United Arab E mirates ,
+...</div>
+        </div>
+        
+        <div class="case" id="case-15">
+            <div class="case-header">
+                <h2>Case 15: ID 114347</h2>
+                <p class="metrics">Expected: 6 | Extracted: 0 | 
+                   Ratio: 0.00</p>
+            </div>
+            
+            <div class="comparison">
+                <div class="comparison-column">
+                    <h3>Extracted Determinations (0)</h3>
+        <p>No determinations extracted.</p>
+                </div>
+                <div class="comparison-column">
+                    <h3>Missing Determinations (1)</h3>
+        
+                <div class="missing">
+                    <p>["['rpd’s determination is set aside']", "['overturn its finding']", "['substitute my determination', 'appellant is a convention refugee']", "['appeal is allowed']", "['confirm the decision of the rpd', 'appellants are neither convention refugees nor persons in need of protection']", "['appeals are dismissed']"]</p>
+                </div>
+                
+                </div>
+            </div>
+        
+            <div>
+                <h3>All Expected Determinations (1)</h3>
+        
+                <div class="expected">
+                    <p>["['rpd’s determination is set aside']", "['overturn its finding']", "['substitute my determination', 'appellant is a convention refugee']", "['appeal is allowed']", "['confirm the decision of the rpd', 'appellants are neither convention refugees nor persons in need of protection']", "['appeals are dismissed']"]</p>
+                </div>
+                
+            </div>
+            
+            <h3>Case Text (first portion):</h3>
+            <div class="case-text">(CA IRB)
+
+RAD File / Dossier de la SAR : TB8 -05949
+
+TB8 -05950 / TB8 -05951
+
+
+
+
+
+RAD.25.02 ( September 18 , 2018)
+
+Disponible en français 2
+
+REASONS FOR DECISION
+
+
+
+INTRODUCTION
+
+[1] [REDACTED] [REDACTED] [REDACTED] (the “ Principal Appellant”) is a citizen of Venezuela . [REDACTED]
+
+[REDACTED] [REDACTED] [REDACTED] (the “Female Appellant”) is a citizen of both Venezuela and Iran. [REDACTED]
+
+[REDACTED] [REDACTED] [REDACTED] (the “Minor Appellant”) is a citizen of both Venezuela and the United
+
+States (US). They are appealing a decision of the Refugee Protection Division (RPD) denying
+
+their claim s for refugee protection.
+
+[2] The Principal Appellant’s claim was refused on the grou nds that he was found not
+
+credible. The Female and Minor Appellants were found not to be refugees or persons in need of
+
+protection as they had not established claims against Iran or the US respectively.
+
+[3] The Principal Appellant was appointed as the Designat ed Representative (DR) for the
+
+Minor Appellant at the RPD.
+
+DETERMINATION S
+
+[4] The Principal Appellant’s appeal is allowed. The Female and Minor Appellants’ appeals
+
+are dismissed.
+
+BACKGROUND
+
+[5] The Principal Appellant alleges that he was a senior government civil servant with an 18 -
+
+year career in Venezuela. The Principal Appellant began to voice disagreement with his
+
+superiors about the actions of the government, including forcing his workers to attend pro -
+
+government rallies, and the firings of workers who expresse d dissent with the government.
+
+[6] The Principal Appellant alleges that he and his family were visited by the Bolivarian
+
+National Intelligence Service (SEBIN), collectivos and other state agents as a result of his
+
+2019 CanLII 114347 (CA IRB)
+
+RAD File / Dossier de la SAR : TB8 -05949
+
+TB8 -05950 / TB8 -05951
+
+
+
+
+
+RAD.25.02 ( September 18 , 2018)
+
+Disponible en français 3
+
+expressions of opposition. The Appellants deci ded to flee Venezuela and come to Canada where
+
+they made their refugee claims.
+
+[7...</div>
+        </div>
+        
+        <div class="case" id="case-16">
+            <div class="case-header">
+                <h2>Case 16: ID 124270</h2>
+                <p class="metrics">Expected: 7 | Extracted: 1 | 
+                   Ratio: 0.14</p>
+            </div>
+            
+            <div class="comparison">
+                <div class="comparison-column">
+                    <h3>Extracted Determinations (1)</h3>
+        
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>NOTICE OF DECISION  
+ 
+ 
+ The appeal is allowed .</p>
+                </div>
+                
+                </div>
+                <div class="comparison-column">
+                    <h3>Missing Determinations (1)</h3>
+        
+                <div class="missing">
+                    <p>["['appeal is dismissed']", "['appeal were to be dismissed']", "['appeal is allowed.the']", "['appeal is allowed']", "['appeal were dismissed']", "['appellant has not lost his permanent resident status']", "['appeal is dismissed']"]</p>
+                </div>
+                
+                </div>
+            </div>
+        
+            <div>
+                <h3>All Expected Determinations (1)</h3>
+        
+                <div class="expected">
+                    <p>["['appeal is dismissed']", "['appeal were to be dismissed']", "['appeal is allowed.the']", "['appeal is allowed']", "['appeal were dismissed']", "['appellant has not lost his permanent resident status']", "['appeal is dismissed']"]</p>
+                </div>
+                
+            </div>
+            
+            <h3>Case Text (first portion):</h3>
+            <div class="case-text">(CA IRB)
+
+IAD File No. / N° de dossier de la S AI : TB9 -20474
+
+
+
+1
+
+REASONS FOR DECISION
+
+
+
+INTRODUCTION
+
+[1] The Appellant, [REDACTED] is an 18 -year -old man from India but grew up in Kuwait
+
+since he was an infant because his parents worked there. The Appellant and his parents landed in
+
+Canada in April 2005 when he was three and a half years old . They left Kuwait because of
+
+political inst ability. The Appellant and his parents stayed in Canada for 11 days and returned to
+
+Kuwait because the political situation had improved.
+
+[2] In February 2019, when the Appellant was 17 years old, he applied for his permanent
+
+resident travel document (PRTD) b ecause he wanted to return to Canada to study. In July 2019,
+
+the visa officer denied the Appellant ’s application because he had not met his residency
+
+obligations ---the Appellant had not been physically in Canada for the past 5 years. Permanent
+
+residents (PR) are required to be in Canada for at least 730 in any five -year period in order to
+
+maintain their PR status. At the time when the Appellant applied for his PRTD, he had not
+
+returned to Canada since he had left at the age of three and a half years old.
+
+[3] The Appellant admits that he has not met his residency obligation and appeals the matter
+
+on humanitarian and compassionate (H&C) grounds in order for him to maintain his PR status.
+
+[4] In August 2019, the Appellant came to Canada through a land border. Current ly, the
+
+Appellant lives and studies in Canada.
+
+[5] The Appellant ’s position is that the appeal should be allowed because it was not his
+
+parents’ choice, and not his, to leave Canada; he is now established in Canada and he will suffer
+
+hardship if the appeal is dismissed. In contrast, the Minister’s position is that the appeal should
+
+be dismissed because the Appellant has not provided sufficient H&C grounds to overcome the
+
+significant breach.
+
+[6] I find there are sufficient H&C grounds to allow the appeal. While the re is a significant
+
+brea...</div>
+        </div>
+        
+        <div class="case" id="case-17">
+            <div class="case-header">
+                <h2>Case 17: ID 129187</h2>
+                <p class="metrics">Expected: 7 | Extracted: 1 | 
+                   Ratio: 0.14</p>
+            </div>
+            
+            <div class="comparison">
+                <div class="comparison-column">
+                    <h3>Extracted Determinations (1)</h3>
+        
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>The appeal is allowed.</p>
+                </div>
+                
+                </div>
+                <div class="comparison-column">
+                    <h3>Missing Determinations (1)</h3>
+        
+                <div class="missing">
+                    <p>["['appeal was dismissed']", "['appeal was dismissed']", "['appellant has not lost her permanent resident status']", "['appeal was dismissed']", "['appeal is allowed']", "['appeal was dismissed']", "['appeal is allowed.the']"]</p>
+                </div>
+                
+                </div>
+            </div>
+        
+            <div>
+                <h3>All Expected Determinations (1)</h3>
+        
+                <div class="expected">
+                    <p>["['appeal was dismissed']", "['appeal was dismissed']", "['appellant has not lost her permanent resident status']", "['appeal was dismissed']", "['appeal is allowed']", "['appeal was dismissed']", "['appeal is allowed.the']"]</p>
+                </div>
+                
+            </div>
+            
+            <h3>Case Text (first portion):</h3>
+            <div class="case-text">(CA IRB)
+
+IAD File No. / No de dossier de la SAI: TB8 -12563
+
+Client ID No. / No ID client: 5335 -6123
+
+
+
+
+
+
+
+REASONS FOR DECISION
+
+
+
+[1] A permanent resident (“PR”) of Canada is required to be physically present in Canada for
+
+at least 730 days in a 5 -year period or fall into one of the exceptions permitted in the legislation.
+
+Yandu[REDACTED] (“the appellant”) is a 41 -year -old citizen of Cuba who app lied for
+
+her Permanent Resident Travel Document (PRTD) on March 21, 2018 in Havana. The appellant
+
+indicated in her Permanent Resident Travel Document application that she had been physically
+
+present in Canada for zero days in the five years preceding Marc h 21, 2018 (“the period”). The
+
+visa officer who examined the appellant's PRTD application refused it on April 12, 2018, as the
+
+appellant did not meet the requirements of section 28 of the Immigration and Refugee Protection
+
+Act (“the Act ”), and indeed had last been physically present in Canada in October 2009. The visa
+
+officer noted that in the 5 -year period prior to the application, the appellant had zero days of
+
+physical presence in Canada, but the officer did consider whether time spent with her Canadia n
+
+citizen spouse in Cuba would count toward her residency obligation. Even if this time was
+
+included, however, it would only amount to 252 days in the five -year period, and the appellant
+
+was still in breach of the residency obligation. The appellant appe aled the decision of the visa
+
+officer on May 16, 2018, and this is the decision in her appeal.
+
+
+
+HEARING
+
+
+
+[2] At the hearing, the appellant was present over the telephone. She was represented by
+
+counsel at the first sitting, and her husband and daughter attend ed the hearing as witnesses.
+
+Unfortunately, due to the difficulty in telephoning in and out of Cuba, the hearing did not
+
+conclude and the second sitting was required. At the second sitting, the appellant’s husband
+
+advised that he had fired their counsel and that he would be representin...</div>
+        </div>
+        
+        <div class="case" id="case-18">
+            <div class="case-header">
+                <h2>Case 18: ID 131231</h2>
+                <p class="metrics">Expected: 7 | Extracted: 1 | 
+                   Ratio: 0.14</p>
+            </div>
+            
+            <div class="comparison">
+                <div class="comparison-column">
+                    <h3>Extracted Determinations (1)</h3>
+        
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>NOTICE OF DECISION  
+ 
+ The appeal is allowed .</p>
+                </div>
+                
+                </div>
+                <div class="comparison-column">
+                    <h3>Missing Determinations (1)</h3>
+        
+                <div class="missing">
+                    <p>["['appeal isallowed']", "['departure order isset aside']", "['appeal were dismissed']", "['appeal were dismissed']", "['officer’s decision is valid in law']", "['appeal is allowed']", "['appellant has not lost his permanent resident status']"]</p>
+                </div>
+                
+                </div>
+            </div>
+        
+            <div>
+                <h3>All Expected Determinations (1)</h3>
+        
+                <div class="expected">
+                    <p>["['appeal isallowed']", "['departure order isset aside']", "['appeal were dismissed']", "['appeal were dismissed']", "['officer’s decision is valid in law']", "['appeal is allowed']", "['appellant has not lost his permanent resident status']"]</p>
+                </div>
+                
+            </div>
+            
+            <h3>Case Text (first portion):</h3>
+            <div class="case-text">(CA IRB)
+
+IAD File No. / N° de dossier de la S AI : MB5 -05278
+
+
+
+
+
+
+
+1
+
+ORAL REASONS FOR DECISION
+
+“French version edited for spelling, syntax and grammar ”
+
+INTRODUCTION
+
+[1] This is an oral decision in the case concerning the appellant ,
+
+[REDACTED] SILVA , a citizen of Brazil , who is appealing against a decision made on
+
+November 12, 2015, at a port of entry , and the fact that the appellant could not comply with his
+
+residency obligation of being present in Canada for a minimum of 730 days during the five -year
+
+period in question, from February 4, 2012, the date when the appellant became a permanent
+
+resident, until February 4, 2017. In fact, on the date of the decision at the port of entry, that is,
+
+November 12, 2015, the appellant had been present in Canada for approximately 30 days.
+
+Following the depart ure order, the tendency of being absent from Canada changed considerably,
+
+and he has spent most of his time in Canada since the order was issued in 2015. The appellant is
+
+not challenging the legal validity of the decision. He is requesting that the panel consider the
+
+various humanitarian and comp assionate considerations in his case.
+
+
+
+[2] Considering the appellant’s position and the evidence in the case, the panel concludes
+
+that the officer’s decision is valid in law. Now, concerning the humanitarian and compassionate
+
+aspects, the panel is guided by the jurisprudence, specifically, the factors that have been
+
+established since Bufete Arce .1 The main factors to consider are the extent of the non -compliance
+
+with the residency obligation, the initial and continuing degree of establishment in Canada , the
+
+reasons for departure from Canada, whether reasonable attempts to return to Can ada were made
+
+and the hardship and dislocation that could be cause d to the appellant and his family members by
+
+a dismissal and, cert ainly, the best interests of any minor child directly affected by this decision
+
+and any other factor s that could be relevant and co...</div>
+        </div>
+        
+        <div class="case" id="case-19">
+            <div class="case-header">
+                <h2>Case 19: ID 131528</h2>
+                <p class="metrics">Expected: 7 | Extracted: 1 | 
+                   Ratio: 0.14</p>
+            </div>
+            
+            <div class="comparison">
+                <div class="comparison-column">
+                    <h3>Extracted Determinations (1)</h3>
+        
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>The removal order is set aside .</p>
+                </div>
+                
+                </div>
+                <div class="comparison-column">
+                    <h3>Missing Determinations (1)</h3>
+        
+                <div class="missing">
+                    <p>["['sufficient humanitarian and compassionate considerations']", "['appellant has not lost her permanent resident status']", "['removal order is set aside']", "['removal order is set aside', 'appellant has not lost her permanent resident status']", "['sufficient humanitarian and compassionate considerations']", "['appeal is allowed']", "['appeal is allowed']"]</p>
+                </div>
+                
+                </div>
+            </div>
+        
+            <div>
+                <h3>All Expected Determinations (1)</h3>
+        
+                <div class="expected">
+                    <p>["['sufficient humanitarian and compassionate considerations']", "['appellant has not lost her permanent resident status']", "['removal order is set aside']", "['removal order is set aside', 'appellant has not lost her permanent resident status']", "['sufficient humanitarian and compassionate considerations']", "['appeal is allowed']", "['appeal is allowed']"]</p>
+                </div>
+                
+            </div>
+            
+            <h3>Case Text (first portion):</h3>
+            <div class="case-text">(CA IRB)
+
+IAD Fil e No. / N° de dossier de la SAI : VB9 -07207
+
+
+
+
+
+
+
+
+
+REASONS FOR DECISION
+
+
+
+[1] These are the reasons and decision of the Immigrati on Appeal Division (IAD) in the
+
+appeal by [REDACTED] BIGO (Appellant) from a removal order made against h er on
+
+September 12, 2019 .1 The Appellant was found to be inadmissible on the basis of failing to
+
+comply with the residency obligation requirements of section 28 of the Immigration and Refugee
+
+Protection Act (Act ).2
+
+
+
+
+
+BACKGROUND
+
+
+
+[2] The Appellant is a citizen of the Sudan. The Appellant was granted refugee status and
+
+then became a permanent resident in February 2005.3
+
+
+
+[3] The Appellant was married in Canada i n 2008 and has four children that were born in
+
+Canada.4
+
+
+
+[4] The Appellant testified at the hearing and no additional documentary evidence was
+
+provided.
+
+
+
+
+
+ANALYSIS
+
+
+
+[5] There was no challenge to the legal validity of the removal order. Based on the evidence
+
+befor e me , the removal order is valid in law as the Appellant has not met her residency
+
+obligation requirements under section 28 of the Act.
+
+
+
+2019 CanLII 131528 (CA IRB)
+
+IAD File No. / No de dossier de la SAI : VB9 -07207
+
+
+
+
+
+
+
+
+
+
+
+[6] However, the IAD has discretionary jurisdiction to permit an Appellant to retain their
+
+permanent resident status despi te a breach of the residency obligation. The test is that the IAD
+
+must be satisfied at the time that the appeal is disposed of, taking into account the best interest of
+
+any child directly affected by the decision whether there are sufficient humanitarian a nd
+
+compassionate considerations that warrant special relief in light of all the circumstances of the
+
+case.
+
+
+
+[7] The Appellant testified in the usual areas that are considered by the IAD in the exercise
+
+of its discretionary jurisdiction. At the conclusion of t he evidence the Minister’s counsel
+
+recommended that the appeal be allowed on the basis there are sufficient humanitarian and
+
+compassionate considerations tha...</div>
+        </div>
+        
+        <div class="case" id="case-20">
+            <div class="case-header">
+                <h2>Case 20: ID 131912</h2>
+                <p class="metrics">Expected: 6 | Extracted: 0 | 
+                   Ratio: 0.00</p>
+            </div>
+            
+            <div class="comparison">
+                <div class="comparison-column">
+                    <h3>Extracted Determinations (0)</h3>
+        <p>No determinations extracted.</p>
+                </div>
+                <div class="comparison-column">
+                    <h3>Missing Determinations (1)</h3>
+        
+                <div class="missing">
+                    <p>["['dismiss the appellant’s appeal for lack of interest']", "['application to reopen the appeal is granted']", "['appeal is hereby dismissed']", "['dismissing the appeal']", "['dismissed the appeal']", "['dismissing the appeal']"]</p>
+                </div>
+                
+                </div>
+            </div>
+        
+            <div>
+                <h3>All Expected Determinations (1)</h3>
+        
+                <div class="expected">
+                    <p>["['dismiss the appellant’s appeal for lack of interest']", "['application to reopen the appeal is granted']", "['appeal is hereby dismissed']", "['dismissing the appeal']", "['dismissed the appeal']", "['dismissing the appeal']"]</p>
+                </div>
+                
+            </div>
+            
+            <h3>Case Text (first portion):</h3>
+            <div class="case-text">(CA IRB)
+
+IAD File No. / No de dossier de la SAI : TB2 -01385
+
+Client ID No. / No ID clie nt : 2529 -0368
+
+
+
+1
+
+
+
+REASONS FOR DECISION
+
+INTRODUCTION
+
+[1] [REDACTED] (the appellant) filed an application under section 71 of the
+
+Immigration and Refugee Protection Act (the Act ) to reopen his appeal. The Respon dent opposes
+
+this application which is decided in chambers pursuant to section 25 of the Immigration Appeal
+
+Division Rules.
+
+ANALYSIS
+
+[2] The Immigration Appeal Division ( IAD ) may reopen an appeal pursuant to section 71 of
+
+the Act which states the following:
+
+Reopening appeal
+
+71 The Immigration Appeal Division, on an application by a foreign national who has not left
+
+Canada under a removal order, may reopen an appeal if it is satisfied that it failed to observe a
+
+principle of natural justice.
+
+[3] The appellant was sc heduled for a reconsideration of his appeal (stay) on May 31, 2018, on
+
+a peremptory basis. This matter had been postponed on numerous occasions. On the day of his
+
+reconsideration, the appellant failed to appear despite the presence of his counsel. Accordin gly,
+
+IAD M ember [REDACTED] dismissed the appeal. Here are the reasons contained in the last 2
+
+paragraphs of his reasons:
+
+Given the appellant has been aware of his reconsideration appeal hearing and was
+
+counselled by this Panel on January 29, 2018, about the importance of appearing before
+
+the IAD with respect to his stay reconsideration, as well as to ensure compliance with any
+
+possible stay order extensions, the fact that he failed to appear suggests that he is no
+
+longer pursing his appeal and recognizes that he will be eventually removed to Guyana.
+
+Accordingly, the Panel sees no other alternative other than to dismiss the appellant’s
+
+appeal for lack of interest. The appeal is hereby dismissed pursuant to subsection 69(1) of
+
+the IRPA .
+
+2018 CanLII 131912 (CA IRB)
+
+IAD File No. / No de dossier de la SAI : TB2 -01385
+
+Client ID No. / No ID clie nt : 2529 -0368
+
+
+
+2
+
+
+
+[4] The...</div>
+        </div>
+        
+    <script>
+        // Add a simple navigation for jumping between cases
+        document.addEventListener('DOMContentLoaded', function() {
+            const nav = document.querySelector('.nav');
+            const navContent = document.createElement('div');
+            navContent.style.marginTop = '10px';
+            
+            for (let i = 1; i <= 20; i++) {
+                const link = document.createElement('a');
+                link.href = '#case-' + i;
+                link.textContent = 'Case ' + i;
+                link.style.marginRight = '15px';
+                link.style.textDecoration = 'none';
+                link.style.padding = '5px 10px';
+                link.style.backgroundColor = '#f8f9fa';
+                link.style.borderRadius = '5px';
+                navContent.appendChild(link);
+            }
+            
+            nav.appendChild(navContent);
+        });
+    </script>
+    </body>
+    </html>
+    

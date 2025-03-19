@@ -1,0 +1,1968 @@
+{
+  "analysis_summary": {
+    "total_overextraction_cases": 20,
+    "max_cases_shown": 20
+  },
+  "overextraction_cases": [
+    {
+      "case_id": "101178",
+      "expected_count": 4,
+      "extracted_count": 9,
+      "extra_count": 5,
+      "ratio": 2.25,
+      "extracted_determinations": [
+        {
+          "text": "1 the RAD sets aside the determination of the RPD",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "This appeal is allowed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "the RAD dismisses the appeal",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "confirms the decision of the RPD that the Principal",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "the RAD sets aside the determination of the RPD",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "substitutes its determination that the Minor Appellant is a Convention refugee for the reasons \nstated above",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "This appeal is allowed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "the RAD confirms the decision of the RPD tha t the \nPrincipal",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "This appeal is dismissed",
+          "score": 1.0,
+          "match_type": "explicit"
+        }
+      ],
+      "expected_determinations": [
+        "[\"['rad sets aside the determination of the rpd', 'substitutes its determination']\", \"['appeal is allowed']\", \"['appeal is dismissed']\", \"['rad confirms the decision of the rpd', 'are neither convention refugees nor persons in need of protection']\"]"
+      ],
+      "extra_determinations": [
+        {
+          "text": "1 the RAD sets aside the determination of the RPD",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "This appeal is allowed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "the RAD dismisses the appeal",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "confirms the decision of the RPD that the Principal",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "the RAD sets aside the determination of the RPD",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "substitutes its determination that the Minor Appellant is a Convention refugee for the reasons \nstated above",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "This appeal is allowed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "the RAD confirms the decision of the RPD tha t the \nPrincipal",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "This appeal is dismissed",
+          "score": 1.0,
+          "match_type": "explicit"
+        }
+      ],
+      "case_text": "(CA IRB)\n\nRAD F ile No. / N\u00b0 de dossier de la SA R : TB7 -20771\n\nTB7 -20772\n\nTB7 -20773\n\n\n\nREASONS FOR DECISION\n\n[1] [REDACTED] [REDACTED] [REDACTED] [REDACTED] [REDACTED] (the \u201cPrincipal Appellant\u201d), [REDACTED] [REDACTED] [REDACTED]\n\n[REDACTED] (the \u201cSpousal Appellant\u201d) and [REDACTED] [REDACTED] [REDACTED] [REDACTED] (the \u201cMinor Appellant\u201d) are\n\ncitizens of Nigeria and are appealing a dec ision of the Refugee Protection Division (RPD)\n\ndenying their claims for refugee protection.\n\n[2] The Minor Appellant is the daughter of the Principal Appellant and Spousal Appellant.\n\nThe Principal and Spousal Appellants also have a son named [REDACTED] [REDACTED] [REDACTED] [REDACTED]\n\n[REDACTED] , who was born in Canada and is a Canadian citizen and not an Appellant in this case . The\n\nPrincipal Appellant was named as the Designated Representative (DR) of the Minor Appellant at\n\nthe RPD hearing and the RAD confirms this designation.\n\n[3] The Appellan ts are requesting that the Refugee Appeal Division (RAD) set aside the\n\nRPD\u2019s negative determination and find that they are Convention refugees or persons in need of\n\nprotection. In the alternative, the Appellants request that the RAD refer the matters back to the\n\nRPD for redetermination by a differently constituted panel.\n\nRAD DETERMINATION\n\n[4] In relation to the Minor Appellant, pursuant to s.111(1)( b) of the Immigration and Refugee\n\nProtection Act (IRPA),1 the RAD sets aside the determination of the RPD and subs titutes its own\n\ndetermination that the Minor Appellant is a Convention refugee. This appeal is allowed.\n\n[5] In relation to the Principal and Spousal Appellants, the RAD dismisses the appeal and\n\nconfirms the decision of the RPD that the Principal and Spousal Ap pellants are neither\n\nConvention refugees nor persons in need of protection pursuant to s.111(1)( a) of the IRPA.2\n\n\n\n\n\n1 S.111(1)( b), Immigration and Refugee Protection Act , S.C. 2001, c.27. [ IRPA ]\n\n2 S.111(1)( a), Immigration and Refugee Protection Act ..."
+    },
+    {
+      "case_id": "123434",
+      "expected_count": 4,
+      "extracted_count": 9,
+      "extra_count": 5,
+      "ratio": 2.25,
+      "extracted_determinations": [
+        {
+          "text": "their appeal is dismissed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "the RAD confirms the decision  of the RPD that the Appellants are \nneither Convention refugees nor persons in need of protection",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "their \nappeal is allowed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "the RAD sets aside the determination of the RPD",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "[17]  The Appellants request that the appeal be allowed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "their appeal is dismissed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "the RAD confirms the decision of the  RPD that the Appellants are \nneither Convention refugees nor persons in need of protection",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "their \nappeal is allowed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "the RAD sets aside the determination of the RPD",
+          "score": 1.0,
+          "match_type": "explicit"
+        }
+      ],
+      "expected_determinations": [
+        "[\"['appeal is allowed']\", \"['appeal is dismissed']\", \"['rad sets aside the determination of the rpd', 'substitutes its own determination that the appellants are convention refugees']\", \"['rad confirms the decision of the rpd', 'appellants are neither convention refugees nor persons in need of protection', 'dismisses the appeal']\"]"
+      ],
+      "extra_determinations": [
+        {
+          "text": "their appeal is dismissed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "the RAD confirms the decision  of the RPD that the Appellants are \nneither Convention refugees nor persons in need of protection",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "their \nappeal is allowed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "the RAD sets aside the determination of the RPD",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "[17]  The Appellants request that the appeal be allowed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "their appeal is dismissed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "the RAD confirms the decision of the  RPD that the Appellants are \nneither Convention refugees nor persons in need of protection",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "their \nappeal is allowed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "the RAD sets aside the determination of the RPD",
+          "score": 1.0,
+          "match_type": "explicit"
+        }
+      ],
+      "case_text": "(CA IRB)\n\nRAD File / Dossier de la SAR : TB8 -26704\n\nTB8 -26705 / TB8 -26706 / TB8 -26707\n\n\n\nRAD.25.02 ( January , 20 20)\n\nDisponible en fran\u00e7ais 2\n\nREASONS FOR DECISION\n\nOVERVIEW\n\n[1] [REDACTED] [REDACTED] (Principal A ppellant) , and her children [REDACTED] [REDACTED] [REDACTED] (Associate\n\nAppellant), [REDACTED] [REDACTED] [REDACTED] and [REDACTED] [REDACTED] [REDACTED] (Minor Associate Appellants),\n\nappeal a decision of the Refugee Protection Division (RPD), dated September 14, 2018 , rejecting\n\ntheir claims for refugee protection.\n\n[2] [REDACTED] [REDACTED] and her son [REDACTED] are citizens of Kazakhstan.\n\n[REDACTED] and [REDACTED] [REDACTED] [REDACTED] [REDACTED] are citizens of Pakistan.\n\n[3] The principal Appellant acted as the Designated Representative for the Minor Associate\n\nAppellants, [REDACTED] and [REDACTED] .\n\n[4] The Appellants submit that the RPD erred in law in its analysis on credibility, state\n\nprotection and review of the Appellants\u2019 forward -look ing risk. The Appellants ask the Refugee\n\nAppeal Division (RAD) to overturn the RP D\u2019s decision and either substitute a finding that they\n\nare Convention refugees or persons in need of protection.\n\nDETERMINATION OF THE APPEAL\n\n[5] This is a split decision with respect to the Appellants\u2019 appeals.\n\n[6] With respect to [REDACTED] [REDACTED] and [REDACTED] [REDACTED] [REDACTED] [REDACTED] , citizens of Kazakhstan,\n\ntheir appeal is dismissed. Pursuant to paragraph 111(1)( a) of the Immigration and Refugee\n\nProtection Act (the \u201c Act \u201d), the RAD confirms the decision of the RPD that the Appellants are\n\nneither Convention refugees nor persons in need of protection and dismisses the appeal.\n\n[7] With respect to [REDACTED] and [REDACTED] [REDACTED] [REDACTED] [REDACTED] , citizens of Pakistan, their\n\nappeal is allowed. Pursuant to paragraph 111(1)( b) of the Immigration and Refugee Protection\n\nAct (the \u201cAct\u201d ), the RAD sets aside the determination of the RPD and substitutes its own\n\ndetermination that the App..."
+    },
+    {
+      "case_id": "127359",
+      "expected_count": 4,
+      "extracted_count": 9,
+      "extra_count": 5,
+      "ratio": 2.25,
+      "extracted_determinations": [
+        {
+          "text": "1 the RAD sets aside the determination of the RPD",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "substitutes its decision that the PA",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "Their appeal is allowed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "the RAD confirms the decision of th e RPD \nthat the American MA is neither a Convention refugee nor a person in need of protection",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "His \nappeal is dismissed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "the RAD sets aside the determination of the \nRPD",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "The ir appeal is allowed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "the RAD confirms the dec ision of the RPD \nthat the minor US appellant is neither a Convention refugee nor a person in need of protection",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "His appeal is dismissed",
+          "score": 1.0,
+          "match_type": "explicit"
+        }
+      ],
+      "expected_determinations": [
+        "[\"['appeal is allowed']\", \"['rad confirms the decision of the rpd']\", \"['appeal is dismissed']\", \"['pa and sudanese mas to be convention refugees']\"]"
+      ],
+      "extra_determinations": [
+        {
+          "text": "1 the RAD sets aside the determination of the RPD",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "substitutes its decision that the PA",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "Their appeal is allowed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "the RAD confirms the decision of th e RPD \nthat the American MA is neither a Convention refugee nor a person in need of protection",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "His \nappeal is dismissed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "the RAD sets aside the determination of the \nRPD",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "The ir appeal is allowed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "the RAD confirms the dec ision of the RPD \nthat the minor US appellant is neither a Convention refugee nor a person in need of protection",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "His appeal is dismissed",
+          "score": 1.0,
+          "match_type": "explicit"
+        }
+      ],
+      "case_text": "(CA IRB)\n\nRAD File / Dossier de la SAR : TB8 -29358\n\nTB8 -29359 / TB8 -29360 / TB8 -29361\n\n\n\n\n\nRAD.25.02 ( September 18 , 2018)\n\nDisponible en fran\u00e7ais 2\n\nREASONS FOR DECISION\n\nINTRODUCTION\n\n[1] The appellants [REDACTED] [REDACTED] [REDACTED] [REDACTED] (the principal appellant \u201cPA\u201d ) and her\n\nchildren [REDACTED] [REDACTED] [REDACTED] [REDACTED] and A[REDACTED] [REDACTED] [REDACTED] [REDACTED] (minor appellants\n\n\u201cMAs\u201d ), citizens of Sudan, appeal a decision of the Refugee Protection Division (RPD) denying\n\ntheir claim for refugee protection. The appellants ask the Refugee Appeal Division (RAD) to set\n\naside the negative determination of the RPD and either grant their claim for protection, or r efer\n\nthe matter back to the RPD for redetermination. They have not provided new evidence in support\n\nof their appeal. They have not requested an oral hearing.\n\n[2] The youngest minor appellant [REDACTED] [REDACTED] [REDACTED] is a citizen of the United States of\n\nAmerica (USA). No arguments have been submitted on his behalf for the purposes of this appeal.\n\nThe RAD further sees no reason to interfere with the RPD\u2019s finding rejecting his claim.\n\nDETERMINATION\n\n[3] Pursuant to paragraph 111(1)( b) of the Immigration and Refugee Protection A ct (the\n\n\u201cAct\u201d ),1 the RAD sets aside the determination of the RPD and substitutes its decision that the PA\n\nand two Sudanese MAs are Convention refugees. Their appeal is allowed.\n\n[4] Pursuant to paragraph 111(1)( a) of the Act , the RAD confirms the decision of th e RPD\n\nthat the American MA is neither a Convention refugee nor a person in need of protection. His\n\nappeal is dismissed.\n\nBACKGROUND\n\n[5] On [REDACTED] [REDACTED] [REDACTED] 2016 , the PA and MAs went to the USA on vacation.\n\n[6] On [REDACTED] [REDACTED] [REDACTED] 2016 , the youngest XX was born in the USA.\n\n2019 CanLII 127359 (CA IRB)\n\nRAD File / Dossier de la SAR : TB8 -29358\n\nTB8 -29359 / TB8 -29360 / TB8 -29361\n\n\n\n\n\nRAD.25.02 ( September 18 , 2018)\n\nDisponible en fran\u00e7ais 3..."
+    },
+    {
+      "case_id": "148756",
+      "expected_count": 4,
+      "extracted_count": 9,
+      "extra_count": 5,
+      "ratio": 2.25,
+      "extracted_determinations": [
+        {
+          "text": "The Appellant further  \nrequests that the Refugee Appeal Division (RAD) set aside the determination of the RPD",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "the appeal was dismissed on April 11",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "her appeal was allowed  on July 11",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "the \nRAD confirms the determination of the RPD that the Appellant is neither a Convention refugee nor \na person in need of protection",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "The appeal is dismissed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "[62]  The Appellant is neither a Convention refugee nor a person in need of protection",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "The \nappeal is dismissed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "DECISION  \nDisposition  \n[63]  Pursuant to section 111(1)(a) of the IRPA the RAD confirms the determination of the RPD \nthat the Appellant is  neither a Convention refugee nor a person in need of protection",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "The appeal is \ndismissed",
+          "score": 1.0,
+          "match_type": "explicit"
+        }
+      ],
+      "expected_determinations": [
+        "[\"['appellant is neither a convention refugee nor a person in need of protection']\", \"['appeal is dismissed']\", \"['appellant is neither a convention refugee nor a person in need of protection']\", \"['appeal is dismissed']\"]"
+      ],
+      "extra_determinations": [
+        {
+          "text": "The Appellant further  \nrequests that the Refugee Appeal Division (RAD) set aside the determination of the RPD",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "the appeal was dismissed on April 11",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "her appeal was allowed  on July 11",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "the \nRAD confirms the determination of the RPD that the Appellant is neither a Convention refugee nor \na person in need of protection",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "The appeal is dismissed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "[62]  The Appellant is neither a Convention refugee nor a person in need of protection",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "The \nappeal is dismissed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "DECISION  \nDisposition  \n[63]  Pursuant to section 111(1)(a) of the IRPA the RAD confirms the determination of the RPD \nthat the Appellant is  neither a Convention refugee nor a person in need of protection",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "The appeal is \ndismissed",
+          "score": 1.0,
+          "match_type": "explicit"
+        }
+      ],
+      "case_text": "(CA IRB)\n\nRAD File / Dossier de la SAR : TB6 -02584\n\n1 REASONS FOR DECISION\n\n\n\n[1] [REDACTED] [REDACTED] [REDACTED] (the \u201cAppellant \u201d) appeals a decision of the Refugee Protection\n\nDivision (RPD) denying her claim for refugee protection. The Appellant has submitted new\n\nevidence in support of her appeal and she has requested an oral hearing. The Appellant further\n\nrequests that the Refugee Appeal Division (RAD) set aside the determination of the RPD and find\n\nthat she is a Convention refugee or a person in need of protection. Alternatively, the Appellant\n\nrequests that the matter be remitted to the RPD for reconsider ation by a differently -constituted\n\npanel.\n\n[2] The RPD rejected this claim on February 4, 2016. The Appellant appealed to the RAD and\n\nthe appeal was dismissed on April 11, 2016. The Appellant subsequently appealed to the Federal\n\nCourt and her appeal was allowed on July 11, 2016, and remitted to the RAD.\n\nDetermination\n\n[3] Pursuant to section 111(1)(a) of the Immigration and Refugee Protection Act (IRPA), the\n\nRAD confirms the determination of the RPD that the Appellant is neither a Convention refugee nor\n\na person in need of protection. The appeal is dismissed.\n\nBackground\n\n[4] The Appellant alleged in her Basis of Claim narrative (BOC) that she is a lesbian. She\n\npretended to be straight for years because being gay in Jamaica is dangerous. In [REDACTED] 2015 , she\n\nwas with a female friend in Montego Bay and she was seen by someone from her home town.\n\nWord spread and she was harassed and threatened. Her parents rejected her and she feared walking\n\nthe street. On April 2, 2015, she fled Jamaica and came to Canada.\n\n[5] The Appellant further alleged in her BOC that the police in Jamaica are as homophobic as\n\nthe public and she would place her life in danger by going to them. She fled Jamaica soon after she\n\nwas discovered to be gay.\n\n2017 CanLII 148756 (CA IRB)\n\nRAD File / Dossier de la SAR : TB6 -02584\n\n2 The I ssues\n\n[6] The panel indicated that ..."
+    },
+    {
+      "case_id": "29636",
+      "expected_count": 5,
+      "extracted_count": 10,
+      "extra_count": 5,
+      "ratio": 2.0,
+      "extracted_determinations": [
+        {
+          "text": "the appellant is not contesting the legal \nvalidity of the officer\u2019s decision but argues that the appeal should be allowed because",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "is asking that the appeal be \ndismissed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "as \nwell as the fact that this is the only serious partner either of them has ever had given that \nthey have been together since  1989 \u2014if the appeal were dismissed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "If the appeal were dismissed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "the hardship his spouse would encounter if \nthe appeal were dismissed is an important aspect that must be considered",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "it is in the best interests of the children that the appeal \nbe allowed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "the appeal is \nallowed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "NOTICE OF DECISION  \n \n The appeal is allowed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "The removal order is set aside",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "The Immigration Appeal Division \ndetermines that the appellant has not lost his permanent resident status",
+          "score": 1.0,
+          "match_type": "explicit"
+        }
+      ],
+      "expected_determinations": [
+        "[\"['appeal isallowed']\", \"['appeal be allowed']\", \"['removal order isset aside']\", \"['appellant has not lost his permanent resident status']\", \"['appeal is allowed']\"]"
+      ],
+      "extra_determinations": [
+        {
+          "text": "the appellant is not contesting the legal \nvalidity of the officer\u2019s decision but argues that the appeal should be allowed because",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "is asking that the appeal be \ndismissed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "as \nwell as the fact that this is the only serious partner either of them has ever had given that \nthey have been together since  1989 \u2014if the appeal were dismissed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "If the appeal were dismissed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "the hardship his spouse would encounter if \nthe appeal were dismissed is an important aspect that must be considered",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "it is in the best interests of the children that the appeal \nbe allowed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "the appeal is \nallowed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "NOTICE OF DECISION  \n \n The appeal is allowed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "The removal order is set aside",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "The Immigration Appeal Division \ndetermines that the appellant has not lost his permanent resident status",
+          "score": 1.0,
+          "match_type": "explicit"
+        }
+      ],
+      "case_text": "(CA IRB)\n\nIAD File No. / N\u00b0 de dossier de la SAI : MB1 -02763\n\n\n\n\n\n\n\n1\n\nREASONS FOR DECISION\n\n\n\nINTRODUCTION\n\n[1] These are the reasons for decision in the appeal filed by [REDACTED]the appellant), a citizen of Lebanon, pursuant to subsection 63(3) of the\n\nImmigration and Refugee Protection Act1 (the Act) against the removal order issued\n\nagainst him on April 16, 2011, for failure to comply with the residency obligation set out\n\nin section 28 of the Act and because there are in sufficient humanitarian and\n\ncompassionate considerations to warrant special relief and justify the retention of his\n\npermanent resident status. Section 28 of the Act indicates that a permanent resident must\n\nbe present in Canada for 730 days over a five -year period.\n\n[2] According to the evidence on record, including the officer\u2019s\n\ndecision,2 document A -1,3 and the appellant\u2019s testimony, he allegedly spent\n\napproximately 200 days in Cana da before the removal order was issued against him. The\n\nappellant is not contesting the legal validity of the immigration officer\u2019s decision.\n\n[3] This appeal was heard by two different members on the following\n\ndates: January 27, 2015, and January 11, 2016.4 Given the considerable evidence in this\n\ncase, the parties agreed that it is in the best interests of those involved i n this case to\n\ncontinue with a new member after Member [REDACTED] left the Immigration Appeal\n\nDivision (IAD). In addition, it is important to note that during the hearing on January 27,\n\n2015, there was the possibility that a second reason would be added by t he Minister\u2019s\n\nrepresentative; however, she indicated at the beginning of the hearing on January 11,\n\n2016, that she would not be invoking a second reason for refusal, and it should therefore\n\nnot be taken into consideration by the panel in this case.\n\n\n\n1 Immigration and Refugee Protection Act , S.C. (2001), c. 27, as amended.\n\n2 Appeal record, pp. 3 -22.\n\n3 Document A -1: Table of days of presence in Canada.\n\n4 The hearing o..."
+    },
+    {
+      "case_id": "60664",
+      "expected_count": 4,
+      "extracted_count": 9,
+      "extra_count": 5,
+      "ratio": 2.25,
+      "extracted_determinations": [
+        {
+          "text": "The appeal is allowed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "if this appeal is dismissed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "daughter -in-law confirmed that if this appeal is dismissed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "[29]  I acknowledge the position of the Minister that if this appeal is dismissed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "I accept the position of the Appellant\u2019s counsel that  the Appellant \nwill  suffer emotional hardship if this appeal is dismissed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "other family \nmembers in Canada will  suffer emotional hardship if this appeal is dismissed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "if \nthe appeal is dismissed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "The appeal  is allowed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "NOTICE OF DECISION  \n \n \nThe appeal  is allowed",
+          "score": 1.0,
+          "match_type": "explicit"
+        }
+      ],
+      "expected_determinations": [
+        "[\"['theappealis allowed']\", \"['appellant has not lost her permanent resident status']\", \"['appeal is allowed.the']\", \"['appeal is dismissed']\"]"
+      ],
+      "extra_determinations": [
+        {
+          "text": "The appeal is allowed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "if this appeal is dismissed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "daughter -in-law confirmed that if this appeal is dismissed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "[29]  I acknowledge the position of the Minister that if this appeal is dismissed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "I accept the position of the Appellant\u2019s counsel that  the Appellant \nwill  suffer emotional hardship if this appeal is dismissed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "other family \nmembers in Canada will  suffer emotional hardship if this appeal is dismissed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "if \nthe appeal is dismissed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "The appeal  is allowed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "NOTICE OF DECISION  \n \n \nThe appeal  is allowed",
+          "score": 1.0,
+          "match_type": "explicit"
+        }
+      ],
+      "case_text": "(CA IRB)\n\nIAD File No. / No de dossier de la SAI: TC1-02416\n\nClient ID No. / No ID client: 29405339\n\n\n\nREASONS FOR DECISION\n\nOVERVIEW\n\n\n\n[1] The Appellant, [REDACTED], is a widowed 73 -year -old British national overseas and\n\na Chinese citizen who lives in Hong Kong.1 She appeal s a February 2021 decisio n that she did not\n\ncompl y with the residency obligation as a permanent resident (PR) .2\n\n[2] To comply with the residency obligation, a PR must be physically present in Canada for\n\n730 days in a five -year period.3 The Appellant concedes that she was present in Canada for zero\n\ndays in the relevant five -year period. As such, the validity of the decision is not in dispute.\n\n[3] The issue in this appeal is whether humanitarian and compassionate ( H&C ) considerations\n\nwarrant special relief in the Appellant\u2019s case.4 I find that they do. The appeal is allowed.\n\n[4] In 1994, the [REDACTED] landed in Canada with her spouse and their two children.5 Their\n\nson stayed in Canada with the [REDACTED]\u2019s brother. The Appellant, her spouse, and t heir daughter\n\nreturned to Hong Kong. They intended to settle permanently in Canada in 1995 or 1996 after\n\nwinding up her spouse\u2019s business in Hong Kong. The Appellant, her spouse, and their daughter\n\nreturned to Canada in 1995 to visit their son. The [REDACTED] nt\u2019s spouse experienced health concerns\n\nduring those long -haul flights. Consequently, he refused to travel anywhere after 1995. The\n\nAppellant stayed in Hong Kong with her spouse because she felt this was her role as \u201ca traditional\n\nChinese wife.\u201d She travel ed to Canada regularly until 2013 on her own. After 2013, her spouse\u2019s\n\nhealth deteriorated, and she could no longer leave him to travel to Canada. He died in Hong Kong\n\nin September 2018. In April 2019, the [REDACTED]\u2019s daughter had surgery in Hong Kong . In mid -\n\n2019, the [REDACTED]\u2019s son learned that the Appellant could apply for a PR travel document. At\n\nthat time, a proposed extradition bill caused protests and di..."
+    },
+    {
+      "case_id": "105866",
+      "expected_count": 5,
+      "extracted_count": 9,
+      "extra_count": 4,
+      "ratio": 1.8,
+      "extracted_determinations": [
+        {
+          "text": "the \nRAD confirms the decision of the RPD that the Appellant is neither a Convention refugee nor a \nperson in n eed of protection",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "This appeal is dismissed  \n2015 CanLII 105866 (CA IRB)\nRAD F ile No",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "the RAD sets aside the determination of the \nRPD",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "substitutes its determination that the Appellant  is a Convention refugee",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "come to an independent assessment of whether the claimant is a Convention refugee \nor a person in need of protection",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "The appeal is dismissed for the principal Appellant",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "the RAD confirms the decision of the RPD that \nthe Appellant is neither a Convention refugee nor a person in need of protection",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "This appeal is \ndismissed  \nCONCLUSION re: XXXX XXXX  \n[31]  Pursuant to s ection 111(1)(b) of the IRPA",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "substitutes its determination that the Appellant  is a Convention refugee",
+          "score": 1.0,
+          "match_type": "explicit"
+        }
+      ],
+      "expected_determinations": [
+        "[\"['appeal is dismissed']\", \"['rad sets aside the determination of the rpd', 'substitutes its determination that the appellant is a convention refugee']\", \"['rad has found that the rpd\u2019s decision will stand']\", \"['rad confirms the decision of the rpd', 'appellant is neither a convention refugee nor a person in need of protection']\", \"['leave to appeal to the supreme court of canada dismissed']\"]"
+      ],
+      "extra_determinations": [
+        {
+          "text": "the \nRAD confirms the decision of the RPD that the Appellant is neither a Convention refugee nor a \nperson in n eed of protection",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "This appeal is dismissed  \n2015 CanLII 105866 (CA IRB)\nRAD F ile No",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "the RAD sets aside the determination of the \nRPD",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "substitutes its determination that the Appellant  is a Convention refugee",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "come to an independent assessment of whether the claimant is a Convention refugee \nor a person in need of protection",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "The appeal is dismissed for the principal Appellant",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "the RAD confirms the decision of the RPD that \nthe Appellant is neither a Convention refugee nor a person in need of protection",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "This appeal is \ndismissed  \nCONCLUSION re: XXXX XXXX  \n[31]  Pursuant to s ection 111(1)(b) of the IRPA",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "substitutes its determination that the Appellant  is a Convention refugee",
+          "score": 1.0,
+          "match_type": "explicit"
+        }
+      ],
+      "case_text": "(CA IRB)\n\nRAD F ile No. / N\u00b0 de dossier de la SA R :\n\n\n\nREASONS FOR DECISION\n\n[1] [REDACTED] (the principal Appellant) and his daughter [REDACTED] , citizen s of\n\nUkraine , appeal a decision of the Refugee Protection Division (RPD) denying their claim s for\n\nrefugee protection. They have not submitted new evidence in suppor t of their appeal but do\n\nrequest an oral hearing. The principal Appellant had been designated at the RPD hearing as a\n\ndesignated representative of the minor daughter. The RAD will maintain that designation for the\n\nsake of this appeal. The Appellant s ask th e Refugee Appeal Division (RAD) to overturn the\n\ndecision of the RPD and to find that this Appellant is a Convention refugee or a person in need of\n\nprotection . In the alternative, the Appellant requests that the matter be returned to the RPD for a\n\nnew heari ng under a differently constituted panel.\n\nORAL HEARING\n\n[2] The Appellants have requested an oral hearing ; however , they have not disclosed any new\n\nevidence. Section 110 (6) of the IRPA allows the RAD to hold an oral hearing only if new\n\nevidence is disclosed in an appeal and if that new evidence :\n\n(a) raises a serious issue with respect to the credibility of the person who is the subject of\n\nthe appeal;\n\n(b) is central to the decision with respect to the refugee protection claim; and\n\n(c) if accepted, would justify allowing or rejecting the refugee protection claim.\n\n[3] As there is no new evidence , there can be no oral hearing before the RAD . The application\n\nfor an oral hearing is therefore dismissed.\n\nDETERMINATION - [REDACTED] [REDACTED]\n\n[4] Pursuant to section 111(1)(a) of the Immigration and Refugee Protection Act (IRPA), the\n\nRAD confirms the decision of the RPD that the Appellant is neither a Convention refugee nor a\n\nperson in n eed of protection. This appeal is dismissed\n\n2015 CanLII 105866 (CA IRB)\n\nRAD F ile No. / N\u00b0 de dossier de la SA R :\n\n\n\nDETERMINATION \u2013 [REDACTED] [REDACTED]\n\n[5] Pursuant to s ection 111(1)(..."
+    },
+    {
+      "case_id": "131521",
+      "expected_count": 5,
+      "extracted_count": 9,
+      "extra_count": 4,
+      "ratio": 1.8,
+      "extracted_determinations": [
+        {
+          "text": "compassionate grounds that this appeal should be allowed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "this  appeal  is allowed    \nEVIDENCE  \n[5]      The Appellant was present in person",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "[23]      If this appeal is dismissed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "[24]       I accept the Minister\u2019s submission that it is most likely that the Appellant will be \nsuccessfully sponsored for permanent residence if this appeal is denied",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "Minister\u2019s counsel submitted that little \nhardship would arise if this appeal is dismissed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "It is in the \nbest interests of the Appellant\u2019s daughter that this appeal be allowed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "this appeal  is allowed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "/ No ID client:  3847 -6766  \n \n \n 6 \n \nNOTICE OF DECISION  \n \nThe appeal is allowed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "The Immigration Appeal Division finds that the appellant has \nnot lost his permanent resident status",
+          "score": 1.0,
+          "match_type": "explicit"
+        }
+      ],
+      "expected_determinations": [
+        "[\"['appeal is dismissed']\", \"['appellant has not lost his permanent resident status']\", \"['appeal is allowed.the']\", \"['appeal is dismissed']\", \"['appeal be allowed']\"]"
+      ],
+      "extra_determinations": [
+        {
+          "text": "compassionate grounds that this appeal should be allowed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "this  appeal  is allowed    \nEVIDENCE  \n[5]      The Appellant was present in person",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "[23]      If this appeal is dismissed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "[24]       I accept the Minister\u2019s submission that it is most likely that the Appellant will be \nsuccessfully sponsored for permanent residence if this appeal is denied",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "Minister\u2019s counsel submitted that little \nhardship would arise if this appeal is dismissed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "It is in the \nbest interests of the Appellant\u2019s daughter that this appeal be allowed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "this appeal  is allowed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "/ No ID client:  3847 -6766  \n \n \n 6 \n \nNOTICE OF DECISION  \n \nThe appeal is allowed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "The Immigration Appeal Division finds that the appellant has \nnot lost his permanent resident status",
+          "score": 1.0,
+          "match_type": "explicit"
+        }
+      ],
+      "case_text": "(CA IRB)\n\nIAD File No. / No de dossier de la SAI: TB8 -28586\n\nClient ID No. / No ID client: 3847 -6766\n\n\n\n\n\n2\n\nREASONS FOR DECISION\n\n\n\nINTRODUCTION\n\n\n\n[1] The Appellant appeals from the determination that he has failed to meet his\n\nresidency obligation.\n\n[2] Subject to certain exceptions that do not apply in this case , subsection 28(2) of the\n\nImmigration and Refugee Protection Act (Act) requires that a permanent r esident be\n\nphysically present in Canada for at least 730 days in any five -year period .\n\n[3] It is conceded that the Appellant did not meet his residency requirement and that the\n\ndecision under appeal is valid in fact and law. The issue on appeal is whether ther e are\n\nsufficient humanitarian and compassionate grounds that this appeal should be allowed.\n\n[4] For the reasons that follow, this appeal is allowed\n\nEVIDENCE\n\n[5] The Appellant was present in person and testified at the hearing before me.\n\n[6] In the five years en ding August 8 , 2018, the Appellant has been physically present in\n\nCanada for 413 of the 730 days that are required by the residency obligation . The Appellant has\n\nsatisfied approximately 57% of the two -year requirement.\n\n[7] The Appellant is married. He and his wife have a daughter who is now 13 years old.\n\nHis wife is a permanent resident. His daughter was born in Canada and is a Canadian citizen.\n\n[8] The Appellant became a permanent resident in 2001 under a skilled worker program.\n\nHe came from Shanghai, China. He f irst lived in Toronto for several months and then moved\n\nto Montreal. From 2002 to 2004, the Appellant studied business as a graduate student at\n\nMcGill. He earned his Masters of Business Administration in 2004.\n\n[9] The [REDACTED]\u2019s wife first became a permanent resident of Canada in 2004. She was\n\nsponsored by the Appellant.\n\n2019 CanLII 131521 (CA IRB)\n\nIAD File No. / No de dossier de la SAI: TB8 -28586\n\nClient ID No. / No ID client: 3847 -6766\n\n\n\n\n\n3\n\n[10] After the [REDACTED] graduated from McGill, he looked..."
+    },
+    {
+      "case_id": "142807",
+      "expected_count": 4,
+      "extracted_count": 8,
+      "extra_count": 4,
+      "ratio": 2.0,
+      "extracted_determinations": [
+        {
+          "text": "[2] They are ask ing the Refugee Appeal Division  (RAD) to set aside the determination of the \nRPD a nd recognize them as Convention refugees or as persons in need of protection or",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "the \nRAD dismisses the appeal of XXXX XXXX",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "the appeal is allowed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "The RAD sets aside the \ndetermination of the RPD",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "substitutes the determination that",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "t he RAD dismisses the appeal of XXXX \nXXXX",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "the appeal is allowed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "The RAD sets aside the \ndetermination of the RPD",
+          "score": 1.0,
+          "match_type": "explicit"
+        }
+      ],
+      "expected_determinations": [
+        "[\"['neither a refugee nor a person in need of protection']\", \"['appeal is allowed']\", \"['rad sets aside the determination of the rpd', 'substitutes a determination']\", \"['rad dismisses the appeal', 'confirms the determination of the rpd', 'neither a convention refugee nor a person in need of protection']\"]"
+      ],
+      "extra_determinations": [
+        {
+          "text": "[2] They are ask ing the Refugee Appeal Division  (RAD) to set aside the determination of the \nRPD a nd recognize them as Convention refugees or as persons in need of protection or",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "the \nRAD dismisses the appeal of XXXX XXXX",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "the appeal is allowed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "The RAD sets aside the \ndetermination of the RPD",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "substitutes the determination that",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "t he RAD dismisses the appeal of XXXX \nXXXX",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "the appeal is allowed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "The RAD sets aside the \ndetermination of the RPD",
+          "score": 1.0,
+          "match_type": "explicit"
+        }
+      ],
+      "case_text": "(CA IRB)\n\nRAD File No. / No de d ossier de la SAR : MB7 -24560\n\nMB7 -24561\n\n\n\n\n\n\n\n\n\nRAD.25.02 (August 8, 2018)\n\nDisponible en fran\u00e7ais 2\n\nREASONS FOR DECISION\n\nINTRODUCTION\n\n[1] [REDACTED] , the principal appellant , and her spouse , [REDACTED] , who are citizens\n\nof Haiti , are appealing the decision of the Refugee Protection Division (RPD) dated\n\nNovember 21, 2017 , rejecting their refugee protection claim .\n\n[2] They are ask ing the Refugee Appeal Division (RAD) to set aside the determination of the\n\nRPD a nd recognize them as Convention refugees or as persons in need of protection or,\n\nalternatively, to refer the matter to the RPD for re -determination by a differently constituted\n\npanel .\n\n[3] The appellants are not seeking to present new evidence and are not askin g that a hearing\n\nbe held in this appeal .\n\nDETERMINATION OF THE APPEAL\n\n[4] Pursuant to subsection 111(1) of the Immigration and Refugee Protection Act (IRPA ), the\n\nRAD dismisses the appeal of [REDACTED] [REDACTED] and confirms the determination of the RPD,\n\nnamely, that he is neither a Convention refugee nor a person in need of protection .\n\n[5] However, in the case of [REDACTED] , the appeal is allowed . The RAD sets aside the\n\ndetermination of the RPD and substitutes the determination that, in its opinion, should have been\n\nmade, namely, that [REDACTED] [REDACTED] is a Convention refugee .\n\nTH E R AD\u2019S ROLE\n\n[6] The role of the RAD is to review RPD decisions by applying the co rrectness standard of\n\nreview after carrying out its own analysis of the record in order to determine whether , as\n\nsubmitted by the appellant, the RPD erred . The exception to this rule arises in situations where\n\nthe RPD enjoys a meaningful advantage in assessing the credibility or weight to be given to the\n\n2018 CanLII 142807 (CA IRB)\n\nRAD File No. / No de d ossier de la SAR : MB7 -24560\n\nMB7 -24561\n\n\n\n\n\n\n\n\n\nRAD.25.02 (August 8, 2018)\n\nDisponible en fran\u00e7ais 3\n\noral evidence it hears . The RAD m ay then apply the reason..."
+    },
+    {
+      "case_id": "34097",
+      "expected_count": 4,
+      "extracted_count": 8,
+      "extra_count": 4,
+      "ratio": 2.0,
+      "extracted_determinations": [
+        {
+          "text": "the \nRAD confirms the decision of the RPD that the Appellant is neithe r a Convention refugee (CR) \nnor a person in need of protection pursuant to sections 96",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "[5] This appeal is dismissed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "Did the Panel Member err in finding that the Appellant is not a Convention \nRefugee or a person in need of protection",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "/ N\u00b0 de dossier de la S AR :  \n \n come to an independent assessment of whether the claimant is a Convention refugee o r a person \nin need of protection",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "come to an  \nindependent assessment of whether the claimant is a Convention refugee or a \nperson in need of protection",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "I find that the Appellant is \nneither a Convention refugee nor a person in need of protection",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "I find that the Appellant is neither a Convention \nrefugee nor a person in need of protection",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "I confirm the decision of the RPD that the \nAppellant is neither a Convention refugee nor a person in need of protection",
+          "score": 1.0,
+          "match_type": "explicit"
+        }
+      ],
+      "expected_determinations": [
+        "[\"['confirm the decision of the rpd', 'appellant is neither a convention refugee nor a person in need of protection']\", \"['appeal fails']\", \"['appellant is neither a convention refugee nor a person in need of protection']\", \"['302 (c.a.']\"]"
+      ],
+      "extra_determinations": [
+        {
+          "text": "the \nRAD confirms the decision of the RPD that the Appellant is neithe r a Convention refugee (CR) \nnor a person in need of protection pursuant to sections 96",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "[5] This appeal is dismissed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "Did the Panel Member err in finding that the Appellant is not a Convention \nRefugee or a person in need of protection",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "/ N\u00b0 de dossier de la S AR :  \n \n come to an independent assessment of whether the claimant is a Convention refugee o r a person \nin need of protection",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "come to an  \nindependent assessment of whether the claimant is a Convention refugee or a \nperson in need of protection",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "I find that the Appellant is \nneither a Convention refugee nor a person in need of protection",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "I find that the Appellant is neither a Convention \nrefugee nor a person in need of protection",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "I confirm the decision of the RPD that the \nAppellant is neither a Convention refugee nor a person in need of protection",
+          "score": 1.0,
+          "match_type": "explicit"
+        }
+      ],
+      "case_text": "(CA IRB)\n\nRAD File No. / N\u00b0 de dossier de la S AR :\n\n\n\nREASONS FOR DECISION\n\n[1] [REDACTED] (the Appellant), a citizen of Ghana, appeals a decision of the Refugee\n\nProtection Division (RPD) rejecting her claim for refugee protection.\n\n[2] The Appellant submit ted documents to be considered as new evidence pursuant to\n\ns.110(4) of the Immigration and Refugee Protection Act (the Act or IRPA) in support of her\n\nappeal. However, the Appellant did not request a hearing before the Refugee Appeal Division\n\n(RAD) pursuant to section 1 10 (6) of the Act.\n\n[3] The Appellant requests that the RAD set aside the RPD\u2019s decision and remit the matter\n\nback to the RPD for redetermination. In the alternative, the Appellant requests that the RAD grant\n\nany other order that the Division deems reasona ble and expedient having regard to the peculiar\n\nfacts and circumstances of this case.\n\nDETERMINATION\n\n[4] Pursuant to Section 111(a) of the Immigration and Refugee Protection Act (IRPA), the\n\nRAD confirms the decision of the RPD that the Appellant is neithe r a Convention refugee (CR)\n\nnor a person in need of protection pursuant to sections 96 and 97(1) of the IRPA.\n\n[5] This appeal is dismissed.\n\nBackground:\n\n[6] The Appellant alleged before the RPD that her husband\u2019s famil y members want to carry\n\nout female circumcision (female genital mutilation) on her infant daughter who was born in\n\nCanada on [REDACTED], 2014. [REDACTED] and her husband oppose this practice. The Appellant is\n\nafraid that she would personally face serious harm, torture or death due to her op posi tion to this\n\npractice. The A ppellant\u2019s husband remains in Ghana and he does not believe that he could protect\n\nhis wife or daughter in these circumstances. The Appellant also alleged that all female family\n\nmembers of her husband have undergone this procedur e and her father -in-law in particular wishes\n\nto preserve this custom .\n\n2015 CanLII 34097 (CA IRB)\n\nRAD File No. / N\u00b0 de dossier de la S AR :\n\n\n\n[7] The Appellant i..."
+    },
+    {
+      "case_id": "34933",
+      "expected_count": 4,
+      "extracted_count": 8,
+      "extra_count": 4,
+      "ratio": 2.0,
+      "extracted_determinations": [
+        {
+          "text": "the RAD confirms the decision of the RPD that the \nAppellant is neither a Convention refugee (CR) nor a person in need of protection pursuant to \nsections 96",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "[5] This appeal is dismissed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "and I find that the Appellant is neither a Convention \nrefugee  nor a  person in need of protection",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "I find that the Appellant is not a \nConvention refugee \u2013 the basic allegation is regarding greed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "this appeal is denied",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "I find that the Appellant is neither a Convention \nrefugee nor a person in need of protection",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "I confirm the decision of the RPD that the \nAppellant is neither a Convention refugee nor a person in need of protection",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "[42]  The appeal is dismissed",
+          "score": 1.0,
+          "match_type": "explicit"
+        }
+      ],
+      "expected_determinations": [
+        "[\"['302 (c.a.']\", \"['appeal fails']\", \"['appellant is neither a convention refugee', 'nor a person in need of protection']\", \"['confirm the decision of the rpd', 'appellant is neither a convention refugee nor a person in need of protection']\"]"
+      ],
+      "extra_determinations": [
+        {
+          "text": "the RAD confirms the decision of the RPD that the \nAppellant is neither a Convention refugee (CR) nor a person in need of protection pursuant to \nsections 96",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "[5] This appeal is dismissed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "and I find that the Appellant is neither a Convention \nrefugee  nor a  person in need of protection",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "I find that the Appellant is not a \nConvention refugee \u2013 the basic allegation is regarding greed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "this appeal is denied",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "I find that the Appellant is neither a Convention \nrefugee nor a person in need of protection",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "I confirm the decision of the RPD that the \nAppellant is neither a Convention refugee nor a person in need of protection",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "[42]  The appeal is dismissed",
+          "score": 1.0,
+          "match_type": "explicit"
+        }
+      ],
+      "case_text": "(CA IRB)\n\nRAD File No. / N\u00b0 de dossier de la S AR :\n\n\n\nREASONS FOR DECISION\n\n[1] [REDACTED] (the Appellant), a citizen of Pakistan, appeals a decision of the Refugee\n\nProtect ion Division (RPD) rejecting her claim for refugee protection.\n\n[2] The Appellant did not submit documents to be considered as new evidence pursuant t o\n\ns.110(4) of the Immigration and Refugee Protection Act (the Act or IRPA) , and t he Appellant did\n\nnot request a hearing before the Refugee Appeal Division (RAD).\n\n[3] The Appellant requests that the RAD set aside the RPD\u2019s decision and accept her claim . In\n\nthe alternative, the Appellant requests that this claim be referred back to the RPD to be re -heard\n\nby a differently constituted Panel.\n\nDETERMINATION\n\n[4] Pursuant to Section 111(a) of the Act , the RAD confirms the decision of the RPD that the\n\nAppellant is neither a Convention refugee (CR) nor a person in need of protection pursuant to\n\nsections 96 and 97(1) of the Act.\n\n[5] This appeal is dismissed.\n\nBackground:\n\n[6] The Appellant, a 76 year old widow , alleged before the RPD that her husband distributed\n\nhis assets amongst their six children (three live in Pakistan, two in Canada and one in the UK)\n\nbefore he died. He also gave the Appellant two big houses . The Appellant was in Canada for five\n\nmonths and returned to Pakistan in May 2013 . Upon her return to Pakistan , her children in\n\nPakistan pressured her to transfer her properties in their names o r else they will strangle her. She\n\nis afraid to return to Pak istan because she fears that her children might kill her.\n\n[7] Her claim was heard on October 23 , 2014 and the RPD, by a written decision, dated\n\nNovem ber 13, 2014 rejected the claim and found that the Appellant is not credible and made up\n\nher story to seek hea lth care in Canada.\n\n2015 CanLII 34933 (CA IRB)\n\nRAD File No. / N\u00b0 de dossier de la S AR :\n\n\n\n\n\nThe Issues\n\n[8] The Appellant\u2019s issues are as follows:\n\n1. What is the appropriate standard of review?\n\n2. Did the R..."
+    },
+    {
+      "case_id": "40371",
+      "expected_count": 6,
+      "extracted_count": 10,
+      "extra_count": 4,
+      "ratio": 1.6666666666666667,
+      "extracted_determinations": [
+        {
+          "text": "and the appeal is terminated by operation of law under paragraph 68(4) of \nthe Act",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "I find that there \nis no need to grant the Appellant an extension of time as the appeal is terminated by operation of \nlaw",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "The documents that counsel wishes to obtain are not relevant as Section 68(4) states that the \nappeal is terminated by operation of law without the need for further consideration of the \nAppellant\u2019s rehabilitation or a review of the submissions made at the trial that led to his most \nrecent conv iction",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "conditions of his stay said that the appeal would be terminated by operation of law if the Appellant \nwas subsequently convicted of a serious offence that falls within the ambit of Section 36 of th e Act",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "but he further argues \nthat the appeal should not be terminated because a sentence of 6 months or more was not impose d \non the Appellant",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "and the appeal is terminated by operation of law if the Appellant is subsequently convicted of a \nserious offence under Section 36 of the Act  or (my emphasis) if a sentence of 6 months or more is \nimposed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "[15]  I find that Member XXXX in delivering her oral decision misspoke when she said that the \nappeal would be terminated if the Appellant was convicted of a serious offence under Section 36",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "your appeal is terminated by operation \nof law",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "the appeal is terminated by operation of \nlaw",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "and the appeal is terminated",
+          "score": 1.0,
+          "match_type": "explicit"
+        }
+      ],
+      "expected_determinations": [
+        "[\"['appeal should not be terminated']\", \"['appeal is terminated']\", \"['appeal is terminated']\", \"['appeal would be terminated']\", \"['appeal is terminated']\", \"['appeal is terminated']\"]"
+      ],
+      "extra_determinations": [
+        {
+          "text": "and the appeal is terminated by operation of law under paragraph 68(4) of \nthe Act",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "I find that there \nis no need to grant the Appellant an extension of time as the appeal is terminated by operation of \nlaw",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "The documents that counsel wishes to obtain are not relevant as Section 68(4) states that the \nappeal is terminated by operation of law without the need for further consideration of the \nAppellant\u2019s rehabilitation or a review of the submissions made at the trial that led to his most \nrecent conv iction",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "conditions of his stay said that the appeal would be terminated by operation of law if the Appellant \nwas subsequently convicted of a serious offence that falls within the ambit of Section 36 of th e Act",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "but he further argues \nthat the appeal should not be terminated because a sentence of 6 months or more was not impose d \non the Appellant",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "and the appeal is terminated by operation of law if the Appellant is subsequently convicted of a \nserious offence under Section 36 of the Act  or (my emphasis) if a sentence of 6 months or more is \nimposed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "[15]  I find that Member XXXX in delivering her oral decision misspoke when she said that the \nappeal would be terminated if the Appellant was convicted of a serious offence under Section 36",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "your appeal is terminated by operation \nof law",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "the appeal is terminated by operation of \nlaw",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "and the appeal is terminated",
+          "score": 1.0,
+          "match_type": "explicit"
+        }
+      ],
+      "case_text": "(CA IRB)\n\n2022 CanLII 40371 (CA IRB)\n\nIAD File No. / No de dossier de la SAI : VB8 -06051\n\nClient ID No. / No ID client : 29960657\n\n\n\n\n\n1\n\nREASONS FOR DECISION\n\nOVERVIEW\n\n\n\n[1] [REDACTED] (Appellant) appealed a decision of the Immigration Division that\n\nissued him a deportation order on October 29, 2018, for serious criminality under Section 36(1) of\n\nthe Immigration and Refugee Protection Act (Act) .\n\n\n\n[2] On May 21, 2019, the Immigration Appeal Division (IAD) granted the Appellant a stay of\n\nremoval for a period of 3 years based on a joint recommendation from his counsel and the\n\nMinister\u2019s counsel . The Appellant was sent a written copy of the oral decision f rom Member [REDACTED]\n\non June 21, 2019.\n\n\n\n[3] At the time of the appeal hearing on May 21, 2019, the Appellant had a pending criminal\n\ncharge under Section 348(1)(a) of the Criminal Code of Canada . The Appellant and his counsel\n\nwere aware of this pending criminal char ge at the time of the IAD hearing.\n\n\n\n[4] The Appellant was convicted on June 24, 2019, of the offence under Section 348(1)(a) of\n\nthe Criminal Code and sentenced under Section 348( 1) (e) . The Minister\u2019s representative sent a\n\nletter to the IAD dated January 26, 2 022, informing the IAD of the Appellant\u2019s conviction on June\n\n24, 2019 . The Minister referred to Section 68(4) of the Act and asked that the stay be cancelled\n\nand that the appeal be terminated by operation of law.\n\n\n\n[5] The IAD contacted the Appellant and offere d him the opportunity to provide written\n\nsubmissions in response to the Minister\u2019s request that the appeal be terminated by operation of\n\nlaw.\n\n\n\n[6] The Appellant\u2019s counsel responded to the IAD request for submissions . The Appellant\u2019s\n\ncounsel asked for clarifica tion from the Minister\u2019s representative regarding the conviction under\n\nSection 348(1)(a) of the Criminal Code . The Appellant\u2019s counsel also made an application for an\n\nextension of time to provide disclosure on behalf of the Appellant and to make furthe..."
+    },
+    {
+      "case_id": "74265",
+      "expected_count": 4,
+      "extracted_count": 8,
+      "extra_count": 4,
+      "ratio": 2.0,
+      "extracted_determinations": [
+        {
+          "text": "The Appellant asks the Refugee Appeal Divi sion \n(RAD) to set aside the determination of the RPD",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "the RAD sets aside the determination of the RPD",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "substitutes its determination that the Appellant is a Convention refugee",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "This appeal is \nallowed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "come to an independent assessme nt of whether the claimant is a \nConvention refugee or a person in need of protection",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "the RAD sets aside the determination of the  RPD",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "substitutes its determination that the Appellant is a Convention refugee",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "This appeal is \nallowed",
+          "score": 1.0,
+          "match_type": "explicit"
+        }
+      ],
+      "expected_determinations": [
+        "[\"['rpd\u2019s decision cannot stand and must be set aside']\", \"['302 (c.a.']\", \"['appeal is allowed']\", \"['rad sets aside the determination of the rpd', 'substitutes its determination that the appellant is a convention refugee']\"]"
+      ],
+      "extra_determinations": [
+        {
+          "text": "The Appellant asks the Refugee Appeal Divi sion \n(RAD) to set aside the determination of the RPD",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "the RAD sets aside the determination of the RPD",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "This appeal is \nallowed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "come to an independent assessme nt of whether the claimant is a \nConvention refugee or a person in need of protection",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "the RAD sets aside the determination of the  RPD",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "This appeal is \nallowed",
+          "score": 1.0,
+          "match_type": "explicit"
+        }
+      ],
+      "case_text": "(CA IRB)\n\nRAD F ile No. / N\u00b0 de dossier de la SA R :\n\nREASONS FOR DECISION\n\n[1] [REDACTED] [REDACTED] (the Appellant), a citizen of Uganda, appeals a decision of the Refugee\n\nProtection Division (RPD) denying her claim for refugee protection. She has not submitted new\n\nevidence and does not request an oral hearing. The Appellant asks the Refugee Appeal Divi sion\n\n(RAD) to set aside the determination of the RPD and substitute a positive determination. In the\n\nalternative, the Appellant asks that the matter be referred to the RPD for redetermination, giving\n\ndirections to the RPD to accept her claim.\n\nDETERMINATIO N\n\n[2] Pursuant to Section 111(1)(b) of IRPA, the RAD sets aside the determination of the RPD\n\nand substitutes its determination that the Appellant is a Convention refugee. This appeal is\n\nallowed.\n\nBackground\n\n[3] The Appellant alleged before the RPD that, upon return to Uganda, she will be harmed by\n\nher husband because she left him and he had abused her in the past.\n\n[4] The Appellant\u2019s claim for refugee protection was heard on December 16, 2014. By a\n\ndecision of January 8, 2015, the RPD rejected the claim. The RPD found that the Appellant has a\n\nviable internal flight alternative (IFA) in Kampala. The Appellant submits that the RPD\u2019s\n\ndecision i s replete with errors of law and facts.\n\nANALYSIS\n\nRole of the RAD\n\n[5] What is the role of the RAD in considering an appeal against a decision of the RPD?\n\nAlthough the Appellant makes no arguments with respect to the role of the RAD, the RAD notes ,\n\nin [REDACTED] , the Court considered the appropriate relationship between the RAD and the RPD.1\n\n\n\n\n\n1 [REDACTED], [REDACTED] v. M.C.I. (F.C., no. IMM -6362 -13), Phelan, August 22, 2014; 2014 FC 799.\n\n2015 CanLII 74265 (CA IRB)\n\nRAD F ile No. / N\u00b0 de dossier de la SA R :\n\nIt found that the RAD had erred in simply reviewing the RPD\u2019s decision on a standard of\n\nreasonableness, rather than conducting its own independent assessment of the Appellant \u2019s refugee\n\nclaim ..."
+    },
+    {
+      "case_id": "74550",
+      "expected_count": 4,
+      "extracted_count": 8,
+      "extra_count": 4,
+      "ratio": 2.0,
+      "extracted_determinations": [
+        {
+          "text": "t he appellant \u2019s appeal was allowed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "Member  XXXXXXXXXXX \nconcluded that the Minister \u2019s appeal was allowed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "especially her son might experience  if this appeal is dismissed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "CONCLUSION  \n[17]  The appeal is allowed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "the exclusion order is set aside",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "NOTICE  OF DECISION  \n \nThe appeal is allowed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "The exclusion order is set aside",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "The Immigration Appeal Division has \ndetermined that the appellant has not lost her permanent resident status",
+          "score": 1.0,
+          "match_type": "explicit"
+        }
+      ],
+      "expected_determinations": [
+        "[\"['appeal is dismissed']\", \"['exclusion order is set aside']\", \"['appeal is allowed']\", \"['appeal is allowed']\"]"
+      ],
+      "extra_determinations": [
+        {
+          "text": "t he appellant \u2019s appeal was allowed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "Member  XXXXXXXXXXX \nconcluded that the Minister \u2019s appeal was allowed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "especially her son might experience  if this appeal is dismissed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "CONCLUSION  \n[17]  The appeal is allowed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "the exclusion order is set aside",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "NOTICE  OF DECISION  \n \nThe appeal is allowed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "The exclusion order is set aside",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "The Immigration Appeal Division has \ndetermined that the appellant has not lost her permanent resident status",
+          "score": 1.0,
+          "match_type": "explicit"
+        }
+      ],
+      "case_text": "(CA IRB)\n\nIAD File No. / N\u00b0 de dossier de la S AI : MB6 -00384\n\n\n\n\n\n2\n\nREASONS FOR DECISION\n\n\n\n[1] These are the reasons for decision in the case of [REDACTED] (the\n\nappellant) , a citizen of Cameroon, who is appealing a decision made by the Immig ration Division\n\n(ID) on January 19, 2016 .1 In th at decision, the Member conclude s as follows , with respect to the\n\nappellant\u2019s admissions of misrepresentation :\n\n[translatio n]\n\nI therefore have no other option than to issue an exclusion order against you with a right\n\nof appeal. I agree that the report is well -founded in light of the documentary evidence ,\n\nC-1 to C -5, that has been submitted , as well as the admissions that were made in your\n\nname .\n\n[translated as it appears in the French version ]\n\n[2] The appellant is not challenging the ID \u2019s decision but is asking that the panel take into\n\naccount the various humanitarian and compassionate considerations in this case. Considering this\n\nand all the evidence, the panel concludes that the ID \u2019s decision is valid in law.\n\n[3] Before proceeding with the analysis of humanitarian and compassionate considerations ,\n\nthe panel is of the opinion that it is useful to provide a brief summary of the relevant facts in this\n\ncase, particularly with respect to misrepresentation.\n\nBACKGROUND\n\n[4] The appellant was born in Cameroon in 1982 . She pursued studies in management and\n\nobtained a master \u2019s degree in business administration. Her higher studies took place in\n\nCameroon and Belgium , where she lived temporarily for a few years. In May 2011, the appellant\n\nfiled an application to become a permanent resident in the \u201c skilled worker \u201d category. Her\n\napplication was accept ed and she arrived at Pierre Elliott Trudeau In ternational Airport with her\n\npermanent resident visa on December 6, 2012, prepared to complete the process of becoming a\n\npermanent resident of Canada. When applying for admission at the port of entry, the appe llant\n\nstated that she forgot to include her t..."
+    },
+    {
+      "case_id": "81259",
+      "expected_count": 4,
+      "extracted_count": 8,
+      "extra_count": 4,
+      "ratio": 2.0,
+      "extracted_determinations": [
+        {
+          "text": "you are \nasking that you r appeal be allowed based on humanitarian",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "The \nMinister\u2019s representative is request ing that your appeal be dismissed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "This  paragraph states that an appeal is allowed if",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "You mentioned that you would be disappointed if \nthe appeal were dismissed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "If the appeal is allowed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "whether or not the appeal is  allowed  is not really going \nto have an impact on the best interests of your  children",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "the appeal is dismissed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "/ No ID client : 90191623  \n \n \n9 \n NOTICE OF DECISION  \n \nThe appeal is dismissed",
+          "score": 1.0,
+          "match_type": "explicit"
+        }
+      ],
+      "expected_determinations": [
+        "[\"['appeal is allowed']\", \"['immigration officer\u2019s decision is valid in law']\", \"['appeal is dismissed']\", \"['appeal is allowed']\"]"
+      ],
+      "extra_determinations": [
+        {
+          "text": "you are \nasking that you r appeal be allowed based on humanitarian",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "The \nMinister\u2019s representative is request ing that your appeal be dismissed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "This  paragraph states that an appeal is allowed if",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "You mentioned that you would be disappointed if \nthe appeal were dismissed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "If the appeal is allowed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "whether or not the appeal is  allowed  is not really going \nto have an impact on the best interests of your  children",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "the appeal is dismissed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "/ No ID client : 90191623  \n \n \n9 \n NOTICE OF DECISION  \n \nThe appeal is dismissed",
+          "score": 1.0,
+          "match_type": "explicit"
+        }
+      ],
+      "case_text": "(CA IRB)\n\nIAD File No. / No de dossier de la SAI : MC0 -05107\n\nClient ID No. / No ID client : 90191623\n\n\n\n\n\n1\n\nORAL REASONS FOR DECISION\n\n[French version e dited for spelling, grammar and syntax]\n\nOVERVIEW\n\n[1] You, [REDACTED] , are the appellant. You are a citizen of Algeria and a permanent\n\nresident of Canada.\n\n[2] Permanent residents of Canada must comply with a residency obligation. One of the ways\n\nto comply with it is to have spent a sufficient number of days in Canada.\n\n[3] To be able to enter Canada, you applied for a permanent resident travel document. This\n\napplication was received by the Canadian immigration authorities on August 8, 2019 . An\n\nimmigration officer refused this application because he concluded that you had not complied with\n\nyour residency obligation. This is the decision being appealed before me. Your appeal is based on\n\nsubsection 63(4) of the Immigration and Refugee Protectio n Act , which I will refer to simply as the\n\nAct.\n\n[4] You admit that you did not comply with your residency obligation. However, you are\n\nasking that you r appeal be allowed based on humanitarian and compassionate considerations. The\n\nMinister\u2019s representative is request ing that your appeal be dismissed.\n\n[5] The standard of proof in this appeal is the balance of probabilities, requiring that\n\nallegations are more likely than not to be true .\n\n[6] I conclude that you failed to comply with your residency obligation. I also conclude that\n\nthere are not sufficient humanitarian and compassionate considerations. I will refer to\n\nparagraph 67(1)(c) of the Act. This paragraph states that an appeal is allowed if, taking into\n\naccount the best interests of a child directly affected by the decision, sufficient humanitarian and\n\ncompassionate considerations warrant special relief in light of all the circumstances of the case.\n\n[7] Given that I conclude that there are not sufficient humanitarian and compassionate\n\nconsiderations, the appeal is d ismissed.\n\n\n\n2021 CanLII 81259..."
+    },
+    {
+      "case_id": "101335",
+      "expected_count": 4,
+      "extracted_count": 7,
+      "extra_count": 3,
+      "ratio": 1.75,
+      "extracted_determinations": [
+        {
+          "text": "/ No ID client : 4076 -7411  \n \n1  \nRea sons for Decision  \n \nIntroduction  \n[1] The respondent makes an application that the appeal be dismissed for lack of jurisdiction",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "the panel  finds  that  the appeal  is \ndismissed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "the appeal is \nterminated",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "the panel finds that this appeal is \nterminated",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "the panel  finds  \nthat  the appeal  is terminated",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "that the appeal  is dismissed  for lack  of jurisdiction",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "/ No ID client : 4076 -7411  \n \n4  \nNOTICE OF DECISION  \n \n \n The appeal is dismissed  for lack of jurisdiction because the appellant has not shown",
+          "score": 1.0,
+          "match_type": "explicit"
+        }
+      ],
+      "expected_determinations": [
+        "[\"['appeal is terminated']\", \"['appeal is terminated', 'appeal is dismissed']\", \"['appeal isdismissedfor lack of jurisdiction']\", \"['appeal is terminated']\"]"
+      ],
+      "extra_determinations": [
+        {
+          "text": "/ No ID client : 4076 -7411  \n \n1  \nRea sons for Decision  \n \nIntroduction  \n[1] The respondent makes an application that the appeal be dismissed for lack of jurisdiction",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "the panel  finds  that  the appeal  is \ndismissed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "the appeal is \nterminated",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "the panel finds that this appeal is \nterminated",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "the panel  finds  \nthat  the appeal  is terminated",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "that the appeal  is dismissed  for lack  of jurisdiction",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "/ No ID client : 4076 -7411  \n \n4  \nNOTICE OF DECISION  \n \n \n The appeal is dismissed  for lack of jurisdiction because the appellant has not shown",
+          "score": 1.0,
+          "match_type": "explicit"
+        }
+      ],
+      "case_text": "(CA IRB)\n\nIAD File No. / No de dossier de la SAI : TA9 -19424\n\nClient ID No. / No ID client : 4076 -7411\n\n\n\n1\n\nRea sons for Decision\n\n\n\nIntroduction\n\n[1] The respondent makes an application that the appeal be dismissed for lack of jurisdiction.\n\nThe appeal is pursuant to sub section 63(3) of the Immigration and Refugee Protection Act1\n\n(IRPA ) of a removal order made against the appellant.\n\nDecision\n\n[2] Having considered the evidence and submissions, the panel finds that the appeal is\n\ndismissed .\n\nBackground\n\n[3] The Immigration Division issued a deportatio n order in September 2009 against the\n\nappellant based on paragraph 36(1)( a) of the IRPA ,2 and the appellant appealed that order.\n\n[4] In September 2012, the respondent made an application to dismiss the appeal for absence\n\nof jurisdiction. On September 27, 2012, the appellant was requested to make any submissions;\n\nnone were received. This matter w as dealt with in chambers.\n\nAnalysis\n\n[5] A person may be inadmissible based on serious criminality:3\n\n36. (1) A permanent resident or a foreign national is inadmissible on grounds of\n\nserious criminality for\n\n(a) having been convicted in Canada of an offence under an Act of Parliament\n\npunishable by a maximum term of imprisonment of at least 10 years, or of an\n\noffence under an Act of Parliament for which a term of imprisonment of more than\n\nsix months has been imposed;\n\n\n\n1 Immigration and Refugee Protection Act , S.C. 2001, c. 27.\n\n2 Record, p. 29.\n\n3 Immigration and Refugee Protection Act , S.C. 2001, c. 27.\n\n2012 CanLII 101335 (CA IRB)\n\nIAD File No. / No de dossier de la SAI : TA9 -19424\n\nClient ID No. / No ID client : 4076 -7411\n\n\n\n2 [6] Additionally, a removal order may be stayed and the appeal may be terminated:\n\n68. (1) To stay a removal order, the Immigration Appeal Division must be satisfied,\n\ntaking into account the best interests of a child directly affected by the decision, that\n\nsufficient humanitarian and compassionate considerat ions warrant speci..."
+    },
+    {
+      "case_id": "102116",
+      "expected_count": 5,
+      "extracted_count": 8,
+      "extra_count": 3,
+      "ratio": 1.6,
+      "extracted_determinations": [
+        {
+          "text": "the appellant requested that his appeal be allowed for humanitarian",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "the appeal is allowed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "the appeal is allowed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "[27]  The departure order is set aside",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "and the Immigration Appeal Division finds that the appellant has \nnot lost his permanent resident status",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "g rammar ] \n \n \n \n \n \n \n \nNOTICE OF DECISION  \n \nThe appeal is allowed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "The removal order is set aside",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "The Immigration Appeal Division \nfinds that the appellant has not lost his permanent resident status",
+          "score": 1.0,
+          "match_type": "explicit"
+        }
+      ],
+      "expected_determinations": [
+        "[\"['appellant has not lost his permanent resident status']\", \"['removal order is set aside']\", \"['appeal is   ']\", \"['departure order is set aside', 'appellant has not lost his permanent resident status']\", \"['appeal is allowed']\"]"
+      ],
+      "extra_determinations": [
+        {
+          "text": "the appellant requested that his appeal be allowed for humanitarian",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "the appeal is allowed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "the appeal is allowed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "[27]  The departure order is set aside",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "and the Immigration Appeal Division finds that the appellant has \nnot lost his permanent resident status",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "g rammar ] \n \n \n \n \n \n \n \nNOTICE OF DECISION  \n \nThe appeal is allowed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "The removal order is set aside",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "The Immigration Appeal Division \nfinds that the appellant has not lost his permanent resident status",
+          "score": 1.0,
+          "match_type": "explicit"
+        }
+      ],
+      "case_text": "(CA IRB)\n\nIAD File No. / No de dossier de la SAI : TB7 -09730\n\nClient ID No. / No ID client : 9012 -5321\n\n\n\n1\n\n\n\nORAL REASONS FOR DECISION\n\n\n\n[1] Karly[REDACTED], the appellant, a permanent resident and a citizen of the Republic of\n\nCameroon by birth, is appealing under subsection 63(3) of the Immigration and Refugee Protection Act\n\nfrom a departure order issued on April 24, 2017, by the Minis ter\u2019s delegate at Pierre Elliott Trudeau\n\nAirport in Montr\u00e9al.\n\n[2] The delegate noted that at the time of his port -of-entry interview, the appellant was unable to\n\nmeet the residency obligation under section 28 of the Act.\n\n[3] During a hearing today, July 19, 2018, I reminded the appellant of his right, at his own expense,\n\nto be represented by legal or other counsel. He stated that he intended to proceed alone.\n\n[4] I received the oral testimony of the appellant and of his spouse. There were no communication\n\ndifficulties.\n\n[5] At the end of the hearing, the appellant requested that his appeal be allowed for humanitarian and\n\ncompassionate considerations. The Minister is of the opinion that there are not sufficient humanitarian\n\nand compassionate considerations to warrant special relief.\n\n[6] In light of the documentary evidence, the testimonies and the positions of the parties, I determine\n\non a balance of probabilities that the removal order in this case is valid in law.\n\n[7] I also determine that there are sufficient humanitarian and compa ssionate considerations to\n\nwarrant special relief in light of the other circumstances of the case. Therefore, the appeal is allowed. I set\n\naside the departure order , and order that the appellant retain his permanent resident status for the reasons\n\nthat fol low.\n\n[8] The appellant arrived as a permanent resident on December 14, 2013. He returned to France, his\n\nprevious country of residence, to continue employment.\n\n[9] At the time of his interview on April 24, 2017, the appellant \u2019s permanent resident card had not\n\nyet expired, bu..."
+    },
+    {
+      "case_id": "105231",
+      "expected_count": 4,
+      "extracted_count": 7,
+      "extra_count": 3,
+      "ratio": 1.75,
+      "extracted_determinations": [
+        {
+          "text": "the RAD confirms the decision of the RPD that the Appellant is neither a Convention \nrefugee nor a person in need of protection",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "This appeal is dismissed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "come to an independent assessment of whether the claimant is \na Convention refugee or a person in need of protection",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "The RAD finds that the Appellant is neither  a Convention \nrefugee nor a person in need of protection",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "agrees with the \nRPD that the Appellant is neither a Convention refugee nor a person in need of protection",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "the RAD confirms the decision of the RPD th at \nthe Appellant is neither a Convention refugee nor a person in need of protection",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "This appeal is \ndismissed",
+          "score": 1.0,
+          "match_type": "explicit"
+        }
+      ],
+      "expected_determinations": [
+        "[\"['appellant is neither a convention refugee nor a person in need of protection']\", \"['appellant is neither a convention refugee nor a person in need of protection']\", \"['appeal is dismissed']\", \"['rad confirms the decision of the rpd', 'appellant is neither a convention refugee nor a person in need of protection']\"]"
+      ],
+      "extra_determinations": [
+        {
+          "text": "the RAD confirms the decision of the RPD that the Appellant is neither a Convention \nrefugee nor a person in need of protection",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "This appeal is dismissed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "come to an independent assessment of whether the claimant is \na Convention refugee or a person in need of protection",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "The RAD finds that the Appellant is neither  a Convention \nrefugee nor a person in need of protection",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "agrees with the \nRPD that the Appellant is neither a Convention refugee nor a person in need of protection",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "the RAD confirms the decision of the RPD th at \nthe Appellant is neither a Convention refugee nor a person in need of protection",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "This appeal is \ndismissed",
+          "score": 1.0,
+          "match_type": "explicit"
+        }
+      ],
+      "case_text": "(CA IRB)\n\nRAD F ile No. / N\u00b0 de dossier de la SA R :\n\nREASONS FOR DECISION\n\n[1] [REDACTED] [REDACTED] [REDACTED] (the Appellant) , a citizen of Somalia , appeals a decision of the\n\nRefugee Protection Division (RPD) denying his claim for refugee protection. He has not\n\nsubmitted new evidence in support of his appeal, nor does he request an oral hearing. The\n\nAppellant asks the Refugee Ap peal Division (RAD) to overturn the decision of the RPD and to\n\nfind that th e Appellant is a Convention refugee or a person in need of protection. In the\n\nalternative, the Appellant requests that the matter be returned to the RPD for a new hearing under\n\na di fferently constituted panel.\n\nDETERMINATION\n\n[2] Pursuant to Section 111(1)(a) of the Immigration and Refugee Protection Act (IRPA or\n\n\u201cthe Act\u201d ), the RAD confirms the decision of the RPD that the Appellant is neither a Convention\n\nrefugee nor a person in need of protection. This appeal is dismissed.\n\nBackground\n\n[3] The Appellant alleged before the RPD that he is a young male from the [REDACTED] [REDACTED]\n\n[REDACTED] clan and fears returning to Somalia because he will be persecuted by Al -Shabaab (forcibly\n\nrecruited or killed). Greater details may be found in the Appellant\u2019s Basis of Claim (BOC) form1\n\nand in the audio recording of the hearing.\n\n[4] The Appellant\u2019s application for refugee protection was heard on August 12 and 25, 2015.\n\nA negative decision was rendered in writing on October 6, 2015. The RPD found that the\n\nAppellant failed to provide sufficient credible evidence to substantiate the core of his claim\n\nagainst Somalia.\n\n[5] The Appellant submits that the RPD erred when the panel failed to deal clearly with the\n\nrisks faced by members of m inority clans when considering that government forces may be part\n\nof the problem for those minorities. The Appellant submits that there is a nexus as he is a young\n\nman of minority clan membership returning to Somalia after a lengthy absence that will be\n\n\n\n\n\n1 Exhibit RPD ..."
+    },
+    {
+      "case_id": "105868",
+      "expected_count": 4,
+      "extracted_count": 7,
+      "extra_count": 3,
+      "ratio": 1.75,
+      "extracted_determinations": [
+        {
+          "text": "the \nRefugee Appeal Division ( RAD ) sets aside the determination of the RPD",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "substitutes the \ndetermination that  XXXX XXXX XXXX  is neith er a Convention refugee pursuant to s",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "This Appeal  is allowed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "come to an independent assessment of whether the claimant is \na Convention refugee or a person in need of protection",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "the RAD substitutes the determination that should have bee n \nmade",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "the RAD sets aside the \ndetermination of the RPD",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "which \nempowers the RAD to set aside the determination of the RPD",
+          "score": 1.0,
+          "match_type": "explicit"
+        }
+      ],
+      "expected_determinations": [
+        "[\"['rad finds that the respondent\u2019s refugee claim has']\", \"['rad sets aside the determination of the rpd']\", \"['respondent is neither a convention refugee nor a person in need of protection']\", \"['neither a convention refugee nor a person in need of protection']\"]"
+      ],
+      "extra_determinations": [
+        {
+          "text": "the \nRefugee Appeal Division ( RAD ) sets aside the determination of the RPD",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "substitutes the \ndetermination that  XXXX XXXX XXXX  is neith er a Convention refugee pursuant to s",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "This Appeal  is allowed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "come to an independent assessment of whether the claimant is \na Convention refugee or a person in need of protection",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "the RAD substitutes the determination that should have bee n \nmade",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "the RAD sets aside the \ndetermination of the RPD",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "which \nempowers the RAD to set aside the determination of the RPD",
+          "score": 1.0,
+          "match_type": "explicit"
+        }
+      ],
+      "case_text": "(CA IRB)\n\n\n\n\n\n\n\n2015 CanLII 105868 (CA IRB)\n\nRAD F ile No. / N\u00b0 de dossier de la SA R :\n\nREASONS FOR DECISION\n\n[1] The Minister of Citizenship and Immigration Canada (the Appellant) appeals a decision of\n\nthe Refugee Protection Division (RPD) accepting the claim for refugee protection of [REDACTED]\n\n[REDACTED] [REDACTED] (the Respondent ), a male from Nigeria. The Minister has submitted new evidence\n\nin support of the appeal that was not presented at the RPD hearing.\n\nDETERMINATION OF THE APPEAL\n\n[2] Pursuant to ss. 111 (1) (b) of Immigration and Refugee Protection Act (IRPA ), the\n\nRefugee Appeal Division ( RAD ) sets aside the determination of the RPD and substitutes the\n\ndetermination that [REDACTED] [REDACTED] [REDACTED] is neith er a Convention refugee pursuant to s. 96 of the\n\nIRPA nor a person in need of protection pursuant to s. 97 of IRPA. Pursuant to ss. 107(2) of\n\nIRPA, the RAD finds that there is no credible basis for the claim and that it is manifestly\n\nunfounded. This Appeal is allowed.\n\nBACKGROUND\n\n[3] The Respondent, [REDACTED] , alleged before the RPD that he is a gay man and\n\nwas involved in a sexual relationship with another man. The Respondent in the Addendum to his\n\nBasis of Claim form (BOC) states that he engaged in a he terosexual relationship with one other\n\nperson of the opposite sex in Nigeria in an attempt to camouflage his true sexual orientation.\n\n[4] The Respondent alleges that on [REDACTED] [REDACTED] , 2013 while he was going home, he was\n\nstopped by an unknown person who advised [REDACTED] not to go home, as there was police looking for\n\nhim, and that there had been a killing in the neighbourhood. The unknown person told the\n\nRespondent to hide; the Respondent later learnt that the person killed was his fianc\u00e9, [REDACTED] . The\n\nRespondent alleges that the assailants were either police officers or individuals purported to be\n\nthe same.\n\n[5] The Respondent further alleges that this unknown man took him to a restaurant where he\n\nleft t..."
+    },
+    {
+      "case_id": "111316",
+      "expected_count": 4,
+      "extracted_count": 7,
+      "extra_count": 3,
+      "ratio": 1.75,
+      "extracted_determinations": [
+        {
+          "text": "the \nRAD sets aside the determination of the RPD",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "substitutes its determination that the Appellant s \nare Convention refugees",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "The  appeal is allowed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "come to an independent assessment of whether the claimant is \na Convention refugee or a person in need of protection",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "the RAD sets aside the determination of the RPD",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "substitutes its determination that the Appellant s are Convention refugees",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "The appeal is \nallowed",
+          "score": 1.0,
+          "match_type": "explicit"
+        }
+      ],
+      "expected_determinations": [
+        "[\"['rad sets aside the determination of the rpd', 'substitutes its determination that the appellants are convention refugees']\", \"['appeal is allowed']\", \"['rad has found that the rpd\u2019s decision cannot stand']\", \"['rad must substitute its own decision']\"]"
+      ],
+      "extra_determinations": [
+        {
+          "text": "the \nRAD sets aside the determination of the RPD",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "substitutes its determination that the Appellant s \nare Convention refugees",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "The  appeal is allowed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "come to an independent assessment of whether the claimant is \na Convention refugee or a person in need of protection",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "the RAD sets aside the determination of the RPD",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "substitutes its determination that the Appellant s are Convention refugees",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "The appeal is \nallowed",
+          "score": 1.0,
+          "match_type": "explicit"
+        }
+      ],
+      "case_text": "(CA IRB)\n\nRAD F ile No. / N\u00b0 de dossier de la SA R :\n\n[1] [REDACTED] [REDACTED] [REDACTED] [REDACTED] (the principal Appellant), his wife [REDACTED]\n\n[REDACTED] [REDACTED] and their minor child, [REDACTED] , citizen s of Venezuela ,\n\nappeal a decision of the Refugee Protection Division (RPD) denying their claim s for refugee\n\nprotection. They have submitted no new evidence in support of their appeal, nor do they seek an\n\noral hearing before the RAD . The principal Appellant has been appointed as the designated\n\nrepresentative of the minor child. The Appellant asks the Refugee Appeal Division (RAD) to set\n\naside the decision of the RPD and substitute a determination that the Appellants are Convention\n\nrefugees or perso ns in need of protection.\n\nDetermination\n\n[2] Pursuant to Section 111(1)(b) of the Immigration and Refugee Protection Act (IRPA), the\n\nRAD sets aside the determination of the RPD and substitutes its determination that the Appellant s\n\nare Convention refugees. The appeal is allowed.\n\nBackground\n\n[3] The principal Appellant alleged before the RPD that his company was expropriated by the\n\nVenezuelan government in 2009. He protested that expropriation which resulted in him and his\n\nfamily being harassed and threatened by \u201cBol ivarian Circles\u201d Greater details of the harassment\n\nmay be found in the principal Appellant\u2019s amended narrative1 and in the audio recording of the\n\nhearings.\n\n[4] The Appellant\u2019s application for refugee protection was heard on May 20, 2014. A negative\n\ndecision wa s handed down by the RPD on June 3, 2014 based on the panel\u2019s credibility findings.\n\n[5] The principal Appellant submits that the RPD erred in concluding that there were\n\nsignificant inconsistencies (contradictions and omissions) in the principal Appellant\u2019s [REDACTED].\n\n[6] The principal appellant submits that the RPD erred by basing its decision on factual\n\nfindings that were made in an arbitrary, capricious or perverse manner or without regard to the\n\nmaterial before h im..."
+    }
+  ]
+}

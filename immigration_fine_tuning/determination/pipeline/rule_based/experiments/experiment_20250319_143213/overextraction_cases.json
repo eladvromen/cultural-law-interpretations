@@ -1,0 +1,1638 @@
+{
+  "analysis_summary": {
+    "total_overextraction_cases": 18,
+    "max_cases_shown": 18
+  },
+  "overextraction_cases": [
+    {
+      "case_id": "29636",
+      "expected_count": 5,
+      "extracted_count": 10,
+      "extra_count": 5,
+      "ratio": 2.0,
+      "extracted_determinations": [
+        {
+          "text": "/ N\u00b0 de dossier de la SAI : MB1 -02763  \n \n \n \n2  \n[4] As pre viously mentioned, the appellant is not contesting the legal \nvalidity of the officer\u2019s decision but argues that the appeal should be allowed because, in \nlight of the best interests of children who are directly affected, there are humanitarian and \ncompassio nate considerations in this matter that warrant special relief",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "[5] The Minister\u2019s representative argues that there are insufficient \nhumanitarian and compassionate considerations and is asking that the appeal be \ndismissed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "XXXX\u2019s fragile \nhealth, the support her husband provides and the mutual support they give each other, as \nwell as the fact that this is the only serious partner either of them has ever had given that \nthey have been together since  1989 \u2014if the appeal were dismissed, and despite the fact \nthat the appellant could likely obtain visitor visas to come to Canada, it is clear that it \nwould cause ev en more issues for the appellant\u2019s wife given her fragile state of health",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "If the appeal were dismissed, losing that right would place \nadditional stress on his wife, who hopes to regain her health and stability so that she \nherself can return to the labour market full time",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "[19]  In the panel\u2019s op inion, the hardship his spouse would encounter if \nthe appeal were dismissed is an important aspect that must be considered, particularly \ngiven her current state of health",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "Considering those aspects and their attachment to their father, the panel \nis of the opinion that in this case, it is in the best interests of the children that the appeal \nbe allowed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "Therefore, the appeal is \nallowed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "NOTICE OF DECISION  \n \n The appeal is allowed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "The removal order is set aside",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "The Immigration Appeal Division \ndetermines that the appellant has not lost his permanent resident status",
+          "score": 1.0,
+          "match_type": "explicit"
+        }
+      ],
+      "expected_determinations": [
+        "[\"['appeal isallowed']\", \"['appeal be allowed']\", \"['removal order isset aside']\", \"['appellant has not lost his permanent resident status']\", \"['appeal is allowed']\"]"
+      ],
+      "extra_determinations": [
+        {
+          "text": "/ N\u00b0 de dossier de la SAI : MB1 -02763  \n \n \n \n2  \n[4] As pre viously mentioned, the appellant is not contesting the legal \nvalidity of the officer\u2019s decision but argues that the appeal should be allowed because, in \nlight of the best interests of children who are directly affected, there are humanitarian and \ncompassio nate considerations in this matter that warrant special relief",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "[5] The Minister\u2019s representative argues that there are insufficient \nhumanitarian and compassionate considerations and is asking that the appeal be \ndismissed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "XXXX\u2019s fragile \nhealth, the support her husband provides and the mutual support they give each other, as \nwell as the fact that this is the only serious partner either of them has ever had given that \nthey have been together since  1989 \u2014if the appeal were dismissed, and despite the fact \nthat the appellant could likely obtain visitor visas to come to Canada, it is clear that it \nwould cause ev en more issues for the appellant\u2019s wife given her fragile state of health",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "If the appeal were dismissed, losing that right would place \nadditional stress on his wife, who hopes to regain her health and stability so that she \nherself can return to the labour market full time",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "[19]  In the panel\u2019s op inion, the hardship his spouse would encounter if \nthe appeal were dismissed is an important aspect that must be considered, particularly \ngiven her current state of health",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "Considering those aspects and their attachment to their father, the panel \nis of the opinion that in this case, it is in the best interests of the children that the appeal \nbe allowed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "Therefore, the appeal is \nallowed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "NOTICE OF DECISION  \n \n The appeal is allowed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "The removal order is set aside",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "The Immigration Appeal Division \ndetermines that the appellant has not lost his permanent resident status",
+          "score": 1.0,
+          "match_type": "explicit"
+        }
+      ],
+      "case_text": "(CA IRB)\n\nIAD File No. / N\u00b0 de dossier de la SAI : MB1 -02763\n\n\n\n\n\n\n\n1\n\nREASONS FOR DECISION\n\n\n\nINTRODUCTION\n\n[1] These are the reasons for decision in the appeal filed by [REDACTED]the appellant), a citizen of Lebanon, pursuant to subsection 63(3) of the\n\nImmigration and Refugee Protection Act1 (the Act) against the removal order issued\n\nagainst him on April 16, 2011, for failure to comply with the residency obligation set out\n\nin section 28 of the Act and because there are in sufficient humanitarian and\n\ncompassionate considerations to warrant special relief and justify the retention of his\n\npermanent resident status. Section 28 of the Act indicates that a permanent resident must\n\nbe present in Canada for 730 days over a five -year period.\n\n[2] According to the evidence on record, including the officer\u2019s\n\ndecision,2 document A -1,3 and the appellant\u2019s testimony, he allegedly spent\n\napproximately 200 days in Cana da before the removal order was issued against him. The\n\nappellant is not contesting the legal validity of the immigration officer\u2019s decision.\n\n[3] This appeal was heard by two different members on the following\n\ndates: January 27, 2015, and January 11, 2016.4 Given the considerable evidence in this\n\ncase, the parties agreed that it is in the best interests of those involved i n this case to\n\ncontinue with a new member after Member [REDACTED] left the Immigration Appeal\n\nDivision (IAD). In addition, it is important to note that during the hearing on January 27,\n\n2015, there was the possibility that a second reason would be added by t he Minister\u2019s\n\nrepresentative; however, she indicated at the beginning of the hearing on January 11,\n\n2016, that she would not be invoking a second reason for refusal, and it should therefore\n\nnot be taken into consideration by the panel in this case.\n\n\n\n1 Immigration and Refugee Protection Act , S.C. (2001), c. 27, as amended.\n\n2 Appeal record, pp. 3 -22.\n\n3 Document A -1: Table of days of presence in Canada.\n\n4 The hearing o..."
+    },
+    {
+      "case_id": "60664",
+      "expected_count": 4,
+      "extracted_count": 9,
+      "extra_count": 5,
+      "ratio": 2.25,
+      "extracted_determinations": [
+        {
+          "text": "The appeal is allowed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "As the Appellant\u2019s daughter testified, if this appeal is dismissed, \nshe and her brother will first find a way to settle the Appellant  down in Canada through his \nsponsorship or other means, and then she (the Appellant\u2019s daughter) will find a way to come to \nCanada",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "The Appellant\u2019s son and daughter -in-law confirmed that if this appeal is dismissed, he \nwill investigate sponsoring his mother",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "[29]  I acknowledge the position of the Minister that if this appeal is dismissed, the Appellant \ncan visit her family in Canada, or potentially be sponsored as a member of the family class",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "For these reasons, I accept the position of the Appellant\u2019s counsel that  the Appellant \nwill  suffer emotional hardship if this appeal is dismissed,  and if she is unable to spend time with \nher family in Canada",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "/ No ID client:  29405339  \n \n \n 10 \n[30]  I accept the position of the Appellant\u2019s counsel that the A XXXXXXXX\u2019s son and other family \nmembers in Canada will  suffer emotional hardship if this appeal is dismissed , and if they cannot \nspend time with the Appellant in Canada",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "I acknowledge the Minister\u2019s position that \nalthough there are minor grandchildren who would be affec ted by the outcome in this appeal, if \nthe appeal is dismissed, the status quo  could simply be maintained with the XXXXXXXXX living in \nHong Kong and visiting Canada when she wishes",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "The appeal  is allowed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "NOTICE OF DECISION  \n \n \nThe appeal  is allowed",
+          "score": 1.0,
+          "match_type": "explicit"
+        }
+      ],
+      "expected_determinations": [
+        "[\"['theappealis allowed']\", \"['appellant has not lost her permanent resident status']\", \"['appeal is allowed.the']\", \"['appeal is dismissed']\"]"
+      ],
+      "extra_determinations": [
+        {
+          "text": "The appeal is allowed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "As the Appellant\u2019s daughter testified, if this appeal is dismissed, \nshe and her brother will first find a way to settle the Appellant  down in Canada through his \nsponsorship or other means, and then she (the Appellant\u2019s daughter) will find a way to come to \nCanada",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "The Appellant\u2019s son and daughter -in-law confirmed that if this appeal is dismissed, he \nwill investigate sponsoring his mother",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "[29]  I acknowledge the position of the Minister that if this appeal is dismissed, the Appellant \ncan visit her family in Canada, or potentially be sponsored as a member of the family class",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "For these reasons, I accept the position of the Appellant\u2019s counsel that  the Appellant \nwill  suffer emotional hardship if this appeal is dismissed,  and if she is unable to spend time with \nher family in Canada",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "/ No ID client:  29405339  \n \n \n 10 \n[30]  I accept the position of the Appellant\u2019s counsel that the A XXXXXXXX\u2019s son and other family \nmembers in Canada will  suffer emotional hardship if this appeal is dismissed , and if they cannot \nspend time with the Appellant in Canada",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "I acknowledge the Minister\u2019s position that \nalthough there are minor grandchildren who would be affec ted by the outcome in this appeal, if \nthe appeal is dismissed, the status quo  could simply be maintained with the XXXXXXXXX living in \nHong Kong and visiting Canada when she wishes",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "The appeal  is allowed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "NOTICE OF DECISION  \n \n \nThe appeal  is allowed",
+          "score": 1.0,
+          "match_type": "explicit"
+        }
+      ],
+      "case_text": "(CA IRB)\n\nIAD File No. / No de dossier de la SAI: TC1-02416\n\nClient ID No. / No ID client: 29405339\n\n\n\nREASONS FOR DECISION\n\nOVERVIEW\n\n\n\n[1] The Appellant, [REDACTED], is a widowed 73 -year -old British national overseas and\n\na Chinese citizen who lives in Hong Kong.1 She appeal s a February 2021 decisio n that she did not\n\ncompl y with the residency obligation as a permanent resident (PR) .2\n\n[2] To comply with the residency obligation, a PR must be physically present in Canada for\n\n730 days in a five -year period.3 The Appellant concedes that she was present in Canada for zero\n\ndays in the relevant five -year period. As such, the validity of the decision is not in dispute.\n\n[3] The issue in this appeal is whether humanitarian and compassionate ( H&C ) considerations\n\nwarrant special relief in the Appellant\u2019s case.4 I find that they do. The appeal is allowed.\n\n[4] In 1994, the [REDACTED] landed in Canada with her spouse and their two children.5 Their\n\nson stayed in Canada with the [REDACTED]\u2019s brother. The Appellant, her spouse, and t heir daughter\n\nreturned to Hong Kong. They intended to settle permanently in Canada in 1995 or 1996 after\n\nwinding up her spouse\u2019s business in Hong Kong. The Appellant, her spouse, and their daughter\n\nreturned to Canada in 1995 to visit their son. The [REDACTED] nt\u2019s spouse experienced health concerns\n\nduring those long -haul flights. Consequently, he refused to travel anywhere after 1995. The\n\nAppellant stayed in Hong Kong with her spouse because she felt this was her role as \u201ca traditional\n\nChinese wife.\u201d She travel ed to Canada regularly until 2013 on her own. After 2013, her spouse\u2019s\n\nhealth deteriorated, and she could no longer leave him to travel to Canada. He died in Hong Kong\n\nin September 2018. In April 2019, the [REDACTED]\u2019s daughter had surgery in Hong Kong . In mid -\n\n2019, the [REDACTED]\u2019s son learned that the Appellant could apply for a PR travel document. At\n\nthat time, a proposed extradition bill caused protests and di..."
+    },
+    {
+      "case_id": "131521",
+      "expected_count": 5,
+      "extracted_count": 9,
+      "extra_count": 4,
+      "ratio": 1.8,
+      "extracted_determinations": [
+        {
+          "text": "The issue on appeal is whether ther e are \nsufficient humanitarian and compassionate grounds that this appeal should be allowed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "[4]      For the reasons that follow, this  appeal  is allowed    \nEVIDENCE  \n[5]      The Appellant was present in person and testified at the hearing before me",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "[23]      If this appeal is dismissed, the XXXXXXXXX\u2019s wife and daughter will ei ther be separated \nfrom the Appellant, if only for a time, or will have to return to China to live",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "[24]       I accept the Minister\u2019s submission that it is most likely that the Appellant will be \nsuccessfully sponsored for permanent residence if this appeal is denied",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "On t his basis, Minister\u2019s counsel submitted that little \nhardship would arise if this appeal is dismissed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "It is in the \nbest interests of the Appellant\u2019s daughter that this appeal be allowed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "CONCLUSION  \n[27]        For these reasons, this appeal  is allowed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "/ No ID client:  3847 -6766  \n \n \n 6 \n \nNOTICE OF DECISION  \n \nThe appeal is allowed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "The Immigration Appeal Division finds that the appellant has \nnot lost his permanent resident status",
+          "score": 1.0,
+          "match_type": "explicit"
+        }
+      ],
+      "expected_determinations": [
+        "[\"['appeal is dismissed']\", \"['appellant has not lost his permanent resident status']\", \"['appeal is allowed.the']\", \"['appeal is dismissed']\", \"['appeal be allowed']\"]"
+      ],
+      "extra_determinations": [
+        {
+          "text": "The issue on appeal is whether ther e are \nsufficient humanitarian and compassionate grounds that this appeal should be allowed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "[4]      For the reasons that follow, this  appeal  is allowed    \nEVIDENCE  \n[5]      The Appellant was present in person and testified at the hearing before me",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "[23]      If this appeal is dismissed, the XXXXXXXXX\u2019s wife and daughter will ei ther be separated \nfrom the Appellant, if only for a time, or will have to return to China to live",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "[24]       I accept the Minister\u2019s submission that it is most likely that the Appellant will be \nsuccessfully sponsored for permanent residence if this appeal is denied",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "On t his basis, Minister\u2019s counsel submitted that little \nhardship would arise if this appeal is dismissed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "It is in the \nbest interests of the Appellant\u2019s daughter that this appeal be allowed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "CONCLUSION  \n[27]        For these reasons, this appeal  is allowed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "/ No ID client:  3847 -6766  \n \n \n 6 \n \nNOTICE OF DECISION  \n \nThe appeal is allowed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "The Immigration Appeal Division finds that the appellant has \nnot lost his permanent resident status",
+          "score": 1.0,
+          "match_type": "explicit"
+        }
+      ],
+      "case_text": "(CA IRB)\n\nIAD File No. / No de dossier de la SAI: TB8 -28586\n\nClient ID No. / No ID client: 3847 -6766\n\n\n\n\n\n2\n\nREASONS FOR DECISION\n\n\n\nINTRODUCTION\n\n\n\n[1] The Appellant appeals from the determination that he has failed to meet his\n\nresidency obligation.\n\n[2] Subject to certain exceptions that do not apply in this case , subsection 28(2) of the\n\nImmigration and Refugee Protection Act (Act) requires that a permanent r esident be\n\nphysically present in Canada for at least 730 days in any five -year period .\n\n[3] It is conceded that the Appellant did not meet his residency requirement and that the\n\ndecision under appeal is valid in fact and law. The issue on appeal is whether ther e are\n\nsufficient humanitarian and compassionate grounds that this appeal should be allowed.\n\n[4] For the reasons that follow, this appeal is allowed\n\nEVIDENCE\n\n[5] The Appellant was present in person and testified at the hearing before me.\n\n[6] In the five years en ding August 8 , 2018, the Appellant has been physically present in\n\nCanada for 413 of the 730 days that are required by the residency obligation . The Appellant has\n\nsatisfied approximately 57% of the two -year requirement.\n\n[7] The Appellant is married. He and his wife have a daughter who is now 13 years old.\n\nHis wife is a permanent resident. His daughter was born in Canada and is a Canadian citizen.\n\n[8] The Appellant became a permanent resident in 2001 under a skilled worker program.\n\nHe came from Shanghai, China. He f irst lived in Toronto for several months and then moved\n\nto Montreal. From 2002 to 2004, the Appellant studied business as a graduate student at\n\nMcGill. He earned his Masters of Business Administration in 2004.\n\n[9] The [REDACTED]\u2019s wife first became a permanent resident of Canada in 2004. She was\n\nsponsored by the Appellant.\n\n2019 CanLII 131521 (CA IRB)\n\nIAD File No. / No de dossier de la SAI: TB8 -28586\n\nClient ID No. / No ID client: 3847 -6766\n\n\n\n\n\n3\n\n[10] After the [REDACTED] graduated from McGill, he looked..."
+    },
+    {
+      "case_id": "81259",
+      "expected_count": 4,
+      "extracted_count": 8,
+      "extra_count": 4,
+      "ratio": 2.0,
+      "extracted_determinations": [
+        {
+          "text": "However, you are \nasking that you r appeal be allowed based on humanitarian and compassionate considerations",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "The \nMinister\u2019s representative is request ing that your appeal be dismissed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "This  paragraph states that an appeal is allowed if, taking into \naccount the best interests of a child directly affected by the decision, sufficient humanitarian and \ncompassionate considerations warrant special relief in light of all the circumstances of the case",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "You mentioned that you would be disappointed if \nthe appeal were dismissed and I understand that your desire to come to Canada never died and \ngoes back a long way",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "If the appeal is allowed, \nyou r plan is to come to Canada and sponsor them",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "The second thing is, as I mentioned , \nbecause they do not have Canadian status, whether or not the appeal is  allowed  is not really going \nto have an impact on the best interests of your  children",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "For all of these reasons, the appeal is dismissed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "/ No ID client : 90191623  \n \n \n9 \n NOTICE OF DECISION  \n \nThe appeal is dismissed",
+          "score": 1.0,
+          "match_type": "explicit"
+        }
+      ],
+      "expected_determinations": [
+        "[\"['appeal is allowed']\", \"['immigration officer\u2019s decision is valid in law']\", \"['appeal is dismissed']\", \"['appeal is allowed']\"]"
+      ],
+      "extra_determinations": [
+        {
+          "text": "However, you are \nasking that you r appeal be allowed based on humanitarian and compassionate considerations",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "The \nMinister\u2019s representative is request ing that your appeal be dismissed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "This  paragraph states that an appeal is allowed if, taking into \naccount the best interests of a child directly affected by the decision, sufficient humanitarian and \ncompassionate considerations warrant special relief in light of all the circumstances of the case",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "You mentioned that you would be disappointed if \nthe appeal were dismissed and I understand that your desire to come to Canada never died and \ngoes back a long way",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "If the appeal is allowed, \nyou r plan is to come to Canada and sponsor them",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "The second thing is, as I mentioned , \nbecause they do not have Canadian status, whether or not the appeal is  allowed  is not really going \nto have an impact on the best interests of your  children",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "For all of these reasons, the appeal is dismissed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "/ No ID client : 90191623  \n \n \n9 \n NOTICE OF DECISION  \n \nThe appeal is dismissed",
+          "score": 1.0,
+          "match_type": "explicit"
+        }
+      ],
+      "case_text": "(CA IRB)\n\nIAD File No. / No de dossier de la SAI : MC0 -05107\n\nClient ID No. / No ID client : 90191623\n\n\n\n\n\n1\n\nORAL REASONS FOR DECISION\n\n[French version e dited for spelling, grammar and syntax]\n\nOVERVIEW\n\n[1] You, [REDACTED] , are the appellant. You are a citizen of Algeria and a permanent\n\nresident of Canada.\n\n[2] Permanent residents of Canada must comply with a residency obligation. One of the ways\n\nto comply with it is to have spent a sufficient number of days in Canada.\n\n[3] To be able to enter Canada, you applied for a permanent resident travel document. This\n\napplication was received by the Canadian immigration authorities on August 8, 2019 . An\n\nimmigration officer refused this application because he concluded that you had not complied with\n\nyour residency obligation. This is the decision being appealed before me. Your appeal is based on\n\nsubsection 63(4) of the Immigration and Refugee Protectio n Act , which I will refer to simply as the\n\nAct.\n\n[4] You admit that you did not comply with your residency obligation. However, you are\n\nasking that you r appeal be allowed based on humanitarian and compassionate considerations. The\n\nMinister\u2019s representative is request ing that your appeal be dismissed.\n\n[5] The standard of proof in this appeal is the balance of probabilities, requiring that\n\nallegations are more likely than not to be true .\n\n[6] I conclude that you failed to comply with your residency obligation. I also conclude that\n\nthere are not sufficient humanitarian and compassionate considerations. I will refer to\n\nparagraph 67(1)(c) of the Act. This paragraph states that an appeal is allowed if, taking into\n\naccount the best interests of a child directly affected by the decision, sufficient humanitarian and\n\ncompassionate considerations warrant special relief in light of all the circumstances of the case.\n\n[7] Given that I conclude that there are not sufficient humanitarian and compassionate\n\nconsiderations, the appeal is d ismissed.\n\n\n\n2021 CanLII 81259..."
+    },
+    {
+      "case_id": "113629",
+      "expected_count": 4,
+      "extracted_count": 7,
+      "extra_count": 3,
+      "ratio": 1.75,
+      "extracted_determinations": [
+        {
+          "text": "[5] The reasons below explain why this appeal is allowed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "[48]  The Appellant\u2019s spouse testified that if the Appellant\u2019s appeal is dismissed, and he must \nleave Canada, she does not know what she will do",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "/ No ID client:  6235 -7513  \n \n \n 14 \nwork, and their family\u2019s future in Canada, the Appellant\u2019s spouse testified that if this appeal is \ndismissed, she and their daughters will leave Canada because their family must stay together",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "The appeal  is allowed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "NOTICE OF DECISION  \n \n \nThe appeal  is allowed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "The removal order is set aside",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "The Immigration Appeal Division finds that \nthe Appellant has not lost his permanent resident status",
+          "score": 1.0,
+          "match_type": "explicit"
+        }
+      ],
+      "expected_determinations": [
+        "[\"['theappealis allowed']\", \"['removal order is set aside']\", \"['appeal is allowed']\", \"['appellant has not lost his permanent resident status']\"]"
+      ],
+      "extra_determinations": [
+        {
+          "text": "[5] The reasons below explain why this appeal is allowed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "[48]  The Appellant\u2019s spouse testified that if the Appellant\u2019s appeal is dismissed, and he must \nleave Canada, she does not know what she will do",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "/ No ID client:  6235 -7513  \n \n \n 14 \nwork, and their family\u2019s future in Canada, the Appellant\u2019s spouse testified that if this appeal is \ndismissed, she and their daughters will leave Canada because their family must stay together",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "The appeal  is allowed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "NOTICE OF DECISION  \n \n \nThe appeal  is allowed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "The removal order is set aside",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "The Immigration Appeal Division finds that \nthe Appellant has not lost his permanent resident status",
+          "score": 1.0,
+          "match_type": "explicit"
+        }
+      ],
+      "case_text": "(CA IRB)\n\nIAD File No. / No de dossier de la SAI: TB9 -32986\n\nClient ID No. / No ID client: 6235 -7513\n\n\n\nREASONS FOR DECISION\n\nOVERVIEW\n\n[1] The Appellant , [REDACTED] , appeal s1 a Departure Order issued against him because\n\nhe did not compl y with the residency obligation as a permanent resident (PR).2\n\n[2] To comply with the residency obligation, a PR must be physically present in Canada for\n\n730 days in a five -year period.3 The Appellant conceded that he was physically present in\n\nCanada for less than the required 730 days . As such, the validity of the decision is not in dispute.\n\n[3] The issue in this appeal is whether humanitarian and compassionate (H &C)\n\nconsiderations warrant special relief in all the circumstances of the Appellant\u2019s case.4\n\n[4] I find that the Appellant\u2019s reasons for staying outside of Canada, his return to Canada at\n\nthe first opportunity, his establishment in Canada, his family ties to and support from his family\n\nin Canada, the hardship he and his family members in Canada would suffer if he were removed\n\nfrom Canada, the best interests of his minor children , and Canada\u2019s immigration objectives are\n\nsufficient H&C considerations to warrant allowing this appeal. In coming to this decision, I\n\nacknowledge the Appellant\u2019s significant shortfall in meeting the residency obligation.\n\n[5] The reasons below explain why this appeal is allowed.\n\nPROCEDURAL HISTORY\n\n[6] The Appellant is a 39-year -old Pakistani citizen who became a PR as a dependent on his\n\nspouse\u2019s skilled worker application .5 He landed as a PR with his spouse and their daughters on\n\nOctober 16, 2014. The Appellant and his family left Canada on November 21 or 22, 2014.\n\n[7] On Octob er 17, 2019, the Appellant\u2019s spouse and daughters returned to Canada for the\n\nfirst time since November 2014.6 The officer who examined them took no enforcement action,7\n\nand there is no evidence before me that their PR status is now in jeopardy.8\n\n[8] On November 6, 2019, the Appellant returned t..."
+    },
+    {
+      "case_id": "131159",
+      "expected_count": 4,
+      "extracted_count": 7,
+      "extra_count": 3,
+      "ratio": 1.75,
+      "extracted_determinations": [
+        {
+          "text": "The appeal is dismissed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "The appeal is allowed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "Having analyzed all the \nfactors, the female appellant\u2019 s appeal is dismissed  because I am not satisfied, on a balance of \nprobabilities, that there are sufficient humanitarian and compassionate considerations to warrant \nspecial relief",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "NOTICE OF DECISION  \nALI  MOUTTAKI  \nThe appeal is allowed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "The removal order is set aside",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "The Immigration Appeal Division \ndetermines that the appellant has not lost his permanent resident status",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "RKIA  AZIZ  EL  IDRISSI   \n \nThe appeal is dismissed",
+          "score": 1.0,
+          "match_type": "explicit"
+        }
+      ],
+      "expected_determinations": [
+        "[\"['removal order is set aside']\", \"['appeal is allowed']\", \"['appeal is dismissed', 'sufficient humanitarian and compassionate considerations']\", \"['appellant has not lost his permanent resident status']\"]"
+      ],
+      "extra_determinations": [
+        {
+          "text": "The appeal is dismissed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "The appeal is allowed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "Having analyzed all the \nfactors, the female appellant\u2019 s appeal is dismissed  because I am not satisfied, on a balance of \nprobabilities, that there are sufficient humanitarian and compassionate considerations to warrant \nspecial relief",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "NOTICE OF DECISION  \nALI  MOUTTAKI  \nThe appeal is allowed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "The removal order is set aside",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "The Immigration Appeal Division \ndetermines that the appellant has not lost his permanent resident status",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "RKIA  AZIZ  EL  IDRISSI   \n \nThe appeal is dismissed",
+          "score": 1.0,
+          "match_type": "explicit"
+        }
+      ],
+      "case_text": "(CA IRB)\n\nIAD File No. / N\u00b0 de dossier de la S AI : MB5 -03556\n\nMB5 -03557\n\n\n\n\n\n\n\n1\n\nREASONS FOR DECISION\n\nINTRODUCTION\n\n[1] Rki[REDACTED] (the female appellant ) and [REDACTED] (the male\n\nappellant ) are appealing against the decision of an immigration officer under subsection 63(3) of\n\nthe Immigration and Refugee Protection Act1 (the Act ). In 2015, a Minister\u2019 s delegate issued a\n\nremoval order against them for failing to comply with the residency obligation.\n\n[2] In fact, under section 28 of the Act, a permanent resident must be in Canada for at least\n\n730 days during the relevant five -year period. In this case, that is the five years after October 5,\n\n2012.\n\nISSUE\n\n[3] The appellant s acknowledge the non -compliance with the residency obligation in Canada\n\nduring the relevant period, and the panel does not note any er ror in law or fact in this regard .\n\nUnder paragraph 67(1) (c) of the Act, the appellants submit that there are sufficient humanitarian\n\nand co mpassionate considerations to warrant special relief to retain their permanent residence.\n\nThe analysis of this point is based on the applicable case law .2 The appellants\u2019 burden of proof is\n\nthe balance of probabilities.\n\n\n\nDETERMINATION\n\n\n\n1 Immigration and Refugee Protection Act , S.C. 2001, c. 27, as amended .\n\n2 [REDACTED], [REDACTED] v . Canada ( The Minister of Citizenship and Immigration ), (VA2 -02515), [REDACTED], June 16, 2003.\n\n2018 CanLII 131159 (CA IRB)\n\nIAD File No. / N\u00b0 de dossier de la S AI : MB5 -03556\n\nMB5 -03557\n\n\n\n\n\n\n\n2 [4] I am not satisfied, on a balance of probabilities and after analyzing all the factors, that the\n\nfemale appellant raised sufficient humanitarian and compassionate considerations to warrant\n\nspecial relief to retain her permanent residence. The appeal is dismissed.\n\n[5] However, I a m satisfied, on a balance of probabilities and after analyzing all the factors,\n\nthat the male appellant raised sufficient humanitarian and compassionate considerations to\n\nwarrant spec..."
+    },
+    {
+      "case_id": "20003",
+      "expected_count": 4,
+      "extracted_count": 7,
+      "extra_count": 3,
+      "ratio": 1.75,
+      "extracted_determinations": [
+        {
+          "text": "ISSUE  \n \n[3] The ap pellant challenges the legal validity of the removal order and also argues in the \nalternative that the appeal should be allowed on the basis that sufficient humanitarian and \ncompassionate considerations warrant special relief in light of all the circumstan ces of the case, \ntaking into account the best interests of any child directly affected by the decision",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "Therefore , the appeal is allowed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "The appeal is allowed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "This appeal is allowed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "NOTICE OF DECISION  \n \n The appeal is allowed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "The removal order is set aside",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "The Immigration Appeal  Division \nfinds that the appellant has not lost his permanent resident status",
+          "score": 1.0,
+          "match_type": "explicit"
+        }
+      ],
+      "expected_determinations": [
+        "[\"['appeal is allowed']\", \"['appeal is allowed']\", \"['removal order is set aside.the', 'appellant has not lost his permanent resident status']\", \"['appeal is allowed']\"]"
+      ],
+      "extra_determinations": [
+        {
+          "text": "ISSUE  \n \n[3] The ap pellant challenges the legal validity of the removal order and also argues in the \nalternative that the appeal should be allowed on the basis that sufficient humanitarian and \ncompassionate considerations warrant special relief in light of all the circumstan ces of the case, \ntaking into account the best interests of any child directly affected by the decision",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "Therefore , the appeal is allowed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "The appeal is allowed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "This appeal is allowed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "NOTICE OF DECISION  \n \n The appeal is allowed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "The removal order is set aside",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "The Immigration Appeal  Division \nfinds that the appellant has not lost his permanent resident status",
+          "score": 1.0,
+          "match_type": "explicit"
+        }
+      ],
+      "case_text": "(CA IRB)\n\nIAD File No. / N\u00b0 de dossier de la SAI : VB4 -03787\n\n\n\n\n\n\n\nREASONS FOR DECISION\n\n\n\n[1] These are the reasons for the decisio n in the appeal of [REDACTED] ( the\n\n\u201cappellant \u201d), from a removal order made against him on December 2, 2014 because of his failure\n\nto comply with the residency obligation set out in the Immigration and Refugee Protection Act\n\n(the \u201cAct \u201d).1\n\n\n\n[2] Section 28 of the Act requires a permanent resident to be physically present in Canada for\n\nat least 730 days in the five -year period immediately prior to their application for a travel\n\ndocument. The Minister\u2019s delegate found that there were insufficient humanitarian and\n\ncompassionate considerations, taking into account the best interests of a child directly affected\n\nby the decision, to justify the appellant\u2019s retention of his permanent resident status overcoming\n\nthe breach of the residency obligation.\n\n\n\nISSUE\n\n\n\n[3] The ap pellant challenges the legal validity of the removal order and also argues in the\n\nalternative that the appeal should be allowed on the basis that sufficient humanitarian and\n\ncompassionate considerations warrant special relief in light of all the circumstan ces of the case,\n\ntaking into account the best interests of any child directly affected by the decision.\n\n\n\nDECISION\n\n\n\n[4] I have come to the conclusion the removal order is valid in law. However, there are\n\nsufficient humanitarian and compassionate grounds, in li ght of all the circumstances of the case,\n\ntaking into account the best interests of a child directly affected by the decision, for me to find in\n\nthe appellant\u2019s favour. Therefore , the appeal is allowed.\n\n\n\n\n\n1 Immigration and Refugee Protection Act , S.C. 2001, c. 27.\n\n2016 CanLII 20003 (CA IRB)\n\nIAD File No. / No de dossier de la SAI : VB4 -03787\n\n\n\n\n\n\n\n\n\nBACKGROUND\n\n\n\n[5] As background, the appellant is 36 yea rs old and a citizen of Germany. The appellant\n\nobtained permanent resident status on October 23, 2010.\n\n\n\nANALYSIS\n\n\n\n[6] The appella..."
+    },
+    {
+      "case_id": "36245",
+      "expected_count": 4,
+      "extracted_count": 7,
+      "extra_count": 3,
+      "ratio": 1.75,
+      "extracted_determinations": [
+        {
+          "text": "/ N\no ID client:    \n 8\nDecision  [38] The Minister\u2019s counsel recommended th at the daughter\u2019s appeal be allowed on humanitarian and compassionate grounds",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "[43] The appeals of the father, XXXXXXXXXXXXXXXXXXX, the mother, XXXXXXXXXXXXXXXXXXXX, and the son, XXXXXXXXXXXX, are dismissed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "The appeal  of the daughter, XXXXXXXXXXXXX, is allowed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "Her departure order is set aside",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "/ N\no ID client:    \n 9\n \nNOTICE OF DECISION \n \n The appeal of the appellant, XXXXXXXXXXXXX, is allowed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "The departure order is set aside",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "The appeals of XXXXXXXXXXXXXXXXXXX, SXXXXXXXXXXXXXXXXXXXX, and XXXXXXXXXXXX are dismissed",
+          "score": 1.0,
+          "match_type": "explicit"
+        }
+      ],
+      "expected_determinations": [
+        "[\"['departure order is set aside']\", \"['appeals of the father, kar wai thomas shek, the mother, suet fan shek cheung, and the son, lok hei shek, are dismissed']\", \"['departure order is set aside']\", \"['appeal of the daughter, lok ting shek, is allowed']\"]"
+      ],
+      "extra_determinations": [
+        {
+          "text": "/ N\no ID client:    \n 8\nDecision  [38] The Minister\u2019s counsel recommended th at the daughter\u2019s appeal be allowed on humanitarian and compassionate grounds",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "[43] The appeals of the father, XXXXXXXXXXXXXXXXXXX, the mother, XXXXXXXXXXXXXXXXXXXX, and the son, XXXXXXXXXXXX, are dismissed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "The appeal  of the daughter, XXXXXXXXXXXXX, is allowed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "Her departure order is set aside",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "/ N\no ID client:    \n 9\n \nNOTICE OF DECISION \n \n The appeal of the appellant, XXXXXXXXXXXXX, is allowed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "The departure order is set aside",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "The appeals of XXXXXXXXXXXXXXXXXXX, SXXXXXXXXXXXXXXXXXXXX, and XXXXXXXXXXXX are dismissed",
+          "score": 1.0,
+          "match_type": "explicit"
+        }
+      ],
+      "case_text": "(CA IRB)\n\nIAD File No. / No de dossier de la SAI: Client ID No. / N\n\no ID client:\n\n2\n\n\n\n2009 CanLII 36245 (CA IRB)\n\nIAD File No. / No de dossier de la SAI: Client ID No. / N\n\no ID client:\n\n1\n\n\n\nReasons for Decision\n\n[1] On July 24, 2007, departure orders were issued by an Immigration Division Member against the principal appellant, [REDACTED] his wife, [REDACTED]; his son [REDACTED]; and his daughter [REDACTED]. The departure orders were based on findings that the appellants were permanent residents who had not complied with their conditions of landing. [2] The appellants appealed to the Immigra tion Appeal Division (IAD). They did not challenge the legal validity of the departure orders made against them. The departure orders are valid in law. [3] The appellants based their appeals on the humanitarian and compassionate grounds for special relief set out in s. 67(1)(c) of the Immigration and Refugee Protection Act\n\n(IRPA ). [4] The principal appellant testified at the admissibility hearing before the Immigration Division. He did not testify at the IAD appeal hearing. [5] The principal appellant\u2019s daughter, [REDACTED] (Tina), testified at the IAD hearing. So did her mother, [REDACTED], as well as her brother [REDACTED]. An Exhibit Book of disclosure materials was also filed. [6] The appellant\u2019s counsel submitted that an independent humanitarian and compassionate assessment be conducted by the panel for each of the four appellants. The appellant\u2019s counsel, in his submissions, focussed on the humanitarian and compassionate considerations established that warrant the granting of special relief with respect to the appellants [REDACTED] and [REDACTED]. While not abandoning their claims for special relief, the appellant\u2019s counsel acknowledged some of the weaknesses in the cases for special relief presented by the appellants [REDACTED] and his son [REDACTED].\n\n2009 CanLII 36245 (CA IRB)\n\nIAD File No. / No de dossier de la SAI: Client ID No. / N\n\no ID client:\n\n2\n\n[7] The Min..."
+    },
+    {
+      "case_id": "42279",
+      "expected_count": 4,
+      "extracted_count": 7,
+      "extra_count": 3,
+      "ratio": 1.75,
+      "extracted_determinations": [
+        {
+          "text": "I find that the appellant has limited family \nconnections in Canada  and there would be little hardship to them if the appeal was dismissed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "/ No ID client:   3973 -2225  \n \n \n 6 \n[13]  The appellant argued that the biggest hardship if the appeal was dismissed is not to him, \nbut to his daughter who was born in Canada",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "He testified that his daughter would never forgive him if the appeal was dismissed \nbecause she would not be able to come to Canada on her own",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "It is for this reason, and the limited est ablishment that the appellant has in India, \nthat I find that there would be some hardship to him if the appeal was dismissed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "\u201d8   \n[18]  There are several humanitarian and compassionate factors which I can weigh in the \nappellant\u2019s favour in this appeal, and those are: the reasons for departure and  stay abroad; his \nestablishment in Canada and lack of establishment in India, and the hardship to him if the appeal \nis dismissed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "NOTICE OF DECISION  \n \n \nThe appeal is allowed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "The Immigration Appeal Division finds that the appellant has \nnot lost his  permanent resident status",
+          "score": 1.0,
+          "match_type": "explicit"
+        }
+      ],
+      "expected_determinations": [
+        "[\"['appeal is allowed.the']\", \"['appellant has not lost his permanent resident status']\", \"['appeal is dismissed']\", \"['appeal was dismissed']\"]"
+      ],
+      "extra_determinations": [
+        {
+          "text": "I find that the appellant has limited family \nconnections in Canada  and there would be little hardship to them if the appeal was dismissed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "/ No ID client:   3973 -2225  \n \n \n 6 \n[13]  The appellant argued that the biggest hardship if the appeal was dismissed is not to him, \nbut to his daughter who was born in Canada",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "He testified that his daughter would never forgive him if the appeal was dismissed \nbecause she would not be able to come to Canada on her own",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "It is for this reason, and the limited est ablishment that the appellant has in India, \nthat I find that there would be some hardship to him if the appeal was dismissed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "\u201d8   \n[18]  There are several humanitarian and compassionate factors which I can weigh in the \nappellant\u2019s favour in this appeal, and those are: the reasons for departure and  stay abroad; his \nestablishment in Canada and lack of establishment in India, and the hardship to him if the appeal \nis dismissed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "NOTICE OF DECISION  \n \n \nThe appeal is allowed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "The Immigration Appeal Division finds that the appellant has \nnot lost his  permanent resident status",
+          "score": 1.0,
+          "match_type": "explicit"
+        }
+      ],
+      "case_text": "(CA IRB)\n\nIAD File No. / No de dossier de la SAI: TB8 -10997\n\nClient ID No. / No ID client: 3973 -2225\n\n\n\n\n\n\n\nREASONS FOR DECISION\n\n\n\nINTRODUCTION\n\n[1] A permanent resident (\u201cPR\u201d) of Canada is required to be physically present in Canada for\n\nat least 730 days in a five -year period, or fall into one of the exceptions permitted in the\n\nlegislation. Vi[REDACTED] (\u201cthe appellant\u201d) is a 52 -year -old cit izen of India who\n\nbecame a PR of Canada on June 26, 2000. The appellant applied for a permanent resident travel\n\ndocument (\u201cPRTD\u201d) on February 28, 2018 in Bengaluru. His application was refused on March\n\n28, 2018, as he did not meet the requirements of secti on 28 of the Immigration and Refugee\n\nProtection Act1 (hereinafter \u201cthe Act \u201d). The visa officer noted that in the five -year period before\n\nMarch 1, 2018 (\u201cthe period\u201d), the appellant was physically present in Canada for zero days, and\n\nindeed was last present in Canada in May 2006, more than 12 years ago. On May 7, 2018, the\n\nappellant appealed the visa officer\u2019s refusal to issue his PRTD and this is the decision in his\n\nappeal.\n\n\n\nHEARING\n\n[2] At the hearing, the appellant was present over the telephone. He was questi oned\n\nextensively by the panel. The Minister\u2019s counsel provided submissions in writing and the\n\nappellant and the panel considered these submissions in the examination of the appeal.\n\n[3] I found the appellant to be a credible witness on a balance of probabiliti es and I accept\n\nwhat he told me as truthful.\n\nISSUE\n\n[4] The appellant conceded that the refusal by the visa officer was legally valid. Therefore,\n\nthe sole issue to be decided in this appeal is:\n\n\n\n1 Immigration and Refugee Protection Act, S.C. 2001, c. 27 .\n\n2019 CanLII 42279 (CA IRB)\n\nIAD File No. / No de dossier de la SAI: TB8 -10997\n\nClient ID No. / No ID client: 3973 -2225\n\n\n\n\n\n2\n\n1. In all the circumstances of the case, and taking into account the best\n\ninterests of any minor children affected by the appeal, are there sufficient\n\nhu..."
+    },
+    {
+      "case_id": "42287",
+      "expected_count": 4,
+      "extracted_count": 7,
+      "extra_count": 3,
+      "ratio": 1.75,
+      "extracted_determinations": [
+        {
+          "text": "/ N\u00b0 de dossier de la SAI : MB5 -05688  \n \n \n \n3 \n [6] The appeal is allowed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "I find that the appellant\u2019s fami ly, notably  her husband, would suffer undue \nhardship if the appeal were dismissed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "Her husband has serious heart problem s and would \nsuffer undue headship if this appeal were dismissed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "[24]  Consequently , the appeal is allowed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "NOTICE OF DECISION  \n \nThe appeal is allowed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "The removal order is set aside",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "The Immigration Appeal Division  finds \nthat the appellant has not lost her permanent resident status",
+          "score": 1.0,
+          "match_type": "explicit"
+        }
+      ],
+      "expected_determinations": [
+        "[\"['removal order is set aside']\", \"['appeal isallowed']\", \"['appeal were dismissed']\", \"['appellant has not lost her permanent resident status']\"]"
+      ],
+      "extra_determinations": [
+        {
+          "text": "/ N\u00b0 de dossier de la SAI : MB5 -05688  \n \n \n \n3 \n [6] The appeal is allowed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "I find that the appellant\u2019s fami ly, notably  her husband, would suffer undue \nhardship if the appeal were dismissed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "Her husband has serious heart problem s and would \nsuffer undue headship if this appeal were dismissed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "[24]  Consequently , the appeal is allowed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "NOTICE OF DECISION  \n \nThe appeal is allowed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "The removal order is set aside",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "The Immigration Appeal Division  finds \nthat the appellant has not lost her permanent resident status",
+          "score": 1.0,
+          "match_type": "explicit"
+        }
+      ],
+      "case_text": "(CA IRB)\n\nIAD File No. / N\u00b0 de dossier de la SAI : MB5 -05688\n\n\n\n\n\n\n\n2\n\n\n\nREASONS FOR DECISION\n\n\n\nINTRODUCTION\n\n[1] [REDACTED] (the appellant), a citizen of Algeria , is appealing the decision that she\n\nfailed to comply with the residency obligation under section 28 of the Immigration and Refugee\n\nProtection Act1 (the Act ).\n\n[2] The appellant is represented by counsel. I reviewed the documents submitted into\n\nevidence by the appellant,2 the Minister\u2019s Appeal Book and the additional documents from the\n\nMinister,3 and I listened to the testimony from the three witnesses and the submissions from the\n\nparties .\n\n[3] Ms. [REDACTED] was born in Algeria in 1952 and landed in Canada in April 2007 with her\n\nhusband and children. She immigrated as a skilled worker and is a doctor. Her husband and her\n\nchildren , born in 1982, 1985 and 1990 , have all become Canadian citizens .\n\n[4] The appellant did not challenge the legal validity of the decision. An office r determined\n\nin December 2015 that the appellant had failed to compl y with her residency obligation durin g\n\nthe relevant five -year period from December 2010 to December 2015 .\n\nDETERMINATION\n\n[5] In light of the evidence and the submissions, the panel determines that the officer\u2019s\n\ndecision concerning the non -compliance with the residency obligation is valid in law, but that\n\nthere are sufficient humanitarian and compassionate considerations to warrant special relief in\n\nlight of all the circumstances of the case.\n\n\n\n1 Immigration and Refugee Protection Act , S.C. 2001, c. 27, as amended .\n\n2 Exhibits A-1 to A-22.\n\n3 Exhibits R -1 to R-3.\n\n2019 CanLII 42287 (CA IRB)\n\nIAD File No. / N\u00b0 de dossier de la SAI : MB5 -05688\n\n\n\n\n\n\n\n3\n\n[6] The appeal is allowed.\n\nBACKGROUND\n\n[7] The appellant became a permanent resident of Canada in April 2007. She immigrated to\n\nCanada with her husband and three children. The family is settled in Canada. The children are\n\nyoung professionals , and the appellant \u2019s husband is a retired psyc..."
+    },
+    {
+      "case_id": "63723",
+      "expected_count": 4,
+      "extracted_count": 7,
+      "extra_count": 3,
+      "ratio": 1.75,
+      "extracted_determinations": [
+        {
+          "text": "The issue before me is \nwhether the appeal should  be allowed on the basis that sufficient humanitarian and \ncompassionate considerations warrant special relief in light of all the circumstances of the case, \ntaking into account the best interests of any child directly affected by the decision",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "The appeal is allowed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "If the appeal is denied and the \nappellant is removed, the child will lose his primary care giver",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "[21]  The appeal is allowed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "/ No de dossier de la SAI :  VB6 -04174  \n \n \n \n NOTICE OF DECISION  \n \n The appeal is allowed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "The r emoval order is set aside",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "The Immigration Appeal Division \nfinds that the appellant has not lost her permanent resident status",
+          "score": 1.0,
+          "match_type": "explicit"
+        }
+      ],
+      "expected_determinations": [
+        "[\"['removal order is set aside']\", \"['appeal is allowed']\", \"['appeal is denied']\", \"['appellant has not lost her permanent resident status']\"]"
+      ],
+      "extra_determinations": [
+        {
+          "text": "The issue before me is \nwhether the appeal should  be allowed on the basis that sufficient humanitarian and \ncompassionate considerations warrant special relief in light of all the circumstances of the case, \ntaking into account the best interests of any child directly affected by the decision",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "The appeal is allowed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "If the appeal is denied and the \nappellant is removed, the child will lose his primary care giver",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "[21]  The appeal is allowed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "/ No de dossier de la SAI :  VB6 -04174  \n \n \n \n NOTICE OF DECISION  \n \n The appeal is allowed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "The r emoval order is set aside",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "The Immigration Appeal Division \nfinds that the appellant has not lost her permanent resident status",
+          "score": 1.0,
+          "match_type": "explicit"
+        }
+      ],
+      "case_text": "(CA IRB)\n\nIAD File No. / N\u00b0 de dossier de la SAI : VB6 -04174\n\n\n\n\n\nREASONS FOR DEC ISION\n\n\n\n\n\nBACKGROUND\n\n\n\n[1] These are the Reasons for decision of [REDACTED](the \u201cappellant \u201d) who is a 59 -year -\n\nold citizen of China who immigrated to Canad a in 2006 as a skilled worker. He immigrated with\n\nhis wife and his dependant son. The appellant stayed i n Canada just over one week after\n\nbecoming a permanent resident. He says he could not find employment as a geological engineer\n\nbecause of his poor English language skills and had to return to China to look after his elderly\n\nfather. His wife and son stayed in Canada. When it was time to renew his permanent resident\n\ncard the appellant knew he only spent 150 days in Canada in the preceding five years. He also\n\nknew he would not meet his residency obligations. He hired an immigration consultant by the\n\nname of [REDACTED] to renew his permanent resident card. In hiring Mr. [REDACTED], the\n\nappellant became a participant in a large -scale immigration fraud aimed at obtaining permanent\n\nresident cards for permanent residents of Canada who did not spend the required period in\n\nCanada. Mr. [REDACTED] came to the attention of Canadian immigration authorities in 2012 when his\n\ntravel documents were found in the offices of Mr. [REDACTED] and New Can Consultants (Canada)\n\nLtd. \u201cNew Can Consultants\u201d during the execution of a search warrant during th e criminal\n\ninvestigation of Mr. [REDACTED].\n\n\n\nThe Sunny Wang -New Can Consultants fraud:\n\n\n\n[2] [REDACTED] and New Can Consultants assisted clients with renewing their permanent\n\nresident card when they did not meet their residency obligation. The firm assisted clients in\n\nfraudulently obtaining their permanent residency status by altering passports or copies of\n\npassport to show that the clients were in Canada when they were not, falsifying employment\n\nrecords to show that the clients worked for a Canadian corporation when they did not and,\n\nmisrepresenting the residence of clients b..."
+    },
+    {
+      "case_id": "64592",
+      "expected_count": 4,
+      "extracted_count": 7,
+      "extra_count": 3,
+      "ratio": 1.75,
+      "extracted_determinations": [
+        {
+          "text": "[10]  Prior decision -makers of the Immigration Appeal Division (IAD) have considered the \nfollowing factors in their determination of whether there are sufficient H&C considerations to \ngrant special relief: extent of non -compliance, the reasons for the appellant\u2019 s departure from \nCanada, reasons for the lengthy stay abroad, ties to the foreign country, the appellant\u2019s degree of \nestablishment in Canada, whether the appellant or his family would suffer hardship if the appeal \nis dismissed, whether there are unique or special circumstances present in the case4 and the best \ninterests of a child directly affected by the  decision",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "Hardship for appellant, family and best interests of the child  \n \n[30]  I give substantial weight to the hardship for the appellant and his family if the appeal  was \ndismissed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "/ No ID client: 4105 -1089  \n9  \n the reasons for his lengthy stay abroad, the hardship for himself and his family if the appeal was \ndismissed and the best interest of the appellant\u2019s youngest daughter",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "[37]  Accordingly, the appeal is allowed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "The Immigration Appeal Division finds that \nthe appellant has not lost his permanent resident  status",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "NOTICE OF D ECISION  \nThe appeal is allowed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "The Immigration Appeal Division finds that the appellant has \nnot lost his permanent resident status",
+          "score": 1.0,
+          "match_type": "explicit"
+        }
+      ],
+      "expected_determinations": [
+        "[\"['appellant has not lost his permanent resident status']\", \"['appeal is allowed']\", \"['appeal is allowed']\", \"['appeal was dismissed']\"]"
+      ],
+      "extra_determinations": [
+        {
+          "text": "[10]  Prior decision -makers of the Immigration Appeal Division (IAD) have considered the \nfollowing factors in their determination of whether there are sufficient H&C considerations to \ngrant special relief: extent of non -compliance, the reasons for the appellant\u2019 s departure from \nCanada, reasons for the lengthy stay abroad, ties to the foreign country, the appellant\u2019s degree of \nestablishment in Canada, whether the appellant or his family would suffer hardship if the appeal \nis dismissed, whether there are unique or special circumstances present in the case4 and the best \ninterests of a child directly affected by the  decision",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "Hardship for appellant, family and best interests of the child  \n \n[30]  I give substantial weight to the hardship for the appellant and his family if the appeal  was \ndismissed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "/ No ID client: 4105 -1089  \n9  \n the reasons for his lengthy stay abroad, the hardship for himself and his family if the appeal was \ndismissed and the best interest of the appellant\u2019s youngest daughter",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "[37]  Accordingly, the appeal is allowed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "The Immigration Appeal Division finds that \nthe appellant has not lost his permanent resident  status",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "NOTICE OF D ECISION  \nThe appeal is allowed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "The Immigration Appeal Division finds that the appellant has \nnot lost his permanent resident status",
+          "score": 1.0,
+          "match_type": "explicit"
+        }
+      ],
+      "case_text": "(CA IRB)\n\nIAD File No. / No de dossier de la SAI: TB5 -07072\n\nClient ID No. / No ID client: 4105 -1089\n\n\n\n\n\n\n\nINTRODUCTION REASONS FOR DECISION\n\n\n\n\n\n[1] These are the reasons for the decision in the appeal of Singh Mayank Sin[REDACTED]) from a negative determination made by a visa officer that the appellant did not\n\ncomply with the residency obligation prescribed in section 28 of the Immigration an d Refugee\n\nProtection Act (Act ).1\n\n\n\n[2] Section 28 of Act requires a permanent resident of Canada to be physically present in\n\nCanada for at least 730 days in the five -year period immediately prior to their application for a\n\ntravel d ocument. The visa officer determined on June 4, 2015 that the Appellant was physically\n\npresent in Canada between 64 to 109 days in the five -year period preceding May 26, 2010, the\n\ndate his request for a travel document was received.2\n\n\n\n[3] The appellant is not challenging the legal validity of the visa officer\u2019s refusal and is\n\nrelying on the panel\u2019s jurisdiction to grant special relief on humanitarian and compassionate\n\n(H&C) grounds under section 67(1)( c) of the Act .3 The Minister appeared by written\n\nsubmissions.\n\n\n\n[4] After consideration of the appellant\u2019s oral testimony and the documentary evidence, I\n\nfind sufficient H&C grounds to allow the appeal for the reasons that follow.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n1 Immigration and Refugee Protection Act, S.C. 2001, c. 27.\n\n2 Exhibit R -1, pp. 3 and 9.\n\n3 Section 67(1)( c) of IRPA states:\n\n67. (1) To allow an appeal, the Immigration Appeal Division must be satisfied that, at the time that\n\nthe appeal is disposed of, ...\n\n(c) other than in the case of an appeal by the Minister, taking into account the best interests of a\n\nchild directly affected by the decision, sufficient humanitarian and compassionate considerations\n\nwarrant special relief in light of all the circumstances of the case.\n\n2017 CanLII 64592 (CA IRB)\n\nIAD File No. / No de dossier de la SAI: TB5 -07072\n\nClient ID No. / No ID client: ..."
+    },
+    {
+      "case_id": "74550",
+      "expected_count": 4,
+      "extracted_count": 7,
+      "extra_count": 3,
+      "ratio": 1.75,
+      "extracted_determinations": [
+        {
+          "text": "In a \ndecision dated August  9, 2013, the ID found that a violation of subsection  16(1) of the \nImmigration and Refugee Protection Act8 (the Act) does not constitute a ground s of \ninadmissibility and t he appellant \u2019s appeal was allowed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "This decision was appealed before  the \nImmigration Appeal Division (IAD) , and in a decision dated July  28, 2015, Member  XXXXXXXXXXX \nconcluded that the Minister \u2019s appeal was allowed , and set aside  the ID \u2019s decision dated \nAugust  9, 2013 , and the matter was referred to the ID for re-determination , leading to the \ndecision the appellant is currently  appeal ing",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "14  \n[14]  Another important factor would be the hardship  and dislocation that the appellant and \nespecially her son might experience  if this appeal is dismissed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "CONCLUSION  \n[17]  The appeal is allowed and the exclusion order is set aside",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "NOTICE  OF DECISION  \n \nThe appeal is allowed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "The exclusion order is set aside",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "The Immigration Appeal Division has \ndetermined that the appellant has not lost her permanent resident status",
+          "score": 1.0,
+          "match_type": "explicit"
+        }
+      ],
+      "expected_determinations": [
+        "[\"['appeal is dismissed']\", \"['exclusion order is set aside']\", \"['appeal is allowed']\", \"['appeal is allowed']\"]"
+      ],
+      "extra_determinations": [
+        {
+          "text": "In a \ndecision dated August  9, 2013, the ID found that a violation of subsection  16(1) of the \nImmigration and Refugee Protection Act8 (the Act) does not constitute a ground s of \ninadmissibility and t he appellant \u2019s appeal was allowed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "This decision was appealed before  the \nImmigration Appeal Division (IAD) , and in a decision dated July  28, 2015, Member  XXXXXXXXXXX \nconcluded that the Minister \u2019s appeal was allowed , and set aside  the ID \u2019s decision dated \nAugust  9, 2013 , and the matter was referred to the ID for re-determination , leading to the \ndecision the appellant is currently  appeal ing",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "14  \n[14]  Another important factor would be the hardship  and dislocation that the appellant and \nespecially her son might experience  if this appeal is dismissed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "CONCLUSION  \n[17]  The appeal is allowed and the exclusion order is set aside",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "NOTICE  OF DECISION  \n \nThe appeal is allowed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "The exclusion order is set aside",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "The Immigration Appeal Division has \ndetermined that the appellant has not lost her permanent resident status",
+          "score": 1.0,
+          "match_type": "explicit"
+        }
+      ],
+      "case_text": "(CA IRB)\n\nIAD File No. / N\u00b0 de dossier de la S AI : MB6 -00384\n\n\n\n\n\n2\n\nREASONS FOR DECISION\n\n\n\n[1] These are the reasons for decision in the case of [REDACTED] (the\n\nappellant) , a citizen of Cameroon, who is appealing a decision made by the Immig ration Division\n\n(ID) on January 19, 2016 .1 In th at decision, the Member conclude s as follows , with respect to the\n\nappellant\u2019s admissions of misrepresentation :\n\n[translatio n]\n\nI therefore have no other option than to issue an exclusion order against you with a right\n\nof appeal. I agree that the report is well -founded in light of the documentary evidence ,\n\nC-1 to C -5, that has been submitted , as well as the admissions that were made in your\n\nname .\n\n[translated as it appears in the French version ]\n\n[2] The appellant is not challenging the ID \u2019s decision but is asking that the panel take into\n\naccount the various humanitarian and compassionate considerations in this case. Considering this\n\nand all the evidence, the panel concludes that the ID \u2019s decision is valid in law.\n\n[3] Before proceeding with the analysis of humanitarian and compassionate considerations ,\n\nthe panel is of the opinion that it is useful to provide a brief summary of the relevant facts in this\n\ncase, particularly with respect to misrepresentation.\n\nBACKGROUND\n\n[4] The appellant was born in Cameroon in 1982 . She pursued studies in management and\n\nobtained a master \u2019s degree in business administration. Her higher studies took place in\n\nCameroon and Belgium , where she lived temporarily for a few years. In May 2011, the appellant\n\nfiled an application to become a permanent resident in the \u201c skilled worker \u201d category. Her\n\napplication was accept ed and she arrived at Pierre Elliott Trudeau In ternational Airport with her\n\npermanent resident visa on December 6, 2012, prepared to complete the process of becoming a\n\npermanent resident of Canada. When applying for admission at the port of entry, the appe llant\n\nstated that she forgot to include her t..."
+    },
+    {
+      "case_id": "81131",
+      "expected_count": 4,
+      "extracted_count": 7,
+      "extra_count": 3,
+      "ratio": 1.75,
+      "extracted_determinations": [
+        {
+          "text": "At \nthis appeal, he does not dispute the legal validity of officer\u2019s decision but asks that his appeal be \nallowed because sufficient humanitarian and compassionate  (H&C)  grounds e xist to warrant \nallowing his appeal",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "[4] The appeal is allowed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "He plans to sp onsor his wife to Canada if his appeal is allowed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "[35]  The appeal is allowed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "/ No ID client:  8997 -3570  \n \n \n 9 \nNOTICE OF DECISION  \n \n The appeal is allowed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "The removal order is set aside",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "The Immigration Appeal Division \nfinds that the appellant has not lost his permanent resident status",
+          "score": 1.0,
+          "match_type": "explicit"
+        }
+      ],
+      "expected_determinations": [
+        "[\"['appeal is allowed']\", \"['removal order is set aside']\", \"['appeal is allowed']\", \"['appellant has not lost his permanent resident status']\"]"
+      ],
+      "extra_determinations": [
+        {
+          "text": "At \nthis appeal, he does not dispute the legal validity of officer\u2019s decision but asks that his appeal be \nallowed because sufficient humanitarian and compassionate  (H&C)  grounds e xist to warrant \nallowing his appeal",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "[4] The appeal is allowed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "He plans to sp onsor his wife to Canada if his appeal is allowed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "[35]  The appeal is allowed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "/ No ID client:  8997 -3570  \n \n \n 9 \nNOTICE OF DECISION  \n \n The appeal is allowed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "The removal order is set aside",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "The Immigration Appeal Division \nfinds that the appellant has not lost his permanent resident status",
+          "score": 1.0,
+          "match_type": "explicit"
+        }
+      ],
+      "case_text": "(CA IRB)\n\nIAD File No. / No de dossier de la SAI: TB9-18127\n\nClient ID No. / No ID client: 8997 -3570\n\n\n\n\n\nREASONS FOR DECISION\n\nOVERVIEW\n\n[1] Gonzalo Anto[REDACTED] (the Appellant), a 33-year -old citizen of Peru became\n\na permanent resident (PR) of Canada on February 19, 2015 after being sponsored by his brother\n\nto Canada as a dependent in his father\u2019s PR application . He was issued a removal order at\n\nMontr \u00e9al-Pierre Elliot Trudeau International Airport on June 13, 2019 because an officer\n\ndetermined that he did not meet the residency obligation of being physically present in Canada\n\nfor 730 days in any five -year period.1 The officer gave him credit for 81 days.2\n\n[2] At the time the removal order was issued, the Appellant had about eight months left for\n\nthe five -year period to elapse. He did not leave Canada after the removal order was issued. At\n\nthis appeal, he does not dispute the legal validity of officer\u2019s decision but asks that his appeal be\n\nallowed because sufficient humanitarian and compassionate (H&C) grounds e xist to warrant\n\nallowing his appeal. The Minister opposes this outcome.\n\n[3] The Appellant being burdened with the responsibility of supporting his family financially\n\nfrom when he was a minor is a unique and special circumstance in this appeal. This\n\nresponsibil ity impacted his ability to remain in Canada after he obtained PR status. He also\n\nprovided a reasonable reason for his extended stay abroad. His establishment in Canada is\n\nsignificant when compared to his establishment abroad and there is hardship to him i f he uproots\n\nhimself and returns to Peru. These all amount to sufficient H &C grounds to warrant granting\n\nspecial relief to him.\n\n[4] The appeal is allowed.\n\nANALYSIS\n\n[5] In assessing H&C considerations, I am guided by various factors that have been set out\n\nin case law.3 The factors include the level of non -compliance, the reason for leaving and\n\nextended stay outside of Canada, ties to Canada, and establishment in Canada..."
+    },
+    {
+      "case_id": "81203",
+      "expected_count": 4,
+      "extracted_count": 7,
+      "extra_count": 3,
+      "ratio": 1.75,
+      "extracted_determinations": [
+        {
+          "text": "The appeal is dismissed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "Lack of future plans if this appeal is dismissed point to a non -genuine marriage  \n[50]  The Appellant and the Applicant  could not articulate plans for a future together if \nunsuccessful in this appeal",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "T he Appellant testified that if the appeal is dismissed and the \nApplicant cannot come to Canada, he will try again",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "She never asked him to come back to China to \nlive with her if this appeal is dismissed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "I find that their lack of future pl ans \nfor a life together if this appeal is dismissed is  inconsistent with a genuine relationship",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "[53]  The appeal is dismissed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "/ No ID client:  6328 -4877  \n \n \n 17 \nNOTICE OF DECISION  \nThe appeal is dismissed",
+          "score": 1.0,
+          "match_type": "explicit"
+        }
+      ],
+      "expected_determinations": [
+        "[\"['appeal is dismissed']\", \"['appeal is dismissed']\", \"['appeal is dismissed']\", \"['appeal is dismissed']\"]"
+      ],
+      "extra_determinations": [
+        {
+          "text": "The appeal is dismissed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "Lack of future plans if this appeal is dismissed point to a non -genuine marriage  \n[50]  The Appellant and the Applicant  could not articulate plans for a future together if \nunsuccessful in this appeal",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "T he Appellant testified that if the appeal is dismissed and the \nApplicant cannot come to Canada, he will try again",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "She never asked him to come back to China to \nlive with her if this appeal is dismissed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "I find that their lack of future pl ans \nfor a life together if this appeal is dismissed is  inconsistent with a genuine relationship",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "[53]  The appeal is dismissed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "/ No ID client:  6328 -4877  \n \n \n 17 \nNOTICE OF DECISION  \nThe appeal is dismissed",
+          "score": 1.0,
+          "match_type": "explicit"
+        }
+      ],
+      "case_text": "(CA IRB)\n\nIAD File No. / No de dossier de la SAI: TB8 -04235\n\nClient ID No. / No ID client: 6328 -4877\n\n\n\n\n\nREASONS FOR DECISION\n\nOVERVIEW\n\n[1] The Appellant, [REDACTED] , appeals1 the refusal of the sponsorship of his spouse,\n\n[REDACTED] , the Applicant.2\n\n[2] The issue in this appeal is whether the Appellant demonstrates on a balance of\n\nprobabilities that this marriage is genuine and was not entered i nto primarily to acquire any\n\nstatus or privilege under the Immigration and Refugee Protection Act (IRPA).3\n\n[3] The Appellant submits that he and the Applicant are in a genuine marriage which was not\n\nentered into primarily for the Applicant to obtain permanent resident (PR) status . I do not agree.\n\n[4] I find that neither the Appellant nor the Applicant provide a credible account about when,\n\nwhere, or how they first met, or about how their relationship developed from 2005 (or earlier) to\n\nthe point of marriage more than 10 years later in 2016. With each witness, more unresolved\n\ninconsistencies arose. As well, there is little in the way of documentary evidence to corroborate a\n\nrelationship before their marriage in 2016. Though there are elements of genuineness in this\n\nrelationship, and I acknowledge the Appellant\u2019s visits from Canada to China since 2010, the\n\nprovision of financial support, and the Appellant and Applicant demonstrating some knowledge\n\nof one another, I find that material inconsistencies and unexplained g aps in evidence about how\n\nthis relationship began and developed as well as other material inconsistencies and unexplained\n\ngaps in evidence tips the balance of probabilities against genuineness. For these reasons, I find it\n\nmore likely than not that this ma rriage is not genuine. The appeal is dismissed.\n\nBACKGROUND\n\n[5] The Appellant is a 60 -year -old Chinese citizen who has spent considerable amounts of\n\ntime in Canada since 2010, and who landed as a PR in February 2015, having been sponsored by\n\nhis older son.4 The Applicant is a 48 -yea..."
+    },
+    {
+      "case_id": "81613",
+      "expected_count": 4,
+      "extracted_count": 7,
+      "extra_count": 3,
+      "ratio": 1.75,
+      "extracted_determinations": [
+        {
+          "text": "[4] The appeal is dismissed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "Under oath, the appellant stated  that he would not experience any material or finan cial \nhardship if the appeal is  dismissed, but he would suffer emotional hardship , namely , the \ndisappointment of not pursuing  his plans",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "I find  that the app ellant and his family would not suffer undue \nhardship if the appeal is dismissed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "I find that the best \ninterests of the appellant\u2019s child will not be compromised if the appeal is dismissed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "Currently, he has little establishment in Canada, and there will be no \nundue hardship if the appeal is dismissed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "[20]  Consequently, the appeal is dismissed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "/ No de dossier de la S AI : MB5 -01742  \n \n \n8  \nNOTICE  OF DECISION  \n \nThe appeal is dismissed",
+          "score": 1.0,
+          "match_type": "explicit"
+        }
+      ],
+      "expected_determinations": [
+        "[\"['appeal is dismissed']\", \"['appeal is dismissed']\", \"['appeal is dismissed']\", \"['appeal is dismissed']\"]"
+      ],
+      "extra_determinations": [
+        {
+          "text": "[4] The appeal is dismissed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "Under oath, the appellant stated  that he would not experience any material or finan cial \nhardship if the appeal is  dismissed, but he would suffer emotional hardship , namely , the \ndisappointment of not pursuing  his plans",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "I find  that the app ellant and his family would not suffer undue \nhardship if the appeal is dismissed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "I find that the best \ninterests of the appellant\u2019s child will not be compromised if the appeal is dismissed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "Currently, he has little establishment in Canada, and there will be no \nundue hardship if the appeal is dismissed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "[20]  Consequently, the appeal is dismissed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "/ No de dossier de la S AI : MB5 -01742  \n \n \n8  \nNOTICE  OF DECISION  \n \nThe appeal is dismissed",
+          "score": 1.0,
+          "match_type": "explicit"
+        }
+      ],
+      "case_text": "(CA IRB)\n\nIAD File No. / No de dossier de la S AI : MB5 -01742\n\n\n\n\n\n2\n\nREASONS FOR DECISION\n\n\n\n[1] [REDACTED] (the appellant), a citizen of Morocco , is appealing against the\n\ndecision that he failed to comply with the residency obligation under section 28 of the\n\nImmigration and Refugee Protection Act1 (IRPA ).\n\n[2] The appellant was born in Morocco in 1967, and he was landed in Canada in 2004. The\n\nappellant testified by telephone. I have reviewed his testimony as well as the documents filed by\n\nthe Minister\u2019s representative2 and counsel for the appellant ,3 and I have considered the parties\u2019\n\noral submissions.\n\n[3] In light of the evidence and submissions, the panel concluded that the officer\u2019 s decision\n\nregarding the non -compliance with the residency obligation is valid in law and that, taking into\n\naccount the best interests of a child directly affected by the decision , there a re insufficient\n\nhumanitarian and compassionate considerations to warrant special relief in light of all the\n\ncircumstances of the case.\n\n[4] The appeal is dismissed .\n\nBackground\n\n[5] The appellant became a permanent resident of Canada in 2004. He settled in Canada, go t\n\nmarried, held jobs and lived in Canada from 2004 to 2010. In 2010, his father\u2019s health\n\ndeteriorated. Since he was the only unmarried child, he returned to Morocco to live with his\n\nparents and look after his father. After he left Canada in December 2010, the appellant spent\n\nlittle time in Canada. There is significant non -compliance with his residency obligation. This is\n\n\n\n1 Immigration and Refugee Protection Act , S.C. 2001, c. 27, as amended .\n\n2 Appeal Book .\n\n3 Exhibit A-1.\n\n2018 CanLII 81613 (CA IRB)\n\nIAD File No. / No de dossier de la S AI : MB5 -01742\n\n\n\n\n\n3 the appeal against an immigration officer\u2019s decision rend ered on March 31, 2015, that he failed\n\nto comply with his residency obligation under section 28 of the IRPA.\n\n[6] The appellant was physically present in Canada for 282 days during the five -ye..."
+    },
+    {
+      "case_id": "84523",
+      "expected_count": 5,
+      "extracted_count": 8,
+      "extra_count": 3,
+      "ratio": 1.6,
+      "extracted_determinations": [
+        {
+          "text": "[18] I have considered the documentary material s tendered by XXXXXXXXXXXXXXXXXXXX, contents of the Record and joint recommendation of couns el that his appeal should be allowed on discretionary grounds",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "I have consid ered the documentary materials tendered by the appellant, contents of the Record, and the join t recommendation of his counsel and the Minster\u2019s counsel, that the appeal be allowed based on discretionary grounds, I agree that the recommended disposition is appropriate",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "I have considered the documentary materials tendered by the appellan t, contents of the Record and the joint recommendation of her counsel and the XXXXXX r\u2019s counsel that the appeal be allowed on discretionary grounds",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "The appeals of XXXXXXXXXXXXXXXXXXXX, XXXXXXXXXXXXXXXXX, XXXXXXXXXXXXXXXXX and XXXXXXXXXXXXXXXXX are allowed and their removal orders are set aside",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "The exclusion order is valid in law and the appeal is dismissed in law",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "Sim ilarly, the appeal is dismissed on discretionary grounds for the reasons stated above",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "NOTICE OF DECISION \n The appeals of XXXXXXXXXXXXXXXXXXXX, XXXXXXXXXXXXXXXXXX, XXXXXXXXXXXXXXXX, and XXXXXXXXXXXXXXXXX are allowed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "NOTICE OF DECISION \n The appeal of KXXXXXXXXXXXXXXXXXXXX is dismissed",
+          "score": 1.0,
+          "match_type": "explicit"
+        }
+      ],
+      "expected_determinations": [
+        "[\"['appeals of gurcharan singh brar, baljit singh brar, kartar kaur brar and veerpal kaur brar are allowed']\", \"['removal orders are set aside']\", \"['appeal is dismissed in law']\", \"['appeals of gurcharan singh brar, baljit singh brar, kartar kaur brar, and veerpal kaur brar are allowed']\", \"['appeal is dismissed']\"]"
+      ],
+      "extra_determinations": [
+        {
+          "text": "[18] I have considered the documentary material s tendered by XXXXXXXXXXXXXXXXXXXX, contents of the Record and joint recommendation of couns el that his appeal should be allowed on discretionary grounds",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "I have consid ered the documentary materials tendered by the appellant, contents of the Record, and the join t recommendation of his counsel and the Minster\u2019s counsel, that the appeal be allowed based on discretionary grounds, I agree that the recommended disposition is appropriate",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "I have considered the documentary materials tendered by the appellan t, contents of the Record and the joint recommendation of her counsel and the XXXXXX r\u2019s counsel that the appeal be allowed on discretionary grounds",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "The appeals of XXXXXXXXXXXXXXXXXXXX, XXXXXXXXXXXXXXXXX, XXXXXXXXXXXXXXXXX and XXXXXXXXXXXXXXXXX are allowed and their removal orders are set aside",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "The exclusion order is valid in law and the appeal is dismissed in law",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "Sim ilarly, the appeal is dismissed on discretionary grounds for the reasons stated above",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "NOTICE OF DECISION \n The appeals of XXXXXXXXXXXXXXXXXXXX, XXXXXXXXXXXXXXXXXX, XXXXXXXXXXXXXXXX, and XXXXXXXXXXXXXXXXX are allowed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "NOTICE OF DECISION \n The appeal of KXXXXXXXXXXXXXXXXXXXX is dismissed",
+          "score": 1.0,
+          "match_type": "explicit"
+        }
+      ],
+      "case_text": "(CA IRB)\n\nIAD File No. / N\u00b0 de dossier de la SAI : VA8-01572 / 73 / 74 / 75 VA9-01346\n\n1 Reasons for Decision\n\n[1] [REDACTED], appeals an exclusi on order issued against him on March 11, 2009 at Vancouver, British Columbia and his father [REDACTED], his mother [REDACTED] his sisters K[REDACTED] a nd [REDACTED] (the \u201cappellants\u201d), appeal an exclusion order issued against them on April 22, 2008. The appellants, who are citizens of India, were ordered removed from Canada because they were found described in paragraph 40(1)(a) of the Immigration and Refugee Protection Act (the \u201cAct\u201d).\n\n1 40(1)(a) Misrepresentation \u2013 a permanent resident or a foreign national is inadmissible for misrepresentation for dire ctly or indirectly misrepresenting or withholding material facts relating to a relevant matter that induces or could induce an error in the administration of this Act. [2] [REDACTED], [REDACTED], and Ku[REDACTED] were represented by counsel [REDACTED]. [REDACTED] and [REDACTED] were represented by counsel [REDACTED]. The appeals were scheduled to be heard during two consecutive full day hearings. At the outset of the first hearing, both of the appellants\u2019 counsels were present. The counsels have agreed to use the documentary evidence submitted on behalf of their respective clients in support of all the appeals. The appellants\u2019 counsels conceded the facts pertaining to the misrepresentation, as described in the Statutory Declaration of Heather Dub\u00e9, the immigration officer at the immigration secti on of the Canadian High Commission (the \u201cCHC\u201d) in New Delhi, January 8, 2007.\n\n2 [3] The Statutory Declaration provides the following: STATUTORY DECLARATION IN THE MATTER OF THE IMMIGRATION AND REFUGEE PROTECTION ACT AND THE IMMIGRATION AND REFUGEE PROTECTION REGULATIONS I, [REDACTED], am currently employed at the FS-02 (acting) level as a Visa Officer at the Immigration Section of the Canada High Commission (\u201cCHC\u201d) in New Delhi. I have been a Visa Officer at the CHC since Augu..."
+    },
+    {
+      "case_id": "90603",
+      "expected_count": 5,
+      "extracted_count": 8,
+      "extra_count": 3,
+      "ratio": 1.6,
+      "extracted_determinations": [
+        {
+          "text": "Therefore the appeal is allowed for the reasons expressed below",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "/ No ID Client : 5677 -3396  \n9 \n \n \n \n  The hardship that the appellant would face if his appeal was dismissed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "The tribunal considers that the \nhardship that the appellant would experience if his appeal was dismissed is a positive factor of \nlimited weight",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "/ No ID Client : 5677 -3396  \n10 \n \n \n \n - the appellant\u2019s integration in the Canadian community outside his family;  \n- the appellant\u2019s modification of his behavior as to his residency obligation after the \nissuance of the deportation order and his work in Canada during that time;  \n- the hardship that the appellant would face if his appeal was dismissed and if he was \nseparated from his wife and children in Canada;  \n- the objective of the Act  of \u201creunification of families in Canada\u201d",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "[35]  When the tribunal looks at the negative factors, the tribunal sees  \n- a legal impediment that is  important but not overwhelming;   \n- the short duration of the appellant\u2019s stay in Canada;  \n- the appellant\u2019s  establishment in Iran more important than  his establishment in Canada;  \n- the appellant\u2019s absence of imperious reasons to be away from Canada during the period \nof reference and the fact that the he did not return at the first opportunity;  \n- the fact that the appellant\u2019s life would not be at risk in Iran if his appeal was dismissed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "[38]  The appeal is allowed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "The removal order is set aside",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "/ No ID Client : 5677 -3396  \n11 \n \n \n \n NOTICE OF DECISION  \n \nThe appeal is allowed",
+          "score": 1.0,
+          "match_type": "explicit"
+        }
+      ],
+      "expected_determinations": [
+        "[\"['removal order is set aside']\", \"['appeal was dismissed']\", \"['appeal was dismissed']\", \"['appeal is allowed']\", \"['appellant has not lost his permanent resident status']\"]"
+      ],
+      "extra_determinations": [
+        {
+          "text": "Therefore the appeal is allowed for the reasons expressed below",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "/ No ID Client : 5677 -3396  \n9 \n \n \n \n  The hardship that the appellant would face if his appeal was dismissed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "The tribunal considers that the \nhardship that the appellant would experience if his appeal was dismissed is a positive factor of \nlimited weight",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "/ No ID Client : 5677 -3396  \n10 \n \n \n \n - the appellant\u2019s integration in the Canadian community outside his family;  \n- the appellant\u2019s modification of his behavior as to his residency obligation after the \nissuance of the deportation order and his work in Canada during that time;  \n- the hardship that the appellant would face if his appeal was dismissed and if he was \nseparated from his wife and children in Canada;  \n- the objective of the Act  of \u201creunification of families in Canada\u201d",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "[35]  When the tribunal looks at the negative factors, the tribunal sees  \n- a legal impediment that is  important but not overwhelming;   \n- the short duration of the appellant\u2019s stay in Canada;  \n- the appellant\u2019s  establishment in Iran more important than  his establishment in Canada;  \n- the appellant\u2019s absence of imperious reasons to be away from Canada during the period \nof reference and the fact that the he did not return at the first opportunity;  \n- the fact that the appellant\u2019s life would not be at risk in Iran if his appeal was dismissed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "[38]  The appeal is allowed",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "The removal order is set aside",
+          "score": 1.0,
+          "match_type": "explicit"
+        },
+        {
+          "text": "/ No ID Client : 5677 -3396  \n11 \n \n \n \n NOTICE OF DECISION  \n \nThe appeal is allowed",
+          "score": 1.0,
+          "match_type": "explicit"
+        }
+      ],
+      "case_text": "(CA IRB)\n\nIAD File No. / No Dossier de la SAI : MB2 -00918\n\nClient ID No. / No ID Client : 5677 -3396\n\n2\n\n\n\n\n\n\n\nReasons for Decision\n\n[1] These are the motives in the decision concerning the appeal of Seyed[REDACTED] (the appellant), a citizen of Iran, pursuant to section 63(3) of the Immigration and Re fugee\n\nProtection Act1 (the Act ), against the departure order made against him on the 13th of January 2012.\n\n\n\n[2] On that day the visa officer found that the appellant was a person described at\n\nparagraph 41( b) of the Act , a permanent resident who is inadmissib le in Canada for failing to\n\ncomply with the residency obligation prescribed in section 28 of the Act .\n\n\n\n[3] Section 28 of the Act requires a permanent resident to be physically present in Canada for at\n\nleast 730 days during the five -year period immediately prec eding the date of the determination by\n\nthe visa officer of the permanent resident level of compliance with the requirements of the residency\n\nobligation under the Act.\n\n\n\nISSUE\n\n[4] The appellant did not challenge the validity of the departure order made by the vi sa officer.\n\nConsidering the fact that there is no evidence that the order is invalid, the tribunal concludes that the\n\ndeparture order is valid in law.\n\n\n\n[5] The appellant claimed that there are sufficient humanitarian and compassionate grounds,\n\nincluding the b est intere sts of the children that are directly affected to warrant the granting of\n\nspecial relief in light of all the circumstances of this case, pursuant to paragraph 67(1)( c) of the Act .\n\n\n\n[6] An appeal in front of the Immigration Appeal Division (IAD) is a De novo hearing, which\n\nmeans that the role of the IAD is to evaluate all the evidence, evidence which was presented before\n\nthe visa officer as well as the new evidence provided and/or presented at the hearing on the 27th of\n\nFebruary 2014.\n\n\n\n1 S.C. 2001, c. 27 , modified.\n\n2014 CanLII 90603 (CA IRB)\n\nIAD File No. / No Dossier de la SAI : MB2 -00918\n\nClient ID ..."
+    }
+  ]
+}

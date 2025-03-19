@@ -13,6 +13,11 @@ default_experiments:
     description: "Basic rule-based model with default parameters"
     params: {}
 
+  - name: "sparse_baseline"
+    model: "sparse"
+    description: "High-precision sparse explicit model for first-layer filtering"
+    params: {}
+
 # Experiment sets for different scenarios
 experiment_sets:
   precision_focused:
@@ -30,6 +35,13 @@ experiment_sets:
       params:
         score_threshold: 0.8
 
+    - name: "sparse_strict"
+      model: "sparse"
+      description: "Sparse explicit model with very high precision"
+      params:
+        confidence_threshold: 0.9
+        require_structural_context: true
+
   recall_focused:
     - name: "ngram_high_recall"
       model: "ngram"
@@ -45,6 +57,13 @@ experiment_sets:
       params:
         score_threshold: 0.6
 
+    - name: "sparse_relaxed"
+      model: "sparse"
+      description: "Sparse explicit model with relaxed matching"
+      params:
+        confidence_threshold: 0.7
+        require_structural_context: false
+
   combined:
     - name: "ngram_balanced"
       model: "ngram"
@@ -58,4 +77,11 @@ experiment_sets:
       model: "basic"
       description: "Basic model with balanced thresholds"
       params:
-        score_threshold: 0.7 
+        score_threshold: 0.7
+
+    - name: "sparse_balanced"
+      model: "sparse"
+      description: "Sparse explicit model with balanced settings"
+      params:
+        confidence_threshold: 0.8
+        require_structural_context: true 

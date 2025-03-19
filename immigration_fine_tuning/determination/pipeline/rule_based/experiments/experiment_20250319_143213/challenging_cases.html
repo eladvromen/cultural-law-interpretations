@@ -1,0 +1,1726 @@
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title>Determination Extraction Analysis</title>
+        <style>
+            body { font-family: Arial, sans-serif; margin: 20px; }
+            h1 { color: #2c3e50; }
+            .case { margin-bottom: 30px; border: 1px solid #ddd; padding: 15px; border-radius: 5px; }
+            .case-header { background-color: #f8f9fa; padding: 10px; margin-bottom: 15px; }
+            .extracted { background-color: #e8f4f8; padding: 10px; margin: 10px 0; border-left: 4px solid #3498db; }
+            .expected { background-color: #f8f4e8; padding: 10px; margin: 10px 0; border-left: 4px solid #f39c12; }
+            .missing { background-color: #f8e8e8; padding: 10px; margin: 10px 0; border-left: 4px solid #e74c3c; }
+            .case-text { background-color: #f9f9f9; padding: 15px; border: 1px solid #eee; 
+                         height: 200px; overflow: auto; font-family: monospace; white-space: pre-wrap; }
+            .metrics { font-weight: bold; color: #e74c3c; }
+            .comparison { display: flex; flex-wrap: wrap; gap: 20px; }
+            .comparison-column { flex: 1; min-width: 300px; }
+            .nav { position: sticky; top: 0; background: white; padding: 10px; border-bottom: 1px solid #ddd; }
+            .legend { margin: 10px 0 20px 0; padding: 10px; background-color: #f8f9fa; border-radius: 5px; }
+            .legend span { margin-right: 20px; }
+        </style>
+    </head>
+    <body>
+        <div class="nav">
+            <h1>Challenging Cases in Determination Extraction</h1>
+            <div class="legend">
+                <span style="color: #3498db;">■</span> Extracted
+                <span style="color: #f39c12;">■</span> Expected
+                <span style="color: #e74c3c;">■</span> Missing (Expected but not found)
+            </div>
+        </div>
+        <p>These cases had significantly fewer extracted determinations than expected.</p>
+    
+        <div class="case" id="case-1">
+            <div class="case-header">
+                <h2>Case 1: ID 60041</h2>
+                <p class="metrics">Expected: 7 | Extracted: 0 | 
+                   Ratio: 0.00</p>
+            </div>
+            
+            <div class="comparison">
+                <div class="comparison-column">
+                    <h3>Extracted Determinations (0)</h3>
+        <p>No determinations extracted.</p>
+                </div>
+                <div class="comparison-column">
+                    <h3>Missing Determinations (1)</h3>
+        
+                <div class="missing">
+                    <p>["['claimant is neither a convention refugee nor a person in need of protection']", "['reject this explanation']", "['reject the claimant’s explanations']", "['refugee protection division therefore rejects his claim']", "['negative']", "['claimant is neither a convention refugee nor a person in need of protection']", "['reject the claimant’s explanation']"]</p>
+                </div>
+                
+                </div>
+            </div>
+        
+            <div>
+                <h3>All Expected Determinations (1)</h3>
+        
+                <div class="expected">
+                    <p>["['claimant is neither a convention refugee nor a person in need of protection']", "['reject this explanation']", "['reject the claimant’s explanations']", "['refugee protection division therefore rejects his claim']", "['negative']", "['claimant is neither a convention refugee nor a person in need of protection']", "['reject the claimant’s explanation']"]</p>
+                </div>
+                
+            </div>
+            
+            <h3>Case Text (first portion):</h3>
+            <div class="case-text">(CA IRB)
+
+TA4-09616
+
+[REDACTED] [REDACTED] (the claimant) is a citizen of the People's Republic of China. He claims to have a well-founded fear of persecution at the hands of the Communist regime and in particular, the Public Security Bureau, by reason of his political opinion as a Falun Gong practitioner. In addition, he claims to be a person in need of protection because he would be subjected personally to a risk to his life or to a risk of cruel and unusual treatment or punishment or to a dange r of torture in the People's Republic of China. ALLEGATIONS: The claimant alleges that he started to practice Falun Gong in [REDACTED] 2003 in order to improve his health. The claimant stated that on [REDACTED], 2003, the Public Security Bureau raided his Falun Gong practice group. The claimant stated that he was not present at the time but was advised to go into hiding, which he did. The claimant indicated that he learned, while in hiding, that the Public Security Bureau had come to his home, looking to arrest him. The claimant made arrangements to leave the country and arrived in Canada on [REDACTED], 2003. DETERMINATION: I find that the claimant is neither a Convention refugee nor a person in need of protection.
+
+2005 CanLII 60041 (CA IRB)
+
+TA4-09616
+
+2 ANALYSIS: Identity: The claimant’s oral testimony, the supporting documentation
+
+1 filed and the RCMP report
+
+2 establish his identity as a national of the People's Republic of China. I find that the Public Security Bureau is not, nor has ever been, interested in arresting the claimant. The claimant maintained that the Public Security Bureau went to his home on more than one occasion, looking to arrest him. The claimant stated that he left the People's Republic of China with his own genuine passport via the Beijing Airport. It was put to the claimant that the country documentation
+
+3 indicates that there are a number of security checks at the Beijing Airpor t and that there is a computer system to check names. The claima...</div>
+        </div>
+        
+        <div class="case" id="case-2">
+            <div class="case-header">
+                <h2>Case 2: ID 134307</h2>
+                <p class="metrics">Expected: 6 | Extracted: 0 | 
+                   Ratio: 0.00</p>
+            </div>
+            
+            <div class="comparison">
+                <div class="comparison-column">
+                    <h3>Extracted Determinations (0)</h3>
+        <p>No determinations extracted.</p>
+                </div>
+                <div class="comparison-column">
+                    <h3>Missing Determinations (1)</h3>
+        
+                <div class="missing">
+                    <p>["['appeal is dismissed']", "['appellant has not lost his permanent resident status']", "['appeal is dismissed']", "['appeal is dismissed']", "['appeal is allowed for diego gabriel cruz.the']", "['appeal is allowed', 'appeal is dismissed']"]</p>
+                </div>
+                
+                </div>
+            </div>
+        
+            <div>
+                <h3>All Expected Determinations (1)</h3>
+        
+                <div class="expected">
+                    <p>["['appeal is dismissed']", "['appellant has not lost his permanent resident status']", "['appeal is dismissed']", "['appeal is dismissed']", "['appeal is allowed for diego gabriel cruz.the']", "['appeal is allowed', 'appeal is dismissed']"]</p>
+                </div>
+                
+            </div>
+            
+            <h3>Case Text (first portion):</h3>
+            <div class="case-text">
+</div>
+        </div>
+        
+        <div class="case" id="case-3">
+            <div class="case-header">
+                <h2>Case 3: ID 142475</h2>
+                <p class="metrics">Expected: 6 | Extracted: 0 | 
+                   Ratio: 0.00</p>
+            </div>
+            
+            <div class="comparison">
+                <div class="comparison-column">
+                    <h3>Extracted Determinations (0)</h3>
+        <p>No determinations extracted.</p>
+                </div>
+                <div class="comparison-column">
+                    <h3>Missing Determinations (1)</h3>
+        
+                <div class="missing">
+                    <p>["['rad finds that that the rpd correctly decided that thexxxxandxxxxare not refugees']", "['appeal of the principal appellant', 'appeals of the minor appellants, xxxx and xxxx, are rejected']", "['rad grants xxxx appeal', 'substitutes its decision in place of the decision rendered by the rpd']", "['rad grants the appeal ofxxxxand']", "['rad confirms the decision of the rpd']", "['rad finds the nigerian jg inapplicable']"]</p>
+                </div>
+                
+                </div>
+            </div>
+        
+            <div>
+                <h3>All Expected Determinations (1)</h3>
+        
+                <div class="expected">
+                    <p>["['rad finds that that the rpd correctly decided that thexxxxandxxxxare not refugees']", "['appeal of the principal appellant', 'appeals of the minor appellants, xxxx and xxxx, are rejected']", "['rad grants xxxx appeal', 'substitutes its decision in place of the decision rendered by the rpd']", "['rad grants the appeal ofxxxxand']", "['rad confirms the decision of the rpd']", "['rad finds the nigerian jg inapplicable']"]</p>
+                </div>
+                
+            </div>
+            
+            <h3>Case Text (first portion):</h3>
+            <div class="case-text">(CA IRB)
+
+RAD File / Dossier de la SAR : MB8 - 19687
+
+MB8 - 19688 /MB8 - 19689
+
+
+
+
+
+RAD.25.02 (April 04, 2019)
+
+Disponible en français 2
+
+REASONS FOR DECISION
+
+OVERVIEW
+
+[1] This is an appeal of a decision by the Refugee Protection Division (RPD) of the
+
+Immigration and Refugee Board (IRB) rejecting the claims of [REDACTED] [REDACTED] [REDACTED]
+
+(hereinafter referred to by her first name, [REDACTED] ), and her two minor children , [REDACTED] [REDACTED]
+
+[REDACTED] and [REDACTED] [REDACTED] [REDACTED] (each respectively born in 2014 and 2017 in the United States
+
+of America —the U.S.A. and hereinafter respectively referred to by their first names [REDACTED] and
+
+[REDACTED] ). The RPD rejected the claims of [REDACTED] and [REDACTED] for reasons relating to their birth in
+
+the U.S.A. and rejected the claim of [REDACTED] for the existence of an internal flight alternative
+
+(IFA) in Lagos, Nigeria .
+
+[2] The Appellants claimed refugee protection from Canada pursuant to the Immigration
+
+Refugee Protect ion Act (IRPA)1 based on an alleged fear of violence and the threat of death from
+
+[REDACTED] ex-husband and the alleged agent of persecution, [REDACTED] [REDACTED] (hereinafter “ [REDACTED] ”),
+
+if they return to Nigeria. [REDACTED] is not the father of [REDACTED] or [REDACTED] .
+
+[3] The RPD stated that the determinative issues of [REDACTED] claim were her credibility
+
+concerning any forward -looking risk, whether she rebutted the presumption of State Protection
+
+and the availability of an IFA in Lagos.
+
+DECISION
+
+[4] For the reasons provided below, the RAD finds that the RPD’s decision was correct with
+
+respect to [REDACTED] and [REDACTED] but was incorrect with respect to [REDACTED] . The RAD grants [REDACTED]
+
+appeal but agrees with the correct decision of the RPD and rejects the a ppeals of [REDACTED] and
+
+[REDACTED] .
+
+CONTEXT
+
+[5] [REDACTED] allege s her father forced her into a n arranged marriage to [REDACTED] and that [REDACTED]
+
+beat, raped and threatened her l...</div>
+        </div>
+        
+        <div class="case" id="case-4">
+            <div class="case-header">
+                <h2>Case 4: ID 40371</h2>
+                <p class="metrics">Expected: 6 | Extracted: 0 | 
+                   Ratio: 0.00</p>
+            </div>
+            
+            <div class="comparison">
+                <div class="comparison-column">
+                    <h3>Extracted Determinations (0)</h3>
+        <p>No determinations extracted.</p>
+                </div>
+                <div class="comparison-column">
+                    <h3>Missing Determinations (1)</h3>
+        
+                <div class="missing">
+                    <p>["['appeal should not be terminated']", "['appeal is terminated']", "['appeal is terminated']", "['appeal would be terminated']", "['appeal is terminated']", "['appeal is terminated']"]</p>
+                </div>
+                
+                </div>
+            </div>
+        
+            <div>
+                <h3>All Expected Determinations (1)</h3>
+        
+                <div class="expected">
+                    <p>["['appeal should not be terminated']", "['appeal is terminated']", "['appeal is terminated']", "['appeal would be terminated']", "['appeal is terminated']", "['appeal is terminated']"]</p>
+                </div>
+                
+            </div>
+            
+            <h3>Case Text (first portion):</h3>
+            <div class="case-text">(CA IRB)
+
+2022 CanLII 40371 (CA IRB)
+
+IAD File No. / No de dossier de la SAI : VB8 -06051
+
+Client ID No. / No ID client : 29960657
+
+
+
+
+
+1
+
+REASONS FOR DECISION
+
+OVERVIEW
+
+
+
+[1] [REDACTED] (Appellant) appealed a decision of the Immigration Division that
+
+issued him a deportation order on October 29, 2018, for serious criminality under Section 36(1) of
+
+the Immigration and Refugee Protection Act (Act) .
+
+
+
+[2] On May 21, 2019, the Immigration Appeal Division (IAD) granted the Appellant a stay of
+
+removal for a period of 3 years based on a joint recommendation from his counsel and the
+
+Minister’s counsel . The Appellant was sent a written copy of the oral decision f rom Member [REDACTED]
+
+on June 21, 2019.
+
+
+
+[3] At the time of the appeal hearing on May 21, 2019, the Appellant had a pending criminal
+
+charge under Section 348(1)(a) of the Criminal Code of Canada . The Appellant and his counsel
+
+were aware of this pending criminal char ge at the time of the IAD hearing.
+
+
+
+[4] The Appellant was convicted on June 24, 2019, of the offence under Section 348(1)(a) of
+
+the Criminal Code and sentenced under Section 348( 1) (e) . The Minister’s representative sent a
+
+letter to the IAD dated January 26, 2 022, informing the IAD of the Appellant’s conviction on June
+
+24, 2019 . The Minister referred to Section 68(4) of the Act and asked that the stay be cancelled
+
+and that the appeal be terminated by operation of law.
+
+
+
+[5] The IAD contacted the Appellant and offere d him the opportunity to provide written
+
+submissions in response to the Minister’s request that the appeal be terminated by operation of
+
+law.
+
+
+
+[6] The Appellant’s counsel responded to the IAD request for submissions . The Appellant’s
+
+counsel asked for clarifica tion from the Minister’s representative regarding the conviction under
+
+Section 348(1)(a) of the Criminal Code . The Appellant’s counsel also made an application for an
+
+extension of time to provide disclosure on behalf of the Appellant and to make furthe...</div>
+        </div>
+        
+        <div class="case" id="case-5">
+            <div class="case-header">
+                <h2>Case 5: ID 44181</h2>
+                <p class="metrics">Expected: 6 | Extracted: 0 | 
+                   Ratio: 0.00</p>
+            </div>
+            
+            <div class="comparison">
+                <div class="comparison-column">
+                    <h3>Extracted Determinations (0)</h3>
+        <p>No determinations extracted.</p>
+                </div>
+                <div class="comparison-column">
+                    <h3>Missing Determinations (1)</h3>
+        
+                <div class="missing">
+                    <p>["['rad concurs with the rpd’s finding on this issue']", "['rad must substitute its own decision']", "['appeal is dismissed']", "['appellant is a convention refugee or a person in need of protection']", "['appellant is a convention refugee or a person in need of protection']", "['rad confirms the decision of the rpd', 'appellant is neither a convention refugee nor a person in need of protection']"]</p>
+                </div>
+                
+                </div>
+            </div>
+        
+            <div>
+                <h3>All Expected Determinations (1)</h3>
+        
+                <div class="expected">
+                    <p>["['rad concurs with the rpd’s finding on this issue']", "['rad must substitute its own decision']", "['appeal is dismissed']", "['appellant is a convention refugee or a person in need of protection']", "['appellant is a convention refugee or a person in need of protection']", "['rad confirms the decision of the rpd', 'appellant is neither a convention refugee nor a person in need of protection']"]</p>
+                </div>
+                
+            </div>
+            
+            <h3>Case Text (first portion):</h3>
+            <div class="case-text">(CA IRB)
+
+RAD File No. / N° de dossier de la S AR :
+
+
+
+
+
+REASONS FOR DECISION
+
+[1] [REDACTED] [REDACTED] (the Appellant) is a citizen of Saint Lucia. She appeals a decision of the
+
+Refugee Protection Division (RPD) denying her claim for refugee protection. The Appellant asks
+
+the Refugee Appeal Division (RAD) to set aside the decision of the RPD, and find the Appellant
+
+to be a Convention refugee, or in the alternative, refer the claim back to the RPD for
+
+redetermination. The Appellant asks for a hearing to deal with the documentation presented in the
+
+Memorandum of Appeal. No new evidence was presented in the Me morandum of Appeal.
+
+DETERMINATION
+
+[2] Pursuant to ss. 111(1)(a) of the Immigration and Refugee Protection Act (IRPA), the RAD
+
+confirms the determination of the RPD and dismisses the appeal.
+
+Background
+
+[3] The Appellant was raised by her stepmother, and does not ha ve any knowledge of her
+
+biological mother. The Appellant discovered during her teenage years that she was more attracted
+
+to girls than boys. As a result of the homophobic attitudes in Saint Lucia, the [REDACTED] became
+
+withdrawn and unhappy emotionally. The Appellant discovered a girl in the school who felt the
+
+same way, and began a nonsexual relationship. After the relationship became more physical, they
+
+were discovered by other students who made life a torment at school. Both she and her friend
+
+dropped out of secondary school in [REDACTED] 1997. The Appellant ’s father and stepmother tried to
+
+convince her to go back to school in another location, but she refused, and ran away from home.
+
+While living on the streets, a man befriended her, took her into his home, and she became
+
+sexually active with him. After the birth of a daughter on [REDACTED] [REDACTED] , 2000, the relationship
+
+ended, but she continued to live with this man in a nonsexual relationship, all the time seeing her
+
+girlfriend from high school. At the Appellant ’s wor kplace, she and her girlfriend were discovered
+
+em...</div>
+        </div>
+        
+        <div class="case" id="case-6">
+            <div class="case-header">
+                <h2>Case 6: ID 53826</h2>
+                <p class="metrics">Expected: 6 | Extracted: 0 | 
+                   Ratio: 0.00</p>
+            </div>
+            
+            <div class="comparison">
+                <div class="comparison-column">
+                    <h3>Extracted Determinations (0)</h3>
+        <p>No determinations extracted.</p>
+                </div>
+                <div class="comparison-column">
+                    <h3>Missing Determinations (1)</h3>
+        
+                <div class="missing">
+                    <p>["['stay of the removal order is cancelled', 'appeal is terminated']", "['iad has lost its jurisdiction']", "['appeal is terminated']", "['stay of the removal order is cancelled', 'appeal is terminated']", "['appeal is terminated']", "['appeal is terminated']"]</p>
+                </div>
+                
+                </div>
+            </div>
+        
+            <div>
+                <h3>All Expected Determinations (1)</h3>
+        
+                <div class="expected">
+                    <p>["['stay of the removal order is cancelled', 'appeal is terminated']", "['iad has lost its jurisdiction']", "['appeal is terminated']", "['stay of the removal order is cancelled', 'appeal is terminated']", "['appeal is terminated']", "['appeal is terminated']"]</p>
+                </div>
+                
+            </div>
+            
+            <h3>Case Text (first portion):</h3>
+            <div class="case-text">(CA IRB)
+
+IAD File No. / No de dossier de la SAI : TA7-05084 Client ID No. / N
+
+o ID client : 2437-0296 1
+
+Reasons for Decision
+
+
+
+[1] On May 8, 2008 Member [REDACTED] of the Immigration Appeal Division (IAD) granted Or[REDACTED] (the appellant) a stay (on conditions) of the deportation order issued against him on May 7, 2007. The stay was gr anted to the appellant based on the written recommendation of the respondent. The duration of the stay was for one year and it included 12 conditions. [2] On February 25, 2010 Member [REDACTED] of the IAD extended the stay for another six months because the appellant did not obtain his passport. Minister’s counsel at that time consented to the extension of the stay in order to allow the appellant to obtain his passport. [3] On November 2, 2010 the stay was further extended. On December 9, 2010 the appellant was sent a Notice of Reconsideration and on March 7, 2011 the Minister submitted a written statement indicating that the appellant had not complied with his stay and pointed to further criminality, his failure to obtain a passport and his failure to provide a Statement of Compliance. [4] At today’s hearing the appellant appeared without counsel. The Panel entered into evidence documents submitted by the Minister.
+
+1 Minister’s counsel submitted in writing the following:
+
+… you [the appellant] were granted a stay of your deportation order by the Immigration Appeal Division (IAD) of the Immigration and Refugee Board. As you were convicted of serious criminality since, your stay is now cancelled by operation of law. Your appeal is terminated. Section 68 of the Immigration and Refugee Protection Act states as follows: 68. (1) To stay a removal order, the Immigration Appeal Division must be satisfied, taking into account the best interests of a child directly affected by the decision, that sufficient humanitarian and compassionate considerations warrant special relief in light of all the circumstances of the case.
+
+
+
+1 Exhibits R...</div>
+        </div>
+        
+        <div class="case" id="case-7">
+            <div class="case-header">
+                <h2>Case 7: ID 56755</h2>
+                <p class="metrics">Expected: 6 | Extracted: 0 | 
+                   Ratio: 0.00</p>
+            </div>
+            
+            <div class="comparison">
+                <div class="comparison-column">
+                    <h3>Extracted Determinations (0)</h3>
+        <p>No determinations extracted.</p>
+                </div>
+                <div class="comparison-column">
+                    <h3>Missing Determinations (1)</h3>
+        
+                <div class="missing">
+                    <p>["['neither convention refugees nor persons in need of protection', 'reject their claims']", "['neither a convention refugee nor a person in need of protection']", "['claimant is not a person in need of protection']", "['reject his claim']", "['reject his claim']", "['claimant is not a convention refugee']"]</p>
+                </div>
+                
+                </div>
+            </div>
+        
+            <div>
+                <h3>All Expected Determinations (1)</h3>
+        
+                <div class="expected">
+                    <p>["['neither convention refugees nor persons in need of protection', 'reject their claims']", "['neither a convention refugee nor a person in need of protection']", "['claimant is not a person in need of protection']", "['reject his claim']", "['reject his claim']", "['claimant is not a convention refugee']"]</p>
+                </div>
+                
+            </div>
+            
+            <h3>Case Text (first portion):</h3>
+            <div class="case-text">(CA IRB)
+
+RPD File # / No. dossier SPR : CA3-00671 CA3-00672 1
+
+[REDACTED], the principal claimant, is a citizen of Venezuela and claims refugee protection pursuant to ss.96 and 97 of the Immigration and Refugee Protection Act. [REDACTED], the minor claimant, is the son of the principal claimant and also a citizen of Venezuela. He also claims refugee protection pursuant to ss.96 and 97 of the Act basing his claim on the claim of his mother. The principal claimant is the designate d representative of the minor claimant. ALLEGATIONS The principal claimant alleged that she came to Canada to seek protection because she was constantly harassed by one [REDACTED] XX who was her friend in Venezuela and that the said friend threatened her life. She alleged that the threats were the result of her refusing the sexual advances of [REDACTED] who is a lesbian. DETERMINATION I find that the claimant is not a Convention refugee, as she does not have a well- founded fear of persecution for a Convention ground in Venezuela. I also find that the claimant is not a person in need of protection in that her removal to Venezuela would not subject her personally to a risk to her life or to a risk of cruel and unusual treatment or punishment, and there are no substantial grounds to believe that her removal to Venezuela will subject her personally to a danger of torture. I find that the minor claimant is neither a Convention refugee nor a person in need of protection for the same reasons as his mother as his claim depended on the circumstances of his mother.
+
+2004 CanLII 56755 (CA IRB)
+
+RPD File # / No. dossier SPR : CA3-00671 CA3-00672 2
+
+ANALYSIS The claimant testified that she befriended [REDACTED] in 1998 when her family moved to the city of [REDACTED] where her father operated a restaurant. Her newfound friend frequently came to her father’s restaurant where she worked so they got close. After a while [REDACTED] told the claimant that she was in love with th e claimant. She responded tha...</div>
+        </div>
+        
+        <div class="case" id="case-8">
+            <div class="case-header">
+                <h2>Case 8: ID 90204</h2>
+                <p class="metrics">Expected: 6 | Extracted: 0 | 
+                   Ratio: 0.00</p>
+            </div>
+            
+            <div class="comparison">
+                <div class="comparison-column">
+                    <h3>Extracted Determinations (0)</h3>
+        <p>No determinations extracted.</p>
+                </div>
+                <div class="comparison-column">
+                    <h3>Missing Determinations (1)</h3>
+        
+                <div class="missing">
+                    <p>["['302 (c.a.']", "['reject her claim']", "['negative']", "['claimant is not a convention refugee and is not a person in need of protection']", "['her claim fails']", "['claimant is not a convention refugee', 'not a person in need of protection']"]</p>
+                </div>
+                
+                </div>
+            </div>
+        
+            <div>
+                <h3>All Expected Determinations (1)</h3>
+        
+                <div class="expected">
+                    <p>["['302 (c.a.']", "['reject her claim']", "['negative']", "['claimant is not a convention refugee and is not a person in need of protection']", "['her claim fails']", "['claimant is not a convention refugee', 'not a person in need of protection']"]</p>
+                </div>
+                
+            </div>
+            
+            <h3>Case Text (first portion):</h3>
+            <div class="case-text">(CA IRB)
+
+RPD File No. :
+
+[1] [REDACTED] [REDACTED] [REDACTED] [REDACTED], a citizen of Colombia, claims refugee protection pursuant to ss. 96 and 97(1) of the Immigration and Refugee Protection Act
+
+1 (IRPA). ALLEGATIONS [2] The PC alleged the following:
+
+2 [3] She fled Colombia due to her fear of the Revolutionary Armed Forces of Colombia (FARC). Her son was kidnap ped by the FARC in [REDACTED] 2006 because of his inability to pay extortion demands. He r granddaughter also fled Colombia because of threats from the FARC due to her member ship in a political party. She operated a [REDACTED] business in Colombia. The claimant went to the United States of America (USA) in [REDACTED] 2007 and returned in [REDACTED] XX 2008. In [REDACTED] 2008, FARC called her and told her to cooperate with their cause. In [REDACTED] 2008, the FARC told her to [REDACTED] [REDACTED] for them by [REDACTED]. She di d not have money [REDACTED] [REDACTED]. In [REDACTED] 2008, she left Columbia and went to the USA again. She entered Canada on [REDACTED], 2008 and claimed protection a few days after. DETERMINATION [4] I find that the claimant is not a Convention refugee and she is not in need Canada's protection for the following reasons: Identity [5] I am satisfied that the claimant is a Colombian citizen because of Exhibit R/A-2, in particular her passport. Determinative issue [6] Credibility is the determinative issue in this case.
+
+
+
+1 As enacted by S.C. 20001, c. 27.
+
+2 Exhibit C-1, Personal Information Form Narrative.
+
+2009 CanLII 90204 (CA IRB)
+
+RPD File No. :
+
+ANALYSIS [7] Credibility is central to all on claims for protection in Canada. Maldonado
+
+3 guides us the testimony of the claimant given un der oath or affirmation is presumed to be truthful unless there reasons to doubt. I find that, on a balance of probabilities, the claimant is not credible and her actions ar e inconsistent with her alleged fear of persecution or harm in Colombia. Reasons for my determination follow. Lack of ...</div>
+        </div>
+        
+        <div class="case" id="case-9">
+            <div class="case-header">
+                <h2>Case 9: ID 90457</h2>
+                <p class="metrics">Expected: 6 | Extracted: 0 | 
+                   Ratio: 0.00</p>
+            </div>
+            
+            <div class="comparison">
+                <div class="comparison-column">
+                    <h3>Extracted Determinations (0)</h3>
+        <p>No determinations extracted.</p>
+                </div>
+                <div class="comparison-column">
+                    <h3>Missing Determinations (1)</h3>
+        
+                <div class="missing">
+                    <p>["['neither a convention refugee nor a person in need of protection']", "['302 (c.a.']", "['negative']", "['pc is not a person in need of protection']", "['panel therefore rejects their claims']", "['claimants are neither convention refugees nor are they persons in need of protection']"]</p>
+                </div>
+                
+                </div>
+            </div>
+        
+            <div>
+                <h3>All Expected Determinations (1)</h3>
+        
+                <div class="expected">
+                    <p>["['neither a convention refugee nor a person in need of protection']", "['302 (c.a.']", "['negative']", "['pc is not a person in need of protection']", "['panel therefore rejects their claims']", "['claimants are neither convention refugees nor are they persons in need of protection']"]</p>
+                </div>
+                
+            </div>
+            
+            <h3>Case Text (first portion):</h3>
+            <div class="case-text">(CA IRB)
+
+RPD File No. :
+
+[1] [REDACTED], the principal claimant (PC), is a citizen of the Republic of Haiti (Haiti) who seeks refugee protection pursu ant to subsections 96 and 97(1) of the Immigration and Refugee Protection Act
+
+1 (IRPA). The claim of her daughter, [REDACTED], the minor claimant, was joined pursuant to Rule 49.1.
+
+2 The panel appointed the XX as the Designated Representative (DR) of the minor claimant. Allegations [2] The PC alleges that she joined the polit ical party Organisation du Peuple en Lutte (OPL). She alleges that on [REDACTED] 1997, a bu llet entered her home, which prompted her to go into hiding. She travelled with her daught er to the USA in [REDACTED] 1997. She claims to have made an asylum claim which was late r refused. She made a claim for protection in Canada in [REDACTED] 2007. She claims a well -founded fear of persecution for reason of her political opinion and her membership in a particular social group, namely her gender. [3] The minor claimant has French nationalit y by virtue of her birth at [REDACTED] [REDACTED]. The PC did not advance any evidence of perse cution or personalized risk for the minor claimant in her country of nationality. Issues and Determination [4] The panel finds that the claimants are neither Convention refugees, nor are they persons in need of protection. In reaching this decision, the panel considered the Chairperson’s Guidelines on Women Refugee Claimants Fearing Gender-Related Persecution.
+
+3 The determinative issues were the credi bility of the claimant, the subjective fear and the personalized risk. The panel’s reasons are as follows:
+
+
+
+1 Immigration and Refugee Protection Act , S.C. 2001, c. 27.
+
+2 Refugee Protection Division Rules , SOR/2002-228 11 June 2002.
+
+3 Guidelines on Women Refugee Claimants Fear ing Gender-Related Persecution: Guidelines Issued by the Chairperson pursuant to section 65(3) of the Immigration Act, Immigration and Refugee Board, Ottawa, Canada, November 25, 1996, as cont...</div>
+        </div>
+        
+        <div class="case" id="case-10">
+            <div class="case-header">
+                <h2>Case 10: ID 93085</h2>
+                <p class="metrics">Expected: 6 | Extracted: 0 | 
+                   Ratio: 0.00</p>
+            </div>
+            
+            <div class="comparison">
+                <div class="comparison-column">
+                    <h3>Extracted Determinations (0)</h3>
+        <p>No determinations extracted.</p>
+                </div>
+                <div class="comparison-column">
+                    <h3>Missing Determinations (1)</h3>
+        
+                <div class="missing">
+                    <p>["['claimants are determined to be neither convention refugees nor persons in need of protection']", "['they are not convention refugees']", "['claimants are not convention refugees']", "['claimants are not persons in need of protection']", "['board rejects the claims']", "['claims for refugee protection are rejected']"]</p>
+                </div>
+                
+                </div>
+            </div>
+        
+            <div>
+                <h3>All Expected Determinations (1)</h3>
+        
+                <div class="expected">
+                    <p>["['claimants are determined to be neither convention refugees nor persons in need of protection']", "['they are not convention refugees']", "['claimants are not convention refugees']", "['claimants are not persons in need of protection']", "['board rejects the claims']", "['claims for refugee protection are rejected']"]</p>
+                </div>
+                
+            </div>
+            
+            <h3>Case Text (first portion):</h3>
+            <div class="case-text">(CA IRB)
+
+[1] The [REDACTED] [REDACTED] [REDACTED] [REDACTED] , [REDACTED] [REDACTED] , [REDACTED] [REDACTED] [REDACTED] [REDACTED] [REDACTED] ,
+
+[REDACTED] [REDACTED] , [REDACTED] [REDACTED] , and [REDACTED] [REDACTED] , citizens of the Slovak Republic, seek refugee
+
+protection pursuant to sections 96 and 97(1) of the Immigration and Refu gee Protection Act1
+
+(IRPA). The claimants’ identities have been established through identity documents filed in
+
+evidence.2
+
+DESIGNATIVE REPRESENTATIVE
+
+[2] [REDACTED] , lawyer, Law Offices of [REDACTED] [REDACTED] , acted as Designated Represtenative
+
+for the claimants who wer e all minors.
+
+[3] Social Worker, [REDACTED] , from the Children’s Aid Society, was in attendance.
+
+ALLEGATIONS
+
+[4] The following is a summary of the claimants’ allegations:
+
+[5] The claimants have not lived with their parents for over a year. Presently they reside with
+
+two different foster families. They are wards of the state in the care of the Children’s Aid Society.
+
+[6] They alleged that they have been physically abused by their parents through neglect and
+
+unwillingness to provide the basic necessities of life. They alleged that their mother is lazy and
+
+required that they do most of the housework. She does not care about them, she does not cook and
+
+clean the house and she does not care if they go to school or not. Their father repeatedly hit them
+
+even for the simplest of thi ngs. They alleged that their father is usually drunk and physically and
+
+verbally abusive. While they have always been physically and verbally abused even in their
+
+country, it has gotten worse here in Canada.
+
+[7] The claimants alleged that in their country they do not give jobs to Roma, and when their
+
+father did work he would come home most often drunk and he and their mother would get into
+
+fights. The alleged that their parents would not be able to take care of them if they return to their
+
+country.
+
+
+
+1 As enacted by S.C. 2001, c. 27.
+
+2 Exhibit R/A -2, Information rec...</div>
+        </div>
+        
+        <div class="case" id="case-11">
+            <div class="case-header">
+                <h2>Case 11: ID 90204</h2>
+                <p class="metrics">Expected: 6 | Extracted: 0 | 
+                   Ratio: 0.00</p>
+            </div>
+            
+            <div class="comparison">
+                <div class="comparison-column">
+                    <h3>Extracted Determinations (0)</h3>
+        <p>No determinations extracted.</p>
+                </div>
+                <div class="comparison-column">
+                    <h3>Missing Determinations (1)</h3>
+        
+                <div class="missing">
+                    <p>["['302 (c.a.']", "['reject her claim']", "['negative']", "['claimant is not a convention refugee and is not a person in need of protection']", "['her claim fails']", "['claimant is not a convention refugee', 'not a person in need of protection']"]</p>
+                </div>
+                
+                </div>
+            </div>
+        
+            <div>
+                <h3>All Expected Determinations (1)</h3>
+        
+                <div class="expected">
+                    <p>["['302 (c.a.']", "['reject her claim']", "['negative']", "['claimant is not a convention refugee and is not a person in need of protection']", "['her claim fails']", "['claimant is not a convention refugee', 'not a person in need of protection']"]</p>
+                </div>
+                
+            </div>
+            
+            <h3>Case Text (first portion):</h3>
+            <div class="case-text">(CA IRB)
+
+RPD File No. :
+
+[1] [REDACTED] [REDACTED] [REDACTED] [REDACTED], a citizen of Colombia, claims refugee protection pursuant to ss. 96 and 97(1) of the Immigration and Refugee Protection Act
+
+1 (IRPA). ALLEGATIONS [2] The PC alleged the following:
+
+2 [3] She fled Colombia due to her fear of the Revolutionary Armed Forces of Colombia (FARC). Her son was kidnap ped by the FARC in [REDACTED] 2006 because of his inability to pay extortion demands. He r granddaughter also fled Colombia because of threats from the FARC due to her member ship in a political party. She operated a [REDACTED] business in Colombia. The claimant went to the United States of America (USA) in [REDACTED] 2007 and returned in [REDACTED] XX 2008. In [REDACTED] 2008, FARC called her and told her to cooperate with their cause. In [REDACTED] 2008, the FARC told her to [REDACTED] [REDACTED] for them by [REDACTED]. She di d not have money [REDACTED] [REDACTED]. In [REDACTED] 2008, she left Columbia and went to the USA again. She entered Canada on [REDACTED], 2008 and claimed protection a few days after. DETERMINATION [4] I find that the claimant is not a Convention refugee and she is not in need Canada's protection for the following reasons: Identity [5] I am satisfied that the claimant is a Colombian citizen because of Exhibit R/A-2, in particular her passport. Determinative issue [6] Credibility is the determinative issue in this case.
+
+
+
+1 As enacted by S.C. 20001, c. 27.
+
+2 Exhibit C-1, Personal Information Form Narrative.
+
+2009 CanLII 90204 (CA IRB)
+
+RPD File No. :
+
+ANALYSIS [7] Credibility is central to all on claims for protection in Canada. Maldonado
+
+3 guides us the testimony of the claimant given un der oath or affirmation is presumed to be truthful unless there reasons to doubt. I find that, on a balance of probabilities, the claimant is not credible and her actions ar e inconsistent with her alleged fear of persecution or harm in Colombia. Reasons for my determination follow. Lack of ...</div>
+        </div>
+        
+        <div class="case" id="case-12">
+            <div class="case-header">
+                <h2>Case 12: ID 90457</h2>
+                <p class="metrics">Expected: 6 | Extracted: 0 | 
+                   Ratio: 0.00</p>
+            </div>
+            
+            <div class="comparison">
+                <div class="comparison-column">
+                    <h3>Extracted Determinations (0)</h3>
+        <p>No determinations extracted.</p>
+                </div>
+                <div class="comparison-column">
+                    <h3>Missing Determinations (1)</h3>
+        
+                <div class="missing">
+                    <p>["['neither a convention refugee nor a person in need of protection']", "['302 (c.a.']", "['negative']", "['pc is not a person in need of protection']", "['panel therefore rejects their claims']", "['claimants are neither convention refugees nor are they persons in need of protection']"]</p>
+                </div>
+                
+                </div>
+            </div>
+        
+            <div>
+                <h3>All Expected Determinations (1)</h3>
+        
+                <div class="expected">
+                    <p>["['neither a convention refugee nor a person in need of protection']", "['302 (c.a.']", "['negative']", "['pc is not a person in need of protection']", "['panel therefore rejects their claims']", "['claimants are neither convention refugees nor are they persons in need of protection']"]</p>
+                </div>
+                
+            </div>
+            
+            <h3>Case Text (first portion):</h3>
+            <div class="case-text">(CA IRB)
+
+RPD File No. :
+
+[1] [REDACTED], the principal claimant (PC), is a citizen of the Republic of Haiti (Haiti) who seeks refugee protection pursu ant to subsections 96 and 97(1) of the Immigration and Refugee Protection Act
+
+1 (IRPA). The claim of her daughter, [REDACTED], the minor claimant, was joined pursuant to Rule 49.1.
+
+2 The panel appointed the XX as the Designated Representative (DR) of the minor claimant. Allegations [2] The PC alleges that she joined the polit ical party Organisation du Peuple en Lutte (OPL). She alleges that on [REDACTED] 1997, a bu llet entered her home, which prompted her to go into hiding. She travelled with her daught er to the USA in [REDACTED] 1997. She claims to have made an asylum claim which was late r refused. She made a claim for protection in Canada in [REDACTED] 2007. She claims a well -founded fear of persecution for reason of her political opinion and her membership in a particular social group, namely her gender. [3] The minor claimant has French nationalit y by virtue of her birth at [REDACTED] [REDACTED]. The PC did not advance any evidence of perse cution or personalized risk for the minor claimant in her country of nationality. Issues and Determination [4] The panel finds that the claimants are neither Convention refugees, nor are they persons in need of protection. In reaching this decision, the panel considered the Chairperson’s Guidelines on Women Refugee Claimants Fearing Gender-Related Persecution.
+
+3 The determinative issues were the credi bility of the claimant, the subjective fear and the personalized risk. The panel’s reasons are as follows:
+
+
+
+1 Immigration and Refugee Protection Act , S.C. 2001, c. 27.
+
+2 Refugee Protection Division Rules , SOR/2002-228 11 June 2002.
+
+3 Guidelines on Women Refugee Claimants Fear ing Gender-Related Persecution: Guidelines Issued by the Chairperson pursuant to section 65(3) of the Immigration Act, Immigration and Refugee Board, Ottawa, Canada, November 25, 1996, as cont...</div>
+        </div>
+        
+        <div class="case" id="case-13">
+            <div class="case-header">
+                <h2>Case 13: ID 100436</h2>
+                <p class="metrics">Expected: 5 | Extracted: 0 | 
+                   Ratio: 0.00</p>
+            </div>
+            
+            <div class="comparison">
+                <div class="comparison-column">
+                    <h3>Extracted Determinations (0)</h3>
+        <p>No determinations extracted.</p>
+                </div>
+                <div class="comparison-column">
+                    <h3>Missing Determinations (1)</h3>
+        
+                <div class="missing">
+                    <p>["['claimant is a convention refugee']", "['302 (c.a.']", "['reject his claim']", "['negative']", "['ifa fails on the first prong']"]</p>
+                </div>
+                
+                </div>
+            </div>
+        
+            <div>
+                <h3>All Expected Determinations (1)</h3>
+        
+                <div class="expected">
+                    <p>["['claimant is a convention refugee']", "['302 (c.a.']", "['reject his claim']", "['negative']", "['ifa fails on the first prong']"]</p>
+                </div>
+                
+            </div>
+            
+            <h3>Case Text (first portion):</h3>
+            <div class="case-text">(CA IRB)
+
+RPD File No. :
+
+TB0 -06456
+
+[1] As the claimants are citizens of two different countries, I have dealt with the claims from
+
+each country separately. As well, I have written separate reasons for the two claimants who are
+
+citizens of Nigeria as I have rendered different decisions in each claim. As the allegations are based
+
+on the same set of facts, I have writt en one set of allegations.
+
+[2] [REDACTED] [REDACTED] XX XX [REDACTED] (the claimant) and [REDACTED] [REDACTED] [REDACTED] XX [REDACTED] (the minor
+
+female claimant), citizens of Nigeria as established by certified true copies of their passports, 1 and
+
+[REDACTED] [REDACTED] [REDACTED] [REDACTED] [REDACTED] (the minor male claimant), a c itizen of the United States
+
+of America (U.S.) as established by a certified true copy of his passport,2 claim refugee protection
+
+pursuant to sections 96 and 97(1) of the Immigration and Refugee Protection Act (IRPA ).3
+
+ALLEGATIONS
+
+[3] The claimants alleged the following.
+
+[4] The claimant lived in [REDACTED] , [REDACTED] State. She married [REDACTED] [REDACTED] XX [REDACTED] XX [REDACTED]
+
+in 1996. His family was very traditional and worshipped gods, but he was not interested in those
+
+practices. The claimant and her husband were Christian and refused to pa rticipate in his family’s
+
+rituals, although the family continued to carry out rites related to their children and pressured them
+
+to participate.
+
+[5] The claimant’s husband began going out with other women and they divorced in or around
+
+2001. She applied for i mmigration to Canada under the skilled worker program. She also traveled
+
+to the U.S. in or around [REDACTED] 2003 with her daughter born in Nigeria and son born in the U.S. on
+
+a previous trip. She lived common -law with an American citizen from [REDACTED] 2003 until
+
+[REDACTED] 2004, and as a result, she dropped her application to immigrate to Canada. After she and
+
+her common -law partner separated, she reconciled with her ex -husband and they re...</div>
+        </div>
+        
+        <div class="case" id="case-14">
+            <div class="case-header">
+                <h2>Case 14: ID 101336</h2>
+                <p class="metrics">Expected: 5 | Extracted: 0 | 
+                   Ratio: 0.00</p>
+            </div>
+            
+            <div class="comparison">
+                <div class="comparison-column">
+                    <h3>Extracted Determinations (0)</h3>
+        <p>No determinations extracted.</p>
+                </div>
+                <div class="comparison-column">
+                    <h3>Missing Determinations (1)</h3>
+        
+                <div class="missing">
+                    <p>["['appeal is terminated']", "['appeal is terminated']", "['appeal is terminated']", "['appeal is terminated']", "['appeal is terminated']"]</p>
+                </div>
+                
+                </div>
+            </div>
+        
+            <div>
+                <h3>All Expected Determinations (1)</h3>
+        
+                <div class="expected">
+                    <p>["['appeal is terminated']", "['appeal is terminated']", "['appeal is terminated']", "['appeal is terminated']", "['appeal is terminated']"]</p>
+                </div>
+                
+            </div>
+            
+            <h3>Case Text (first portion):</h3>
+            <div class="case-text">(CA IRB)
+
+IAD File No. / No de dossier de la SAI : TA9 -03094
+
+Client ID No. / No ID client : 2174 -8410
+
+
+
+1
+
+Reasons for Decision
+
+
+
+
+
+INTRODUCTION
+
+
+
+[1] This is an appeal pursuant to section 63(3) of the Immigration and Refugee Protection
+
+Act1 (IRPA ) of a removal order made against the appellant.
+
+
+
+Decision
+
+
+
+[2] Having considered the evidence and submissions, the panel finds that the appeal is
+
+terminated.
+
+
+
+Background
+
+
+
+[3] The Immigration Division issued a Deportation Order in February 2009 against the
+
+appellant based on IRPA section 36(1)(a),2 and the appellant appealed that Order. On November
+
+13, 2009, the Immigration A ppeal Division (IAD) stayed that removal order for four years.
+
+
+
+[4] In April 2012, the appellant was convicted of serious criminality Criminal Code offences
+
+and sentenced to four years, six months and three weeks jail (considering five months and 20
+
+days of p re-sentence custody).
+
+
+
+[5] On May 24, 2012, the respondent submitted in writing that the appeal is terminated by
+
+operation of law and the appellant was requested to make any submissions by July 8 , 2012 . No
+
+submissions have been received from the appellant. This matter was dealt with in chambers.
+
+
+
+
+
+1 Immigration and Refugee Protection Act , S.C. 2001, c. 27.
+
+2 Record, page 34.
+
+2012 CanLII 101336 (CA IRB)
+
+IAD File No. / No de dossier de la SAI : TA9 -03094
+
+Client ID No. / No ID client : 2174 -8410
+
+
+
+2 Analysis
+
+
+
+[6] A person may be inadmissible based on serious criminality:3
+
+36. (1) A permanent resident or a foreign national is inadmissible on grounds of
+
+serious criminality for
+
+(a) having been convicted in Canada of an offence under an Act of Parliament
+
+punishable by a maximum term of imprisonment of at least 10 years, or of an
+
+offence under an Act of Parliament for which a term of imprisonment of more
+
+than six months has been imposed;
+
+[7] Additionally, a removal orde r may be stayed, and an appeal may be terminated:
+
+68. (4) If the Immigration Appeal Div...</div>
+        </div>
+        
+        <div class="case" id="case-15">
+            <div class="case-header">
+                <h2>Case 15: ID 104937</h2>
+                <p class="metrics">Expected: 5 | Extracted: 0 | 
+                   Ratio: 0.00</p>
+            </div>
+            
+            <div class="comparison">
+                <div class="comparison-column">
+                    <h3>Extracted Determinations (0)</h3>
+        <p>No determinations extracted.</p>
+                </div>
+                <div class="comparison-column">
+                    <h3>Missing Determinations (1)</h3>
+        
+                <div class="missing">
+                    <p>["['appeal is terminated']", "['appeal is terminated']", "['appeal is terminated']", "['appeal is terminated']", "['appeal is terminated']"]</p>
+                </div>
+                
+                </div>
+            </div>
+        
+            <div>
+                <h3>All Expected Determinations (1)</h3>
+        
+                <div class="expected">
+                    <p>["['appeal is terminated']", "['appeal is terminated']", "['appeal is terminated']", "['appeal is terminated']", "['appeal is terminated']"]</p>
+                </div>
+                
+            </div>
+            
+            <h3>Case Text (first portion):</h3>
+            <div class="case-text">(CA IRB)
+
+IAD File No. / No de dossier de la SAI: TA9 -09825
+
+Client ID No. / No ID client: 2942 -9246
+
+
+
+
+
+1
+
+
+
+REASONS FOR DECISION
+
+Introduction
+
+[1] This is an appeal pursuant to section 63( 3) of the Immigration and Refugee Protect ion
+
+Act1 (IRPA ) of a removal order made against the appellant .
+
+Decision
+
+[2] Having considered the evidence and submissions, the panel finds that the appeal is
+
+terminated.
+
+Background
+
+[3] The Immigration Division issued a Deportation Order in April 200 9 against the appellant
+
+based on IRPA s. 36(1)(a) ,2 and the appellant appealed that Order. On April 30, 2010, the
+
+Immigration Appeal Division (IAD) stayed that removal order for three years.
+
+[4] In December 2010, the appellant was convicted of assault and criminal harassme nt
+
+(offence dates October 2010), and sentenced to a total of 85 days jail (intermittent; with
+
+consideration of 35 days pre -sentence custody) and probation for 18 months.
+
+[5] On May 5 , 201 1, the respondent submitted in writing that the appeal is terminated by
+
+operation of law; the appellant was requested to make any submissions by June 28, 2013. No
+
+submissions have been received from the appellant. This matter was dealt with in chambers.
+
+Analysis
+
+[6] A person may be inadmissible based on serious criminality:3
+
+36. (1) A permanent resident or a foreign national is inadmissible on grounds of
+
+serious criminality for
+
+
+
+1 Immigration and Refugee Protection Act , S.C. 2001, c. 27.
+
+2 Record, page 22.
+
+3 Immigrati on and Refugee Protection Act , S.C. 2001, c. 27.
+
+2013 CanLII 104937 (CA IRB)
+
+IAD File No. / No de dossier de la SAI: TA9 -09825
+
+Client ID No. / No ID client: 2942 -9246
+
+
+
+
+
+2
+
+(a) having been convicted in Canada of an offence under an Act
+
+of Parliament punishable by a maximum term of imprisonment of
+
+at least 10 years, or of an off ence under an Act of Parliament for
+
+which a term of imprisonment of more than six months has been
+
+imposed;
+
+[7] A removal order may be stayed ; additionally...</div>
+        </div>
+        
+        <div class="case" id="case-16">
+            <div class="case-header">
+                <h2>Case 16: ID 114347</h2>
+                <p class="metrics">Expected: 6 | Extracted: 1 | 
+                   Ratio: 0.17</p>
+            </div>
+            
+            <div class="comparison">
+                <div class="comparison-column">
+                    <h3>Extracted Determinations (1)</h3>
+        
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>DETERMINATION S 
+[4] The Principal Appellant’s appeal is allowed</p>
+                </div>
+                
+                </div>
+                <div class="comparison-column">
+                    <h3>Missing Determinations (1)</h3>
+        
+                <div class="missing">
+                    <p>["['rpd’s determination is set aside']", "['overturn its finding']", "['substitute my determination', 'appellant is a convention refugee']", "['appeal is allowed']", "['confirm the decision of the rpd', 'appellants are neither convention refugees nor persons in need of protection']", "['appeals are dismissed']"]</p>
+                </div>
+                
+                </div>
+            </div>
+        
+            <div>
+                <h3>All Expected Determinations (1)</h3>
+        
+                <div class="expected">
+                    <p>["['rpd’s determination is set aside']", "['overturn its finding']", "['substitute my determination', 'appellant is a convention refugee']", "['appeal is allowed']", "['confirm the decision of the rpd', 'appellants are neither convention refugees nor persons in need of protection']", "['appeals are dismissed']"]</p>
+                </div>
+                
+            </div>
+            
+            <h3>Case Text (first portion):</h3>
+            <div class="case-text">(CA IRB)
+
+RAD File / Dossier de la SAR : TB8 -05949
+
+TB8 -05950 / TB8 -05951
+
+
+
+
+
+RAD.25.02 ( September 18 , 2018)
+
+Disponible en français 2
+
+REASONS FOR DECISION
+
+
+
+INTRODUCTION
+
+[1] [REDACTED] [REDACTED] [REDACTED] (the “ Principal Appellant”) is a citizen of Venezuela . [REDACTED]
+
+[REDACTED] [REDACTED] [REDACTED] (the “Female Appellant”) is a citizen of both Venezuela and Iran. [REDACTED]
+
+[REDACTED] [REDACTED] [REDACTED] (the “Minor Appellant”) is a citizen of both Venezuela and the United
+
+States (US). They are appealing a decision of the Refugee Protection Division (RPD) denying
+
+their claim s for refugee protection.
+
+[2] The Principal Appellant’s claim was refused on the grou nds that he was found not
+
+credible. The Female and Minor Appellants were found not to be refugees or persons in need of
+
+protection as they had not established claims against Iran or the US respectively.
+
+[3] The Principal Appellant was appointed as the Designat ed Representative (DR) for the
+
+Minor Appellant at the RPD.
+
+DETERMINATION S
+
+[4] The Principal Appellant’s appeal is allowed. The Female and Minor Appellants’ appeals
+
+are dismissed.
+
+BACKGROUND
+
+[5] The Principal Appellant alleges that he was a senior government civil servant with an 18 -
+
+year career in Venezuela. The Principal Appellant began to voice disagreement with his
+
+superiors about the actions of the government, including forcing his workers to attend pro -
+
+government rallies, and the firings of workers who expresse d dissent with the government.
+
+[6] The Principal Appellant alleges that he and his family were visited by the Bolivarian
+
+National Intelligence Service (SEBIN), collectivos and other state agents as a result of his
+
+2019 CanLII 114347 (CA IRB)
+
+RAD File / Dossier de la SAR : TB8 -05949
+
+TB8 -05950 / TB8 -05951
+
+
+
+
+
+RAD.25.02 ( September 18 , 2018)
+
+Disponible en français 3
+
+expressions of opposition. The Appellants deci ded to flee Venezuela and come to Canada where
+
+they made their refugee claims.
+
+[7...</div>
+        </div>
+        
+        <div class="case" id="case-17">
+            <div class="case-header">
+                <h2>Case 17: ID 122958</h2>
+                <p class="metrics">Expected: 5 | Extracted: 0 | 
+                   Ratio: 0.00</p>
+            </div>
+            
+            <div class="comparison">
+                <div class="comparison-column">
+                    <h3>Extracted Determinations (0)</h3>
+        <p>No determinations extracted.</p>
+                </div>
+                <div class="comparison-column">
+                    <h3>Missing Determinations (1)</h3>
+        
+                <div class="missing">
+                    <p>["['rejects the claim of the principal appellant’s son']", "['panel sets aside the determination of the rpd', 'appellants are persons in need of protection']", "['appellant is a person in need of protection']", "['appellant is not excluded from the definition of refugee']", "['substitutes the decision']"]</p>
+                </div>
+                
+                </div>
+            </div>
+        
+            <div>
+                <h3>All Expected Determinations (1)</h3>
+        
+                <div class="expected">
+                    <p>["['rejects the claim of the principal appellant’s son']", "['panel sets aside the determination of the rpd', 'appellants are persons in need of protection']", "['appellant is a person in need of protection']", "['appellant is not excluded from the definition of refugee']", "['substitutes the decision']"]</p>
+                </div>
+                
+            </div>
+            
+            <h3>Case Text (first portion):</h3>
+            <div class="case-text">(CA IRB)
+
+RAD File / Dossier de la SAR : VB9 -07031 / VB9 -07032
+
+VB9 -07033 / VB9 -07034 / VB9 -07035
+
+
+
+
+
+RAD.25.02 (January, 2020)
+
+Disponible en français 2
+
+REASONS FOR DECISION
+
+
+
+OVERVIEW
+
+
+
+[1] [REDACTED] [REDACTED] [REDACTED] (Principal Appellant ), [REDACTED] [REDACTED] [REDACTED] (Principal
+
+Appellant’s Spouse ), [REDACTED] [REDACTED] [REDACTED] (Principal Appellant’s Son ), [REDACTED] [REDACTED] [REDACTED]
+
+[REDACTED] (Female Appellant ) and [REDACTED] [REDACTED] [REDACTED] (Female Appellant’s Son ) appeal a
+
+decision of the Refugee Protection Division (RPD) rejecting their claims for refugee protection.
+
+They request that the Refugee Appeal Division (RAD) set aside the RPD ’s decision and find that
+
+the Appellants are Convention1 refugees or persons in need of protection or in the alternative that
+
+the RAD set aside the RPD decision and refer the matter back to the RPD for reconsideration
+
+before another Panel.
+
+
+
+DETERMINATION OF THE APPEAL
+
+
+
+[2] Pursuant to section 111(1)(a) of the Immigration and Refugee Protection Act (IRPA ),2 the
+
+Panel confirms the determination of the RPD, namely, that the Appellants are neither Convention
+
+refugees pursuant to section 96 of the IRPA nor are they persons in need of protection pursuant
+
+to section 97 of the IRPA .
+
+
+
+BACKGROUND
+
+
+
+[3] The Principal Appellant and the Principal Appellant’s Spouse are citizens of Colombia.
+
+They were also permanent residents of Chile. The Principal Appellant’s Son is a citizen of Chile.
+
+The Principal Appellants was appointed as the Designated Representative of his son at the RPD.
+
+The Panel has recognized the Principal Appellant as the Designated Representative of his son for
+
+the purpose of this appeal.
+
+
+
+[4] The Female Appellant and the Female Appellant’s Son are both citizens of Colombia.
+
+The Female Appellant was appointed as the Designated Representative of her son at the RPD
+
+2020 CanLII 122958 (CA IRB)
+
+RAD File / Dossier de la SAR : VB9 -07031 / VB9 -07032
+
+VB9 -07033 / VB...</div>
+        </div>
+        
+        <div class="case" id="case-18">
+            <div class="case-header">
+                <h2>Case 18: ID 123290</h2>
+                <p class="metrics">Expected: 5 | Extracted: 0 | 
+                   Ratio: 0.00</p>
+            </div>
+            
+            <div class="comparison">
+                <div class="comparison-column">
+                    <h3>Extracted Determinations (0)</h3>
+        <p>No determinations extracted.</p>
+                </div>
+                <div class="comparison-column">
+                    <h3>Missing Determinations (1)</h3>
+        
+                <div class="missing">
+                    <p>["['rad dismisses the appeal and', 'confirms the decision of the rpd', 'appellants are neither convention refugees nor persons in need of protection']", "['claim therefore fails']", "['not a convention refugee or a person in need of protection']", "['her claim fails']", "['appellant is not a person in need of protection']"]</p>
+                </div>
+                
+                </div>
+            </div>
+        
+            <div>
+                <h3>All Expected Determinations (1)</h3>
+        
+                <div class="expected">
+                    <p>["['rad dismisses the appeal and', 'confirms the decision of the rpd', 'appellants are neither convention refugees nor persons in need of protection']", "['claim therefore fails']", "['not a convention refugee or a person in need of protection']", "['her claim fails']", "['appellant is not a person in need of protection']"]</p>
+                </div>
+                
+            </div>
+            
+            <h3>Case Text (first portion):</h3>
+            <div class="case-text">(CA IRB)
+
+RAD File / Dossier de la SAR : VB9 -06106
+
+VB9 -06107 / VB9 -06108
+
+
+
+
+
+RAD.25.02 ( January , 20 20)
+
+Disponible en français 2
+
+REASONS FOR DECISION
+
+
+
+OVERVIEW
+
+
+
+[1] [REDACTED] [REDACTED] (Principal Appellant) , and [REDACTED] [REDACTED] (Associate Appellant) , and
+
+[REDACTED] [REDACTED] (Minor Appellant) , (collectively the Appellants), appeal a decision of the
+
+Refugee Protection Division (RPD), dated July 19, 2019, rejecting their claims for refugee
+
+protection on the grounds of an Internal Flight Alte rnative (IFA) in Abuja, Ibadan or Port
+
+Harcourt. The Principal Appellant was the Designated Representative for the Minor Appellant in
+
+this proceeding. I have conducted an independent analysis of all the evidence concerned, and
+
+have determined the Appellant s are not Convention1 Refugees or persons in need of protection .
+
+
+
+BACKGROUND
+
+
+
+[2] The Principal Appellant and the Associate Appellant both completed [REDACTED] school in
+
+Ukraine, and the Associate Appellant has worked as a [REDACTED] in Nigeria. The Principal
+
+Appellant also studied [REDACTED] in Dubai and the Associate Appellant lived for some time in South
+
+Korea. The Associate Appellant’s father was a very wealthy man who comes from a large,
+
+polygamous family in Nigeria. He died suddenly, leaving investments in South Korea, the United
+
+States (US) , and Nigeria and several properties and businesses in Nigeria, but no will. The
+
+Associate Appellant has a half -brother, [REDACTED] , who has a different mother, and who is
+
+aggrieved because of his alleged inferior treatment by the family and also believes that, as he is
+
+the oldest son, he is entitled to control his late father’s estate. Additionally, the extended family
+
+of the Associate Appellant disliked her mother because she is not from their tribe and is
+
+originally from Ghana. The Associate Appellant has been harassed, assaulted and threatened. In
+
+[REDACTED] 2015, the [REDACTED] moved from Benin City to Abuja and stayed with the Prin...</div>
+        </div>
+        
+        <div class="case" id="case-19">
+            <div class="case-header">
+                <h2>Case 19: ID 123367</h2>
+                <p class="metrics">Expected: 5 | Extracted: 0 | 
+                   Ratio: 0.00</p>
+            </div>
+            
+            <div class="comparison">
+                <div class="comparison-column">
+                    <h3>Extracted Determinations (0)</h3>
+        <p>No determinations extracted.</p>
+                </div>
+                <div class="comparison-column">
+                    <h3>Missing Determinations (1)</h3>
+        
+                <div class="missing">
+                    <p>["['confirms the decision of the rpd member']", "['decision must be set aside']", "['rpd decision must be set aside']", "['rejects the minor claims']", "['panel confirms the decision of the rpd']"]</p>
+                </div>
+                
+                </div>
+            </div>
+        
+            <div>
+                <h3>All Expected Determinations (1)</h3>
+        
+                <div class="expected">
+                    <p>["['confirms the decision of the rpd member']", "['decision must be set aside']", "['rpd decision must be set aside']", "['rejects the minor claims']", "['panel confirms the decision of the rpd']"]</p>
+                </div>
+                
+            </div>
+            
+            <h3>Case Text (first portion):</h3>
+            <div class="case-text">(CA IRB)
+
+RAD File / Dossier de la SAR : TB9 -08462
+
+TB9 -08463 / TB9 -08464
+
+
+
+
+
+RAD.25.02 ( January , 20 20)
+
+Disponible en français 2
+
+REASONS FOR DECISION
+
+
+
+OVERVIEW
+
+
+
+[1] [REDACTED] [REDACTED] [REDACTED] [REDACTED] (Principal Appellant ), [REDACTED] [REDACTED] [REDACTED] [REDACTED]
+
+(Principal Appellant’s Daughter ) and [REDACTED] [REDACTED] [REDACTED] (Principal Appellant’s Son ) are
+
+appealing a decision of the Refugee Protection Division (R PD) rejecting their claims for refugee
+
+protection. T hey request that the Refugee Appeal Division (R AD) set aside the RPD's decision
+
+under section 111(1)(b) and find that they are Convention1 refugees or perso ns in need of
+
+protection.
+
+
+
+DETERMINATION OF THE APPEAL
+
+
+
+[2] Pursuant to section 111(1)(c) of the Immigration and Refugee Protection Act (IRPA ),2 the
+
+Panel sets aside the determination of the RPD and refers the matter back to the RPD for re -
+
+determination with respect to the principal appellant . The panel confirms the decision of the
+
+RPD with respect to the principal appellant’s daughter and son under Section 111(1)(a) of the
+
+IRPA. The panel finds that the minor appellants are not Convention refugees or persons in need
+
+of protection.
+
+
+
+BACKGROU ND
+
+
+
+[3] The Principal Appellant is a citizen of Venezuela and Lebanon. T he Principal Appellant’s
+
+Daughter a nd Son are citizens of the United States . The Principal Appellant was a [REDACTED] in
+
+Venezuela. I n 2012 he travel led to Turkey and Germany where he met with the Minister of Food
+
+and Industry as well as [REDACTED] [REDACTED] , the present leader of Venezuela. T he Principal Appellant
+
+stated that he exchanged phone numbers with the individuals. W hen he returned to Venezuela, he
+
+was con tacted by these individuals and asked to attend a meeting in Caracas.
+
+
+
+2020 CanLII 123367 (CA IRB)
+
+RAD File / Dossier de la SAR : TB9 -08462
+
+TB9 -08463 / TB9 -08464
+
+
+
+
+
+RAD.25.02 ( January , 20 20)
+
+Disponible en français 3
+
+[4] The Principal Appellant st...</div>
+        </div>
+        
+        <div class="case" id="case-20">
+            <div class="case-header">
+                <h2>Case 20: ID 124972</h2>
+                <p class="metrics">Expected: 5 | Extracted: 0 | 
+                   Ratio: 0.00</p>
+            </div>
+            
+            <div class="comparison">
+                <div class="comparison-column">
+                    <h3>Extracted Determinations (0)</h3>
+        <p>No determinations extracted.</p>
+                </div>
+                <div class="comparison-column">
+                    <h3>Missing Determinations (1)</h3>
+        
+                <div class="missing">
+                    <p>["['claimants have not displaced']", "['claimants, xxxx xxxx xxxx, xxxx xxxx xxxx, and xxxx xxxx xxxx are not convention refugees and are not persons in need of protection']", "['claimants are not convention refugees']", "['302 (c.a.']", "['claims fail']"]</p>
+                </div>
+                
+                </div>
+            </div>
+        
+            <div>
+                <h3>All Expected Determinations (1)</h3>
+        
+                <div class="expected">
+                    <p>["['claimants have not displaced']", "['claimants, xxxx xxxx xxxx, xxxx xxxx xxxx, and xxxx xxxx xxxx are not convention refugees and are not persons in need of protection']", "['claimants are not convention refugees']", "['302 (c.a.']", "['claims fail']"]</p>
+                </div>
+                
+            </div>
+            
+            <h3>Case Text (first portion):</h3>
+            <div class="case-text">(CA IRB)
+
+RPD File / Dossier de la SPR : TB7 -22488
+
+TB7 -22521 / TB7 -22532
+
+
+
+1
+
+REASONS FOR DECISION
+
+[1] [REDACTED] [REDACTED] [REDACTED] , (the principal claimant), [REDACTED] [REDACTED] [REDACTED] , (the female
+
+claimant), and [REDACTED] [REDACTED] [REDACTED] , (minor claimant), seek protection in Canada pursuant to
+
+sections 96 and 97(1) of the Immigration and Refugee Protection Act (IRPA).1 They allege a
+
+well -founded fear of persecution in Pakistan from Tehrik -i-Taliban.
+
+[2] Pursuant to Rule 55(1) of the Refugee Protection Division Rules,2 these claims have been
+
+joined. The Refugee Protection Division (the RPD) has designated [REDACTED] [REDACTED] [REDACTED] the
+
+representative for the minor claimant, pursuant to IRPA section 167(2).
+
+ALLEGATIONS
+
+[3] The claimants allege that they meet the definition of Convention refugee, in that they are
+
+“persons who by reason of a well -founded fear of persecution for reasons of their nationality and
+
+membership in a particular social group are outside their country of nationality and are unable,
+
+by reason of that fear, or are unwilling to avail themselves of the protection of that county”,
+
+namely Pakistan. In the alternative, they allege they are persons in need of protection. Their fear
+
+stems from the attempts of Tehrik -i-Taliban (Taliban) to recruit the principal claimant. A
+
+summary of their allegations f ollows:
+
+ The principal claimant comes from [REDACTED] or [REDACTED] , a small village in
+
+[REDACTED] , which is in the Khyber -Pakhtunkhwa (KP) region of Pakistan.
+
+ In [REDACTED] 2008, the Taliban attempted to recruit him into its ranks. He told
+
+them he was not interested, but they i nsisted that he meet with them at a
+
+certain “checkpoint”. When he failed to show up, three men went to the
+
+family home to look for him. His father advised him to go into hiding,
+
+which he did. He principal claimant went to the village of [REDACTED] , where
+
+he foun d work as a [REDACTED] . He lost his job when men came ...</div>
+        </div>
+        
+    <script>
+        // Add a simple navigation for jumping between cases
+        document.addEventListener('DOMContentLoaded', function() {
+            const nav = document.querySelector('.nav');
+            const navContent = document.createElement('div');
+            navContent.style.marginTop = '10px';
+            
+            for (let i = 1; i <= 20; i++) {
+                const link = document.createElement('a');
+                link.href = '#case-' + i;
+                link.textContent = 'Case ' + i;
+                link.style.marginRight = '15px';
+                link.style.textDecoration = 'none';
+                link.style.padding = '5px 10px';
+                link.style.backgroundColor = '#f8f9fa';
+                link.style.borderRadius = '5px';
+                navContent.appendChild(link);
+            }
+            
+            nav.appendChild(navContent);
+        });
+    </script>
+    </body>
+    </html>
+    

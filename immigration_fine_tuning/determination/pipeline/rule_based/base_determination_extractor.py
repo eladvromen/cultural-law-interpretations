@@ -29,53 +29,93 @@ class BaseDeterminationExtractor:
         # Convert to lowercase
         text = text.lower()
         
-        # Fix run-together words (common OCR errors) - all in one pass
-        for original, replacement in [
-            ('isallowed', 'is allowed'),
-            ('isdismissed', 'is dismissed'),
-            ('ishereby', 'is hereby'),
-            ('declaredabandoned', 'declared abandoned'),
-            ('tosubsection', 'to subsection'),
-            ('wasallowed', 'was allowed'),
-            ('bedismissed', 'be dismissed')
-        ]:
-            text = text.replace(original, replacement)
+        # Remove square brackets and unnecessary apostrophes
+        text = re.sub(r'\[|\]|\'\'|\`\`', ' ', text)
+        
+        # Handle periods that join words incorrectly
+        text = re.sub(r'(\w)\.(\w)', r'\1. \2', text)
         
         # Replace apostrophes with a temporary character
         text = re.sub(r'(\w)\'(\w)', r'\1§\2', text)
         
-        # Remove punctuation except for the temporary character in one operation
+        # Remove punctuation except for the temporary character
         text = re.sub(r'[^\w\s§]', ' ', text)
         
         # Restore apostrophes
         text = text.replace('§', "'")
         
-        # Normalize whitespace in one operation
+        # Normalize whitespace
         text = re.sub(r'\s+', ' ', text).strip()
         
         return text
+    
+    def _clean_determination_value(self, val: str) -> List[str]:
+        """Clean determination values with consistent formatting."""
+        if not isinstance(val, str) or not val.strip():
+            return []
+            
+        examples = []
+        
+        # Remove outer list brackets and quotes
+        val = re.sub(r'^\[|\]$', '', val.strip())
+        
+        try:
+            # Try to parse as JSON-like format first
+            if val.startswith('[') or val.startswith('{'):
+                normalized_val = val.replace("'", '"')
+                parsed = json.loads(normalized_val)
+                
+                if isinstance(parsed, list):
+                    for item in parsed:
+                        if isinstance(item, str):
+                            # Clean each determination sentence
+                            cleaned = self.clean_text(item)
+                            if cleaned:
+                                examples.append(cleaned)
+                return examples
+        except:
+            pass
+        
+        # Handle string format with multiple determinations
+        parts = re.findall(r'\'([^\']+)\'', val)
+        if parts:
+            for part in parts:
+                cleaned = self.clean_text(part)
+                if cleaned:
+                    examples.append(cleaned)
+            return examples
+        
+        # If no other format matches, clean the entire string
+        cleaned = self.clean_text(val)
+        if cleaned:
+            examples.append(cleaned)
+        
+        return examples
     
     def _parse_determination_value(self, val: str) -> List[str]:
         """Parse determination values with enhanced handling of complex formats."""
         if not isinstance(val, str) or not val.strip():
             return []
             
+        # First clean the determination value
+        cleaned_examples = self._clean_determination_value(val)
+        if cleaned_examples:
+            return cleaned_examples
+            
+        # If no cleaned examples found, fall back to original parsing logic
         examples = []
         
         # Handle complex nested formats
         if '[' in val and ']' in val:
-            # Pattern to extract content within nested quotes and brackets
             nested_items = re.findall(r'\[\'([^\']+)\'\]', val)
             for item in nested_items:
                 if item.strip():
-                    # Fix common OCR issues
-                    item = re.sub(r'isallowed', 'is allowed', item)
-                    item = re.sub(r'declaredabandoned', 'declared abandoned', item)
-                    examples.append(item.strip())
+                    cleaned = self.clean_text(item)
+                    if cleaned:
+                        examples.append(cleaned)
             
-            # If we found nested items, process them and return
-            if nested_items:
-                return [ex for ex in examples if ex.strip()]
+            if examples:
+                return examples
         
         # Try to handle JSON-like formats
         if val.startswith('[') or val.startswith('{'):

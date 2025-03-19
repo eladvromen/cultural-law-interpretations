@@ -10,6 +10,7 @@ from datetime import datetime
 
 from ngram_determination_extraction import NgramDeterminationExtractor
 from basic_determination_extraction import BasicDeterminationExtractor
+from sparse_explicit_extraction import SparseExplicitExtractor
 
 @dataclass
 class ExperimentConfig:
@@ -32,7 +33,7 @@ class DeterminationExperimentRunner:
         return {
             'ngram': 'NgramDeterminationExtractor',
             'basic': 'BasicDeterminationExtractor',
-            # Add new models here
+            'sparse': 'SparseExplicitExtractor'  # Add our new model
         }
     
     def _load_model(self, model_name: str, **model_params) -> Any:
@@ -41,6 +42,8 @@ class DeterminationExperimentRunner:
             model = NgramDeterminationExtractor(**model_params)
         elif model_name == 'basic':
             model = BasicDeterminationExtractor(**model_params)
+        elif model_name == 'sparse':
+            model = SparseExplicitExtractor(**model_params)
         else:
             raise ValueError(f"Unknown model: {model_name}")
         return model
@@ -261,7 +264,7 @@ def main():
     """Main entry point for running determination extraction experiments."""
     parser = argparse.ArgumentParser(description="Run determination extraction experiments")
     parser.add_argument('--config', type=str, help='Path to experiment configuration YAML file')
-    parser.add_argument('--model', choices=['ngram', 'basic', 'all'], 
+    parser.add_argument('--model', choices=['ngram', 'basic', 'sparse', 'all'], 
                         help='Single model to run (overrides config file)')
     parser.add_argument('--train', type=str, help='Path to training data')
     parser.add_argument('--test', type=str, help='Path to test data')
@@ -301,6 +304,10 @@ def main():
                 ),
                 ExperimentConfig(
                     model_name='basic',
+                    model_params={}
+                ),
+                ExperimentConfig(
+                    model_name='sparse',
                     model_params={}
                 )
             ]
