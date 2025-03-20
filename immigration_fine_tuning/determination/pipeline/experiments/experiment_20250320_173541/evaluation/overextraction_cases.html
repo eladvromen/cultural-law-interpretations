@@ -1,0 +1,3993 @@
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title>Over-Extraction Analysis</title>
+        <style>
+            body { font-family: Arial, sans-serif; margin: 20px; }
+            h1 { color: #2c3e50; }
+            .case { margin-bottom: 30px; border: 1px solid #ddd; padding: 15px; border-radius: 5px; }
+            .case-header { background-color: #f8f9fa; padding: 10px; margin-bottom: 15px; }
+            .extracted { background-color: #e8f4f8; padding: 10px; margin: 10px 0; border-left: 4px solid #3498db; }
+            .expected { background-color: #f8f4e8; padding: 10px; margin: 10px 0; border-left: 4px solid #f39c12; }
+            .extra { background-color: #e8f8ec; padding: 10px; margin: 10px 0; border-left: 4px solid #2ecc71; }
+            .case-text { background-color: #f9f9f9; padding: 15px; border: 1px solid #eee; 
+                         height: 200px; overflow: auto; font-family: monospace; white-space: pre-wrap; }
+            .metrics { font-weight: bold; color: #e74c3c; }
+            .comparison { display: flex; flex-wrap: wrap; gap: 20px; }
+            .comparison-column { flex: 1; min-width: 300px; }
+            .nav { position: sticky; top: 0; background: white; padding: 10px; border-bottom: 1px solid #ddd; }
+            .legend { margin: 10px 0 20px 0; padding: 10px; background-color: #f8f9fa; border-radius: 5px; }
+            .legend span { margin-right: 20px; }
+        </style>
+    </head>
+    <body>
+        <div class="nav">
+            <h1>Over-Extraction Cases in Determination Analysis</h1>
+            <div class="legend">
+                <span style="color: #3498db;">■</span> All Extracted
+                <span style="color: #f39c12;">■</span> Expected (Benchmark)
+                <span style="color: #2ecc71;">■</span> Extra (Not in Benchmark)
+            </div>
+        </div>
+        <p>These cases had significantly more extracted determinations than expected in the benchmark.</p>
+    
+        <div class="case" id="case-1">
+            <div class="case-header">
+                <h2>Case 1: ID 101178</h2>
+                <p class="metrics">Expected: 4 | Extracted: 9 | 
+                   Extra: 5 | Ratio: 2.25</p>
+            </div>
+            
+            <div class="comparison">
+                <div class="comparison-column">
+                    <h3>Expected Determinations (1)</h3>
+        
+                <div class="expected">
+                    <p>["['rad sets aside the determination of the rpd', 'substitutes its determination']", "['appeal is allowed']", "['appeal is dismissed']", "['rad confirms the decision of the rpd', 'are neither convention refugees nor persons in need of protection']"]</p>
+                </div>
+                
+                </div>
+                <div class="comparison-column">
+                    <h3>Extra Determinations (9)</h3>
+        
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>1 the RAD sets aside the determination of the RPD</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>This appeal is allowed</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>the RAD dismisses the appeal</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>confirms the decision of the RPD that the Principal</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>the RAD sets aside the determination of the RPD</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>substitutes its determination that the Minor Appellant is a Convention refugee for the reasons 
+stated above</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>This appeal is allowed</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>the RAD confirms the decision of the RPD tha t the 
+Principal</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>This appeal is dismissed</p>
+                </div>
+                
+                </div>
+            </div>
+        
+            <div>
+                <h3>All Extracted Determinations (9)</h3>
+        
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>1 the RAD sets aside the determination of the RPD</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>This appeal is allowed</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>the RAD dismisses the appeal</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>confirms the decision of the RPD that the Principal</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>the RAD sets aside the determination of the RPD</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>substitutes its determination that the Minor Appellant is a Convention refugee for the reasons 
+stated above</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>This appeal is allowed</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>the RAD confirms the decision of the RPD tha t the 
+Principal</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>This appeal is dismissed</p>
+                </div>
+                
+            </div>
+            
+            <h3>Case Text (first portion):</h3>
+            <div class="case-text"> 
+RAD.2 5.02  (June  23, 2014 ) 
+ 
+ 
+Immigration and   
+Refugee Board of Canada  
+ 
+Refugee Appeal Division  
+ Commission de l’immigration  
+et du statut de réfugié du Canada  
+ 
+Section d’appel des réfugiés  
+ 
+ 
+ 
+ 
+RAD File No. / N° de  dossier de la SAR  : TB7 -20771  
+TB7 -20772  
+TB7 -20773  
+ 
+ Private Proceeding / Huis clos  
+ 
+ 
+Reasons and decision  Motifs et décision  
+ 
+ 
+Person(s) who is(are)  
+the subject of the appeal   XXXX XXXX XXXX XXXX XXXX 
+XXXXXXXX XXXX XXXX XXXX 
+XXXXXXXX XXXX XXXX XXXX  
+  Personne(s) en cause  
+   
+Appeal considered / heard at  Toronto, Ontario  Appel instruit à  
+   
+   
+Date of decision  May 3, 2018  Date de la décision  
+   
+   
+Panel  T. Card  Tribunal  
+   
+   
+Counsel for the person(s) who 
+is(are)the subject of the appeal  XXXXXXXXXX . Jesuorobo  Conseil(s) du (de l a/des)   
+personne(s) en cause  
+   
+   
+Designated Representative(s)  XXXX XXXX XXXX XXXX XXXX  Représentant(e)(s) désigné(e)(s)  
+   
+   
+Counsel for the Minister  N/A  Conseil du  ministre  
+ 
+ 
+2018 CanLII 101178 (CA IRB)
+RAD F ile No. / N° de dossier de la SA R : TB7 -20771  
+TB7 -20772  
+TB7 -20773  
+ 
+ REASONS FOR DECISION  
+[1] XXXX XXXX XXXX XXXX XXXX  (the “Principal Appellant”), XXXX XXXX XXXX 
+XXXX  (the “Spousal Appellant”) and XXXX XXXX XXXX XXXX  (the “Minor Appellant”) are 
+citizens of Nigeria and are appealing a dec ision of the Refugee Protection Division (RPD) 
+denying their claims for refugee protection.  
+[2] The Minor Appellant is the daughter of the Principal Appellant and Spousal Appellant. 
+The Principal and Spousal Appellants also have a son named XXXX XXXX XXXX XXXX  
+XXXX , who was born in Canada and is a Canadian citizen  and not an Appellant in this case . The 
+Principal Appellant was named as  the Designated Representative (DR) of the Minor Appellant at 
+the RPD hearing and the RAD confirms this designation.  
+[3] The Appellan ts are requesting that the Refugee Appeal Division (RAD) set aside the 
+RPD’s negative determination...</div>
+        </div>
+        
+        <div class="case" id="case-2">
+            <div class="case-header">
+                <h2>Case 2: ID 123434</h2>
+                <p class="metrics">Expected: 4 | Extracted: 9 | 
+                   Extra: 5 | Ratio: 2.25</p>
+            </div>
+            
+            <div class="comparison">
+                <div class="comparison-column">
+                    <h3>Expected Determinations (1)</h3>
+        
+                <div class="expected">
+                    <p>["['appeal is allowed']", "['appeal is dismissed']", "['rad sets aside the determination of the rpd', 'substitutes its own determination that the appellants are convention refugees']", "['rad confirms the decision of the rpd', 'appellants are neither convention refugees nor persons in need of protection', 'dismisses the appeal']"]</p>
+                </div>
+                
+                </div>
+                <div class="comparison-column">
+                    <h3>Extra Determinations (9)</h3>
+        
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>their appeal is dismissed</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>the RAD confirms the decision  of the RPD that the Appellants are 
+neither Convention refugees nor persons in need of protection</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>their 
+appeal is allowed</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>the RAD sets aside the determination of the RPD</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>[17]  The Appellants request that the appeal be allowed</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>their appeal is dismissed</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>the RAD confirms the decision of the  RPD that the Appellants are 
+neither Convention refugees nor persons in need of protection</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>their 
+appeal is allowed</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>the RAD sets aside the determination of the RPD</p>
+                </div>
+                
+                </div>
+            </div>
+        
+            <div>
+                <h3>All Extracted Determinations (9)</h3>
+        
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>their appeal is dismissed</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>the RAD confirms the decision  of the RPD that the Appellants are 
+neither Convention refugees nor persons in need of protection</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>their 
+appeal is allowed</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>the RAD sets aside the determination of the RPD</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>[17]  The Appellants request that the appeal be allowed</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>their appeal is dismissed</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>the RAD confirms the decision of the  RPD that the Appellants are 
+neither Convention refugees nor persons in need of protection</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>their 
+appeal is allowed</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>the RAD sets aside the determination of the RPD</p>
+                </div>
+                
+            </div>
+            
+            <h3>Case Text (first portion):</h3>
+            <div class="case-text">Immigration and  Refugee  
+Board of Canada  
+Refugee Appeal Division   Commission de l’immigration  
+et du statut de réfugié du Canada  
+Section d’appel des réfugiés  
+ 
+RAD.25.02 ( January,  2020) 
+Disponible en français   
+  
+RAD File / Dossier de la SAR  : TB8 -26704  
+TB8 -26705 / TB8 -26706 / TB8 -26707  
+ 
+Private Proceeding / Huis clos  
+ 
+Reasons and decision  Motifs et décision  
+ 
+Person s who are  the 
+subject of the appeal  XXXX XXXX XXXXXXXX XXXX XXXX 
+XXXXXXXX XXXX XXXX XXXX XXXX 
+XXXX XXXX  Personne s en cause  
+   
+Appeal considered / 
+heard at  Toronto, ON  Appel instruit / 
+entendu à  
+   
+Date of decision   March 12, 2020  Date de la décision   
+   
+Panel  XXXXXXXXXXXXXXXXX  Tribunal  
+   
+Counsel for the person s 
+who are  the subject of the 
+appeal  XXXXXXXXXXXXXXXXX  Conseil des  
+personne s en cause  
+   
+Designated representative  XXXX XXXX  Représentant(e) 
+désign é(e)  
+   
+Counsel for the Minister  N/A  Conseil du ministre  
+   
+  
+2020 CanLII 123434 (CA IRB)
+RAD File / Dossier de la SAR  : TB8 -26704  
+TB8 -26705 / TB8 -26706 / TB8 -26707  
+ 
+RAD.25.02 ( January , 20 20) 
+Disponible en français  2  
+ REASONS FOR DECISION  
+OVERVIEW  
+[1] XXXX XXXX  (Principal A ppellant) , and her children XXXX XXXX XXXX  (Associate 
+Appellant), XXXX XXXX XXXX and XXXX XXXX XXXX  (Minor Associate Appellants),  
+appeal a decision of the Refugee Protection Division (RPD), dated September 14,  2018 , rejecting 
+their claims  for refugee protection.  
+[2] XXXX XXXX  and her son XXXXXXXXXXXXXX  are citizens of Kazakhstan. 
+XXXX and XXXX XXXX XXXX XXXX  are citizens of Pakistan.  
+[3] The principal Appellant acted as the Designated Representative for the Minor Associate 
+Appellants, XXXX and XXXXXXXXX . 
+[4] The Appellants submit that the RPD erred in law in its analysis on credibility, state 
+protection and review of the Appellants’ forward -look ing risk.  The Appellants ask the Refugee 
+Appeal Division (RAD) to overturn the RP D’s decision and either substi...</div>
+        </div>
+        
+        <div class="case" id="case-3">
+            <div class="case-header">
+                <h2>Case 3: ID 127359</h2>
+                <p class="metrics">Expected: 4 | Extracted: 9 | 
+                   Extra: 5 | Ratio: 2.25</p>
+            </div>
+            
+            <div class="comparison">
+                <div class="comparison-column">
+                    <h3>Expected Determinations (1)</h3>
+        
+                <div class="expected">
+                    <p>["['appeal is allowed']", "['rad confirms the decision of the rpd']", "['appeal is dismissed']", "['pa and sudanese mas to be convention refugees']"]</p>
+                </div>
+                
+                </div>
+                <div class="comparison-column">
+                    <h3>Extra Determinations (9)</h3>
+        
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>1 the RAD sets aside the determination of the RPD</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>substitutes its decision that the PA</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>Their appeal is allowed</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>the RAD confirms the decision of th e RPD 
+that the American MA is neither a Convention refugee nor a person in need of protection</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>His 
+appeal is dismissed</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>the RAD sets aside the determination of the 
+RPD</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>The ir appeal is allowed</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>the RAD confirms the dec ision of the RPD 
+that the minor US appellant is neither a Convention refugee nor a person in need of protection</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>His appeal is dismissed</p>
+                </div>
+                
+                </div>
+            </div>
+        
+            <div>
+                <h3>All Extracted Determinations (9)</h3>
+        
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>1 the RAD sets aside the determination of the RPD</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>substitutes its decision that the PA</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>Their appeal is allowed</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>the RAD confirms the decision of th e RPD 
+that the American MA is neither a Convention refugee nor a person in need of protection</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>His 
+appeal is dismissed</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>the RAD sets aside the determination of the 
+RPD</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>The ir appeal is allowed</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>the RAD confirms the dec ision of the RPD 
+that the minor US appellant is neither a Convention refugee nor a person in need of protection</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>His appeal is dismissed</p>
+                </div>
+                
+            </div>
+            
+            <h3>Case Text (first portion):</h3>
+            <div class="case-text">Immigration and  Refugee  
+Board of Canada  
+Refugee Appeal Division   Commission de l’immigration  
+et du statut de réfugié du Canada  
+Section d’appel des réfugiés  
+ 
+RAD.25.02 ( September  18, 2018)  
+Disponible en français   
+  
+RAD File / Dossier de la SAR  : TB8 -29358  
+TB8 -29359 / TB8 -29360 / TB8 -29361  
+ 
+Private Proceeding / Huis clos  
+ 
+Reasons and decision  Motifs et décision  
+ 
+Person(s) who is(are) the 
+subject  of the appeal  XXXX XXXX XXXX XXXX XXXXXXXX 
+XXXX XXXX XXXX XXXXXXXX XXXX 
+XXXX XXXX XXXXXXXX XXXX XXXX  Personne(s) en cause  
+   
+Appeal considered / heard 
+at  Toronto, ON  Appel instruit / entendu 
+à 
+   
+Date of decision   February 26, 2019  Date de la décision   
+   
+Panel  XXXXXXX  Tribunal  
+   
+Counsel for the person(s) 
+who is(are) the subject of 
+the appeal  SimoXXXXXXXXXXXXXXXXXXXX) (de la/des)  
+personne(s) en cause  
+   
+Designated representative  XXXX XXXX XXXX XXXX  Représentant(e) 
+désign é(e)  
+   
+Counsel for the Minister  N/A  Conseil du ministre  
+   
+  
+2019 CanLII 127359 (CA IRB)
+RAD File / Dossier de la SAR  : TB8 -29358  
+TB8 -29359 / TB8 -29360 / TB8 -29361  
+ 
+ 
+RAD.25.02 ( September 18 , 2018)  
+Disponible en français  2  
+ REASONS FOR DECISION  
+INTRODUCTION  
+[1] The appellants XXXX XXXX XXXX XXXX  (the principal appellant  “PA” ) and her 
+children XXXX XXXX XXXX XXXX  and AXXXX XXXX XXXX XXXX  (minor appellants  
+“MAs” ), citizens of Sudan, appeal a decision of the Refugee Protection Division (RPD) denying 
+their claim for refugee protection. The appellants ask the Refugee Appeal Division (RAD) to set 
+aside the negative determination of the RPD and either grant their claim for protection, or r efer 
+the matter back to the RPD for redetermination. They have not provided new evidence in support 
+of their appeal. They have not requested an oral hearing.  
+[2] The youngest minor appellant XXXX XXXX XXXX  is a citizen of the United States of 
+America (USA). No  arguments have been submitted on his behalf for th...</div>
+        </div>
+        
+        <div class="case" id="case-4">
+            <div class="case-header">
+                <h2>Case 4: ID 148756</h2>
+                <p class="metrics">Expected: 4 | Extracted: 9 | 
+                   Extra: 5 | Ratio: 2.25</p>
+            </div>
+            
+            <div class="comparison">
+                <div class="comparison-column">
+                    <h3>Expected Determinations (1)</h3>
+        
+                <div class="expected">
+                    <p>["['appellant is neither a convention refugee nor a person in need of protection']", "['appeal is dismissed']", "['appellant is neither a convention refugee nor a person in need of protection']", "['appeal is dismissed']"]</p>
+                </div>
+                
+                </div>
+                <div class="comparison-column">
+                    <h3>Extra Determinations (9)</h3>
+        
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>The Appellant further  
+requests that the Refugee Appeal Division (RAD) set aside the determination of the RPD</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>the appeal was dismissed on April 11</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>her appeal was allowed  on July 11</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>the 
+RAD confirms the determination of the RPD that the Appellant is neither a Convention refugee nor 
+a person in need of protection</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>The appeal is dismissed</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>[62]  The Appellant is neither a Convention refugee nor a person in need of protection</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>The 
+appeal is dismissed</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>DECISION  
+Disposition  
+[63]  Pursuant to section 111(1)(a) of the IRPA the RAD confirms the determination of the RPD 
+that the Appellant is  neither a Convention refugee nor a person in need of protection</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>The appeal is 
+dismissed</p>
+                </div>
+                
+                </div>
+            </div>
+        
+            <div>
+                <h3>All Extracted Determinations (9)</h3>
+        
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>The Appellant further  
+requests that the Refugee Appeal Division (RAD) set aside the determination of the RPD</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>the appeal was dismissed on April 11</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>her appeal was allowed  on July 11</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>the 
+RAD confirms the determination of the RPD that the Appellant is neither a Convention refugee nor 
+a person in need of protection</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>The appeal is dismissed</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>[62]  The Appellant is neither a Convention refugee nor a person in need of protection</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>The 
+appeal is dismissed</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>DECISION  
+Disposition  
+[63]  Pursuant to section 111(1)(a) of the IRPA the RAD confirms the determination of the RPD 
+that the Appellant is  neither a Convention refugee nor a person in need of protection</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>The appeal is 
+dismissed</p>
+                </div>
+                
+            </div>
+            
+            <h3>Case Text (first portion):</h3>
+            <div class="case-text"> 
+RAD.28.07 ( November 1, 2016 ) 
+Disponible en français   
+ 
+Immigration and  Refugee  
+Board of Canada  
+Refugee Appeal Division   Commission de l’immigration  
+et du statut de réfugié du Canada  
+Section d’appel des réfugiés  
+RAD File / Dossier de la SAR  : TB6 -02584  
+ 
+Private Proceeding / Huis clos  
+ 
+Redetermination of Appeal   Nouvel examen de l’appel  
+Reasons and decision  Motifs et decision  
+ 
+Person(s) who is(are) the 
+subject of the appeal  XXXX XXXX XXXX XXXX  
+XXXX XXXX XXXX XXXX  Personne(s) en cause  
+   
+   
+Appeal considered at   Toronto, ON  
+ Appel instruit à  
+   
+Date of decision   May 9, 2017  Date de la décision   
+   
+Panel  XXXXXXXXXXXXX  
+ Tribunal  
+   
+Counsel for the person(s) 
+who is(are) the subject of 
+the appeal  XXXXXXXXX Hirji  
+Barrister and Solicitor  Conseil(s) (de la/des)  
+personne(s) en cause  
+   
+   
+Counsel for the Minister  N/A  Conseil du ministre  
+2017 CanLII 148756 (CA IRB)
+RAD File / Dossier de la SAR  : TB6 -02584  
+1 REASONS FOR DECISION  
+ 
+[1] XXXX XXXX XXXX  (the “Appellant ”) appeals a decision of the Refugee Protection 
+Division (RPD) denying her claim for refugee protection. The Appellant has submitted new 
+evidence in support of her appeal and she has requested an oral hearing. The Appellant further  
+requests that the Refugee Appeal Division (RAD) set aside the determination of the RPD and find 
+that she is a Convention refugee or a person in need of protection. Alternatively, the Appellant 
+requests that the matter be remitted to the RPD for reconsider ation by a differently -constituted 
+panel.  
+[2] The RPD rejected this claim on February 4, 2016. The Appellant appealed to the RAD and 
+the appeal was dismissed on April 11, 2016. The Appellant subsequently appealed to the Federal 
+Court and her appeal was allowed  on July 11, 2016, and remitted to the RAD.  
+Determination  
+[3] Pursuant to section 111(1)(a) of the Immigration and Refugee Protection Act (IRPA), the 
+RAD confirms the determination o...</div>
+        </div>
+        
+        <div class="case" id="case-5">
+            <div class="case-header">
+                <h2>Case 5: ID 29636</h2>
+                <p class="metrics">Expected: 5 | Extracted: 10 | 
+                   Extra: 5 | Ratio: 2.00</p>
+            </div>
+            
+            <div class="comparison">
+                <div class="comparison-column">
+                    <h3>Expected Determinations (1)</h3>
+        
+                <div class="expected">
+                    <p>["['appeal isallowed']", "['appeal be allowed']", "['removal order isset aside']", "['appellant has not lost his permanent resident status']", "['appeal is allowed']"]</p>
+                </div>
+                
+                </div>
+                <div class="comparison-column">
+                    <h3>Extra Determinations (10)</h3>
+        
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>the appellant is not contesting the legal 
+validity of the officer’s decision but argues that the appeal should be allowed because</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>is asking that the appeal be 
+dismissed</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>as 
+well as the fact that this is the only serious partner either of them has ever had given that 
+they have been together since  1989 —if the appeal were dismissed</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>If the appeal were dismissed</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>the hardship his spouse would encounter if 
+the appeal were dismissed is an important aspect that must be considered</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>it is in the best interests of the children that the appeal 
+be allowed</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>the appeal is 
+allowed</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>NOTICE OF DECISION  
+ 
+ The appeal is allowed</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>The removal order is set aside</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>The Immigration Appeal Division 
+determines that the appellant has not lost his permanent resident status</p>
+                </div>
+                
+                </div>
+            </div>
+        
+            <div>
+                <h3>All Extracted Determinations (10)</h3>
+        
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>the appellant is not contesting the legal 
+validity of the officer’s decision but argues that the appeal should be allowed because</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>is asking that the appeal be 
+dismissed</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>as 
+well as the fact that this is the only serious partner either of them has ever had given that 
+they have been together since  1989 —if the appeal were dismissed</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>If the appeal were dismissed</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>the hardship his spouse would encounter if 
+the appeal were dismissed is an important aspect that must be considered</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>it is in the best interests of the children that the appeal 
+be allowed</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>the appeal is 
+allowed</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>NOTICE OF DECISION  
+ 
+ The appeal is allowed</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>The removal order is set aside</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>The Immigration Appeal Division 
+determines that the appellant has not lost his permanent resident status</p>
+                </div>
+                
+            </div>
+            
+            <h3>Case Text (first portion):</h3>
+            <div class="case-text"> 
+IAD.34.1 (04.2013)  
+Disponible en français   
+ 
+ 
+Immigration and  
+Refugee Board of Canada  
+ 
+Immigration Appeal Division  
+  
+Commission de l’immigration  
+et du statut de réfugié du Canada  
+ 
+Section d’appel de l’immigration  
+IAD File No. / N° de dossier de la SAI : MB1 -02763  
+Client ID No. / N° ID client :  5615 -4897  
+ 
+Reasons and Decision  Motifs et décision  
+ 
+ REMOVAL ORDER  
+ 
+ 
+Appellant(s)  Elias XXXXXXXXXXXXXXXXXXXX)  
+   
+and   et  
+   
+Respondent  The Minister of Public Safety  
+and Emergency Preparedness  
+ Intimé(e)  
+   
+Date(s) of Hearing    
+ January  27, 2015  
+January  11, 2016  Date(s) de l’audience  
+Place of Hearing    
+ Montréal, Quebec  Lieu de l’audience  
+   
+Date of Decision  March  8, 2016  Date de la décision  
+   
+Panel  XXXXXXXXXXXXXXXXX  Tribunal  
+   
+Counsel for the  
+Appellant(s)  XXXXXXXXXXXXXXXXXXXX  
+and XXXXXXXXXXXXXX  Conseil(s) de 
+l’appelant(e) / des 
+appelant(e)(s)  
+   
+Designated 
+Representative(s)  N/A  Représentant(e)(s) 
+désigné(e)(s)  
+   
+   
+Counsel for the Minister  XXXXXXXXXXXXXXX  Conseil(s) du (de la) 
+ministre  
+2016 CanLII 29636 (CA IRB)
+IAD File No. / N° de dossier de la SAI : MB1 -02763  
+ 
+ 
+ 
+1  
+REASONS FOR DECISION  
+ 
+INTRODUCTION  
+[1] These are the reasons for decision in the appeal filed by XXXXXXXXXXXXXXXthe appellant), a citizen of Lebanon, pursuant to subsection  63(3) of the 
+Immigration and Refugee Protection Act1 (the Act) against the removal order issued 
+against him on April 16, 2011, for failure to comply with the residency obligation set out 
+in section  28 of the Act and because there are in sufficient humanitarian and 
+compassionate considerations to warrant special relief and justify the retention of his 
+permanent resident status. Section  28 of the Act indicates that a permanent resident must 
+be present in Canada for 730 days over a five -year  period.  
+[2] According to the evidence on record, including the officer’s 
+decision,2 document A -1,3 and the appellant’s testi...</div>
+        </div>
+        
+        <div class="case" id="case-6">
+            <div class="case-header">
+                <h2>Case 6: ID 60664</h2>
+                <p class="metrics">Expected: 4 | Extracted: 9 | 
+                   Extra: 5 | Ratio: 2.25</p>
+            </div>
+            
+            <div class="comparison">
+                <div class="comparison-column">
+                    <h3>Expected Determinations (1)</h3>
+        
+                <div class="expected">
+                    <p>["['theappealis allowed']", "['appellant has not lost her permanent resident status']", "['appeal is allowed.the']", "['appeal is dismissed']"]</p>
+                </div>
+                
+                </div>
+                <div class="comparison-column">
+                    <h3>Extra Determinations (9)</h3>
+        
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>The appeal is allowed</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>if this appeal is dismissed</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>daughter -in-law confirmed that if this appeal is dismissed</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>[29]  I acknowledge the position of the Minister that if this appeal is dismissed</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>I accept the position of the Appellant’s counsel that  the Appellant 
+will  suffer emotional hardship if this appeal is dismissed</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>other family 
+members in Canada will  suffer emotional hardship if this appeal is dismissed</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>if 
+the appeal is dismissed</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>The appeal  is allowed</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>NOTICE OF DECISION  
+ 
+ 
+The appeal  is allowed</p>
+                </div>
+                
+                </div>
+            </div>
+        
+            <div>
+                <h3>All Extracted Determinations (9)</h3>
+        
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>The appeal is allowed</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>if this appeal is dismissed</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>daughter -in-law confirmed that if this appeal is dismissed</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>[29]  I acknowledge the position of the Minister that if this appeal is dismissed</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>I accept the position of the Appellant’s counsel that  the Appellant 
+will  suffer emotional hardship if this appeal is dismissed</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>other family 
+members in Canada will  suffer emotional hardship if this appeal is dismissed</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>if 
+the appeal is dismissed</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>The appeal  is allowed</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>NOTICE OF DECISION  
+ 
+ 
+The appeal  is allowed</p>
+                </div>
+                
+            </div>
+            
+            <h3>Case Text (first portion):</h3>
+            <div class="case-text"> 
+ 
+ 
+Immigration and  
+Refugee Board of Canada  
+ 
+Immigration Appeal Division  
+  
+Commission de l’immigration  
+et du statut de réfugié du Canada  
+ 
+Section d’appel de l’immigration  
+ 
+IAD File No. /  No de dossier  de la SAI:  TC1-02416  
+Client ID No. / No ID client:  29405339  
+ 
+Reasons and Decision  Motifs et décision  
+ 
+RESIDENCY OBLIGATION  
+ 
+ 
+Appellant (s) XXXXXXXXXXXXXX  
+ Appelant(e)(s)  
+   
+and   et 
+ The Minister of Citizenship and Immigration   
+Respondent  Le ministre de la Citoyenneté et de l’Immigration  Intimé(e)  
+   
+   
+Date(s) of Hearing  December 29 , 2021  
+September 3, 2021  Date(s ) de l’audience  
+   
+   
+Place of Hearing  Toronto, Ontario  
+(by virtual audience)  Lieu de l’audience  
+  
+  
+Date of Decision  February 24, 20 22 Date de la decision  
+   
+   
+Panel  XXXXXXXXXXXXXXXXXXX  Tribunal  
+   
+Counsel for the 
+Appellant (s) 
+XXXXXXXXXXXX  Conseil(s) de 
+l’appelant(e) / des 
+appelant(e)(s ) 
+ 
+   
+Designated 
+Representative(s)   N/A  
+ Représentant(e)(s) 
+désigné(e)(s)  
+ 
+   
+Counsel for the Minister  XXXXXXXXXXXXXXX   
+(by written submissions)  Conseil du ministre  
+2022 CanLII 60664 (CA IRB)
+IAD File No. / No de dossier  de la SAI:  TC1-02416  
+Client ID No. / No ID client:  29405339  
+ 
+ REASONS FOR DECISION  
+OVERVIEW  
+ 
+[1] The Appellant, XXXXXXXXXXXXXX, is a widowed 73 -year -old British national overseas and 
+a Chinese  citizen  who lives in Hong Kong.1 She appeal s a February 2021  decisio n that she  did  not 
+compl y with the residency obligation as a permanent resident (PR) .2  
+[2] To comply with the residency obligation, a PR must be physically present in Canada for 
+730 days in a five -year period.3 The Appellant concedes that she was present in Canada for zero 
+days in the relevant five -year period. As such, the validity of the decision is not in dispute.  
+[3] The issue in this appeal is whether humanitarian and compassionate ( H&C ) considerations 
+warrant  special relief in the Appellant’s case.4 I find th...</div>
+        </div>
+        
+        <div class="case" id="case-7">
+            <div class="case-header">
+                <h2>Case 7: ID 105866</h2>
+                <p class="metrics">Expected: 5 | Extracted: 9 | 
+                   Extra: 4 | Ratio: 1.80</p>
+            </div>
+            
+            <div class="comparison">
+                <div class="comparison-column">
+                    <h3>Expected Determinations (1)</h3>
+        
+                <div class="expected">
+                    <p>["['appeal is dismissed']", "['rad sets aside the determination of the rpd', 'substitutes its determination that the appellant is a convention refugee']", "['rad has found that the rpd’s decision will stand']", "['rad confirms the decision of the rpd', 'appellant is neither a convention refugee nor a person in need of protection']", "['leave to appeal to the supreme court of canada dismissed']"]</p>
+                </div>
+                
+                </div>
+                <div class="comparison-column">
+                    <h3>Extra Determinations (9)</h3>
+        
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>the 
+RAD confirms the decision of the RPD that the Appellant is neither a Convention refugee nor a 
+person in n eed of protection</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>This appeal is dismissed  
+2015 CanLII 105866 (CA IRB)
+RAD F ile No</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>the RAD sets aside the determination of the 
+RPD</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>substitutes its determination that the Appellant  is a Convention refugee</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>come to an independent assessment of whether the claimant is a Convention refugee 
+or a person in need of protection</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>The appeal is dismissed for the principal Appellant</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>the RAD confirms the decision of the RPD that 
+the Appellant is neither a Convention refugee nor a person in need of protection</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>This appeal is 
+dismissed  
+CONCLUSION re: XXXX XXXX  
+[31]  Pursuant to s ection 111(1)(b) of the IRPA</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>substitutes its determination that the Appellant  is a Convention refugee</p>
+                </div>
+                
+                </div>
+            </div>
+        
+            <div>
+                <h3>All Extracted Determinations (9)</h3>
+        
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>the 
+RAD confirms the decision of the RPD that the Appellant is neither a Convention refugee nor a 
+person in n eed of protection</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>This appeal is dismissed  
+2015 CanLII 105866 (CA IRB)
+RAD F ile No</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>the RAD sets aside the determination of the 
+RPD</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>substitutes its determination that the Appellant  is a Convention refugee</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>come to an independent assessment of whether the claimant is a Convention refugee 
+or a person in need of protection</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>The appeal is dismissed for the principal Appellant</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>the RAD confirms the decision of the RPD that 
+the Appellant is neither a Convention refugee nor a person in need of protection</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>This appeal is 
+dismissed  
+CONCLUSION re: XXXX XXXX  
+[31]  Pursuant to s ection 111(1)(b) of the IRPA</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>substitutes its determination that the Appellant  is a Convention refugee</p>
+                </div>
+                
+            </div>
+            
+            <h3>Case Text (first portion):</h3>
+            <div class="case-text"> 
+RAD.2 5.02  (June 23, 2014 ) 
+ 
+ 
+Immigration and   
+Refugee Board of Canada  
+ 
+Refugee Appeal Division  
+ Commission de l’immigration  
+et du statut de réfugié du Canada  
+ 
+Section d’appel des réfugiés  
+ 
+ 
+ 
+ 
+RAD File No. / N° de  dossier de la SAR  : TB5 -09850  
+TB5 -09851  
+ 
+ Private Proceeding / Huis clos  
+ 
+ 
+Reasons and decision  Motifs et décision  
+ 
+ 
+Person(s) who is(are)  
+the subject of the appeal   XXXX XXXX XXXX  
+XXXX XXXX XXXX   Personne(s) en cause  
+   
+   
+Appeal considered / heard  at Toronto, Ontario  Appel instruit à  
+   
+   
+Date of decision  December 9, 2015  Date de la décision  
+   
+   
+Panel  XXXXXXXXXX  Tribunal  
+   
+   
+   
+Counsel for the person(s) who 
+is(are)the subject of the appeal  XXXXXXXXXXXXXXX  
+Barrister and Solicitor  Conseil(s) du (de la/des)   
+personne(s) en cause  
+   
+   
+Designated Representative(s)  XXXX XXXX   Représentant(e)(s) désigné(e)(s)  
+   
+   
+Counsel for the Minister  N/A  Conseil du  ministre  
+   
+ 
+ 
+2015 CanLII 105866 (CA IRB)
+RAD F ile No. / N° de dossier de la SA R :  
+ 
+ REASONS FOR DECISION  
+[1] XXXXXXXXX  (the  principal  Appellant)  and his daughter XXXXXXXXX , citizen s of 
+Ukraine , appeal a decision of the Refugee Protection Division (RPD) denying their  claim s for 
+refugee protection. They  have not submitted new evidence in suppor t of their  appeal  but do 
+request an oral hearing. The principal Appellant had been designated at the RPD hearing as a 
+designated representative of the minor daughter. The RAD will maintain that designation for the 
+sake of this appeal.  The Appellant s ask th e Refugee Appeal Division (RAD)  to overturn the 
+decision of the RPD and to find that this Appellant is a Convention refugee or a person in need of 
+protection . In the alternative, the Appellant requests that the matter be returned to the RPD for a 
+new heari ng under a differently constituted panel.  
+ORAL HEARING  
+[2] The Appellants have requested an oral hearing ; however , they have not...</div>
+        </div>
+        
+        <div class="case" id="case-8">
+            <div class="case-header">
+                <h2>Case 8: ID 131521</h2>
+                <p class="metrics">Expected: 5 | Extracted: 9 | 
+                   Extra: 4 | Ratio: 1.80</p>
+            </div>
+            
+            <div class="comparison">
+                <div class="comparison-column">
+                    <h3>Expected Determinations (1)</h3>
+        
+                <div class="expected">
+                    <p>["['appeal is dismissed']", "['appellant has not lost his permanent resident status']", "['appeal is allowed.the']", "['appeal is dismissed']", "['appeal be allowed']"]</p>
+                </div>
+                
+                </div>
+                <div class="comparison-column">
+                    <h3>Extra Determinations (9)</h3>
+        
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>compassionate grounds that this appeal should be allowed</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>this  appeal  is allowed    
+EVIDENCE  
+[5]      The Appellant was present in person</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>[23]      If this appeal is dismissed</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>[24]       I accept the Minister’s submission that it is most likely that the Appellant will be 
+successfully sponsored for permanent residence if this appeal is denied</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>Minister’s counsel submitted that little 
+hardship would arise if this appeal is dismissed</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>It is in the 
+best interests of the Appellant’s daughter that this appeal be allowed</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>this appeal  is allowed</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>/ No ID client:  3847 -6766  
+ 
+ 
+ 6 
+ 
+NOTICE OF DECISION  
+ 
+The appeal is allowed</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>The Immigration Appeal Division finds that the appellant has 
+not lost his permanent resident status</p>
+                </div>
+                
+                </div>
+            </div>
+        
+            <div>
+                <h3>All Extracted Determinations (9)</h3>
+        
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>compassionate grounds that this appeal should be allowed</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>this  appeal  is allowed    
+EVIDENCE  
+[5]      The Appellant was present in person</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>[23]      If this appeal is dismissed</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>[24]       I accept the Minister’s submission that it is most likely that the Appellant will be 
+successfully sponsored for permanent residence if this appeal is denied</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>Minister’s counsel submitted that little 
+hardship would arise if this appeal is dismissed</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>It is in the 
+best interests of the Appellant’s daughter that this appeal be allowed</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>this appeal  is allowed</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>/ No ID client:  3847 -6766  
+ 
+ 
+ 6 
+ 
+NOTICE OF DECISION  
+ 
+The appeal is allowed</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>The Immigration Appeal Division finds that the appellant has 
+not lost his permanent resident status</p>
+                </div>
+                
+            </div>
+            
+            <h3>Case Text (first portion):</h3>
+            <div class="case-text"> 
+ 
+ 
+Immigration and  
+Refugee Board of Canada  
+ 
+Immigration Appeal Division  
+  
+Commission de l’immigration  
+et du statut de réfugié du Canada  
+ 
+Section d’appel de l’immigration  
+ 
+IAD File No. /  No de dossier  de la SAI:  TB8 -28586  
+Client ID No. / No ID client:  3847 -6766  
+ 
+ 
+Reasons and Decision  Motifs et décision  
+ 
+RESIDENCY OBLIGATION  
+ 
+ 
+Appellant(s)  JIAXXXXXXXXXXXXXXXXXXXX)  
+   
+and   et 
+ The Minister of Citizenship and Immigration   
+Respondent  Le ministre de la Citoyenneté et de l’Immigration  Intimé(e)  
+   
+   
+Date(s) of Hearing  October 21, 2019  
+ Date(s ) de l’audience  
+   
+Place  of Hearing  Toronto, Ontario  
+ 
+ Lieu de l’audience  
+   
+Date of Decision  November 1 8, 2019  Date de la décision  
+   
+   
+Panel  XXXXXXXXXXXXXXX  Tribunal  
+   
+Counsel for the 
+Appellant(s)   Self -Represented  Conseil(s) XXXXXXXXXXXXXXXX / 
+XXXXXXXXXXXXXXXXX  
+   
+   
+Designated 
+Representative(s)  N/A  Représentant(e)(s) 
+désigné(e)(s)  
+   
+Counsel for the Minister   XXXXXXXXXXXXX   Conseil du ministre  
+     
+  
+2019 CanLII 131521 (CA IRB)
+IAD File No. / No de dossier  de la SAI:  TB8 -28586  
+Client ID No. / No ID client:  3847 -6766  
+ 
+ 
+ 2 
+REASONS FOR DECISION  
+ 
+INTRODUCTION  
+ 
+[1]      The Appellant appeals from the determination that he has failed to meet his 
+residency obligation.  
+[2]      Subject to certain exceptions that do not apply  in this case , subsection 28(2) of the 
+Immigration and Refugee Protection Act  (Act)  requires that a permanent r esident be 
+physically present in Canada for at least 730 days in any five -year period . 
+[3]      It is conceded that the Appellant did not meet his residency requirement and that the 
+decision under appeal is valid in fact and law. The issue on appeal is whether ther e are 
+sufficient humanitarian and compassionate grounds that this appeal should be allowed.    
+[4]      For the reasons that follow, this  appeal  is allowed    
+EVIDENCE  
+[5]      The Appellant was present in p...</div>
+        </div>
+        
+        <div class="case" id="case-9">
+            <div class="case-header">
+                <h2>Case 9: ID 142807</h2>
+                <p class="metrics">Expected: 4 | Extracted: 8 | 
+                   Extra: 4 | Ratio: 2.00</p>
+            </div>
+            
+            <div class="comparison">
+                <div class="comparison-column">
+                    <h3>Expected Determinations (1)</h3>
+        
+                <div class="expected">
+                    <p>["['neither a refugee nor a person in need of protection']", "['appeal is allowed']", "['rad sets aside the determination of the rpd', 'substitutes a determination']", "['rad dismisses the appeal', 'confirms the determination of the rpd', 'neither a convention refugee nor a person in need of protection']"]</p>
+                </div>
+                
+                </div>
+                <div class="comparison-column">
+                    <h3>Extra Determinations (8)</h3>
+        
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>[2] They are ask ing the Refugee Appeal Division  (RAD) to set aside the determination of the 
+RPD a nd recognize them as Convention refugees or as persons in need of protection or</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>the 
+RAD dismisses the appeal of XXXX XXXX</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>the appeal is allowed</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>The RAD sets aside the 
+determination of the RPD</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>substitutes the determination that</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>t he RAD dismisses the appeal of XXXX 
+XXXX</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>the appeal is allowed</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>The RAD sets aside the 
+determination of the RPD</p>
+                </div>
+                
+                </div>
+            </div>
+        
+            <div>
+                <h3>All Extracted Determinations (8)</h3>
+        
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>[2] They are ask ing the Refugee Appeal Division  (RAD) to set aside the determination of the 
+RPD a nd recognize them as Convention refugees or as persons in need of protection or</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>the 
+RAD dismisses the appeal of XXXX XXXX</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>the appeal is allowed</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>The RAD sets aside the 
+determination of the RPD</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>substitutes the determination that</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>t he RAD dismisses the appeal of XXXX 
+XXXX</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>the appeal is allowed</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>The RAD sets aside the 
+determination of the RPD</p>
+                </div>
+                
+            </div>
+            
+            <h3>Case Text (first portion):</h3>
+            <div class="case-text"> 
+ 
+ 
+ 
+ 
+RAD.25.02 (August  8, 2018)  
+Disponible en français   
+ 
+Immigration and Refugee  
+Board of Canada  
+ 
+Refugee Appeal Division   
+  Commission de l’immigration  
+et du statut de réfugié du Canada  
+Section d’appel des réfugiés  
+RAD File  No.  / No de d ossier de la SAR  : MB7 -24560  
+MB7 -24561  
+ 
+ 
+Private Proceeding  / Huis clos  
+ 
+Reasons and Decision   Motifs et décision  
+ 
+Person(s) who is (are) the  
+subject(s) of the appeal   XXXX XXXX 
+XXXXXXXX XXXX  Personne(s) en cause  
+  
+ 
+  
+Appeal considered/heard at   Montréal,  Que bec  
+ Appel instruit/entendu à  
+  
+  
+Date of decision   October  1, 2018  Date de la décision  
+  
+  
+Panel  Me Sasha  XXXXXXXXXXXX -Gore  Tribunal  
+  
+  
+Counsel for the person(s)  
+who is (are) the subject of  
+the appeal   Claudette XXXXXXXXXXXXXXXXXXXX) (de la/des)  
+personne(s) en cause  
+  
+  
+Designated representative   N/A  Représentant(e) désigné(e)  
+  
+  
+Counsel for the Minister  N/A Conseil du ministre  
+   
+2018 CanLII 142807 (CA IRB)
+RAD File  No.  / No de d ossier de la SAR  : MB7 -24560  
+MB7 -24561  
+ 
+ 
+ 
+ 
+RAD.25.02 (August  8, 2018)  
+Disponible en français   2  
+ REASONS FOR DECISION  
+INTRODUCTION  
+[1] XXXXXXXXX , the principal appellant , and her spouse , XXXXXXXXX , who are citizens 
+of Haiti , are appealing the decision of the Refugee Protection Division  (RPD) dated 
+November  21, 2017 , rejecting their refugee protection claim .  
+[2] They are ask ing the Refugee Appeal Division  (RAD) to set aside the determination of the 
+RPD a nd recognize them as Convention refugees or as persons in need of protection or, 
+alternatively, to refer the matter to the RPD for re -determination by a differently constituted 
+panel . 
+[3] The appellants are not seeking  to present new evidence and are not askin g that a hearing 
+be held in this appeal . 
+DETERMINATION OF THE APPEAL  
+[4] Pursuant to subsection  111(1) of the  Immigration and Refugee Protection Act  (IRPA ), the 
+RAD dismisses the appeal of XX...</div>
+        </div>
+        
+        <div class="case" id="case-10">
+            <div class="case-header">
+                <h2>Case 10: ID 34097</h2>
+                <p class="metrics">Expected: 4 | Extracted: 8 | 
+                   Extra: 4 | Ratio: 2.00</p>
+            </div>
+            
+            <div class="comparison">
+                <div class="comparison-column">
+                    <h3>Expected Determinations (1)</h3>
+        
+                <div class="expected">
+                    <p>["['confirm the decision of the rpd', 'appellant is neither a convention refugee nor a person in need of protection']", "['appeal fails']", "['appellant is neither a convention refugee nor a person in need of protection']", "['302 (c.a.']"]</p>
+                </div>
+                
+                </div>
+                <div class="comparison-column">
+                    <h3>Extra Determinations (8)</h3>
+        
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>the 
+RAD confirms the decision of the RPD that the Appellant is neithe r a Convention refugee (CR) 
+nor a person in need of protection pursuant to sections 96</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>[5] This appeal is dismissed</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>Did the Panel Member err in finding that the Appellant is not a Convention 
+Refugee or a person in need of protection</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>/ N° de dossier de la S AR :  
+ 
+ come to an independent assessment of whether the claimant is a Convention refugee o r a person 
+in need of protection</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>come to an  
+independent assessment of whether the claimant is a Convention refugee or a 
+person in need of protection</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>I find that the Appellant is 
+neither a Convention refugee nor a person in need of protection</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>I find that the Appellant is neither a Convention 
+refugee nor a person in need of protection</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>I confirm the decision of the RPD that the 
+Appellant is neither a Convention refugee nor a person in need of protection</p>
+                </div>
+                
+                </div>
+            </div>
+        
+            <div>
+                <h3>All Extracted Determinations (8)</h3>
+        
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>the 
+RAD confirms the decision of the RPD that the Appellant is neithe r a Convention refugee (CR) 
+nor a person in need of protection pursuant to sections 96</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>[5] This appeal is dismissed</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>Did the Panel Member err in finding that the Appellant is not a Convention 
+Refugee or a person in need of protection</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>/ N° de dossier de la S AR :  
+ 
+ come to an independent assessment of whether the claimant is a Convention refugee o r a person 
+in need of protection</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>come to an  
+independent assessment of whether the claimant is a Convention refugee or a 
+person in need of protection</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>I find that the Appellant is 
+neither a Convention refugee nor a person in need of protection</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>I find that the Appellant is neither a Convention 
+refugee nor a person in need of protection</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>I confirm the decision of the RPD that the 
+Appellant is neither a Convention refugee nor a person in need of protection</p>
+                </div>
+                
+            </div>
+            
+            <h3>Case Text (first portion):</h3>
+            <div class="case-text"> 
+RAD.2 5.02  (June 23, 2014 ) 
+ 
+Immigration and   
+Refugee Board of Canada  
+ 
+Refugee Appeal Division  
+ Commission de l’immigration  
+et du statut de réfugié du Canada  
+ 
+Section d’appel des réfugiés  
+ 
+ 
+ 
+ 
+RAD File No. / N° de  dossier de la SAR  : TB4 -12525  
+ 
+ Private Proceeding / Huis clos  
+ 
+ 
+Reasons and decision  Motifs et décision  
+ 
+ 
+Person(s) who is(are)  
+the subject of the appeal  XXXXXXX  
+(a.k .a. XXXXXXX)   Personne(s) en cause  
+   
+   
+Appeal considered / heard at  Toronto, Ontario  Appel instruit à  
+   
+   
+Date of decision  March 11, 2015  Date de la décision  
+   
+   
+Panel  XXXXXXXXXX  Tribunal  
+    
+   
+Counsel for the person(s) who 
+is(are)the subject of the appeal  XXXXXXXXXXXXXX  Conseil(s) du (de la/des)   
+personne(s) en cause  
+ Barrister and Solicitor   
+   
+   
+Designated Representative(s)  N/A  Représentant(e)(s) désigné(e)(s)  
+   
+   
+Counsel for the Minister  N/A  Conseil du  ministre  
+   
+ 
+2015 CanLII 34097 (CA IRB)
+ RAD File No. / N° de dossier de la S AR :  
+ 
+ REASONS FOR DECISION  
+[1] XXXXXXX  (the Appellant), a citizen of Ghana,  appeals a decision of the Refugee 
+Protection Division (RPD) rejecting  her claim for refugee protection.  
+[2] The Appellant  submit ted documents  to be considered as new evidence  pursuant to 
+s.110(4) of the Immigration and Refugee Protection Act (the Act or IRPA) in support of her  
+appeal. However, the Appellant did not request a hearing before the Refugee Appeal Division 
+(RAD) pursuant to section 1 10 (6) of the Act.  
+[3] The Appellant requests that the RAD set aside the RPD’s decision and  remit the matter 
+back to the RPD for redetermination. In the alternative, the Appellant requests that the RAD grant 
+any other order that the Division deems reasona ble and expedient having regard to the peculiar 
+facts and circumstances of this case.   
+DETERMINATION  
+[4] Pursuant to Section 111(a) of the Immigration and Refugee Protection Act (IRPA), the 
+RAD confirms the decision of...</div>
+        </div>
+        
+        <div class="case" id="case-11">
+            <div class="case-header">
+                <h2>Case 11: ID 34933</h2>
+                <p class="metrics">Expected: 4 | Extracted: 8 | 
+                   Extra: 4 | Ratio: 2.00</p>
+            </div>
+            
+            <div class="comparison">
+                <div class="comparison-column">
+                    <h3>Expected Determinations (1)</h3>
+        
+                <div class="expected">
+                    <p>["['302 (c.a.']", "['appeal fails']", "['appellant is neither a convention refugee', 'nor a person in need of protection']", "['confirm the decision of the rpd', 'appellant is neither a convention refugee nor a person in need of protection']"]</p>
+                </div>
+                
+                </div>
+                <div class="comparison-column">
+                    <h3>Extra Determinations (8)</h3>
+        
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>the RAD confirms the decision of the RPD that the 
+Appellant is neither a Convention refugee (CR) nor a person in need of protection pursuant to 
+sections 96</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>[5] This appeal is dismissed</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>and I find that the Appellant is neither a Convention 
+refugee  nor a  person in need of protection</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>I find that the Appellant is not a 
+Convention refugee – the basic allegation is regarding greed</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>this appeal is denied</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>I find that the Appellant is neither a Convention 
+refugee nor a person in need of protection</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>I confirm the decision of the RPD that the 
+Appellant is neither a Convention refugee nor a person in need of protection</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>[42]  The appeal is dismissed</p>
+                </div>
+                
+                </div>
+            </div>
+        
+            <div>
+                <h3>All Extracted Determinations (8)</h3>
+        
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>the RAD confirms the decision of the RPD that the 
+Appellant is neither a Convention refugee (CR) nor a person in need of protection pursuant to 
+sections 96</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>[5] This appeal is dismissed</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>and I find that the Appellant is neither a Convention 
+refugee  nor a  person in need of protection</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>I find that the Appellant is not a 
+Convention refugee – the basic allegation is regarding greed</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>this appeal is denied</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>I find that the Appellant is neither a Convention 
+refugee nor a person in need of protection</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>I confirm the decision of the RPD that the 
+Appellant is neither a Convention refugee nor a person in need of protection</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>[42]  The appeal is dismissed</p>
+                </div>
+                
+            </div>
+            
+            <h3>Case Text (first portion):</h3>
+            <div class="case-text"> 
+RAD.2 5.02  (June 23, 2014 ) 
+ 
+Immigration and   
+Refugee Board of Canada  
+ 
+Refugee Appeal Division  
+ Commission de l’immigration  
+et du statut de réfugié du Canada  
+ 
+Section d’appel des réfugiés  
+ 
+ 
+ 
+ 
+RAD File No. / N° de  dossier de la SAR  : TB4 -11943  
+ 
+ Private Proceeding / Huis clos  
+ 
+ 
+Reasons and decision  Motifs et décision  
+ 
+ 
+Person(s) who is(are)  
+the subject of the appeal  XXXXXXX  Personne(s) en cause  
+   
+Appeal considered / heard at  Toronto, Ontario  Appel instruit à  
+   
+   
+Date of decision  March 2, 2015  Date de la décision  
+   
+   
+Panel  XXXXXXXXXX  Tribunal  
+    
+   
+Counsel for the person(s) who 
+is(are)the subject of the appeal  XXXXXXXXXXXXX  Conseil(s) du (de la/des)   
+personne(s) en cause  
+ Barrister and Solicitor   
+   
+   
+Designated Representative(s)  N/A  Représentant(e)(s) désigné(e)(s)  
+   
+   
+Counsel for the Minister  N/A  Conseil du  ministre  
+   
+ 
+2015 CanLII 34933 (CA IRB)
+ RAD File No. / N° de dossier de la S AR :  
+ 
+ REASONS FOR DECISION  
+[1] XXXXXXX  (the Appellant), a citizen of Pakistan, appeals a decision of the Refugee 
+Protect ion Division (RPD) rejecting her  claim for refugee protection.  
+[2] The Appellant did not submit documents to be considered as new evidence pursuant t o 
+s.110(4) of the Immigration and Refugee Protection Act (the Act or IRPA) , and t he Appellant did 
+not request a hearing before the Refugee Appeal Division (RAD).  
+[3] The Appellant requests that the RAD set aside the RPD’s decision and accept her claim . In 
+the alternative, the Appellant requests that this claim be referred back to the RPD to be re -heard 
+by a differently constituted Panel.  
+DETERMINATION  
+[4] Pursuant to Section 111(a) of the Act , the RAD confirms the decision of the RPD that the 
+Appellant is neither a Convention refugee (CR) nor a person in need of protection pursuant to 
+sections 96 and 97(1) of the Act.   
+[5] This appeal is dismissed.  
+Background:  
+[6] The Appellant, a 76 year old...</div>
+        </div>
+        
+        <div class="case" id="case-12">
+            <div class="case-header">
+                <h2>Case 12: ID 40371</h2>
+                <p class="metrics">Expected: 6 | Extracted: 10 | 
+                   Extra: 4 | Ratio: 1.67</p>
+            </div>
+            
+            <div class="comparison">
+                <div class="comparison-column">
+                    <h3>Expected Determinations (1)</h3>
+        
+                <div class="expected">
+                    <p>["['appeal should not be terminated']", "['appeal is terminated']", "['appeal is terminated']", "['appeal would be terminated']", "['appeal is terminated']", "['appeal is terminated']"]</p>
+                </div>
+                
+                </div>
+                <div class="comparison-column">
+                    <h3>Extra Determinations (10)</h3>
+        
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>and the appeal is terminated by operation of law under paragraph 68(4) of 
+the Act</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>I find that there 
+is no need to grant the Appellant an extension of time as the appeal is terminated by operation of 
+law</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>The documents that counsel wishes to obtain are not relevant as Section 68(4) states that the 
+appeal is terminated by operation of law without the need for further consideration of the 
+Appellant’s rehabilitation or a review of the submissions made at the trial that led to his most 
+recent conv iction</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>conditions of his stay said that the appeal would be terminated by operation of law if the Appellant 
+was subsequently convicted of a serious offence that falls within the ambit of Section 36 of th e Act</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>but he further argues 
+that the appeal should not be terminated because a sentence of 6 months or more was not impose d 
+on the Appellant</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>and the appeal is terminated by operation of law if the Appellant is subsequently convicted of a 
+serious offence under Section 36 of the Act  or (my emphasis) if a sentence of 6 months or more is 
+imposed</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>[15]  I find that Member XXXX in delivering her oral decision misspoke when she said that the 
+appeal would be terminated if the Appellant was convicted of a serious offence under Section 36</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>your appeal is terminated by operation 
+of law</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>the appeal is terminated by operation of 
+law</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>and the appeal is terminated</p>
+                </div>
+                
+                </div>
+            </div>
+        
+            <div>
+                <h3>All Extracted Determinations (10)</h3>
+        
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>and the appeal is terminated by operation of law under paragraph 68(4) of 
+the Act</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>I find that there 
+is no need to grant the Appellant an extension of time as the appeal is terminated by operation of 
+law</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>The documents that counsel wishes to obtain are not relevant as Section 68(4) states that the 
+appeal is terminated by operation of law without the need for further consideration of the 
+Appellant’s rehabilitation or a review of the submissions made at the trial that led to his most 
+recent conv iction</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>conditions of his stay said that the appeal would be terminated by operation of law if the Appellant 
+was subsequently convicted of a serious offence that falls within the ambit of Section 36 of th e Act</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>but he further argues 
+that the appeal should not be terminated because a sentence of 6 months or more was not impose d 
+on the Appellant</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>and the appeal is terminated by operation of law if the Appellant is subsequently convicted of a 
+serious offence under Section 36 of the Act  or (my emphasis) if a sentence of 6 months or more is 
+imposed</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>[15]  I find that Member XXXX in delivering her oral decision misspoke when she said that the 
+appeal would be terminated if the Appellant was convicted of a serious offence under Section 36</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>your appeal is terminated by operation 
+of law</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>the appeal is terminated by operation of 
+law</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>and the appeal is terminated</p>
+                </div>
+                
+            </div>
+            
+            <h3>Case Text (first portion):</h3>
+            <div class="case-text"> 
+ 
+IAD.34.01 (2021. 11.24 ) 
+Available in French  Immigration and  
+Refugee Board of Canada  
+ 
+Immigration Appeal Division  
+ Commission de l’immigration  
+et du statut de réfugié du Canada  
+ 
+Section d’appel de l’immigration  
+IAD File No. / No de dossier de la SAI :  VB8 -06051  
+Client ID No. / No ID client : 29960657  
+ 
+ 
+Reasons and Decision  Motifs et decision  
+ 
+Removal Order Appeal  
+ 
+Appellant (s) XXXXXXXXXXXX BRAR  
+ Appelant (e)(s) 
+and   
+ et 
+Respondent  Minister of Public Safety and  
+Emergency Preparedness  Intimé (e) 
+  
+  
+Date (s) of Hearing  N/A  
+ Date(s) de l’audience  
+   
+Place of Hearing  In Chambers  Lieu de l’audience  
+   
+Date of Decision  February 23, 2022  
+ Date de la décision  
+   
+Panel  XXXXXXXXXXXX  
+ Tribunal  
+   
+Counsel for the  
+Appellant (s) XXXXXXXXXXXXX and  
+XXXXXXXXXXXXXXXXXXX  Conseil de  
+l’appelant(e)/ des 
+appelant(e)s  
+  
+  
+Designated 
+Representative (s) N/A  
+ 
+ Représentant(e)(s) 
+désigné(e)(s)  
+   
+Counsel for  
+the Minister  XXXXXXXXXXXX  
+ 
+ Conseil du  
+(de la) ministre  
+ 
+2022 CanLII 40371 (CA IRB)
+2022 CanLII 40371 (CA IRB)
+IAD File No. / No de dossier de la SAI : VB8 -06051  
+Client ID No. / No ID client : 29960657  
+ 
+ 
+1 
+ REASONS FOR DECISION  
+OVERVIEW   
+ 
+[1] XXXXXXXXXXXXXXXXX  (Appellant) appealed a decision of the Immigration Division that 
+issued him a deportation order on October 29, 2018,  for serious criminality under Section 36(1) of 
+the Immigration and Refugee Protection Act  (Act) . 
+ 
+[2] On May 21, 2019, the Immigration Appeal Division (IAD) granted the Appellant a stay of 
+removal for a period of 3 years based on a joint recommendation from his counsel and the 
+Minister’s counsel . The Appellant was sent a written copy of the oral decision f rom Member XXXX 
+on June 21, 2019.  
+ 
+[3] At the time of the appeal hearing on May 21, 2019, the Appellant had a pending criminal 
+charge under Section 348(1)(a) of the Criminal Code of Canada . The Appellant and his counsel 
+were aware of ...</div>
+        </div>
+        
+        <div class="case" id="case-13">
+            <div class="case-header">
+                <h2>Case 13: ID 74265</h2>
+                <p class="metrics">Expected: 4 | Extracted: 8 | 
+                   Extra: 4 | Ratio: 2.00</p>
+            </div>
+            
+            <div class="comparison">
+                <div class="comparison-column">
+                    <h3>Expected Determinations (1)</h3>
+        
+                <div class="expected">
+                    <p>["['rpd’s decision cannot stand and must be set aside']", "['302 (c.a.']", "['appeal is allowed']", "['rad sets aside the determination of the rpd', 'substitutes its determination that the appellant is a convention refugee']"]</p>
+                </div>
+                
+                </div>
+                <div class="comparison-column">
+                    <h3>Extra Determinations (6)</h3>
+        
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>The Appellant asks the Refugee Appeal Divi sion 
+(RAD) to set aside the determination of the RPD</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>the RAD sets aside the determination of the RPD</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>This appeal is 
+allowed</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>come to an independent assessme nt of whether the claimant is a 
+Convention refugee or a person in need of protection</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>the RAD sets aside the determination of the  RPD</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>This appeal is 
+allowed</p>
+                </div>
+                
+                </div>
+            </div>
+        
+            <div>
+                <h3>All Extracted Determinations (8)</h3>
+        
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>The Appellant asks the Refugee Appeal Divi sion 
+(RAD) to set aside the determination of the RPD</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>the RAD sets aside the determination of the RPD</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>substitutes its determination that the Appellant is a Convention refugee</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>This appeal is 
+allowed</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>come to an independent assessme nt of whether the claimant is a 
+Convention refugee or a person in need of protection</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>the RAD sets aside the determination of the  RPD</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>substitutes its determination that the Appellant is a Convention refugee</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>This appeal is 
+allowed</p>
+                </div>
+                
+            </div>
+            
+            <h3>Case Text (first portion):</h3>
+            <div class="case-text"> 
+RAD.2 5.02  (June 23, 2014 ) 
+ 
+ 
+Immigration and   
+Refugee Board of Canada  
+ 
+Refugee Appeal Division  
+ Commission de l’immigration  
+et du statut de réfugié du Canada  
+ 
+Section d’appel des réfugiés  
+ 
+ 
+ 
+ 
+RAD File No. / N° de  dossier de la SAR  : TB5 -01817  
+ 
+ Private Proceeding / Huis clos  
+ 
+ 
+Reasons and decision  Motifs et décision  
+ 
+ 
+Person(s) who is(are)  
+the subject of the appeal   XXXX XXXX XXXX   Personne(s) en cause  
+   
+   
+Appeal considered / heard at  Toronto, Ontario  Appel instruit à  
+   
+   
+Date of decision  May 12, 2015  Date de la décision  
+   
+   
+Panel  M. Pettinella  Tribunal  
+    
+   
+Counsel for the person(s) who 
+is(are)the subject of the appeal  XXXXXXXXXXXXXXXXXXXX  Conseil(s) du (de la/des)   
+personne(s) en cause  
+ Barrister and Solicitor   
+   
+Designated Representative(s)  N/A  Représentant(e)(s) désigné(e)(s)  
+   
+   
+Counsel for the Minister  N/A  Conseil du  ministre  
+   
+ 
+ 
+2015 CanLII 74265 (CA IRB)
+RAD F ile No. / N° de dossier de la SA R :  
+ REASONS FOR DECISION  
+[1] XXXX XXXX  (the Appellant), a citizen of Uganda, appeals a decision of the Refugee 
+Protection Division (RPD) denying her claim for refugee protection. She has not submitted new 
+evidence and does not request an oral hearing. The Appellant asks the Refugee Appeal Divi sion 
+(RAD) to set aside the determination of the RPD and substitute a positive determination. In the 
+alternative, the Appellant asks that the matter be referred to the RPD for redetermination, giving 
+directions to the RPD to accept her claim.  
+DETERMINATIO N 
+[2] Pursuant to Section 111(1)(b) of IRPA, the RAD sets aside the determination of the RPD 
+and substitutes its determination that the Appellant is a Convention refugee. This appeal is 
+allowed.  
+Background  
+[3] The Appellant alleged before the RPD that, upon return  to Uganda, she will be harmed by 
+her husband because she left him and he had abused her in the past.  
+[4] The Appellant’s claim for refugee prot...</div>
+        </div>
+        
+        <div class="case" id="case-14">
+            <div class="case-header">
+                <h2>Case 14: ID 74550</h2>
+                <p class="metrics">Expected: 4 | Extracted: 8 | 
+                   Extra: 4 | Ratio: 2.00</p>
+            </div>
+            
+            <div class="comparison">
+                <div class="comparison-column">
+                    <h3>Expected Determinations (1)</h3>
+        
+                <div class="expected">
+                    <p>["['appeal is dismissed']", "['exclusion order is set aside']", "['appeal is allowed']", "['appeal is allowed']"]</p>
+                </div>
+                
+                </div>
+                <div class="comparison-column">
+                    <h3>Extra Determinations (8)</h3>
+        
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>t he appellant ’s appeal was allowed</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>Member  XXXXXXXXXXX 
+concluded that the Minister ’s appeal was allowed</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>especially her son might experience  if this appeal is dismissed</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>CONCLUSION  
+[17]  The appeal is allowed</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>the exclusion order is set aside</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>NOTICE  OF DECISION  
+ 
+The appeal is allowed</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>The exclusion order is set aside</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>The Immigration Appeal Division has 
+determined that the appellant has not lost her permanent resident status</p>
+                </div>
+                
+                </div>
+            </div>
+        
+            <div>
+                <h3>All Extracted Determinations (8)</h3>
+        
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>t he appellant ’s appeal was allowed</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>Member  XXXXXXXXXXX 
+concluded that the Minister ’s appeal was allowed</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>especially her son might experience  if this appeal is dismissed</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>CONCLUSION  
+[17]  The appeal is allowed</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>the exclusion order is set aside</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>NOTICE  OF DECISION  
+ 
+The appeal is allowed</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>The exclusion order is set aside</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>The Immigration Appeal Division has 
+determined that the appellant has not lost her permanent resident status</p>
+                </div>
+                
+            </div>
+            
+            <h3>Case Text (first portion):</h3>
+            <div class="case-text"> 
+IAD .34.1  (04.2013)  
+Disponible en français   
+ 
+ 
+Immigration and  
+Refugee Board of Canada  
+ 
+Immigration Appeal Division  
+  
+Commission de l’immigration  
+et du statut de réfugié du Canada  
+ 
+Section d’appel de l’immigration  
+IAD File No.  / N° de dossier de la SAI  : MB6 -00384  
+Client ID No. / N° ID c lient  : 88536744  
+ 
+Reasons and Decision  Motifs et décision  
+ 
+REMOVAL ORDER  
+ 
+Appellant(s)  XXXXXXXXXXXXXXXXXX  Appelant(e)(s)  
+   
+and   et 
+   
+Respondent  Minister of Public Safety  
+and Emergency Preparedness  Intimé (e) 
+   
+   
+Date(s) of Hearing  November  13, 2018  
+January  31, 2019  
+ Date(s) de l’audience  
+   
+Place of Hearing  Montr éal, Quebec  Lieu de l’audience  
+   
+Date of Decision  March  26,  2019  Date de la décision  
+   
+Panel  XXXXXXXXXXXXXXXXX  
+ Tribunal  
+   
+Counsel for the  
+Appellant(s)  XXXXXXXXXXXXXXXXXXXX  Conseil(s) de 
+l’appelant(e) / des 
+appelant(e)(s)  
+   
+Designated 
+Representative(s)  N/A  Représentant(e)(s) 
+désigné(e)(s)  
+   
+   
+Counsel for the 
+Minister  XXXXXXXXXXXX  Conseil(s) du (de la) 
+ministre  
+2019 CanLII 74550 (CA IRB)
+IAD  File No.  / N° de dossier de la S AI : MB6 -00384  
+ 
+ 
+2  
+REASONS FOR DECISION  
+ 
+[1] These are the reasons for decision in the case of XXXXXXXXXXXXXXXXXX  (the 
+appellant) , a citizen of Cameroon, who is appealing a decision made by the Immig ration Division 
+(ID) on January  19, 2016 .1 In th at decision,  the Member  conclude s as follows , with respect to the 
+appellant’s admissions of misrepresentation : 
+[translatio n] 
+I therefore have no other option than to issue an exclusion order against you with a right 
+of appeal. I agree that the report is well -founded in light of the documentary evidence , 
+C-1 to C -5, that has been submitted , as well as the admissions that were made in your 
+name . 
+[translated as it appears in the French version ] 
+[2] The appellant is not challenging the ID ’s decision but is asking that the panel  take into 
+account the various hum...</div>
+        </div>
+        
+        <div class="case" id="case-15">
+            <div class="case-header">
+                <h2>Case 15: ID 81259</h2>
+                <p class="metrics">Expected: 4 | Extracted: 8 | 
+                   Extra: 4 | Ratio: 2.00</p>
+            </div>
+            
+            <div class="comparison">
+                <div class="comparison-column">
+                    <h3>Expected Determinations (1)</h3>
+        
+                <div class="expected">
+                    <p>["['appeal is allowed']", "['immigration officer’s decision is valid in law']", "['appeal is dismissed']", "['appeal is allowed']"]</p>
+                </div>
+                
+                </div>
+                <div class="comparison-column">
+                    <h3>Extra Determinations (8)</h3>
+        
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>you are 
+asking that you r appeal be allowed based on humanitarian</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>The 
+Minister’s representative is request ing that your appeal be dismissed</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>This  paragraph states that an appeal is allowed if</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>You mentioned that you would be disappointed if 
+the appeal were dismissed</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>If the appeal is allowed</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>whether or not the appeal is  allowed  is not really going 
+to have an impact on the best interests of your  children</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>the appeal is dismissed</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>/ No ID client : 90191623  
+ 
+ 
+9 
+ NOTICE OF DECISION  
+ 
+The appeal is dismissed</p>
+                </div>
+                
+                </div>
+            </div>
+        
+            <div>
+                <h3>All Extracted Determinations (8)</h3>
+        
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>you are 
+asking that you r appeal be allowed based on humanitarian</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>The 
+Minister’s representative is request ing that your appeal be dismissed</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>This  paragraph states that an appeal is allowed if</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>You mentioned that you would be disappointed if 
+the appeal were dismissed</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>If the appeal is allowed</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>whether or not the appeal is  allowed  is not really going 
+to have an impact on the best interests of your  children</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>the appeal is dismissed</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>/ No ID client : 90191623  
+ 
+ 
+9 
+ NOTICE OF DECISION  
+ 
+The appeal is dismissed</p>
+                </div>
+                
+            </div>
+            
+            <h3>Case Text (first portion):</h3>
+            <div class="case-text"> 
+IAD .34.01 (2021.03)  
+Disponible en français  Immigration and Refugee  
+Board of Canada  
+ 
+Immigration Appeal Division  
+ Commission de l’immigration  
+et du statut de réfugié du Canada  
+ 
+Section d’appel de l’immigration  
+IAD File No. / No de dossier de la SAI : MC0 -05107  
+Client ID No. / No ID client : 90191623  
+ 
+Reasons and Decision Motifs et décision  
+ RESIDENCY OBLIGATIO N APPEAL  
+ 
+ 
+Appellant(s)  Arezki  KIRDOUS  Appelant(e)(s)  
+and   et 
+Respondent  The Minister of Citizenship and Immigration  Intimé(e)  
+   
+Date(s) of Hearing  May  7, 2021  
+ Date(s) de l’audience  
+   
+Place of Hearing  Held by videoconference  
+ Lieu de l’audience  
+   
+Date of Decision  May  7, 2021  
+Decision signed: May  31, 2021  
+ Date de la décision  
+   
+Panel  XXXXXXXXXXXX  Sanso  
+ 
+ Tribunal  
+   
+Counsel for the  
+Appellant(s)  N/A  Conseil(s) de  
+l’appelant(e) / des appelant(e)s  
+   
+Designated Representative(s)  N/A  Représentant(e)(s) 
+désigné(e)(s)  
+   
+Counsel for the  
+Minister  XXXXXXXXXXXXXXXXX  
+ Conseil du ministre  
+ 
+2021 CanLII 81259 (CA IRB)
+IAD File No. / No de dossier de la SAI : MC0 -05107  
+Client ID No. / No ID client : 90191623  
+ 
+ 
+1 
+ ORAL REASONS FOR DECISION  
+[French version e dited for spelling, grammar and syntax]  
+OVERVIEW  
+[1] You, XXXXXXXXXXXXXXX , are the appellant. You are a citizen of Algeria and a permanent 
+resident of Canada.  
+[2] Permanent residents of Canada must comply with a residency obligation. One of the ways 
+to comply with it is to have spent a sufficient number of days in Canada.  
+[3] To be able to enter Canada, you applied for a permanent resident travel document. This 
+application was received by the Canadian immigration authorities on August  8, 2019 . An 
+immigration officer refused this application because he concluded that you had not complied with 
+your residency obligation. This is the decision being appealed before me. Your appeal is based on 
+subsection  63(4) of the Immigration and Refugee Protectio...</div>
+        </div>
+        
+        <div class="case" id="case-16">
+            <div class="case-header">
+                <h2>Case 16: ID 101335</h2>
+                <p class="metrics">Expected: 4 | Extracted: 7 | 
+                   Extra: 3 | Ratio: 1.75</p>
+            </div>
+            
+            <div class="comparison">
+                <div class="comparison-column">
+                    <h3>Expected Determinations (1)</h3>
+        
+                <div class="expected">
+                    <p>["['appeal is terminated']", "['appeal is terminated', 'appeal is dismissed']", "['appeal isdismissedfor lack of jurisdiction']", "['appeal is terminated']"]</p>
+                </div>
+                
+                </div>
+                <div class="comparison-column">
+                    <h3>Extra Determinations (7)</h3>
+        
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>/ No ID client : 4076 -7411  
+ 
+1  
+Rea sons for Decision  
+ 
+Introduction  
+[1] The respondent makes an application that the appeal be dismissed for lack of jurisdiction</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>the panel  finds  that  the appeal  is 
+dismissed</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>the appeal is 
+terminated</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>the panel finds that this appeal is 
+terminated</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>the panel  finds  
+that  the appeal  is terminated</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>that the appeal  is dismissed  for lack  of jurisdiction</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>/ No ID client : 4076 -7411  
+ 
+4  
+NOTICE OF DECISION  
+ 
+ 
+ The appeal is dismissed  for lack of jurisdiction because the appellant has not shown</p>
+                </div>
+                
+                </div>
+            </div>
+        
+            <div>
+                <h3>All Extracted Determinations (7)</h3>
+        
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>/ No ID client : 4076 -7411  
+ 
+1  
+Rea sons for Decision  
+ 
+Introduction  
+[1] The respondent makes an application that the appeal be dismissed for lack of jurisdiction</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>the panel  finds  that  the appeal  is 
+dismissed</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>the appeal is 
+terminated</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>the panel finds that this appeal is 
+terminated</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>the panel  finds  
+that  the appeal  is terminated</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>that the appeal  is dismissed  for lack  of jurisdiction</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>/ No ID client : 4076 -7411  
+ 
+4  
+NOTICE OF DECISION  
+ 
+ 
+ The appeal is dismissed  for lack of jurisdiction because the appellant has not shown</p>
+                </div>
+                
+            </div>
+            
+            <h3>Case Text (first portion):</h3>
+            <div class="case-text"> 
+IAD.34 (October 2007)  
+Disponible en français  
+ 
+ 
+ 
+IAD File No. / No de dossier  de la SAI : TA9 -19424  
+Client ID No. / No ID client : 4076 -7411  
+ 
+ 
+Reasons and Decision  Motifs et décision  
+ 
+ 
+REMOVAL ORDER  
+ 
+ 
+Appellant(s)  XXXXXXXXXXXXXXXX  Appelant(e)(s)  
+   
+   
+and   et 
+   
+   
+Respondent  The Minister of Public Safety and Emergency Preparedness  
+Le ministre de la Sécurité publique et de la Protection civile  Intimé(e)  
+   
+   
+   
+Date(s) and Place 
+of Hearing  In Chambers  Date(s) et lieu de 
+l’audience  
+ Toronto, Ontario   
+   
+   
+Date of Decision  November 7, 2012  Date de la décision  
+   
+   
+   
+Panel  XXXXXXXXXXXXXXXXXXXX  Tribunal  
+   
+   
+   
+Counsel for the  
+Appellant(s)  N/A  Conseil(s) de 
+l’appelant(e) / des 
+appelant(e)(s)  
+   
+   
+   
+Counsel for the 
+Minister  XXXXXXXXXXXXXXXXXX  Conseil du  
+ministre  
+ 
+ 
+ 
+2012 CanLII 101335 (CA IRB)
+IAD File No. / No de dossier  de la SAI : TA9 -19424  
+Client ID No. / No ID client : 4076 -7411  
+ 
+1  
+Rea sons for Decision  
+ 
+Introduction  
+[1] The respondent makes an application that the appeal be dismissed for lack of jurisdiction. 
+The appeal  is pursuant  to sub section  63(3)  of the Immigration  and  Refugee  Protection  Act1 
+(IRPA ) of a removal  order  made  against  the appellant.  
+Decision  
+[2] Having  considered  the evidence  and  submissions,  the panel  finds  that  the appeal  is 
+dismissed . 
+Background  
+[3] The  Immigration  Division  issued  a deportatio n order in September 2009 against  the 
+appellant  based  on paragraph 36(1)( a) of the IRPA ,2 and  the appellant  appealed  that  order.  
+[4] In September 2012, the respondent made an application to dismiss the appeal for absence 
+of jurisdiction. On September 27, 2012, the appellant was requested to make any submissions; 
+none were received. This matter w as dealt with in chambers.  
+Analysis  
+[5] A person  may  be inadmissible  based  on serious  criminality:3 
+36.  (1) A permanent resident or a foreig...</div>
+        </div>
+        
+        <div class="case" id="case-17">
+            <div class="case-header">
+                <h2>Case 17: ID 102116</h2>
+                <p class="metrics">Expected: 5 | Extracted: 8 | 
+                   Extra: 3 | Ratio: 1.60</p>
+            </div>
+            
+            <div class="comparison">
+                <div class="comparison-column">
+                    <h3>Expected Determinations (1)</h3>
+        
+                <div class="expected">
+                    <p>["['appellant has not lost his permanent resident status']", "['removal order is set aside']", "['appeal is   ']", "['departure order is set aside', 'appellant has not lost his permanent resident status']", "['appeal is allowed']"]</p>
+                </div>
+                
+                </div>
+                <div class="comparison-column">
+                    <h3>Extra Determinations (8)</h3>
+        
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>the appellant requested that his appeal be allowed for humanitarian</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>the appeal is allowed</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>the appeal is allowed</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>[27]  The departure order is set aside</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>and the Immigration Appeal Division finds that the appellant has 
+not lost his permanent resident status</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>g rammar ] 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+NOTICE OF DECISION  
+ 
+The appeal is allowed</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>The removal order is set aside</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>The Immigration Appeal Division 
+finds that the appellant has not lost his permanent resident status</p>
+                </div>
+                
+                </div>
+            </div>
+        
+            <div>
+                <h3>All Extracted Determinations (8)</h3>
+        
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>the appellant requested that his appeal be allowed for humanitarian</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>the appeal is allowed</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>the appeal is allowed</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>[27]  The departure order is set aside</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>and the Immigration Appeal Division finds that the appellant has 
+not lost his permanent resident status</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>g rammar ] 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+NOTICE OF DECISION  
+ 
+The appeal is allowed</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>The removal order is set aside</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>The Immigration Appeal Division 
+finds that the appellant has not lost his permanent resident status</p>
+                </div>
+                
+            </div>
+            
+            <h3>Case Text (first portion):</h3>
+            <div class="case-text"> 
+IAD.34.1 (03/14)  
+Disponible en français  
+ 
+ 
+Immigration and  
+Refugee Board of Canada  
+ 
+Immigration Appeal Division  
+  
+Commission de l ’immigration  
+et du statut de réfugié du Canada  
+ 
+Section d ’appel de l ’immigration  
+ 
+IAD File No. /  No de dossier de la SAI  : TB7 -09730  
+Client ID No. / No ID client  : 9012 -5321  
+ 
+Reasons and Decision – Motifs et décision  
+ 
+Removal Order - Mesure de renvoi  
+ 
+Appellant(s)  XXXXXXXXXXXXX  DE OUANDJI  Appelant(e)(s)  
+   
+and   et 
+   
+Respondent  The Minister of Public Safety and Emergency 
+Preparedness  Intimé(e)  
+ Le ministre de la Sécurité publique et de la Protection 
+civile   
+   
+Date(s) of Hearing  July  19, 2018  Date(s) de l ’audience  
+   
+   
+Place of Hearing  Toronto,  Ontario   Lieu de l ’audience  
+   
+   
+Date of Decision  July  19, 2018  Date de la décision  
+   
+   
+Panel  MXXXXXXXXXXXXXXXXXXXX   Tribunal  
+   
+   
+Counsel for the  
+Appellant(s)  N/A   Conseil(s) de 
+l’appelant(e) / des 
+appelant(e)(s)  
+   
+   
+Designated 
+Representative(s)  N/A   Représentant(e)(s) 
+désigné(e)(s)  
+   
+   
+Counsel for the Minister  XXXXXXXXXXXXXX   Conseil(s) du (de la) 
+ministre  
+ 
+2018 CanLII 102116 (CA IRB)
+IAD File No. / No de dossier  de la SAI  : TB7 -09730  
+Client ID No. / No ID client  : 9012 -5321  
+ 
+1 
+  
+ORAL REASONS FOR DECISION  
+ 
+[1] KarlyXXXXXXXXXXXXXXXXXXXX, the appellant, a permanent resident and a citizen of the Republic of 
+Cameroon by birth, is appealing under subsection  63(3) of the Immigration and Refugee Protection Act  
+from a departure order issued on April  24, 2017, by the Minis ter’s delegate at Pierre Elliott Trudeau 
+Airport in Montréal.  
+[2] The delegate noted that at the time of his port -of-entry interview, the appellant was unable to 
+meet the residency obligation under section  28 of the Act.  
+[3] During a hearing today, July  19, 2018, I reminded the appellant of his right, at his own expense, 
+to be represented by legal or other counsel.  He stated that he inte...</div>
+        </div>
+        
+        <div class="case" id="case-18">
+            <div class="case-header">
+                <h2>Case 18: ID 105231</h2>
+                <p class="metrics">Expected: 4 | Extracted: 7 | 
+                   Extra: 3 | Ratio: 1.75</p>
+            </div>
+            
+            <div class="comparison">
+                <div class="comparison-column">
+                    <h3>Expected Determinations (1)</h3>
+        
+                <div class="expected">
+                    <p>["['appellant is neither a convention refugee nor a person in need of protection']", "['appellant is neither a convention refugee nor a person in need of protection']", "['appeal is dismissed']", "['rad confirms the decision of the rpd', 'appellant is neither a convention refugee nor a person in need of protection']"]</p>
+                </div>
+                
+                </div>
+                <div class="comparison-column">
+                    <h3>Extra Determinations (7)</h3>
+        
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>the RAD confirms the decision of the RPD that the Appellant is neither a Convention 
+refugee nor a person in need of protection</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>This appeal is dismissed</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>come to an independent assessment of whether the claimant is 
+a Convention refugee or a person in need of protection</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>The RAD finds that the Appellant is neither  a Convention 
+refugee nor a person in need of protection</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>agrees with the 
+RPD that the Appellant is neither a Convention refugee nor a person in need of protection</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>the RAD confirms the decision of the RPD th at 
+the Appellant is neither a Convention refugee nor a person in need of protection</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>This appeal is 
+dismissed</p>
+                </div>
+                
+                </div>
+            </div>
+        
+            <div>
+                <h3>All Extracted Determinations (7)</h3>
+        
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>the RAD confirms the decision of the RPD that the Appellant is neither a Convention 
+refugee nor a person in need of protection</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>This appeal is dismissed</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>come to an independent assessment of whether the claimant is 
+a Convention refugee or a person in need of protection</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>The RAD finds that the Appellant is neither  a Convention 
+refugee nor a person in need of protection</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>agrees with the 
+RPD that the Appellant is neither a Convention refugee nor a person in need of protection</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>the RAD confirms the decision of the RPD th at 
+the Appellant is neither a Convention refugee nor a person in need of protection</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>This appeal is 
+dismissed</p>
+                </div>
+                
+            </div>
+            
+            <h3>Case Text (first portion):</h3>
+            <div class="case-text"> 
+RAD.2 5.02  (June 23, 2014 ) 
+ 
+ 
+Immigration and   
+Refugee Board of Canada  
+ 
+Refugee Appeal Division  
+ Commission de l’immigration  
+et du statut de réfugié du Canada  
+ 
+Section d’appel des réfugiés  
+ 
+ 
+ 
+ 
+RAD File No. / N° de  dossier de la SAR  : TB5 -10946  
+ 
+ Private Proceeding / Huis clos  
+ 
+ 
+Reasons and decision  Motifs et décision  
+ 
+ 
+Person(s) who is(are)  
+the subject of the appeal   XXXX XXXX XXXX XXXX   Personne(s) en cause  
+   
+   
+Appeal considered / heard at  Toronto, Ontario  Appel instruit à  
+   
+   
+Date of decision  January 20, 2016  Date de la décision  
+   
+   
+Panel  XXXXXXXXXX  Tribunal  
+   
+   
+   
+Counsel for the person(s) who 
+is(are)the subject of the appeal  XXXXXXXXXXXXX  Conseil(s) du (de la/des)   
+personne(s) en cause  
+   
+   
+Designated Representative(s)  N/A  Représentant(e)(s) désigné(e)(s)  
+   
+   
+Counsel for the Minister  N/A  Conseil du  ministre  
+   
+ 
+ 
+2016 CanLII 105231 (CA IRB)
+RAD F ile No. / N° de dossier de la SA R :  
+ REASONS FOR DECISION  
+[1] XXXX XXXX XXXX  (the Appellant) , a citizen of Somalia , appeals a decision of the 
+Refugee Protection Division (RPD) denying his claim for refugee protection.  He has not 
+submitted new evidence in support of his appeal, nor does he request an oral hearing. The 
+Appellant asks the Refugee Ap peal Division (RAD) to overturn the decision of the RPD and to 
+find that th e Appellant is a Convention refugee or a person in need of protection. In the 
+alternative, the Appellant requests that the matter be returned to the RPD for a new hearing under 
+a di fferently constituted panel.  
+DETERMINATION  
+[2] Pursuant to Section 111(1)(a) of the Immigration and Refugee Protection Act  (IRPA  or 
+“the Act” ), the RAD confirms the decision of the RPD that the Appellant is neither a Convention 
+refugee nor a person in need of protection. This appeal is dismissed.  
+Background  
+[3] The Appellant alleged before the RPD that he  is a young male from the XXXX XXXX 
+XXXX  c...</div>
+        </div>
+        
+        <div class="case" id="case-19">
+            <div class="case-header">
+                <h2>Case 19: ID 105868</h2>
+                <p class="metrics">Expected: 4 | Extracted: 7 | 
+                   Extra: 3 | Ratio: 1.75</p>
+            </div>
+            
+            <div class="comparison">
+                <div class="comparison-column">
+                    <h3>Expected Determinations (1)</h3>
+        
+                <div class="expected">
+                    <p>["['rad finds that the respondent’s refugee claim has']", "['rad sets aside the determination of the rpd']", "['respondent is neither a convention refugee nor a person in need of protection']", "['neither a convention refugee nor a person in need of protection']"]</p>
+                </div>
+                
+                </div>
+                <div class="comparison-column">
+                    <h3>Extra Determinations (7)</h3>
+        
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>the 
+Refugee Appeal Division ( RAD ) sets aside the determination of the RPD</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>substitutes the 
+determination that  XXXX XXXX XXXX  is neith er a Convention refugee pursuant to s</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>This Appeal  is allowed</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>come to an independent assessment of whether the claimant is 
+a Convention refugee or a person in need of protection</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>the RAD substitutes the determination that should have bee n 
+made</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>the RAD sets aside the 
+determination of the RPD</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>which 
+empowers the RAD to set aside the determination of the RPD</p>
+                </div>
+                
+                </div>
+            </div>
+        
+            <div>
+                <h3>All Extracted Determinations (7)</h3>
+        
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>the 
+Refugee Appeal Division ( RAD ) sets aside the determination of the RPD</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>substitutes the 
+determination that  XXXX XXXX XXXX  is neith er a Convention refugee pursuant to s</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>This Appeal  is allowed</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>come to an independent assessment of whether the claimant is 
+a Convention refugee or a person in need of protection</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>the RAD substitutes the determination that should have bee n 
+made</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>the RAD sets aside the 
+determination of the RPD</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>which 
+empowers the RAD to set aside the determination of the RPD</p>
+                </div>
+                
+            </div>
+            
+            <h3>Case Text (first portion):</h3>
+            <div class="case-text"> 
+RAD.2 8.07 (June 23, 2014 ) 
+ 
+ 
+Immigration and   
+Refugee Board of Canada  
+ 
+Refugee Appeal Division  
+ Commission de l’immigration  
+et du statut de réfugié du Canada  
+ 
+Section d’appel des réfugiés  
+ 
+ 
+ 
+ 
+RAD File No. / N° de  dossier de la SAR  : TB4 -10724  
+ 
+ Private Proceeding / Huis clos  
+ 
+Redetermination of the Appeal  
+Reasons and decision  Motifs et décision  
+ 
+ 
+Person(s) who is(are)  
+the subject of the appeal   XXXX XXXX XXXX 
+XXXX (a.k.a. XXXX XXXX XXXX 
+XXXX ) 
+(a.k.a. XXXX XXXX XXXX XXXX ) 
+(a.k.a. XXXX XXXX XXXX ) 
+  Personne(s) en cause  
+   
+Appeal considered / heard at  Toronto, Ontario  Appel instruit à  
+   
+   
+Date of decision  October 1 5, 2015  Date de la décision  
+   
+   
+Panel  XXXXXXXXXXXXXXXXX  Tribunal  
+   
+   
+Counsel for the person(s) who 
+is(are)the subject of the appeal  XXXXXXXXXX . Jesuorobo  
+Barrister and Solicitor  Conseil(s) du (de la/des)   
+personne(s) en cause  
+   
+   
+Designated Representative(s)  N/A  Représentant(e)(s) désigné(e)(s)  
+   
+   
+Counsel for the Minister  XXXXXXXXXXXXXXX  Conseil du  ministre  
+   
+ 
+2015 CanLII 105868 (CA IRB)
+ 
+ 
+  
+2015 CanLII 105868 (CA IRB)
+RAD F ile No. / N° de dossier de la SA R :  
+ REASONS FOR DECISION  
+[1] The Minister of Citizenship and Immigration Canada  (the Appellant)  appeals a decision of 
+the Refugee Protection Division (RPD) accepting the claim for refugee protection of XXXX  
+XXXX XXXX  (the Respondent ), a male from Nigeria. The Minister has submitted new evidence 
+in support of the appeal that was not presented at the RPD hearing.  
+DETERMINATION OF THE APPEAL  
+[2] Pursuant to ss. 111 (1) (b) of Immigration and Refugee Protection Act  (IRPA ), the 
+Refugee Appeal Division ( RAD ) sets aside the determination of the RPD and substitutes the 
+determination that  XXXX XXXX XXXX  is neith er a Convention refugee pursuant to s. 96 of the 
+IRPA nor a person in need of protection pursuant to s. 97 of IRPA. Pursuant to ss. 107(2) of 
+IRPA, the RAD finds that ...</div>
+        </div>
+        
+        <div class="case" id="case-20">
+            <div class="case-header">
+                <h2>Case 20: ID 111316</h2>
+                <p class="metrics">Expected: 4 | Extracted: 7 | 
+                   Extra: 3 | Ratio: 1.75</p>
+            </div>
+            
+            <div class="comparison">
+                <div class="comparison-column">
+                    <h3>Expected Determinations (1)</h3>
+        
+                <div class="expected">
+                    <p>["['rad sets aside the determination of the rpd', 'substitutes its determination that the appellants are convention refugees']", "['appeal is allowed']", "['rad has found that the rpd’s decision cannot stand']", "['rad must substitute its own decision']"]</p>
+                </div>
+                
+                </div>
+                <div class="comparison-column">
+                    <h3>Extra Determinations (7)</h3>
+        
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>the 
+RAD sets aside the determination of the RPD</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>substitutes its determination that the Appellant s 
+are Convention refugees</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>The  appeal is allowed</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>come to an independent assessment of whether the claimant is 
+a Convention refugee or a person in need of protection</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>the RAD sets aside the determination of the RPD</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>substitutes its determination that the Appellant s are Convention refugees</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>The appeal is 
+allowed</p>
+                </div>
+                
+                </div>
+            </div>
+        
+            <div>
+                <h3>All Extracted Determinations (7)</h3>
+        
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>the 
+RAD sets aside the determination of the RPD</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>substitutes its determination that the Appellant s 
+are Convention refugees</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>The  appeal is allowed</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>come to an independent assessment of whether the claimant is 
+a Convention refugee or a person in need of protection</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>the RAD sets aside the determination of the RPD</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>substitutes its determination that the Appellant s are Convention refugees</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>The appeal is 
+allowed</p>
+                </div>
+                
+            </div>
+            
+            <h3>Case Text (first portion):</h3>
+            <div class="case-text"> 
+ Immigration and   
+Refugee Board of Canada  
+ 
+Refugee Appeal Division  
+ Commission de l’immigration  
+et du statut de réfugié du Canada  
+ 
+Section d’appel des réfugiés  
+ 
+ 
+ 
+ 
+RAD File No. / N° de  dossier de la SAR  : TB5 -05331  
+TB5 -05332  
+TB5 -05333  
+ 
+ Private Proceeding / Huis clos  
+ 
+ 
+Reasons and decision  Motifs et décision  
+ 
+ 
+Person(s) who is(are)  
+the subject of the appeal   XXXX XXXX XXXX XXXX 
+XXXXXXXX XXXX XXXX XXXX 
+XXXX XXXX XXXX XXXX XXXX 
+XXXX XXXX   Personne(s) en cause  
+   
+Appeal considered / heard at  Toronto, Ontario  Appel instruit à  
+   
+   
+Date of decision  June  24, 2015  Date de la décision  
+   
+   
+Panel  XXXXXXXXXX  Tribunal  
+   
+   
+   
+Counsel for the person(s) who 
+is(are)the subject of the appeal  XXXXXXXXXXXXXXXBarrister and Solicitor  Conseil(s) du (de la/des)   
+personne(s) en cause  
+   
+   
+Designated Representative(s)  XXXX XXXX XXXX XXXX  Représentant(e)(s) désigné(e)(s)  
+   
+   
+Counsel for the Minister  N/A  Conseil du  ministre  
+   
+ 
+REASONS FOR DECISION  
+2015 CanLII 111316 (CA IRB)
+RAD F ile No. / N° de dossier de la SA R :  
+ [1] XXXX XXXX XXXX XXXX  (the  principal  Appellant),  his wife XXXXXXXXXXXXXX 
+XXXX XXXX  and their minor child, XXXXXXXXXXXXXXXXXXX , citizen s of Venezuela , 
+appeal a decision of the Refugee Protection Division (RPD) denying their  claim s for refugee 
+protection.  They  have submitted no new evidence in support of their appeal, nor do they seek an 
+oral hearing before the RAD . The principal  Appellant has been appointed as the designated 
+representative of the minor child.  The Appellant asks the Refugee Appeal Division (RAD)  to set 
+aside the decision of the RPD and substitute a determination that the Appellants are Convention 
+refugees or perso ns in need of protection.  
+Determination  
+[2]  Pursuant to Section 111(1)(b) of the Immigration and Refugee Protection Act  (IRPA), the 
+RAD sets aside the determination of the RPD and substitutes its determination that th...</div>
+        </div>
+        
+    <script>
+        // Add a simple navigation for jumping between cases
+        document.addEventListener('DOMContentLoaded', function() {
+            const nav = document.querySelector('.nav');
+            const navContent = document.createElement('div');
+            navContent.style.marginTop = '10px';
+            
+            for (let i = 1; i <= 20; i++) {
+                const link = document.createElement('a');
+                link.href = '#case-' + i;
+                link.textContent = 'Case ' + i;
+                link.style.marginRight = '15px';
+                link.style.textDecoration = 'none';
+                link.style.padding = '5px 10px';
+                link.style.backgroundColor = '#f8f9fa';
+                link.style.borderRadius = '5px';
+                navContent.appendChild(link);
+            }
+            
+            nav.appendChild(navContent);
+        });
+    </script>
+    </body>
+    </html>
+    

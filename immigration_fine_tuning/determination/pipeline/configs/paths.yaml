@@ -1,0 +1,6 @@
+paths:
+  default:
+    train: "${IMMIGRATION_DATA_DIR}/merged/train_enriched.csv"
+    test: "${IMMIGRATION_DATA_DIR}/merged/test_enriched.csv"
+    validation: "data/validation_set.csv"  # Relative to pipeline dir
+    output: "results/experiments"  # Results will go in pipeline/results/experiments 

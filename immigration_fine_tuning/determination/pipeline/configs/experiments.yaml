@@ -1,0 +1,19 @@
+# Default experiment configurations
+experiments:
+  - name: "ngram_baseline"
+    model: "ngram"
+    description: "Baseline n-gram model with default parameters"
+    params:
+      match_threshold: 0.75
+      min_ngram_size: 2
+      max_ngram_size: 4
+
+  - name: "basic_baseline"
+    model: "basic"
+    description: "Basic rule-based model with default parameters"
+    params: {}
+
+  - name: "sparse_baseline"
+    model: "sparse"
+    description: "High-precision sparse explicit model"
+    params: {} 

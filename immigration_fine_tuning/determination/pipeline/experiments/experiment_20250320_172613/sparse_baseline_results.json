@@ -1,0 +1,23 @@
+{
+  "model_name": "sparse",
+  "model_params": {},
+  "metrics": {},
+  "performance": {
+    "processed_cases": 0,
+    "avg_time_per_case": 0
+  },
+  "total_runtime": "11.82 seconds",
+  "case_results": [],
+  "analysis_files": [],
+  "experiment": {
+    "name": "sparse_baseline",
+    "description": "Testing sparse model extraction",
+    "timestamp": "20250320_172613",
+    "config": {
+      "model_name": "sparse",
+      "model_params": {},
+      "experiment_name": "sparse_baseline",
+      "description": "Testing sparse model extraction"
+    }
+  }
+}
