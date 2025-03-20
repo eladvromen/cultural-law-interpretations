@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Run basic extraction model on validation dataset.
+Run n-gram extraction model on validation dataset.
 """
 
 import os
@@ -11,6 +11,7 @@ import datetime
 import pandas as pd
 import json
 import ast
+import numpy as np
 
 from determination_pipeline import DeterminationPipeline
 
@@ -22,7 +23,7 @@ logging.basicConfig(
         logging.StreamHandler(sys.stdout),
     ]
 )
-logger = logging.getLogger("BasicExtraction")
+logger = logging.getLogger("NgramExtraction")
 
 def parse_list_column(value):
     """Parse a column value that contains a list representation."""
@@ -41,25 +42,40 @@ def parse_list_column(value):
     except (SyntaxError, ValueError):
         return []
 
-class SectionBasedBasicExtractor:
-    """Process specific text sections with the basic extractor and store counts."""
+def convert_to_serializable(obj):
+    """Convert NumPy/pandas types to Python native types for JSON serialization."""
+    if isinstance(obj, (np.integer, np.int64)):
+        return int(obj)
+    elif isinstance(obj, (np.floating, np.float64)):
+        return float(obj)
+    elif isinstance(obj, np.ndarray):
+        return obj.tolist()
+    elif isinstance(obj, dict):
+        return {k: convert_to_serializable(v) for k, v in obj.items()}
+    elif isinstance(obj, list):
+        return [convert_to_serializable(i) for i in obj]
+    else:
+        return obj
+
+class SectionBasedNgramExtractor:
+    """Process specific text sections with the n-gram extractor and store counts."""
     
-    def __init__(self, pipeline, min_score=5.0):
+    def __init__(self, pipeline, min_score=15.0):
         """
-        Initialize with a pipeline instance that has a basic extractor.
+        Initialize with a pipeline instance that has an n-gram extractor.
         
         Args:
             pipeline: DeterminationPipeline instance
-            min_score: Minimum score threshold for extractions (default: 5.0)
+            min_score: Minimum score threshold for extractions (default: 15.0)
         """
         self.pipeline = pipeline
-        self.basic_extractor = pipeline.processors.get('basic')
+        self.ngram_extractor = pipeline.processors.get('ngram')
         self.min_score = min_score
         
         logger.info(f"Using minimum score threshold: {self.min_score}")
         
-        if not self.basic_extractor:
-            raise ValueError("Basic extractor not initialized in pipeline")
+        if not self.ngram_extractor:
+            raise ValueError("N-gram extractor not initialized in pipeline")
     
     def filter_extractions(self, extractions):
         """Filter extractions to keep only those with scores >= min_score."""
@@ -70,28 +86,22 @@ class SectionBasedBasicExtractor:
     
     def process_dataframe(self, df):
         """Process dataframe with section-specific extraction."""
-        # First get the latest sparse extraction results if present
-        logger.info("Processing with SectionBasedBasicExtractor...")
+        logger.info("Processing with SectionBasedNgramExtractor...")
         
-        # Parse sparse extraction column if it exists
-        if 'sparse_explicit_extraction' in df.columns:
-            logger.info("Parsing sparse extraction column...")
-            # Parse the sparse extraction column
-            df['sparse_explicit_extraction'] = df['sparse_explicit_extraction'].apply(parse_list_column)
-            
-            # Add count column
-            df['sparse_explicit_extraction_count'] = df['sparse_explicit_extraction'].apply(len)
-            
-            # Log basic statistics
-            total_extractions = df['sparse_explicit_extraction_count'].sum()
-            docs_with_extractions = (df['sparse_explicit_extraction_count'] > 0).sum()
-            logger.info(f"Found {total_extractions} sparse extractions in {docs_with_extractions} documents")
+        # Parse previous extraction columns
+        for col_name in ['sparse_explicit_extraction', 'decision_basic_extraction', 
+                        'analysis_basic_extraction', 'reasons_basic_extraction', 
+                        'conclusion_basic_extraction']:
+            if col_name in df.columns:
+                logger.info(f"Parsing column: {col_name}")
+                df[col_name] = df[col_name].apply(parse_list_column)
+                df[f"{col_name}_count"] = df[col_name].apply(len)
         
         # Define the sections to process
         sections = [
             'decision_headers_text', 
             'analysis_headers_text', 
-            'reasons_headers_text',  # Note: corrected from 'reasoning_headers_text'
+            'reasons_headers_text',
             'conclusion_headers_text'
         ]
         
@@ -119,7 +129,7 @@ class SectionBasedBasicExtractor:
             }
             
             # Process section
-            output_column = f"{section_key}_basic_extraction"
+            output_column = f"{section_key}_ngram_extraction"
             count_column = f"{output_column}_count"
             raw_count_column = f"{output_column}_raw_count"
             
@@ -135,7 +145,7 @@ class SectionBasedBasicExtractor:
                     continue
                     
                 # Get extractions
-                result = self.basic_extractor.process_case(text)
+                result = self.ngram_extractor.process_case(text)
                 raw_extractions = result.get('extracted_determinations', [])
                 
                 # Count before filtering
@@ -181,43 +191,43 @@ class SectionBasedBasicExtractor:
         return df, stats
 
 
-def find_latest_sparse_run():
-    """Find the latest sparse extraction run directory."""
+def find_latest_basic_run():
+    """Find the latest basic extraction run directory."""
     base_dir = Path('C:/Users/shil6369/cultural-law-interpretations/immigration_fine_tuning')
     pipeline_stages_dir = base_dir / "determination" / "pipeline" / "rule_based" / "pipeline_stages"
     
     if not pipeline_stages_dir.exists():
         return None
     
-    # Find directories that start with sparse_extraction
-    sparse_runs = [d for d in pipeline_stages_dir.iterdir() 
-                  if d.is_dir() and d.name.startswith("sparse_extraction_")]
+    # Find directories that start with basic_extraction
+    basic_runs = [d for d in pipeline_stages_dir.iterdir() 
+                 if d.is_dir() and d.name.startswith("basic_extraction_")]
     
-    if not sparse_runs:
+    if not basic_runs:
         return None
     
     # Sort by name (which includes timestamp) and return latest
-    return sorted(sparse_runs)[-1]
+    return sorted(basic_runs)[-1]
 
 
 def main():
-    """Run basic extraction pipeline on the validation dataset."""
-    # Find latest sparse extraction run
-    latest_sparse_run = find_latest_sparse_run()
-    if not latest_sparse_run:
-        logger.error("No previous sparse extraction run found. Please run sparse extraction first.")
+    """Run n-gram extraction pipeline on the validation dataset."""
+    # Find latest basic extraction run
+    latest_basic_run = find_latest_basic_run()
+    if not latest_basic_run:
+        logger.error("No previous basic extraction run found. Please run basic extraction first.")
         return
         
-    logger.info(f"Found latest sparse extraction run: {latest_sparse_run}")
+    logger.info(f"Found latest basic extraction run: {latest_basic_run}")
     
-    # Find sparse extraction output file
-    sparse_output_files = list(latest_sparse_run.glob("validation_with_sparse_extraction.csv"))
-    if not sparse_output_files:
-        logger.error(f"No sparse extraction output file found in {latest_sparse_run}")
+    # Find basic extraction output file
+    basic_output_files = list(latest_basic_run.glob("validation_with_basic_extraction.csv"))
+    if not basic_output_files:
+        logger.error(f"No basic extraction output file found in {latest_basic_run}")
         return
     
-    input_file = sparse_output_files[0]
-    logger.info(f"Using sparse extraction results: {input_file}")
+    input_file = basic_output_files[0]
+    logger.info(f"Using basic extraction results: {input_file}")
     
     # Define base paths
     base_dir = Path('C:/Users/shil6369/cultural-law-interpretations/immigration_fine_tuning')
@@ -229,14 +239,14 @@ def main():
     
     # Create a timestamped folder for this run
     timestamp = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
-    run_dir = pipeline_stages_dir / f"basic_extraction_{timestamp}"
+    run_dir = pipeline_stages_dir / f"ngram_extraction_{timestamp}"
     run_dir.mkdir(exist_ok=True)
     
     # Set output file path in the new directory
-    output_path = run_dir / "validation_with_basic_extraction.csv"
+    output_path = run_dir / "validation_with_ngram_extraction.csv"
     
     # Add log file to the run directory
-    file_handler = logging.FileHandler(run_dir / "basic_extraction.log")
+    file_handler = logging.FileHandler(run_dir / "ngram_extraction.log")
     file_handler.setFormatter(logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s'))
     logger.addHandler(file_handler)
     
@@ -260,18 +270,25 @@ def main():
     df = pd.read_csv(input_file)
     logger.info(f"Loaded {len(df)} records")
     
-    # Create pipeline with only basic extractor
-    config = {'use_basic_extractor': True, 'use_ngram_extractor': False}
+    # Create pipeline with only ngram extractor
+    config = {
+        'use_basic_extractor': False, 
+        'use_ngram_extractor': True,
+        'min_ngram_size': 2,
+        'max_ngram_size': 4,
+        'ngram_threshold': 0.65  # Default threshold in the model
+    }
     pipeline = DeterminationPipeline(config)
     
     # Load training data
     pipeline.load_training_data(str(train_path), str(test_path))
     
-    # Create section processor with score threshold of 5.0
-    section_processor = SectionBasedBasicExtractor(pipeline, min_score=5.0)
+    # Create section processor with score threshold of 15.0
+    # N-gram scores are typically higher than basic scores
+    section_processor = SectionBasedNgramExtractor(pipeline, min_score=15.0)
     
     # Process data
-    logger.info("Processing data with section-based basic extractor...")
+    logger.info("Processing data with section-based ngram extractor...")
     results_df, stats = section_processor.process_dataframe(df)
     
     # Save results
@@ -281,9 +298,14 @@ def main():
     # Save a config file with information about this run
     config_info = {
         "run_timestamp": timestamp,
-        "previous_stage": str(latest_sparse_run),
-        "extractors_used": ["basic_determination_extraction"],
-        "min_score_threshold": 5.0,
+        "previous_stage": str(latest_basic_run),
+        "extractors_used": ["ngram_determination_extraction"],
+        "min_score_threshold": 15.0,
+        "ngram_config": {
+            "min_ngram_size": config['min_ngram_size'],
+            "max_ngram_size": config['max_ngram_size'],
+            "match_threshold": config['ngram_threshold']
+        },
         "sections_processed": [
             "decision_headers_text", 
             "analysis_headers_text", 
@@ -297,36 +319,59 @@ def main():
         "test_data": str(test_path)
     }
     
-    with open(run_dir / "run_config.json", 'w') as f:
-        json.dump(config_info, f, indent=2)
+    # Create summary of all extractors
+    extractor_summary = {
+        "sparse": {"total": 0, "docs_with_extractions": 0},
+        "basic": {section: {"total": 0, "docs_with_extractions": 0} for section in ['decision', 'analysis', 'reasons', 'conclusion']},
+        "ngram": {section: {"total": 0, "docs_with_extractions": 0} for section in ['decision', 'analysis', 'reasons', 'conclusion']}
+    }
     
-    # Log summary of extraction counts
-    logger.info("Extraction count summary:")
+    # Calculate sparse stats
     if 'sparse_explicit_extraction_count' in results_df.columns:
-        total_sparse = results_df['sparse_explicit_extraction_count'].sum()
-        avg_sparse = results_df['sparse_explicit_extraction_count'].mean()
-        docs_with_sparse = (results_df['sparse_explicit_extraction_count'] > 0).sum()
+        extractor_summary["sparse"]["total"] = results_df['sparse_explicit_extraction_count'].sum()
+        extractor_summary["sparse"]["docs_with_extractions"] = (results_df['sparse_explicit_extraction_count'] > 0).sum()
         
         logger.info(f"  Sparse explicit extraction:")
-        logger.info(f"    Total extractions: {total_sparse}")
-        logger.info(f"    Avg per document: {avg_sparse:.2f}")
-        logger.info(f"    Documents with extractions: {docs_with_sparse} ({docs_with_sparse/len(results_df):.1%})")
+        logger.info(f"    Total extractions: {extractor_summary['sparse']['total']}")
+        logger.info(f"    Documents with extractions: {extractor_summary['sparse']['docs_with_extractions']} "
+                  f"({extractor_summary['sparse']['docs_with_extractions']/len(results_df):.1%})")
     
+    # Calculate basic stats
     for section in ['decision', 'analysis', 'reasons', 'conclusion']:
-        count_col = f"{section}_basic_extraction_count"
-        raw_count_col = f"{section}_basic_extraction_raw_count"
-        
-        if count_col in results_df.columns and raw_count_col in results_df.columns:
-            total_count = results_df[count_col].sum()
-            raw_count = results_df[raw_count_col].sum()
-            avg_count = results_df[count_col].mean()
-            docs_with_extractions = (results_df[count_col] > 0).sum()
+        basic_count_col = f"{section}_basic_extraction_count"
+        if basic_count_col in results_df.columns:
+            extractor_summary["basic"][section]["total"] = results_df[basic_count_col].sum()
+            extractor_summary["basic"][section]["docs_with_extractions"] = (results_df[basic_count_col] > 0).sum()
             
             logger.info(f"  {section.capitalize()} basic extraction:")
-            logger.info(f"    Raw extractions: {raw_count}")
-            logger.info(f"    Filtered extractions: {total_count}")
-            logger.info(f"    Avg per document: {avg_count:.2f}")
-            logger.info(f"    Documents with extractions: {docs_with_extractions} ({docs_with_extractions/len(results_df):.1%})")
+            logger.info(f"    Total extractions: {extractor_summary['basic'][section]['total']}")
+            logger.info(f"    Documents with extractions: {extractor_summary['basic'][section]['docs_with_extractions']} "
+                      f"({extractor_summary['basic'][section]['docs_with_extractions']/len(results_df):.1%})")
+    
+    # Calculate ngram stats
+    for section in ['decision', 'analysis', 'reasons', 'conclusion']:
+        ngram_count_col = f"{section}_ngram_extraction_count"
+        ngram_raw_count_col = f"{section}_ngram_extraction_raw_count"
+        
+        if ngram_count_col in results_df.columns and ngram_raw_count_col in results_df.columns:
+            extractor_summary["ngram"][section]["total"] = results_df[ngram_count_col].sum()
+            extractor_summary["ngram"][section]["total_raw"] = results_df[ngram_raw_count_col].sum()
+            extractor_summary["ngram"][section]["docs_with_extractions"] = (results_df[ngram_count_col] > 0).sum()
+            
+            logger.info(f"  {section.capitalize()} ngram extraction:")
+            logger.info(f"    Raw extractions: {extractor_summary['ngram'][section]['total_raw']}")
+            logger.info(f"    Filtered extractions: {extractor_summary['ngram'][section]['total']}")
+            logger.info(f"    Documents with extractions: {extractor_summary['ngram'][section]['docs_with_extractions']} "
+                      f"({extractor_summary['ngram'][section]['docs_with_extractions']/len(results_df):.1%})")
+    
+    # Add summary to config
+    config_info["extraction_summary"] = extractor_summary
+    
+    # Convert all values to serializable Python types
+    serializable_config = convert_to_serializable(config_info)
+    
+    with open(run_dir / "run_config.json", 'w') as f:
+        json.dump(serializable_config, f, indent=2)
     
     logger.info(f"Completed processing. Results saved to {output_path}")
     logger.info(f"Run information saved to {run_dir}")
