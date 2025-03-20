@@ -11,7 +11,7 @@ from collections import Counter, defaultdict
 from functools import lru_cache
 import random
 
-from base_determination_extractor import BaseDeterminationExtractor
+from .base_determination_extractor import BaseDeterminationExtractor
 
 class NgramDeterminationExtractor(BaseDeterminationExtractor):
     """

@@ -9,7 +9,7 @@ from functools import lru_cache
 import time
 from collections import Counter
 
-from base_determination_extractor import BaseDeterminationExtractor
+from .base_determination_extractor import BaseDeterminationExtractor
 
 class BasicDeterminationExtractor(BaseDeterminationExtractor):
     """

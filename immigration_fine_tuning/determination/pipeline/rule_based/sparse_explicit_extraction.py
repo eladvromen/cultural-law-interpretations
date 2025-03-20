@@ -6,7 +6,7 @@ from pathlib import Path
 import pickle
 from functools import lru_cache
 
-from base_determination_extractor import BaseDeterminationExtractor
+from .base_determination_extractor import BaseDeterminationExtractor
 
 class SparseExplicitExtractor(BaseDeterminationExtractor):
     """
@@ -171,32 +171,32 @@ class SparseExplicitExtractor(BaseDeterminationExtractor):
         cleaned = self.clean_sentence(sentence)
         
         # Debug logging
-        print(f"Original: '{sentence}'")
-        print(f"Cleaned:  '{cleaned}'")
+        # print(f"Original: '{sentence}'")
+        # print(f"Cleaned:  '{cleaned}'")
         
         # 1. Check exact matches in sentence bank
         if cleaned in self.sentence_bank:
-            print("Match found in sentence bank")
+            # print("Match found in sentence bank")
             return True, 1.0
 
         # 2. Check explicit determination phrases
         if cleaned in self.explicit_determinations:
-            print("Match found in explicit determinations")
+            # print("Match found in explicit determinations")
             return True, 1.0
         
         # 2.5 Check partial matches for phrases that contain names
         for phrase in ['appeal is allowed for', 'appeal of', 'appeal for']:
             if cleaned.startswith(phrase) and 'allowed' in cleaned:
-                print(f"Partial match found with phrase: {phrase}")
+                # print(f"Partial match found with phrase: {phrase}")
                 return True, 1.0
 
         # 3. Check strict patterns
         for pattern in self.patterns:
             if pattern.search(cleaned):
-                print(f"Pattern match found: {pattern.pattern}")
+                # print(f"Pattern match found: {pattern.pattern}")
                 return True, 1.0
 
-        print("No match found")
+        # print("No match found")
         return False, 0.0
 
     def extract_determinations(self, text: str) -> List[Dict[str, Any]]:
@@ -384,4 +384,4 @@ class SparseExplicitExtractor(BaseDeterminationExtractor):
         
         for test in test_cases:
             is_det, conf = self.is_determination_sentence(test)
-            print(f"Testing: '{test}' -> {'✓' if is_det else '✗'}")
+            # print(f"Testing: '{test}' -> {'✓' if is_det else '✗'}")

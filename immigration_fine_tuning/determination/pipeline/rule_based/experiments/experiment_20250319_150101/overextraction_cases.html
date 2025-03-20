@@ -1,0 +1,2143 @@
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title>Over-Extraction Analysis</title>
+        <style>
+            body { font-family: Arial, sans-serif; margin: 20px; }
+            h1 { color: #2c3e50; }
+            .case { margin-bottom: 30px; border: 1px solid #ddd; padding: 15px; border-radius: 5px; }
+            .case-header { background-color: #f8f9fa; padding: 10px; margin-bottom: 15px; }
+            .extracted { background-color: #e8f4f8; padding: 10px; margin: 10px 0; border-left: 4px solid #3498db; }
+            .expected { background-color: #f8f4e8; padding: 10px; margin: 10px 0; border-left: 4px solid #f39c12; }
+            .extra { background-color: #e8f8ec; padding: 10px; margin: 10px 0; border-left: 4px solid #2ecc71; }
+            .case-text { background-color: #f9f9f9; padding: 15px; border: 1px solid #eee; 
+                         height: 200px; overflow: auto; font-family: monospace; white-space: pre-wrap; }
+            .metrics { font-weight: bold; color: #e74c3c; }
+            .comparison { display: flex; flex-wrap: wrap; gap: 20px; }
+            .comparison-column { flex: 1; min-width: 300px; }
+            .nav { position: sticky; top: 0; background: white; padding: 10px; border-bottom: 1px solid #ddd; }
+            .legend { margin: 10px 0 20px 0; padding: 10px; background-color: #f8f9fa; border-radius: 5px; }
+            .legend span { margin-right: 20px; }
+        </style>
+    </head>
+    <body>
+        <div class="nav">
+            <h1>Over-Extraction Cases in Determination Analysis</h1>
+            <div class="legend">
+                <span style="color: #3498db;">■</span> All Extracted
+                <span style="color: #f39c12;">■</span> Expected (Benchmark)
+                <span style="color: #2ecc71;">■</span> Extra (Not in Benchmark)
+            </div>
+        </div>
+        <p>These cases had significantly more extracted determinations than expected in the benchmark.</p>
+    
+        <div class="case" id="case-1">
+            <div class="case-header">
+                <h2>Case 1: ID 94588</h2>
+                <p class="metrics">Expected: 6 | Extracted: 15 | 
+                   Extra: 9 | Ratio: 2.50</p>
+            </div>
+            
+            <div class="comparison">
+                <div class="comparison-column">
+                    <h3>Expected Determinations (1)</h3>
+        
+                <div class="expected">
+                    <p>["['appeal of lieh-sheng wang is allowed']", "['appeals are allowed']", "['removal orders are set aside']", "['appeals are allowed']", "['appeal is dismissed']", "['appeal of pei-wen wang is allowed']"]</p>
+                </div>
+                
+                </div>
+                <div class="comparison-column">
+                    <h3>Extra Determinations (15)</h3>
+        
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>subparagraphs 23 1 i a through d of the former immigration regulations the former regulations 3 these appeals are being determined in accordance with the transitional provisions of the act decision xxxxxxxxxxxxx va9 03559 4 i have come to the conclusion that the removal order is valid in law</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>xxxxxxxxxxxxxxx va9 03562 5 i have come to the conclusion that the removal orders are valid in law however i find taking into consideration the consent of the mi nister there are sufficient humanitarian</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>the removal order is valid in law 8 the appellant presented documentary evidence in disclosure that related to the business ventures that he entered into on his arrival to canada the disclosure also documented business activities with respect to a restaurant in rich mond british columbia appellant s counsel led testimony in these areas as well as the legal va lidity of the id decision was not challenged this evidence will not be detailed except insofar as it might relate to humanitarian</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>has the means to support himself in that country 26 i find that that the removal order is valid in law</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>compassionate considerations warranting special relief in light of all the circumstances of the case the appeal of xxxxxxxxxxxxx is dismissed xxxxxxxxxxxx va9 03560 27 the appellant is 54 years of age she became a permanent resident on july 15 1999 the appellant testified that her husband s parents were not happy with their caregivers</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>the removal order is valid in law 29 however i also have the discretion to allo w the appellant s appeal on humanitarian</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>compassionate considerations in all the circumstances of the cas e to warrant special relief the appeal of xxxxxxxxxxxxx is allowed xxxxxxxxxxxx va9 03561 34 the appellant does not challenge the legal va lidity of the id decision i find that the appellant is inadmissible</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>the removal order is valid in law 35 however i also have the discretion to allo w the appellant s appeal on humanitarian</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>compassionate considerations in all the circumstances of the cas e to warrant special relief the appeal of xxxxxxxxxxxxx is allowed xxxxxxxxxxxxxxx va9 03562 41 the appellant does not challenge the legal va lidity of the id decision i find that the appellant is inadmissible</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>the removal order is valid in law 42 however i also have the discretion to allo w the appellant s appeal on humanitarian</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>compassionate considerations in all the circumstances of the case to warrant special relief the appeal of xxxxxxxxxxxxxxxx is allowed conclusion xxxxxxxxxxxxx va9 03559 47 it is therefore my decision that the removal order is valid in law</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>compassionate considerations warranting special relief in light of all the circumstances of the case this appeal is dismissed xxxxxxxxxxxx va9 03560 xxxxxxxxxxxx va9 03561</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>xxxxxxxxxxxxxxx va9 03562 48 it is therefore my decision that the removal orders are valid in law however taking into account the consent of the minister i find there are sufficient humanitarian</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>compassionate 2010 canlii 94588 ca irb iad file no no de dossier de la sai va9 03559 60 61 62 10 considerations warranting special relief in light of all the circumstances of the cases these appeals are allowed notice of decision the appeal of xxxxxxxxxxxxx va9 03559 is dismissed after reviewing the information in the appeals of xxxxxxxxxxxx va9 03560 xxxxxxxxxxxx va9 03561</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>the consent of both parties the appeals are allowed the removal orders are set aside signed larry xxxxxxxx xxxxxxxxxxxxxx 29 june 2010 date judicial review under section 72 of the immigration</p>
+                </div>
+                
+                </div>
+            </div>
+        
+            <div>
+                <h3>All Extracted Determinations (15)</h3>
+        
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>subparagraphs 23 1 i a through d of the former immigration regulations the former regulations 3 these appeals are being determined in accordance with the transitional provisions of the act decision xxxxxxxxxxxxx va9 03559 4 i have come to the conclusion that the removal order is valid in law</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>xxxxxxxxxxxxxxx va9 03562 5 i have come to the conclusion that the removal orders are valid in law however i find taking into consideration the consent of the mi nister there are sufficient humanitarian</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>the removal order is valid in law 8 the appellant presented documentary evidence in disclosure that related to the business ventures that he entered into on his arrival to canada the disclosure also documented business activities with respect to a restaurant in rich mond british columbia appellant s counsel led testimony in these areas as well as the legal va lidity of the id decision was not challenged this evidence will not be detailed except insofar as it might relate to humanitarian</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>has the means to support himself in that country 26 i find that that the removal order is valid in law</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>compassionate considerations warranting special relief in light of all the circumstances of the case the appeal of xxxxxxxxxxxxx is dismissed xxxxxxxxxxxx va9 03560 27 the appellant is 54 years of age she became a permanent resident on july 15 1999 the appellant testified that her husband s parents were not happy with their caregivers</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>the removal order is valid in law 29 however i also have the discretion to allo w the appellant s appeal on humanitarian</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>compassionate considerations in all the circumstances of the cas e to warrant special relief the appeal of xxxxxxxxxxxxx is allowed xxxxxxxxxxxx va9 03561 34 the appellant does not challenge the legal va lidity of the id decision i find that the appellant is inadmissible</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>the removal order is valid in law 35 however i also have the discretion to allo w the appellant s appeal on humanitarian</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>compassionate considerations in all the circumstances of the cas e to warrant special relief the appeal of xxxxxxxxxxxxx is allowed xxxxxxxxxxxxxxx va9 03562 41 the appellant does not challenge the legal va lidity of the id decision i find that the appellant is inadmissible</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>the removal order is valid in law 42 however i also have the discretion to allo w the appellant s appeal on humanitarian</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>compassionate considerations in all the circumstances of the case to warrant special relief the appeal of xxxxxxxxxxxxxxxx is allowed conclusion xxxxxxxxxxxxx va9 03559 47 it is therefore my decision that the removal order is valid in law</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>compassionate considerations warranting special relief in light of all the circumstances of the case this appeal is dismissed xxxxxxxxxxxx va9 03560 xxxxxxxxxxxx va9 03561</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>xxxxxxxxxxxxxxx va9 03562 48 it is therefore my decision that the removal orders are valid in law however taking into account the consent of the minister i find there are sufficient humanitarian</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>compassionate 2010 canlii 94588 ca irb iad file no no de dossier de la sai va9 03559 60 61 62 10 considerations warranting special relief in light of all the circumstances of the cases these appeals are allowed notice of decision the appeal of xxxxxxxxxxxxx va9 03559 is dismissed after reviewing the information in the appeals of xxxxxxxxxxxx va9 03560 xxxxxxxxxxxx va9 03561</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>the consent of both parties the appeals are allowed the removal orders are set aside signed larry xxxxxxxx xxxxxxxxxxxxxx 29 june 2010 date judicial review under section 72 of the immigration</p>
+                </div>
+                
+            </div>
+            
+            <h3>Case Text (first portion):</h3>
+            <div class="case-text">(CA IRB)
+
+IAD File No. / N° de dossier de la SAI : VA9-03559 / 60 / 61 / 62
+
+1 REASONS FOR DECISION
+
+[1] These are the reasons for the decisions in the appeals of [REDACTED] [VA9-03559], [REDACTED] [VA9-03560], [REDACTED] [VA9-03561], and [REDACTED] [VA9- 03562] (the appellants) from removal orders made against them on June 17, 2009 by the Immigration Division (the ID) of the Immigr ation and Refugee Board. The ID issued the removal orders on the ground that [REDACTED] was a person described in subsection 41(b) of the Immigration and Refugee Protection Act (the Act).
+
+1 In particular, he did not comply with the conditions imposed on his as required by subsection 27(2) of the Act. The other appellants were accompanying family members of [REDACTED] and hence are also inadmissible due to his failure to comply. ISSUE [2] The appellants do not challenge to the legal validity of the removal orders and, based on the evidence before me, I am satisfied that the re moval orders are valid in law. The issue before the panel is whether the appeals should be allowed on the basis that sufficient humanitarian and compassionate considerations warrant special relief in light of all the circumstances of the cases, taking into account the best interests of any child directly affected by the decision. [3] The appellants became permanent resident under the provisions of the former Immigration Act (the former Act)
+
+2 and subparagraphs 23(1)(i)(a) through (d) of the former Immigration Regulations (the former Regulations).
+
+3 These appeals are being determined in accordance with the transitional provisions of the Act. DECISION [REDACTED] [VA9-03559] [4] I have come to the conclusion that the removal order is valid in law and that there are not sufficient humanitarian and compassionate grounds, in light of all the circumstances of the case,
+
+
+
+1 Immigration and Refugee Protection Act, S.C. 2001, c. 27.
+
+2 Immigration Act, R.S.C. 1985, c.I-2 as amended.
+
+3 Immigration Regulations, 1...</div>
+        </div>
+        
+        <div class="case" id="case-2">
+            <div class="case-header">
+                <h2>Case 2: ID 123434</h2>
+                <p class="metrics">Expected: 4 | Extracted: 9 | 
+                   Extra: 5 | Ratio: 2.25</p>
+            </div>
+            
+            <div class="comparison">
+                <div class="comparison-column">
+                    <h3>Expected Determinations (1)</h3>
+        
+                <div class="expected">
+                    <p>["['appeal is allowed']", "['appeal is dismissed']", "['rad sets aside the determination of the rpd', 'substitutes its own determination that the appellants are convention refugees']", "['rad confirms the decision of the rpd', 'appellants are neither convention refugees nor persons in need of protection', 'dismisses the appeal']"]</p>
+                </div>
+                
+                </div>
+                <div class="comparison-column">
+                    <h3>Extra Determinations (9)</h3>
+        
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>xxxx xxxx xxxx xxxx citizens of kazakhstan their appeal is dismissed pursuant to paragraph 111 1 a of the immigration</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>refugee protection act the act the rad confirms the decision of the rpd that the appellants are neither convention refugees nor persons in need of protection</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>xxxx xxxx xxxx xxxx citizens of pakistan their appeal is allowed pursuant to paragraph 111 1 b of the immigration</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>refugee protection act the act the rad sets aside the determination of the rpd</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>the rpd erred in its findings on state protection 16 the appellants have not submitted any new evidence for the purpose of this appeal nor have they asked for a hearing before the refugee appeal division 17 the appellants request that the appeal be allowed</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>xxxx xxxx xxxx xxxx citizens of kazakhstan their appeal is dismissed pursuant to paragraph 111 1 a of the immigration</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>refugee 2020 canlii 123434 ca irb rad file dossier de la sar tb8 26704 tb8 26705 tb8 26706 tb8 26707 rad 25 02 january 20 20 disponible en français 10 protection act the act the rad confirms the decision of the rpd that the appellants are neither convention refugees nor persons in need of protection</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>xxxx xxxx xxxx xxxx citizens of pakistan their appeal is allowed pursuant to paragraph 111 1 b of the immigrati on</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>refugee protection act the act the rad sets aside the determination of the rpd</p>
+                </div>
+                
+                </div>
+            </div>
+        
+            <div>
+                <h3>All Extracted Determinations (9)</h3>
+        
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>xxxx xxxx xxxx xxxx citizens of kazakhstan their appeal is dismissed pursuant to paragraph 111 1 a of the immigration</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>refugee protection act the act the rad confirms the decision of the rpd that the appellants are neither convention refugees nor persons in need of protection</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>xxxx xxxx xxxx xxxx citizens of pakistan their appeal is allowed pursuant to paragraph 111 1 b of the immigration</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>refugee protection act the act the rad sets aside the determination of the rpd</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>the rpd erred in its findings on state protection 16 the appellants have not submitted any new evidence for the purpose of this appeal nor have they asked for a hearing before the refugee appeal division 17 the appellants request that the appeal be allowed</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>xxxx xxxx xxxx xxxx citizens of kazakhstan their appeal is dismissed pursuant to paragraph 111 1 a of the immigration</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>refugee 2020 canlii 123434 ca irb rad file dossier de la sar tb8 26704 tb8 26705 tb8 26706 tb8 26707 rad 25 02 january 20 20 disponible en français 10 protection act the act the rad confirms the decision of the rpd that the appellants are neither convention refugees nor persons in need of protection</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>xxxx xxxx xxxx xxxx citizens of pakistan their appeal is allowed pursuant to paragraph 111 1 b of the immigrati on</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>refugee protection act the act the rad sets aside the determination of the rpd</p>
+                </div>
+                
+            </div>
+            
+            <h3>Case Text (first portion):</h3>
+            <div class="case-text">(CA IRB)
+
+RAD File / Dossier de la SAR : TB8 -26704
+
+TB8 -26705 / TB8 -26706 / TB8 -26707
+
+
+
+RAD.25.02 ( January , 20 20)
+
+Disponible en français 2
+
+REASONS FOR DECISION
+
+OVERVIEW
+
+[1] [REDACTED] [REDACTED] (Principal A ppellant) , and her children [REDACTED] [REDACTED] [REDACTED] (Associate
+
+Appellant), [REDACTED] [REDACTED] [REDACTED] and [REDACTED] [REDACTED] [REDACTED] (Minor Associate Appellants),
+
+appeal a decision of the Refugee Protection Division (RPD), dated September 14, 2018 , rejecting
+
+their claims for refugee protection.
+
+[2] [REDACTED] [REDACTED] and her son [REDACTED] are citizens of Kazakhstan.
+
+[REDACTED] and [REDACTED] [REDACTED] [REDACTED] [REDACTED] are citizens of Pakistan.
+
+[3] The principal Appellant acted as the Designated Representative for the Minor Associate
+
+Appellants, [REDACTED] and [REDACTED] .
+
+[4] The Appellants submit that the RPD erred in law in its analysis on credibility, state
+
+protection and review of the Appellants’ forward -look ing risk. The Appellants ask the Refugee
+
+Appeal Division (RAD) to overturn the RP D’s decision and either substitute a finding that they
+
+are Convention refugees or persons in need of protection.
+
+DETERMINATION OF THE APPEAL
+
+[5] This is a split decision with respect to the Appellants’ appeals.
+
+[6] With respect to [REDACTED] [REDACTED] and [REDACTED] [REDACTED] [REDACTED] [REDACTED] , citizens of Kazakhstan,
+
+their appeal is dismissed. Pursuant to paragraph 111(1)( a) of the Immigration and Refugee
+
+Protection Act (the “ Act ”), the RAD confirms the decision of the RPD that the Appellants are
+
+neither Convention refugees nor persons in need of protection and dismisses the appeal.
+
+[7] With respect to [REDACTED] and [REDACTED] [REDACTED] [REDACTED] [REDACTED] , citizens of Pakistan, their
+
+appeal is allowed. Pursuant to paragraph 111(1)( b) of the Immigration and Refugee Protection
+
+Act (the “Act” ), the RAD sets aside the determination of the RPD and substitutes its own
+
+determination that the App...</div>
+        </div>
+        
+        <div class="case" id="case-3">
+            <div class="case-header">
+                <h2>Case 3: ID 101178</h2>
+                <p class="metrics">Expected: 4 | Extracted: 8 | 
+                   Extra: 4 | Ratio: 2.00</p>
+            </div>
+            
+            <div class="comparison">
+                <div class="comparison-column">
+                    <h3>Expected Determinations (1)</h3>
+        
+                <div class="expected">
+                    <p>["['rad sets aside the determination of the rpd', 'substitutes its determination']", "['appeal is allowed']", "['appeal is dismissed']", "['rad confirms the decision of the rpd', 'are neither convention refugees nor persons in need of protection']"]</p>
+                </div>
+                
+                </div>
+                <div class="comparison-column">
+                    <h3>Extra Determinations (8)</h3>
+        
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>refugee protection act irpa 1 the rad sets aside the determination of the rpd</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>subs titutes its own determination that the minor appellant is a convention refugee this appeal is allowed 5 in relation to the principal</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>spousal appellants the rad dismisses the appeal</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>confirms the decision of the rpd that the principal</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>spousal appellants conclusion minor appellant s appeal allowed 45 pursuant to s 111 1 b of the irpa the rad sets aside the determination of the rpd</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>substitutes its determination that the minor appellant is a convention refugee for the reasons stated above this appeal is allowed principal</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>reasonable ifa to xxxxx 47 pursuant to s 111 1 a of the irpa the rad confirms the decision of the rpd tha t the principal</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>spousal appellants are neither convention refugees nor persons in need of protection this appeal is dismissed 2018 canlii 101178 ca irb rad f ile no n de dossier de la sa r tb7 20771 tb7 20772 tb7 20773 signed t card t card may 3 2018 date 2018 canlii 101178 ca irb</p>
+                </div>
+                
+                </div>
+            </div>
+        
+            <div>
+                <h3>All Extracted Determinations (8)</h3>
+        
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>refugee protection act irpa 1 the rad sets aside the determination of the rpd</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>subs titutes its own determination that the minor appellant is a convention refugee this appeal is allowed 5 in relation to the principal</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>spousal appellants the rad dismisses the appeal</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>confirms the decision of the rpd that the principal</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>spousal appellants conclusion minor appellant s appeal allowed 45 pursuant to s 111 1 b of the irpa the rad sets aside the determination of the rpd</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>substitutes its determination that the minor appellant is a convention refugee for the reasons stated above this appeal is allowed principal</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>reasonable ifa to xxxxx 47 pursuant to s 111 1 a of the irpa the rad confirms the decision of the rpd tha t the principal</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>spousal appellants are neither convention refugees nor persons in need of protection this appeal is dismissed 2018 canlii 101178 ca irb rad f ile no n de dossier de la sa r tb7 20771 tb7 20772 tb7 20773 signed t card t card may 3 2018 date 2018 canlii 101178 ca irb</p>
+                </div>
+                
+            </div>
+            
+            <h3>Case Text (first portion):</h3>
+            <div class="case-text">(CA IRB)
+
+RAD F ile No. / N° de dossier de la SA R : TB7 -20771
+
+TB7 -20772
+
+TB7 -20773
+
+
+
+REASONS FOR DECISION
+
+[1] [REDACTED] [REDACTED] [REDACTED] [REDACTED] [REDACTED] (the “Principal Appellant”), [REDACTED] [REDACTED] [REDACTED]
+
+[REDACTED] (the “Spousal Appellant”) and [REDACTED] [REDACTED] [REDACTED] [REDACTED] (the “Minor Appellant”) are
+
+citizens of Nigeria and are appealing a dec ision of the Refugee Protection Division (RPD)
+
+denying their claims for refugee protection.
+
+[2] The Minor Appellant is the daughter of the Principal Appellant and Spousal Appellant.
+
+The Principal and Spousal Appellants also have a son named [REDACTED] [REDACTED] [REDACTED] [REDACTED]
+
+[REDACTED] , who was born in Canada and is a Canadian citizen and not an Appellant in this case . The
+
+Principal Appellant was named as the Designated Representative (DR) of the Minor Appellant at
+
+the RPD hearing and the RAD confirms this designation.
+
+[3] The Appellan ts are requesting that the Refugee Appeal Division (RAD) set aside the
+
+RPD’s negative determination and find that they are Convention refugees or persons in need of
+
+protection. In the alternative, the Appellants request that the RAD refer the matters back to the
+
+RPD for redetermination by a differently constituted panel.
+
+RAD DETERMINATION
+
+[4] In relation to the Minor Appellant, pursuant to s.111(1)( b) of the Immigration and Refugee
+
+Protection Act (IRPA),1 the RAD sets aside the determination of the RPD and subs titutes its own
+
+determination that the Minor Appellant is a Convention refugee. This appeal is allowed.
+
+[5] In relation to the Principal and Spousal Appellants, the RAD dismisses the appeal and
+
+confirms the decision of the RPD that the Principal and Spousal Ap pellants are neither
+
+Convention refugees nor persons in need of protection pursuant to s.111(1)( a) of the IRPA.2
+
+
+
+
+
+1 S.111(1)( b), Immigration and Refugee Protection Act , S.C. 2001, c.27. [ IRPA ]
+
+2 S.111(1)( a), Immigration and Refugee Protection Act ...</div>
+        </div>
+        
+        <div class="case" id="case-4">
+            <div class="case-header">
+                <h2>Case 4: ID 111161</h2>
+                <p class="metrics">Expected: 4 | Extracted: 8 | 
+                   Extra: 4 | Ratio: 2.00</p>
+            </div>
+            
+            <div class="comparison">
+                <div class="comparison-column">
+                    <h3>Expected Determinations (1)</h3>
+        
+                <div class="expected">
+                    <p>["['appellant is neither a convention refugee nor a person in need of protection']", "['rpd decision is hereby set aside']", "['appeal is allowed']", "['appellant is, in fact, a convention refugee or a person in need of protection']"]</p>
+                </div>
+                
+                </div>
+                <div class="comparison-column">
+                    <h3>Extra Determinations (8)</h3>
+        
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>refugee protection act the act 1 the refugee appeal division the rad orders that the determination of the rpd that the appellant is neither a convention refugee nor a person in need of pr otection be set aside</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>that the matter be returned to the rpd for redetermination by a different rpd member without further instruction the appeal is allowed background 3 in her claim for refugee protection the appellant alleged that she</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>the particular circumstances of the appellant 8 the appellan t has requested that the rad set aside the determination of the rpd</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>find that the appellant is a convention refugee or a person in need of protection or in the alternative order that the rpd refer the matter back to a different member of the rpd for redetermination with such directions that the rad considers appropriate 9 the minister has not intervened in this appeal consideration of new evidence 10 no new evidence has been presented for this appeal 2015 canlii 111161 ca irb rad file no n de dossier de la sar vb5 02992 application for an oral hearing 11 the appellant ha s not requested an oral hearing at the rad 12 subs ection 110 3 of the act requires that the rad proceed without a hearing on the basis of the rpd record while allowing the rad to accept documentary evidence</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>come to an independent assessment of whether the appellant is a convention refugee or a person in need of protection justice xxxxxx also states that that notion may well justify deference to a rpd s decision in a circumstance w here a witness credibility is critical or determinative where there is no adverse finding of credibility the policy rationale for deference is not sustainable 23 justice xxxxxx found that the rad must review all aspects of the rpd s decision</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>have conducted my own independent assessment of all the evidence to determine whether the appellant is a convention refugee or a person in need of protection while giving certain deferen ce where the rpd enjoys a particular advantage as well it is clear from the many recent 10 xxxxxxx v canada minister of citizenship</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>without giving the appellant an opportunity to explain in any event as the appellant has not sought to introduce documentary evidence under subsection 110 4 of irpa there is no basis upon which a hearing might b e undertaken by the rad under subsection 110 6 of the act decision 42 pursuant to paragraph 111 1 c of the act the rad orders that the determination of the rpd that the appellant is neither a convention refugee nor a person in need of protection be set aside</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>that the matter be returned to the rpd for redetermination by a different rpd member without further instruction the appeal is allowed signed xxxxxxxxxxxxxxx xxxxxxxxxxxxxxx october 27 2015 date 2015 canlii 111161 ca irb</p>
+                </div>
+                
+                </div>
+            </div>
+        
+            <div>
+                <h3>All Extracted Determinations (8)</h3>
+        
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>refugee protection act the act 1 the refugee appeal division the rad orders that the determination of the rpd that the appellant is neither a convention refugee nor a person in need of pr otection be set aside</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>that the matter be returned to the rpd for redetermination by a different rpd member without further instruction the appeal is allowed background 3 in her claim for refugee protection the appellant alleged that she</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>the particular circumstances of the appellant 8 the appellan t has requested that the rad set aside the determination of the rpd</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>find that the appellant is a convention refugee or a person in need of protection or in the alternative order that the rpd refer the matter back to a different member of the rpd for redetermination with such directions that the rad considers appropriate 9 the minister has not intervened in this appeal consideration of new evidence 10 no new evidence has been presented for this appeal 2015 canlii 111161 ca irb rad file no n de dossier de la sar vb5 02992 application for an oral hearing 11 the appellant ha s not requested an oral hearing at the rad 12 subs ection 110 3 of the act requires that the rad proceed without a hearing on the basis of the rpd record while allowing the rad to accept documentary evidence</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>come to an independent assessment of whether the appellant is a convention refugee or a person in need of protection justice xxxxxx also states that that notion may well justify deference to a rpd s decision in a circumstance w here a witness credibility is critical or determinative where there is no adverse finding of credibility the policy rationale for deference is not sustainable 23 justice xxxxxx found that the rad must review all aspects of the rpd s decision</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>have conducted my own independent assessment of all the evidence to determine whether the appellant is a convention refugee or a person in need of protection while giving certain deferen ce where the rpd enjoys a particular advantage as well it is clear from the many recent 10 xxxxxxx v canada minister of citizenship</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>without giving the appellant an opportunity to explain in any event as the appellant has not sought to introduce documentary evidence under subsection 110 4 of irpa there is no basis upon which a hearing might b e undertaken by the rad under subsection 110 6 of the act decision 42 pursuant to paragraph 111 1 c of the act the rad orders that the determination of the rpd that the appellant is neither a convention refugee nor a person in need of protection be set aside</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>that the matter be returned to the rpd for redetermination by a different rpd member without further instruction the appeal is allowed signed xxxxxxxxxxxxxxx xxxxxxxxxxxxxxx october 27 2015 date 2015 canlii 111161 ca irb</p>
+                </div>
+                
+            </div>
+            
+            <h3>Case Text (first portion):</h3>
+            <div class="case-text">(CA IRB)
+
+RAD Fil e No. / N ° de dossier de la SAR : VB5 -02292
+
+
+
+
+
+
+
+REASONS FOR DECISION
+
+
+
+[1] [REDACTED] [REDACTED] [REDACTED] (the “appellant”), a national of Ethiopia , appeals a decision of the
+
+Refugee Protection Division (the “RPD”) rejecting her claim for refugee protection.
+
+
+
+DETERMINATION OF THE AP PEAL
+
+
+
+[2] Pursuant to paragraph 111(1)(c) of the Immigration and Refugee Protection Act (the
+
+“Act ”),1 the Refugee Appeal Division (the “ RAD ”) orders that the determination of the RPD that
+
+the appellant is neither a Convention refugee nor a person in need of pr otection be set aside and
+
+that the matter be returned to the RPD for redetermination by a different RPD Member without
+
+further instruction. The appeal is allowed.
+
+
+
+BACKGROUND
+
+
+
+[3] In her claim for refugee protection, the appellant alleged that she and her Cana dian born
+
+daughter would be persecuted by her parents in law if they were to return to Ethiopia. The
+
+appellant alleged that her husband’s family insists that her daughter be circumcised. The
+
+appellant refuses to allow this. However, while her husband is al so opposed to his daughter’s
+
+circumcision, he is allegedly unable to oppose his parents out of respect for tradition.
+
+
+
+[4] The appellant alleged that the threat of her daughter’s circumcision represents a form of
+
+persecution as she fears that her refusal to a llow this and to have stayed in Canada without her
+
+in-laws permission will result in severe punishment for her. She also alleged that the prospect of
+
+circumcision for her Canadian born daughter represents a form of psychological persecution for
+
+her .
+
+
+
+1 Immigration and Refugee Protect ion Act (the “ Act ”), S.C. 2001, c. 27.
+
+2015 CanLII 111161 (CA IRB)
+
+RAD File No. / N° de dossier de la SAR : VB5 -02992
+
+
+
+
+
+
+
+
+
+[5] The RPD heard the appellant’s refugee protection claim on April 10, 2015 . The RPD’s
+
+reasons for the decision were rendered in writing with a Notice of Decision dated May 12, 2015 .
+
+The RPD’s reason...</div>
+        </div>
+        
+        <div class="case" id="case-5">
+            <div class="case-header">
+                <h2>Case 5: ID 101335</h2>
+                <p class="metrics">Expected: 4 | Extracted: 7 | 
+                   Extra: 3 | Ratio: 1.75</p>
+            </div>
+            
+            <div class="comparison">
+                <div class="comparison-column">
+                    <h3>Expected Determinations (1)</h3>
+        
+                <div class="expected">
+                    <p>["['appeal is terminated']", "['appeal is terminated', 'appeal is dismissed']", "['appeal isdismissedfor lack of jurisdiction']", "['appeal is terminated']"]</p>
+                </div>
+                
+                </div>
+                <div class="comparison-column">
+                    <h3>Extra Determinations (7)</h3>
+        
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>place of hearing in chambers date s et lieu de l audience toronto ontario date of decision november 7 2012 date de la décision panel xxxxxxxxxxxxxxxxxxxx tribunal counsel for the appellant s n a conseil s de l appelant e des appelant e s counsel for the minister xxxxxxxxxxxxxxxxxx conseil du ministre 2012 canlii 101335 ca irb iad file no no de dossier de la sai ta9 19424 client id no no id client 4076 7411 1 rea sons for decision introduction 1 the respondent makes an application that the appeal be dismissed for lack of jurisdiction the appeal is pursuant to sub section 63 3 of the immigration</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>submissions the panel finds that the appeal is dismissed background 3 the immigration division issued a deportatio n order in september 2009 against the appellant based on paragraph 36 1 a of the irpa 2</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>the appeal is terminated 7 in june 200 5 the appellant was convicted of wounding causing aggravated assault for an incident in july 200 2</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>without effect as a result the panel finds that this appeal is terminated a dditionally the panel now has no jurisdiction to consider an appeal of the september 2009 deportation order 8 conclusion 10 having considered the factors</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>submissions the panel finds that the appeal is terminated</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>that the appeal is dismissed for lack of jurisdiction 8 xxxxxxx v canada public safety</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>68 4 2012 canlii 101335 ca irb iad file no no de dossier de la sai ta9 19424 client id no no id client 4076 7411 4 notice of decision the appeal is dismissed for lack of jurisdiction because the appellant has not shown on the basis of the information provided that the appellant has a right of appeal in these circumstances signed xxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxx november 7 2012 date judicial review under section 72 of the immigration</p>
+                </div>
+                
+                </div>
+            </div>
+        
+            <div>
+                <h3>All Extracted Determinations (7)</h3>
+        
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>place of hearing in chambers date s et lieu de l audience toronto ontario date of decision november 7 2012 date de la décision panel xxxxxxxxxxxxxxxxxxxx tribunal counsel for the appellant s n a conseil s de l appelant e des appelant e s counsel for the minister xxxxxxxxxxxxxxxxxx conseil du ministre 2012 canlii 101335 ca irb iad file no no de dossier de la sai ta9 19424 client id no no id client 4076 7411 1 rea sons for decision introduction 1 the respondent makes an application that the appeal be dismissed for lack of jurisdiction the appeal is pursuant to sub section 63 3 of the immigration</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>submissions the panel finds that the appeal is dismissed background 3 the immigration division issued a deportatio n order in september 2009 against the appellant based on paragraph 36 1 a of the irpa 2</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>the appeal is terminated 7 in june 200 5 the appellant was convicted of wounding causing aggravated assault for an incident in july 200 2</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>without effect as a result the panel finds that this appeal is terminated a dditionally the panel now has no jurisdiction to consider an appeal of the september 2009 deportation order 8 conclusion 10 having considered the factors</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>submissions the panel finds that the appeal is terminated</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>that the appeal is dismissed for lack of jurisdiction 8 xxxxxxx v canada public safety</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>68 4 2012 canlii 101335 ca irb iad file no no de dossier de la sai ta9 19424 client id no no id client 4076 7411 4 notice of decision the appeal is dismissed for lack of jurisdiction because the appellant has not shown on the basis of the information provided that the appellant has a right of appeal in these circumstances signed xxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxx november 7 2012 date judicial review under section 72 of the immigration</p>
+                </div>
+                
+            </div>
+            
+            <h3>Case Text (first portion):</h3>
+            <div class="case-text">(CA IRB)
+
+IAD File No. / No de dossier de la SAI : TA9 -19424
+
+Client ID No. / No ID client : 4076 -7411
+
+
+
+1
+
+Rea sons for Decision
+
+
+
+Introduction
+
+[1] The respondent makes an application that the appeal be dismissed for lack of jurisdiction.
+
+The appeal is pursuant to sub section 63(3) of the Immigration and Refugee Protection Act1
+
+(IRPA ) of a removal order made against the appellant.
+
+Decision
+
+[2] Having considered the evidence and submissions, the panel finds that the appeal is
+
+dismissed .
+
+Background
+
+[3] The Immigration Division issued a deportatio n order in September 2009 against the
+
+appellant based on paragraph 36(1)( a) of the IRPA ,2 and the appellant appealed that order.
+
+[4] In September 2012, the respondent made an application to dismiss the appeal for absence
+
+of jurisdiction. On September 27, 2012, the appellant was requested to make any submissions;
+
+none were received. This matter w as dealt with in chambers.
+
+Analysis
+
+[5] A person may be inadmissible based on serious criminality:3
+
+36. (1) A permanent resident or a foreign national is inadmissible on grounds of
+
+serious criminality for
+
+(a) having been convicted in Canada of an offence under an Act of Parliament
+
+punishable by a maximum term of imprisonment of at least 10 years, or of an
+
+offence under an Act of Parliament for which a term of imprisonment of more than
+
+six months has been imposed;
+
+
+
+1 Immigration and Refugee Protection Act , S.C. 2001, c. 27.
+
+2 Record, p. 29.
+
+3 Immigration and Refugee Protection Act , S.C. 2001, c. 27.
+
+2012 CanLII 101335 (CA IRB)
+
+IAD File No. / No de dossier de la SAI : TA9 -19424
+
+Client ID No. / No ID client : 4076 -7411
+
+
+
+2 [6] Additionally, a removal order may be stayed and the appeal may be terminated:
+
+68. (1) To stay a removal order, the Immigration Appeal Division must be satisfied,
+
+taking into account the best interests of a child directly affected by the decision, that
+
+sufficient humanitarian and compassionate considerat ions warrant speci...</div>
+        </div>
+        
+        <div class="case" id="case-6">
+            <div class="case-header">
+                <h2>Case 6: ID 105868</h2>
+                <p class="metrics">Expected: 4 | Extracted: 7 | 
+                   Extra: 3 | Ratio: 1.75</p>
+            </div>
+            
+            <div class="comparison">
+                <div class="comparison-column">
+                    <h3>Expected Determinations (1)</h3>
+        
+                <div class="expected">
+                    <p>["['rad finds that the respondent’s refugee claim has']", "['rad sets aside the determination of the rpd']", "['respondent is neither a convention refugee nor a person in need of protection']", "['neither a convention refugee nor a person in need of protection']"]</p>
+                </div>
+                
+                </div>
+                <div class="comparison-column">
+                    <h3>Extra Determinations (7)</h3>
+        
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>refugee protection act irpa the refugee appeal division rad sets aside the determination of the rpd</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>substitutes the determination that xxxx xxxx xxxx is neith er a convention refugee pursuant to s 96 of the irpa nor a person in need of protection pursuant to s 97 of irpa pursuant to ss 107 2 of irpa the rad finds that there is no credible basis for the claim</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>that it is manifestly unfounded this appeal is allowed background 3 the respondent xxxxxxxxxxxxxx alleged before the rpd that he is a gay man</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>come to an independent assessment of whether the claimant is a convention refugee or a person in need of protection where its assessment departs from that of the rpd the rad must substitute its own decision 55 in conducting its assessm ent it can recognize</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>none by the respondent i find that on a balance of probabilities the identity of the respondent has not been established therefore the rad substitutes the determination that should have bee n made</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>immigration 2007 fc 1292 2007 f cj no 166 ql at para 3 2015 canlii 105868 ca irb rad f ile no n de dossier de la sa r conclusion 55 for all these reasons due to the evidence on the appeal record the rad sets aside the determination of the rpd</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>the rpd there was no credible or trustworthy evidence o n which a favourable decision could have been made 56 section 107 1 of irpa provides that the rpd shall make a finding of no credible basis if it determines that there was no credible or trustworthy evidence on which it could have made a favourable decisio n 57 nothing in irpa expressly gives the rad the authority to make a finding of no credible basis in the panel s view however such jurisdiction is implicit in section 111 1 b which empowers the rad to set aside the determination of the rpd</p>
+                </div>
+                
+                </div>
+            </div>
+        
+            <div>
+                <h3>All Extracted Determinations (7)</h3>
+        
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>refugee protection act irpa the refugee appeal division rad sets aside the determination of the rpd</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>substitutes the determination that xxxx xxxx xxxx is neith er a convention refugee pursuant to s 96 of the irpa nor a person in need of protection pursuant to s 97 of irpa pursuant to ss 107 2 of irpa the rad finds that there is no credible basis for the claim</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>that it is manifestly unfounded this appeal is allowed background 3 the respondent xxxxxxxxxxxxxx alleged before the rpd that he is a gay man</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>come to an independent assessment of whether the claimant is a convention refugee or a person in need of protection where its assessment departs from that of the rpd the rad must substitute its own decision 55 in conducting its assessm ent it can recognize</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>none by the respondent i find that on a balance of probabilities the identity of the respondent has not been established therefore the rad substitutes the determination that should have bee n made</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>immigration 2007 fc 1292 2007 f cj no 166 ql at para 3 2015 canlii 105868 ca irb rad f ile no n de dossier de la sa r conclusion 55 for all these reasons due to the evidence on the appeal record the rad sets aside the determination of the rpd</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>the rpd there was no credible or trustworthy evidence o n which a favourable decision could have been made 56 section 107 1 of irpa provides that the rpd shall make a finding of no credible basis if it determines that there was no credible or trustworthy evidence on which it could have made a favourable decisio n 57 nothing in irpa expressly gives the rad the authority to make a finding of no credible basis in the panel s view however such jurisdiction is implicit in section 111 1 b which empowers the rad to set aside the determination of the rpd</p>
+                </div>
+                
+            </div>
+            
+            <h3>Case Text (first portion):</h3>
+            <div class="case-text">(CA IRB)
+
+
+
+
+
+
+
+2015 CanLII 105868 (CA IRB)
+
+RAD F ile No. / N° de dossier de la SA R :
+
+REASONS FOR DECISION
+
+[1] The Minister of Citizenship and Immigration Canada (the Appellant) appeals a decision of
+
+the Refugee Protection Division (RPD) accepting the claim for refugee protection of [REDACTED]
+
+[REDACTED] [REDACTED] (the Respondent ), a male from Nigeria. The Minister has submitted new evidence
+
+in support of the appeal that was not presented at the RPD hearing.
+
+DETERMINATION OF THE APPEAL
+
+[2] Pursuant to ss. 111 (1) (b) of Immigration and Refugee Protection Act (IRPA ), the
+
+Refugee Appeal Division ( RAD ) sets aside the determination of the RPD and substitutes the
+
+determination that [REDACTED] [REDACTED] [REDACTED] is neith er a Convention refugee pursuant to s. 96 of the
+
+IRPA nor a person in need of protection pursuant to s. 97 of IRPA. Pursuant to ss. 107(2) of
+
+IRPA, the RAD finds that there is no credible basis for the claim and that it is manifestly
+
+unfounded. This Appeal is allowed.
+
+BACKGROUND
+
+[3] The Respondent, [REDACTED] , alleged before the RPD that he is a gay man and
+
+was involved in a sexual relationship with another man. The Respondent in the Addendum to his
+
+Basis of Claim form (BOC) states that he engaged in a he terosexual relationship with one other
+
+person of the opposite sex in Nigeria in an attempt to camouflage his true sexual orientation.
+
+[4] The Respondent alleges that on [REDACTED] [REDACTED] , 2013 while he was going home, he was
+
+stopped by an unknown person who advised [REDACTED] not to go home, as there was police looking for
+
+him, and that there had been a killing in the neighbourhood. The unknown person told the
+
+Respondent to hide; the Respondent later learnt that the person killed was his fiancé, [REDACTED] . The
+
+Respondent alleges that the assailants were either police officers or individuals purported to be
+
+the same.
+
+[5] The Respondent further alleges that this unknown man took him to a restaurant where he
+
+left t...</div>
+        </div>
+        
+        <div class="case" id="case-7">
+            <div class="case-header">
+                <h2>Case 7: ID 110982</h2>
+                <p class="metrics">Expected: 4 | Extracted: 7 | 
+                   Extra: 3 | Ratio: 1.75</p>
+            </div>
+            
+            <div class="comparison">
+                <div class="comparison-column">
+                    <h3>Expected Determinations (1)</h3>
+        
+                <div class="expected">
+                    <p>["['rad finds that the rpd’s decision cannot stand']", "['302 (c.a.']", "['appellant is a convention refugee']", "['substitutes its determination that the appellant is a convention refugee']"]</p>
+                </div>
+                
+                </div>
+                <div class="comparison-column">
+                    <h3>Extra Determinations (7)</h3>
+        
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>refer the matter back to the rpd for re determination or set aside the determination of the rpd</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>sub stitute that determination with a determination that the appellant is a convention refugee or a person in need of protection or in the event that the rad raises a serious issue respecting the appellant's credibility or that of her newly submitted evidence hold a hearing in accordance to section 110 6 of the immigration</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>refugee protection act irpa 2 as the appellant had submitted some of her evidence beyond the date of perfection of the appeal a notice was sent to the minister on august 14 advising the minister that he has until august 21 to make submissions on the request of the appellant the minister as to the date of completion of this document has not responded determination 3 pursuant to section 111 1 b of the irpa the rad sets aside the determination of the rpd</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>substitutes its determination that the appellant is a convention refugee background 4 the appellant alleged before the rpd that she was born in xxxx somalia she is a member of the xxxx clan her parents were from xxxx having relocated to xxxx during the somali civil war the appellant lived her life in an area of xxxx known as xxxx she worked selling produce with her mother until she married xxxxxxxxxxxxxx after the marriage she began working in her husband's sma ll shop on xxxx xxxx 2014 her husband's shop was attacked by members of al shabab the appellant's father in law</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>come to an independent assessment of whether the claimant is a convention refugee or a person in need of protection where its assessment departs from that of the rpd the rad must substitute its own decision 55 in conducting its assessment it c an recognize</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>come to an independent assessment of whether the appellant is a convention refugee or a person in need of protection the rad will recogniz e</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>substitutes its determination that the appellant is a convention refugee signed xxxxxxxxxx xxxxxxxxxx september 30 2015 date 2015 canlii 110982 ca irb</p>
+                </div>
+                
+                </div>
+            </div>
+        
+            <div>
+                <h3>All Extracted Determinations (7)</h3>
+        
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>refer the matter back to the rpd for re determination or set aside the determination of the rpd</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>sub stitute that determination with a determination that the appellant is a convention refugee or a person in need of protection or in the event that the rad raises a serious issue respecting the appellant's credibility or that of her newly submitted evidence hold a hearing in accordance to section 110 6 of the immigration</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>refugee protection act irpa 2 as the appellant had submitted some of her evidence beyond the date of perfection of the appeal a notice was sent to the minister on august 14 advising the minister that he has until august 21 to make submissions on the request of the appellant the minister as to the date of completion of this document has not responded determination 3 pursuant to section 111 1 b of the irpa the rad sets aside the determination of the rpd</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>substitutes its determination that the appellant is a convention refugee background 4 the appellant alleged before the rpd that she was born in xxxx somalia she is a member of the xxxx clan her parents were from xxxx having relocated to xxxx during the somali civil war the appellant lived her life in an area of xxxx known as xxxx she worked selling produce with her mother until she married xxxxxxxxxxxxxx after the marriage she began working in her husband's sma ll shop on xxxx xxxx 2014 her husband's shop was attacked by members of al shabab the appellant's father in law</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>come to an independent assessment of whether the claimant is a convention refugee or a person in need of protection where its assessment departs from that of the rpd the rad must substitute its own decision 55 in conducting its assessment it c an recognize</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>come to an independent assessment of whether the appellant is a convention refugee or a person in need of protection the rad will recogniz e</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>substitutes its determination that the appellant is a convention refugee signed xxxxxxxxxx xxxxxxxxxx september 30 2015 date 2015 canlii 110982 ca irb</p>
+                </div>
+                
+            </div>
+            
+            <h3>Case Text (first portion):</h3>
+            <div class="case-text">(CA IRB)
+
+RAD F ile No. / N° de dossier de la SA R :
+
+REASONS FOR DECISION
+
+[1] [REDACTED] [REDACTED] [REDACTED] (the Appellant), a citizen of Somalia, appeals a decision of the
+
+Refugee Protection Division (RPD) denying her claim for refugee protection. She has submitted
+
+new evidence in support of her appeal and further seeks to submit additional evidence, not
+
+previously provided, under Rule 29 of the RPD Rules . The Appellant asks the Refugee Appeal
+
+Division (RAD) to set aside the decision of the RPD and refer the matter back to the RPD for re -
+
+determination; or set aside the determination of the RPD and sub stitute that determination with a
+
+determination that the Appellant is a Convention refugee or a person in need of protection; or in
+
+the event that the RAD raises a serious issue respecting the Appellant's credibility or that of her
+
+newly submitted evidence , hold a hearing in accordance to section 110(6) of the Immigration and
+
+Refugee Protection Act (IRPA).
+
+[2] As the Appellant had submitted some of her evidence beyond the date of perfection of the
+
+appeal, a notice was sent to the Minister on August 14 advising the Minister that he has until
+
+August 21 to make submissions on the request of the Appellant. The Minister, as to the date of
+
+completion of this document , has not responded.
+
+DETERMINATION
+
+[3] Pursuant to Section 111(1)(b) of the IRPA , the RAD sets aside the determination of the
+
+RPD and substitutes its determination that the Appellant is a Convention refugee.
+
+Background
+
+[4] The Appellant alleged before the RPD that she was born in [REDACTED] , Somalia. She is a
+
+member of the [REDACTED] Clan. Her parents were from [REDACTED] , having relocated to [REDACTED] during
+
+the Somali civil war. The Appellant lived her life in an area of [REDACTED] known as " [REDACTED] ." She
+
+worked selling produce with her mother until she married [REDACTED] . After the
+
+marriage, she began working in her husband's sma ll shop. On [REDACTED] [REDACTED] , 20...</div>
+        </div>
+        
+        <div class="case" id="case-8">
+            <div class="case-header">
+                <h2>Case 8: ID 138816</h2>
+                <p class="metrics">Expected: 4 | Extracted: 7 | 
+                   Extra: 3 | Ratio: 1.75</p>
+            </div>
+            
+            <div class="comparison">
+                <div class="comparison-column">
+                    <h3>Expected Determinations (1)</h3>
+        
+                <div class="expected">
+                    <p>["['appeal is denied']", "['appeal is dismissed']", "['appeal is dismissed']", "['appeal is dismissed']"]</p>
+                </div>
+                
+                </div>
+                <div class="comparison-column">
+                    <h3>Extra Determinations (7)</h3>
+        
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>exhibits r 1 to r 5 2018 canlii 138816 ca irb iad file no n de dossier de la s ai mb7 17896 3 order he could have accumulated a maximum of 627 days the removal order is valid in law</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>compassionate grounds in light of all the circumstances of the case to find in the a ppellant s favour therefore the appeal is dismissed background 6 as background the appellant is a physician in iran he obtained his permanent resident status in 2014 in the skilled worker category at the time he came to canada with his wife</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>the removal order is valid in law 8 however the panel has the discretion to stay the removal order or to allow the appellants appeal on humanitarian</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>anxious when her father is away she testified she has spoken to the counsellor at school about this there is no documentary evidence she suffers from serious difficulties although i do not doubt the first year of immigration to a fore ign country c ompounded with the absence of her father has been difficult for her the family has been apart f or approximately one year but they communicate daily by video calls if the appeal is denied the appellant can continue to visit his family with a multiple entry visa</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>this general concern does not amount to undue hardship the concerns of the appellant were not elevated to the point he wanted to remain in canada with his family the appellant has not established there will be undue hardship if the appeal is dismissed this is a negative factor 12 there are two minors affected by the outcome of this appeal they live in canada with their mother</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>travels to canada to be with them whenever he choses they speak on the phone daily the children would prefer that their father maintained his perm anent resident status but there is no evidence their best interest will not be served if the appeal is dismissed</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>compassionate considerations to warrant special relief in light of all the circumstances of the case 14 the appeal is dismissed 2018 canlii 138816 ca irb iad file no n de dossier de la s ai mb7 17896 7 notice of decision the appeal is dismissed xxxxxxxxxxxxx me xxxxxxxxxxxxx december 18 2018 date ml judicial review under section 72 of the immigration</p>
+                </div>
+                
+                </div>
+            </div>
+        
+            <div>
+                <h3>All Extracted Determinations (7)</h3>
+        
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>exhibits r 1 to r 5 2018 canlii 138816 ca irb iad file no n de dossier de la s ai mb7 17896 3 order he could have accumulated a maximum of 627 days the removal order is valid in law</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>compassionate grounds in light of all the circumstances of the case to find in the a ppellant s favour therefore the appeal is dismissed background 6 as background the appellant is a physician in iran he obtained his permanent resident status in 2014 in the skilled worker category at the time he came to canada with his wife</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>the removal order is valid in law 8 however the panel has the discretion to stay the removal order or to allow the appellants appeal on humanitarian</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>anxious when her father is away she testified she has spoken to the counsellor at school about this there is no documentary evidence she suffers from serious difficulties although i do not doubt the first year of immigration to a fore ign country c ompounded with the absence of her father has been difficult for her the family has been apart f or approximately one year but they communicate daily by video calls if the appeal is denied the appellant can continue to visit his family with a multiple entry visa</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>this general concern does not amount to undue hardship the concerns of the appellant were not elevated to the point he wanted to remain in canada with his family the appellant has not established there will be undue hardship if the appeal is dismissed this is a negative factor 12 there are two minors affected by the outcome of this appeal they live in canada with their mother</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>travels to canada to be with them whenever he choses they speak on the phone daily the children would prefer that their father maintained his perm anent resident status but there is no evidence their best interest will not be served if the appeal is dismissed</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>compassionate considerations to warrant special relief in light of all the circumstances of the case 14 the appeal is dismissed 2018 canlii 138816 ca irb iad file no n de dossier de la s ai mb7 17896 7 notice of decision the appeal is dismissed xxxxxxxxxxxxx me xxxxxxxxxxxxx december 18 2018 date ml judicial review under section 72 of the immigration</p>
+                </div>
+                
+            </div>
+            
+            <h3>Case Text (first portion):</h3>
+            <div class="case-text">(CA IRB)
+
+IAD File No. / N° de dossier de la S AI : MB7 -17896
+
+
+
+
+
+2
+
+REASONS FOR DECISION
+
+
+
+INTRODUCTION
+
+[1] These are the reasons for the decision in the appeal of [REDACTED] (the
+
+appellant) from a removal order made against him on September 26 , 2017 , because of his failure
+
+to comply with the residency obligation set out in the Immigration and Refugee Protection Act1
+
+(the Act ).
+
+[2] Section 28 of the Act requires a permanent resident to be physically present in Canada for
+
+at least 730 days in the five -year period immediately prior to an assessment, which in this case
+
+five years after the appellant’s landing date of June 15, 2014.
+
+[3] The appellant does not challenge the legal validity of the removal order but argues that
+
+the appeal should b e allowed on the basis that sufficient humanitarian and compassionate
+
+considerations warrant special relief, in light of all the circumstances of the case, taking into
+
+account the best interests of any child directly affected by the decision.
+
+[4] I have consi dered the testimony of the appellant, his daughter and his friend, the Appeal
+
+Record and the documents filed by the appellant2 and the respondent’s and the written
+
+submissions3 of the respondent who participated to the appeal with written submissions.
+
+DECI SION
+
+[5] The appellant did not dispute the legal validity of the breach of the residency obligation.
+
+The appellant, at the time of the control had been present in Canada for 66 days during the
+
+relevant five -year period. If he had stayed in Canada after the dat e of the control and the removal
+
+
+
+1 Immigration and Refugee Protection Act , S.C. (2001), chap. 27, as amended.
+
+2 Exhibits A -1 to A-3.
+
+3 Appeal Record and Exhibits R -1 to R -5.
+
+2018 CanLII 138816 (CA IRB)
+
+IAD File No. / N° de dossier de la S AI : MB7 -17896
+
+
+
+
+
+3 order, he could have accumulated a maximum of 627 days. The removal order is valid in law,
+
+and there are not sufficient humanitarian and compassionate grounds, in light of...</div>
+        </div>
+        
+        <div class="case" id="case-9">
+            <div class="case-header">
+                <h2>Case 9: ID 34097</h2>
+                <p class="metrics">Expected: 4 | Extracted: 7 | 
+                   Extra: 3 | Ratio: 1.75</p>
+            </div>
+            
+            <div class="comparison">
+                <div class="comparison-column">
+                    <h3>Expected Determinations (1)</h3>
+        
+                <div class="expected">
+                    <p>["['confirm the decision of the rpd', 'appellant is neither a convention refugee nor a person in need of protection']", "['appeal fails']", "['appellant is neither a convention refugee nor a person in need of protection']", "['302 (c.a.']"]</p>
+                </div>
+                
+                </div>
+                <div class="comparison-column">
+                    <h3>Extra Determinations (7)</h3>
+        
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>refugee protection act irpa the rad confirms the decision of the rpd that the appellant is neithe r a convention refugee cr nor a person in need of protection pursuant to sections 96</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>97 1 of the irpa 5 this appeal is dismissed background 6 the appellant alleged before the rpd that her husband s famil y members want to carry out female circumcision female genital mutilation on her infant daughter who was born in canada on xxx 2014 xxxxxxxxxxxxxx</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>her father in law will get arrested starting at 1 hour 9 minutes in audio recording the appellant further added that the father in law will eventually be released after paying a bribe but they do not want to go through the appellant repeated that medical report has to be back ed up with police report at 1hr 12 minute mark yet the appellant manages to provide a report from the doctor but there is no evidence tha t police were involved or that her father in law was arrested based on the foregoing i have serious concerns about the credibility of the documents 15 i also note that these documents are not material because they did not indicate that the female geni tal mutilati on was forced upon them by the a ppellant s father in law 16 therefore these documents are not accepted as new evidence since there is no new evidence the appeal is heard on the basis of the record the issues 17 the appellant s issues are as follows 1 did the panel member err in rejecting the appellant's entire claim on the basis of an unreasonable plausibility finding 2 did the panel member err in finding that the appellant is not a convention refugee or a person in need of protection 18 i wil l rephrase the appellant s issue s as did the rpd err in its credibility analysis</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>1 huruglica xxxxx v m c i f c no imm 3632 13 phelan august 22 2014 2014 fc 799 2015 canlii 34097 ca irb rad file no n de dossier de la s ar come to an independent assessment of whether the claimant is a convention refugee o r a person in need of protection 20 the federal court in huruglica2 provides the rad with guidance in relation to the appropriate standard that must be applied by a specialized tribunal such as the rad to decisions of a first level administrative tribunal justice xxxxxx states in paragraphs 54</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>come to an independent assessment of whether the claimant is a convention refugee or a person in need of protection where its assessment departs from that of the rpd the rad must substitute its own decision 551 in conducting its assessment it can recognize</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>respect the rpd s credibility findings where it has particular advantage 37 having considered the totality of the evi dence before me i find that the appellant is neither a convention refugee nor a person in need of protection therefore the rad confirmed the rpd s determination alternate analysis state protection 38 the rpd also considered state protection it is trite law that the burden is on the appellant to provide clear</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>convincing evidence i find that the appellant is neither a convention refugee nor a person in need of protection therefore this appeal fails conclusion 47 pursuant to subsection 111 1 a of irpa i confirm the decision of the rpd that the appellant is neither a convention refugee nor a person in need of protection 48 the appeal is therefore dismissed sign ed atam uppal xxxxxxxxxx march 11 2015 date 2015 canlii 34097 ca irb</p>
+                </div>
+                
+                </div>
+            </div>
+        
+            <div>
+                <h3>All Extracted Determinations (7)</h3>
+        
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>refugee protection act irpa the rad confirms the decision of the rpd that the appellant is neithe r a convention refugee cr nor a person in need of protection pursuant to sections 96</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>97 1 of the irpa 5 this appeal is dismissed background 6 the appellant alleged before the rpd that her husband s famil y members want to carry out female circumcision female genital mutilation on her infant daughter who was born in canada on xxx 2014 xxxxxxxxxxxxxx</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>her father in law will get arrested starting at 1 hour 9 minutes in audio recording the appellant further added that the father in law will eventually be released after paying a bribe but they do not want to go through the appellant repeated that medical report has to be back ed up with police report at 1hr 12 minute mark yet the appellant manages to provide a report from the doctor but there is no evidence tha t police were involved or that her father in law was arrested based on the foregoing i have serious concerns about the credibility of the documents 15 i also note that these documents are not material because they did not indicate that the female geni tal mutilati on was forced upon them by the a ppellant s father in law 16 therefore these documents are not accepted as new evidence since there is no new evidence the appeal is heard on the basis of the record the issues 17 the appellant s issues are as follows 1 did the panel member err in rejecting the appellant's entire claim on the basis of an unreasonable plausibility finding 2 did the panel member err in finding that the appellant is not a convention refugee or a person in need of protection 18 i wil l rephrase the appellant s issue s as did the rpd err in its credibility analysis</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>1 huruglica xxxxx v m c i f c no imm 3632 13 phelan august 22 2014 2014 fc 799 2015 canlii 34097 ca irb rad file no n de dossier de la s ar come to an independent assessment of whether the claimant is a convention refugee o r a person in need of protection 20 the federal court in huruglica2 provides the rad with guidance in relation to the appropriate standard that must be applied by a specialized tribunal such as the rad to decisions of a first level administrative tribunal justice xxxxxx states in paragraphs 54</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>come to an independent assessment of whether the claimant is a convention refugee or a person in need of protection where its assessment departs from that of the rpd the rad must substitute its own decision 551 in conducting its assessment it can recognize</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>respect the rpd s credibility findings where it has particular advantage 37 having considered the totality of the evi dence before me i find that the appellant is neither a convention refugee nor a person in need of protection therefore the rad confirmed the rpd s determination alternate analysis state protection 38 the rpd also considered state protection it is trite law that the burden is on the appellant to provide clear</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>convincing evidence i find that the appellant is neither a convention refugee nor a person in need of protection therefore this appeal fails conclusion 47 pursuant to subsection 111 1 a of irpa i confirm the decision of the rpd that the appellant is neither a convention refugee nor a person in need of protection 48 the appeal is therefore dismissed sign ed atam uppal xxxxxxxxxx march 11 2015 date 2015 canlii 34097 ca irb</p>
+                </div>
+                
+            </div>
+            
+            <h3>Case Text (first portion):</h3>
+            <div class="case-text">(CA IRB)
+
+RAD File No. / N° de dossier de la S AR :
+
+
+
+REASONS FOR DECISION
+
+[1] [REDACTED] (the Appellant), a citizen of Ghana, appeals a decision of the Refugee
+
+Protection Division (RPD) rejecting her claim for refugee protection.
+
+[2] The Appellant submit ted documents to be considered as new evidence pursuant to
+
+s.110(4) of the Immigration and Refugee Protection Act (the Act or IRPA) in support of her
+
+appeal. However, the Appellant did not request a hearing before the Refugee Appeal Division
+
+(RAD) pursuant to section 1 10 (6) of the Act.
+
+[3] The Appellant requests that the RAD set aside the RPD’s decision and remit the matter
+
+back to the RPD for redetermination. In the alternative, the Appellant requests that the RAD grant
+
+any other order that the Division deems reasona ble and expedient having regard to the peculiar
+
+facts and circumstances of this case.
+
+DETERMINATION
+
+[4] Pursuant to Section 111(a) of the Immigration and Refugee Protection Act (IRPA), the
+
+RAD confirms the decision of the RPD that the Appellant is neithe r a Convention refugee (CR)
+
+nor a person in need of protection pursuant to sections 96 and 97(1) of the IRPA.
+
+[5] This appeal is dismissed.
+
+Background:
+
+[6] The Appellant alleged before the RPD that her husband’s famil y members want to carry
+
+out female circumcision (female genital mutilation) on her infant daughter who was born in
+
+Canada on [REDACTED], 2014. [REDACTED] and her husband oppose this practice. The Appellant is
+
+afraid that she would personally face serious harm, torture or death due to her op posi tion to this
+
+practice. The A ppellant’s husband remains in Ghana and he does not believe that he could protect
+
+his wife or daughter in these circumstances. The Appellant also alleged that all female family
+
+members of her husband have undergone this procedur e and her father -in-law in particular wishes
+
+to preserve this custom .
+
+2015 CanLII 34097 (CA IRB)
+
+RAD File No. / N° de dossier de la S AR :
+
+
+
+[7] The Appellant i...</div>
+        </div>
+        
+        <div class="case" id="case-10">
+            <div class="case-header">
+                <h2>Case 10: ID 60664</h2>
+                <p class="metrics">Expected: 4 | Extracted: 7 | 
+                   Extra: 3 | Ratio: 1.75</p>
+            </div>
+            
+            <div class="comparison">
+                <div class="comparison-column">
+                    <h3>Expected Determinations (1)</h3>
+        
+                <div class="expected">
+                    <p>["['theappealis allowed']", "['appellant has not lost her permanent resident status']", "['appeal is allowed.the']", "['appeal is dismissed']"]</p>
+                </div>
+                
+                </div>
+                <div class="comparison-column">
+                    <h3>Extra Determinations (7)</h3>
+        
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>compassionate h c considerations warrant special relief in the appellant s case 4 i find that they do the appeal is allowed 4 in 1994 the xxxxxxxxx landed in canada with her spouse</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>when she transited through canada on her way to h er one year exchange program in the united states she was asked to renounce her status she has continued to visit her family in canada but no longer has pr status she does not have any active immigration applications to canada or any immediate plans to leave hong kong moreover i find it unlikely that the appellant s daughter would leave the appellant alone in hong kong as the appellant s daughter testified if this appeal is dismissed she</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>daughter in law confirmed that if this appeal is dismissed he will investigate sponsoring his mother for these reasons i do not accept that the appellant will suffer the hardship of being left alone in hong kong this does not attract special relief 29 i acknowledge the position of the minister that if this appeal is dismissed the appellant can visit her family in canada or potentially be sponsored as a member of the family class 21 however i accept the position of the appellant s counsel that a visa is a poor substitute for pr status l ong distance travel is difficult</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>his family in canada for these reasons i accept the position of the appellant s counsel that the appellant will suffer emotional hardship if this appeal is dismissed</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>other family members in canada will suffer emotional hardship if this appeal is dismissed</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>7 year old granddaughter who live in canada i acknowledge the minister s position that although there are minor grandchildren who would be affec ted by the outcome in this appeal if the appeal is dismissed the status quo could simply be maintained with the xxxxxxxxx living in hong kong</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>has no active immigration applications in process to return to canada weighing this all in the balance i find that canada s immigration objectives are a neutral factor conclusion 37 for all the reasons articulated above i find that there are enough h c considerations to warrant special relief in light of all the circumstances of this case the appeal is allowed notice of decision the appeal is allowed the decision of the officer made outside of canada on the appellant s residency obligation is set aside the immigration appeal division finds that the appellant ha s not lost her permanent resident status xxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxx february 24 2022 date judicial review under section 72 of the immigration</p>
+                </div>
+                
+                </div>
+            </div>
+        
+            <div>
+                <h3>All Extracted Determinations (7)</h3>
+        
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>compassionate h c considerations warrant special relief in the appellant s case 4 i find that they do the appeal is allowed 4 in 1994 the xxxxxxxxx landed in canada with her spouse</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>when she transited through canada on her way to h er one year exchange program in the united states she was asked to renounce her status she has continued to visit her family in canada but no longer has pr status she does not have any active immigration applications to canada or any immediate plans to leave hong kong moreover i find it unlikely that the appellant s daughter would leave the appellant alone in hong kong as the appellant s daughter testified if this appeal is dismissed she</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>daughter in law confirmed that if this appeal is dismissed he will investigate sponsoring his mother for these reasons i do not accept that the appellant will suffer the hardship of being left alone in hong kong this does not attract special relief 29 i acknowledge the position of the minister that if this appeal is dismissed the appellant can visit her family in canada or potentially be sponsored as a member of the family class 21 however i accept the position of the appellant s counsel that a visa is a poor substitute for pr status l ong distance travel is difficult</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>his family in canada for these reasons i accept the position of the appellant s counsel that the appellant will suffer emotional hardship if this appeal is dismissed</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>other family members in canada will suffer emotional hardship if this appeal is dismissed</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>7 year old granddaughter who live in canada i acknowledge the minister s position that although there are minor grandchildren who would be affec ted by the outcome in this appeal if the appeal is dismissed the status quo could simply be maintained with the xxxxxxxxx living in hong kong</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>has no active immigration applications in process to return to canada weighing this all in the balance i find that canada s immigration objectives are a neutral factor conclusion 37 for all the reasons articulated above i find that there are enough h c considerations to warrant special relief in light of all the circumstances of this case the appeal is allowed notice of decision the appeal is allowed the decision of the officer made outside of canada on the appellant s residency obligation is set aside the immigration appeal division finds that the appellant ha s not lost her permanent resident status xxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxx february 24 2022 date judicial review under section 72 of the immigration</p>
+                </div>
+                
+            </div>
+            
+            <h3>Case Text (first portion):</h3>
+            <div class="case-text">(CA IRB)
+
+IAD File No. / No de dossier de la SAI: TC1-02416
+
+Client ID No. / No ID client: 29405339
+
+
+
+REASONS FOR DECISION
+
+OVERVIEW
+
+
+
+[1] The Appellant, [REDACTED], is a widowed 73 -year -old British national overseas and
+
+a Chinese citizen who lives in Hong Kong.1 She appeal s a February 2021 decisio n that she did not
+
+compl y with the residency obligation as a permanent resident (PR) .2
+
+[2] To comply with the residency obligation, a PR must be physically present in Canada for
+
+730 days in a five -year period.3 The Appellant concedes that she was present in Canada for zero
+
+days in the relevant five -year period. As such, the validity of the decision is not in dispute.
+
+[3] The issue in this appeal is whether humanitarian and compassionate ( H&C ) considerations
+
+warrant special relief in the Appellant’s case.4 I find that they do. The appeal is allowed.
+
+[4] In 1994, the [REDACTED] landed in Canada with her spouse and their two children.5 Their
+
+son stayed in Canada with the [REDACTED]’s brother. The Appellant, her spouse, and t heir daughter
+
+returned to Hong Kong. They intended to settle permanently in Canada in 1995 or 1996 after
+
+winding up her spouse’s business in Hong Kong. The Appellant, her spouse, and their daughter
+
+returned to Canada in 1995 to visit their son. The [REDACTED] nt’s spouse experienced health concerns
+
+during those long -haul flights. Consequently, he refused to travel anywhere after 1995. The
+
+Appellant stayed in Hong Kong with her spouse because she felt this was her role as “a traditional
+
+Chinese wife.” She travel ed to Canada regularly until 2013 on her own. After 2013, her spouse’s
+
+health deteriorated, and she could no longer leave him to travel to Canada. He died in Hong Kong
+
+in September 2018. In April 2019, the [REDACTED]’s daughter had surgery in Hong Kong . In mid -
+
+2019, the [REDACTED]’s son learned that the Appellant could apply for a PR travel document. At
+
+that time, a proposed extradition bill caused protests and di...</div>
+        </div>
+        
+        <div class="case" id="case-11">
+            <div class="case-header">
+                <h2>Case 11: ID 81259</h2>
+                <p class="metrics">Expected: 4 | Extracted: 7 | 
+                   Extra: 3 | Ratio: 1.75</p>
+            </div>
+            
+            <div class="comparison">
+                <div class="comparison-column">
+                    <h3>Expected Determinations (1)</h3>
+        
+                <div class="expected">
+                    <p>["['appeal is allowed']", "['immigration officer’s decision is valid in law']", "['appeal is dismissed']", "['appeal is allowed']"]</p>
+                </div>
+                
+                </div>
+                <div class="comparison-column">
+                    <h3>Extra Determinations (7)</h3>
+        
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>refugee protectio n act which i will refer to simply as the act 4 you admit that you did not comply with your residency obligation however you are asking that you r appeal be allowed based on humanitarian</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>compassionate considerations the minister s representative is request ing that your appeal be dismissed 5 the standard of proof in this appeal is the balance of probabilities requiring that allegations are more likely than not to be true 6 i conclude that you failed to comply with your residency obligation i also conclude that there are not sufficient humanitarian</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>compassionate considerations i will refer to paragraph 67 1 c of the act this paragraph states that an appeal is allowed if taking into account the best interests of a child directly affected by the decision sufficient humanitarian</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>the best interests of your children 31 these are neutral factor s in your case the hardship an d dislocation yo u allege essentially amounts to the best interests of your children you mentioned that you would be disappointed if the appeal were dismissed</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>to have the opportunities that canada could provide in comparison to algeria if the appeal is allowed you r plan is to come to canada</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>your son is about five years old so when i look at their living situation i do not see any particular hardship that is the first thing the second thing is as i mentioned because they do not have canadian status whether or not the appeal is allowed is not really going to have an impact on the best interests of your children 35 you testified that your children your daughter in fact goes to daycare she does activities you take her to visit people on the weekends she is an active child she goes to daycare she is cared for by both of her parents right now she is also surrounded by some of your siblings</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>compassionate considerationsto warrant special relief in light of all the circumstances of the case for all of these reasons the appeal is dismissed 2021 canlii 81259 ca irb iad file no no de dossier de la sai mc0 05107 client id no no id client 90191623 9 notice of decision the appeal is dismissed signed by xxxxxxxxxxxx sanso xxxxxxxxxxxx sanso may 31 2021 date irb translation original language french judicial review under section 72 of the immigration</p>
+                </div>
+                
+                </div>
+            </div>
+        
+            <div>
+                <h3>All Extracted Determinations (7)</h3>
+        
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>refugee protectio n act which i will refer to simply as the act 4 you admit that you did not comply with your residency obligation however you are asking that you r appeal be allowed based on humanitarian</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>compassionate considerations the minister s representative is request ing that your appeal be dismissed 5 the standard of proof in this appeal is the balance of probabilities requiring that allegations are more likely than not to be true 6 i conclude that you failed to comply with your residency obligation i also conclude that there are not sufficient humanitarian</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>compassionate considerations i will refer to paragraph 67 1 c of the act this paragraph states that an appeal is allowed if taking into account the best interests of a child directly affected by the decision sufficient humanitarian</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>the best interests of your children 31 these are neutral factor s in your case the hardship an d dislocation yo u allege essentially amounts to the best interests of your children you mentioned that you would be disappointed if the appeal were dismissed</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>to have the opportunities that canada could provide in comparison to algeria if the appeal is allowed you r plan is to come to canada</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>your son is about five years old so when i look at their living situation i do not see any particular hardship that is the first thing the second thing is as i mentioned because they do not have canadian status whether or not the appeal is allowed is not really going to have an impact on the best interests of your children 35 you testified that your children your daughter in fact goes to daycare she does activities you take her to visit people on the weekends she is an active child she goes to daycare she is cared for by both of her parents right now she is also surrounded by some of your siblings</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>compassionate considerationsto warrant special relief in light of all the circumstances of the case for all of these reasons the appeal is dismissed 2021 canlii 81259 ca irb iad file no no de dossier de la sai mc0 05107 client id no no id client 90191623 9 notice of decision the appeal is dismissed signed by xxxxxxxxxxxx sanso xxxxxxxxxxxx sanso may 31 2021 date irb translation original language french judicial review under section 72 of the immigration</p>
+                </div>
+                
+            </div>
+            
+            <h3>Case Text (first portion):</h3>
+            <div class="case-text">(CA IRB)
+
+IAD File No. / No de dossier de la SAI : MC0 -05107
+
+Client ID No. / No ID client : 90191623
+
+
+
+
+
+1
+
+ORAL REASONS FOR DECISION
+
+[French version e dited for spelling, grammar and syntax]
+
+OVERVIEW
+
+[1] You, [REDACTED] , are the appellant. You are a citizen of Algeria and a permanent
+
+resident of Canada.
+
+[2] Permanent residents of Canada must comply with a residency obligation. One of the ways
+
+to comply with it is to have spent a sufficient number of days in Canada.
+
+[3] To be able to enter Canada, you applied for a permanent resident travel document. This
+
+application was received by the Canadian immigration authorities on August 8, 2019 . An
+
+immigration officer refused this application because he concluded that you had not complied with
+
+your residency obligation. This is the decision being appealed before me. Your appeal is based on
+
+subsection 63(4) of the Immigration and Refugee Protectio n Act , which I will refer to simply as the
+
+Act.
+
+[4] You admit that you did not comply with your residency obligation. However, you are
+
+asking that you r appeal be allowed based on humanitarian and compassionate considerations. The
+
+Minister’s representative is request ing that your appeal be dismissed.
+
+[5] The standard of proof in this appeal is the balance of probabilities, requiring that
+
+allegations are more likely than not to be true .
+
+[6] I conclude that you failed to comply with your residency obligation. I also conclude that
+
+there are not sufficient humanitarian and compassionate considerations. I will refer to
+
+paragraph 67(1)(c) of the Act. This paragraph states that an appeal is allowed if, taking into
+
+account the best interests of a child directly affected by the decision, sufficient humanitarian and
+
+compassionate considerations warrant special relief in light of all the circumstances of the case.
+
+[7] Given that I conclude that there are not sufficient humanitarian and compassionate
+
+considerations, the appeal is d ismissed.
+
+
+
+2021 CanLII 81259...</div>
+        </div>
+        
+        <div class="case" id="case-12">
+            <div class="case-header">
+                <h2>Case 12: ID 97572</h2>
+                <p class="metrics">Expected: 4 | Extracted: 7 | 
+                   Extra: 3 | Ratio: 1.75</p>
+            </div>
+            
+            <div class="comparison">
+                <div class="comparison-column">
+                    <h3>Expected Determinations (1)</h3>
+        
+                <div class="expected">
+                    <p>["['appeal is allowed']", "['appeal is allowed']", "['removal order is set aside']", "['appellant has not lost his permanent resident status']"]</p>
+                </div>
+                
+                </div>
+                <div class="comparison-column">
+                    <h3>Extra Determinations (7)</h3>
+        
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>compassionate grounds that warrant special consideration in light of all the circumstances in the case issues 3 at issue is whether or not the removal or der issued agains t the appellant is valid in law 4 if the removal order is valid in law taking into consideration a child directly affected by the decision whether there exist humanitarian</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>compassionate grounds that warrant special relief in light of all the circumstances in this case decision 5 the removal order is valid in law 6 the panel finds that taking into consideration the best interest of a child directly affected by the decision there are sufficient humanitarian</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>compassionate ground s that warrant the 1 see record p 1 2013 canlii 97572 ca irb iad file no no de dossier de la sai tb0 05377 client id no no id client 2059 3671 2 granting of special relief in light of all the circumstances of this case accordingly the appeal is allowed</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>the removal order is set aside background 7 the appellant testified that he was born in the united states</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>compassionate grounds as such i find that the removal order is valid in law 16 with respect to humanitarian</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>compassionate grounds in this case that warrant special c onsideration in light of all of the circumstances of this case 35 accordingly the appeal is allowed</p>
+                </div>
+                
+                <div class="extra">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>the removal order is set aside 2013 canlii 97572 ca irb iad file no no de dossier de la sai tb0 05377 client id no no id client 2059 3671 9 decision the appeal is allowed the removal order is set aside the immigration appeal division finds that the appellant has not lost his permanent residen t status xxxxxxxxxxxxxx xxxxxxxxxxxxxx february 26 2013 date judicial review under section 72 of the immigration</p>
+                </div>
+                
+                </div>
+            </div>
+        
+            <div>
+                <h3>All Extracted Determinations (7)</h3>
+        
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>compassionate grounds that warrant special consideration in light of all the circumstances in the case issues 3 at issue is whether or not the removal or der issued agains t the appellant is valid in law 4 if the removal order is valid in law taking into consideration a child directly affected by the decision whether there exist humanitarian</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>compassionate grounds that warrant special relief in light of all the circumstances in this case decision 5 the removal order is valid in law 6 the panel finds that taking into consideration the best interest of a child directly affected by the decision there are sufficient humanitarian</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>compassionate ground s that warrant the 1 see record p 1 2013 canlii 97572 ca irb iad file no no de dossier de la sai tb0 05377 client id no no id client 2059 3671 2 granting of special relief in light of all the circumstances of this case accordingly the appeal is allowed</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>the removal order is set aside background 7 the appellant testified that he was born in the united states</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>compassionate grounds as such i find that the removal order is valid in law 16 with respect to humanitarian</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>compassionate grounds in this case that warrant special c onsideration in light of all of the circumstances of this case 35 accordingly the appeal is allowed</p>
+                </div>
+                
+                <div class="extracted">
+                    <p><strong>Score:</strong> 1.0 | <strong>Match type:</strong> explicit</p>
+                    <p>the removal order is set aside 2013 canlii 97572 ca irb iad file no no de dossier de la sai tb0 05377 client id no no id client 2059 3671 9 decision the appeal is allowed the removal order is set aside the immigration appeal division finds that the appellant has not lost his permanent residen t status xxxxxxxxxxxxxx xxxxxxxxxxxxxx february 26 2013 date judicial review under section 72 of the immigration</p>
+                </div>
+                
+            </div>
+            
+            <h3>Case Text (first portion):</h3>
+            <div class="case-text">(CA IRB)
+
+IAD File No. / No de dossier de la SAI : TB0 -05377
+
+Client ID No. / No ID client : 2059 -3671
+
+
+
+1
+
+
+
+REASONS FOR DECISION
+
+
+
+INTRODUCTION
+
+
+
+[1] [REDACTED] (the appellant) appeals the decision of the issuance of a removal
+
+order made against him on April 9, 2 010 by a Minister’s Delegate. The appellant was found to
+
+be a person described in section 41(b) of the Immigration and Refugee Protection Act (IRPA ) for
+
+failing to comply with his residency obligation as described in section 28 of IRPA.1
+
+
+
+[2] The appellant i nitially disputed the Minister’s Delegate’s findings with respect to the
+
+validity of the removal order ; however , later in the hearing he was prepared to concede the
+
+validity issue. Instead, he asked that the panel allow the appeal given that , taking into account
+
+the best interests of a child di rectly affected by the decision there are humanitarian and
+
+compassionate grounds that warrant special consideration in light of all the circumstances in the
+
+case.
+
+
+
+ISSUES
+
+
+
+[3] At issue is whether or not the removal or der issued agains t the appellant is valid in law;
+
+
+
+[4] If the Removal Order is valid in law, taking into consideration a child directly affected by
+
+the decision, whether there exist humanitarian and compassionate grounds that warrant special
+
+relief, in light of all the circumstances in this case.
+
+
+
+DECISION
+
+
+
+[5] The removal order is valid in law;
+
+
+
+[6] The panel finds that taking into consideration the best interest of a child directly affected
+
+by the decision, there are sufficient humanitarian and compassionate ground s that warrant the
+
+
+
+1 See Record, p. 1.
+
+2013 CanLII 97572 (CA IRB)
+
+IAD File No. / No de dossier de la SAI : TB0 -05377
+
+Client ID No. / No ID client : 2059 -3671
+
+
+
+2
+
+
+
+granting of special relief in light of all the circumstances of this case. Accordingly, the appeal is
+
+allowed and the removal order is set aside.
+
+
+
+BACKGROUND
+
+
+
+[7] The appellant testified that he was born in the United States...</div>
+        </div>
+        
+    <script>
+        // Add a simple navigation for jumping between cases
+        document.addEventListener('DOMContentLoaded', function() {
+            const nav = document.querySelector('.nav');
+            const navContent = document.createElement('div');
+            navContent.style.marginTop = '10px';
+            
+            for (let i = 1; i <= 12; i++) {
+                const link = document.createElement('a');
+                link.href = '#case-' + i;
+                link.textContent = 'Case ' + i;
+                link.style.marginRight = '15px';
+                link.style.textDecoration = 'none';
+                link.style.padding = '5px 10px';
+                link.style.backgroundColor = '#f8f9fa';
+                link.style.borderRadius = '5px';
+                navContent.appendChild(link);
+            }
+            
+            nav.appendChild(navContent);
+        });
+    </script>
+    </body>
+    </html>
+    
