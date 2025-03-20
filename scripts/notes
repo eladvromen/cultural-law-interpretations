@@ -1,34 +1,57 @@
 TODO
 ## determination extraction-
+notes- 
+- maybe can refactor runners for duplication
+-should add configurable columns processing (which headers) to models
+- should add post processor
+
+### legalBERT fine tuning
+Summary: Implementation Plan for Determination Extraction with LegalBERT
+Dataset Creation Strategy
+Data Source:
+Use existing labeled data (~10,000 examples)
+Leverage document sections with headers like "DETERMINATION", "CONCLUSION", "DECISION"
+Use extracted determination sentences as positive labels
+Dataset Format:
+Input: Text sections/paragraphs from relevant headers
+Labels: Associated extracted determination sentences
+Structure: Section → Determination mapping (not sentence-level matching)
+Training Approach:
+Train LegalBERT to identify sections containing determinations
+Let the model learn the patterns associating sections with determination content
+Avoid complex sentence-level matching problems
+Dataset Creation Steps:
+Extract header sections using existing text processing methods
+Pair sections with our already-extracted determination sentences
+Create train/validation split (ensuring no document overlap)
+Format for transformer input
+
+### post processor examples
+examples for previous appeals:
+-[{'text': '/ N\\u00b0 de dossier de la S AI : MB6 -00310\\n\\n\\n\\n\\n\\n\\n\\n1", "ORAL REASONS FOR DECISION": "*Edited for spelling, grammar and syntax*\\n\\n\\n\\n\\n\\n[1] This is the decision with respect to the appeal filed by [REDACTED] (the\\n\\nappellant), a citizen of Iran, from the decision rendered on the 23rd of December 2015, by a\\n\\nCanadian Border Services Agency (CBSA) officer at the Canadian port of entry who determined\\n\\nthat the appellant was inadmissible to Canada by reason of his failure to comply w ith the\\n\\nresidency obligation set out in section 28 of the Immigration and Refugee Protection Act (the\\n\\nAct )1.\\n\\n\\n\\n[2] The appellant acknowledges that he has not complied with the residency obligation and is\\n\\nnot contesting the legal validity of the decision, rather he is pursuing his appeal based on\\n\\nhumanitarian and compassionate considerations .\\n\\n\\n\\n[3] The test to be applied by the Immigration Appeal Division (IAD) discretionary\\n\\njurisdiction is , taking into account the best interests of a child directly affected by the decision,\\n\\nwhether there are sufficient humanitarian and compassionate considerations that warrant special\\n\\nrelief in light of all the circumstances of the case.\\n\\n\\n\\n[4] There are a number of factors that are considered by the IAD in the exercise of its\\n\\ndiscretionary jurisdiction2.', 'matched_text': '/ N\\u00b0 de dossier de la S AI : MB6 -00310\\n\\n\\n\\n\\n\\n\\n\\n1", "ORAL REASONS FOR DECISION": "*Edited for spelling, grammar and syntax*\\n\\n\\n\\n\\n\\n[1] This is the decision with respect to the appeal filed by [REDACTED] (the\\n\\nappellant), a citizen of Iran, from the decision rendered on the 23rd of December 2015, by a\\n\\nCanadian Border Services Agency (CBSA) officer at the Canadian port of entry who determined\\n\\nthat the appellant was inadmissible to Canada by reason of his failure to comply w ith the\\n\\nresidency obligation set out in section 28 of the Immigration and Refugee Protection Act (the\\n\\nAct )1.\\n\\n\\n\\n[2] The appellant acknowledges that he has not complied with the residency obligation and is\\n\\nnot contesting the legal validity of the decision, rather he is pursuing his appeal based on\\n\\nhumanitarian and compassionate considerations .\\n\\n\\n\\n[3] The test to be applied by the Immigration Appeal Division (IAD) discretionary\\n\\njurisdiction is , taking into account the best interests of a child directly affected by the decision,\\n\\nwhether there are sufficient humanitarian and compassionate considerations that warrant special\\n\\nrelief in light of all the circumstances of the case.\\n\\n\\n\\n[4] There are a number of factors that are considered by the IAD in the exercise of its\\n\\ndiscretionary jurisdiction2.', 'score': 20.0, 'position': 0.045454545454545456, 'length': 1341, 'match_type': 'direct_pattern'}]
+
+examples for information:
+'''[{'text': 'The test to be app lied is: at the time that\\n\\nthe appeal is disposed of, taking into account the best interests of any child directly affected by\\n\\nthe decision, whether there are sufficient humanitarian and compassionate considerations that\\n\\nwarrant special relief in light of a ll the circumstances of the case.\\n\\n\\n\\n[4] The appellant testified at the hearing and additional documentary evidence was\\n\\nsubmitted.\\n\\n\\n\\n[5] The appellant originally came to Canada in the year 2000 as a student with her sister and\\n\\nher mother came to accompany them while they were here.', 'matched_text': 'The test to be app lied is: at the time that\\n\\nthe appeal is disposed of, taking into account the best interests of any child directly affected by\\n\\nthe decision, whether there are sufficient humanitarian and compassionate considerations that\\n\\nwarrant special relief in light of a ll the circumstances of the case.\\n\\n\\n\\n[4] The appellant testified at the hearing and additional documentary evidence was\\n\\nsubmitted.\\n\\n\\n\\n[5] The appellant originally came to Canada in the year 2000 as a student with her sister and\\n\\nher mother came to accompany them while they were here.', 'score': 20.0, 'position': 0.2, 'length': 582, 'match_type': 'direct_pattern'}]'''
+
+examples for "if":
+ if the appeal were dismissed and the appellant removed ,
+
+this would result in the children remain ing in Canada with their father while the appellant would
+
+reside in China
 
 ### schedule:
-#### Tuseday
-start building spesific sentence rule based extractions.
-utulize knowledge from train of explicit sentences. 
 
-#### Wednesday 
-- need to add decopmosed explicit determination extraction. 
-- need to add rule based post tuning
-#### Thursday
-- need to decsied on the exact preprocessing approach. I think that the low recall high prescion will be used as benchmark and for text that is not in the extracted sections. than more neuanced methods will be used.
- - wrapp up rule based.
- - create benchmark eval for performances. 
- - decsied what are the train\validation\test splits. 
- - wrap rule based code nicely. 
+
+ 
 
 ### further plans
-- look for open source solution
-- start with simple methodes
-   - move to NN methodes - legal BERT? 
-- move to payed API from SOTA models
-- create manual benchmark...
+- we should build the dataset that will be comprised of headers->extracted_sentences for training
+- read about different transformers (prob legalBERT)
+- build fine tuning piepline
+- run on relevant sections (the headers text? the extraction of rule based?)
 
 ### NOTES TO THINK OF
 - there are 2 types of cases- first and re appeals which have some differences in structure.
--need to add metadata from enroched(include descion label) to processed. maybe merge later
+-need to add metadata from enriched(include descion label) to processed. maybe merge later
 
-### DONE
-1. need to understand exactly the differences between full text and all sentense and decide which one we will use.
-- if we want legal reasoning, full text is crucial. 
-2. understand what to do with the duplicated desionID by year and how to distinct them -
- - sthrough away
