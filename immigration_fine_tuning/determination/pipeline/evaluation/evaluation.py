@@ -28,7 +28,7 @@ def create_validation_set(train_df, test_df):
     train_validation = train_df[train_df['determination_count'] >= 4].copy()
     
     # Extract validation samples from test where determination_count >= 3
-    test_validation = test_df[test_df['determination_count'] >= 3].copy()
+    test_validation = test_df[test_df['determination_count'] >= 0].copy()
     
     # Combine into a single validation set
     validation_set = pd.concat([train_validation, test_validation], ignore_index=True)
@@ -774,15 +774,15 @@ def main():
     pipeline_dir = script_dir.parent  # pipeline/
     
     # # Save validation set in our pipeline/data directory
-    # validation_file = pipeline_dir / "data" / "validation_set.csv"
+    validation_file = pipeline_dir / "data" / "determination_extraction_set.csv"
     
     # # Create the validation set
-    # train_df, test_df = load_data()  # Will use project path
-    # validation_set = create_validation_set(train_df, test_df)
+    train_df, test_df = load_data()  # Will use project path
+    validation_set = create_validation_set(train_df, test_df)
     
     # # Save validation set in pipeline/data directory
-    # validation_set.to_csv(validation_file, index=False)
-    # print(f"Saved validation set to {validation_file}")
+    validation_set.to_csv(validation_file, index=False)
+    print(f"Saved validation set to {validation_file}")
 
     print("This module provides evaluation functions for determination extraction models.")
     print("To run an evaluation, import run_evaluation and pass your model.")

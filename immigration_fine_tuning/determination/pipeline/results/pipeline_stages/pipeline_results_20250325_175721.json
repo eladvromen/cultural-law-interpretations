@@ -1,0 +1,51 @@
+{
+  "timestamp": "20250325_175721",
+  "run_name": "determination_extraction_pipeline_basic",
+  "config": {
+    "run_name": "determination_extraction_pipeline_basic",
+    "input_file": "data/determination_extraction_set.csv",
+    "train_data": "data/merged/train_enriched.csv",
+    "test_data": "data/merged/test_enriched.csv",
+    "active_stages": [
+      "text_processing",
+      "sparse",
+      "basic",
+      "ngram"
+    ],
+    "stages": {
+      "text_processing": {
+        "sample_size": 0,
+        "batch_size": 50
+      },
+      "sparse": {},
+      "basic": {
+        "min_score": 5.0,
+        "sections": [
+          "decision_headers_text",
+          "analysis_headers_text",
+          "reasons_headers_text",
+          "conclusion_headers_text"
+        ]
+      },
+      "ngram": {
+        "min_score": 15.0,
+        "min_ngram_size": 2,
+        "max_ngram_size": 4,
+        "ngram_threshold": 0.65,
+        "sections": [
+          "decision_headers_text",
+          "analysis_headers_text",
+          "reasons_headers_text",
+          "conclusion_headers_text"
+        ]
+      }
+    }
+  },
+  "stage_outputs": {
+    "text_processing": "c:\\Users\\shil6369\\cultural-law-interpretations\\immigration_fine_tuning\\determination\\pipeline\\data\\preprocessed_validation_20250325_175721.csv",
+    "sparse": "c:\\Users\\shil6369\\cultural-law-interpretations\\immigration_fine_tuning\\determination\\pipeline\\results\\pipeline_stages\\sparse_extraction_20250325_175721\\validation_with_sparse_extraction.csv",
+    "basic": "c:\\Users\\shil6369\\cultural-law-interpretations\\immigration_fine_tuning\\determination\\pipeline\\results\\pipeline_stages\\basic_extraction_20250325_175721\\validation_with_basic_extraction.csv",
+    "ngram": "c:\\Users\\shil6369\\cultural-law-interpretations\\immigration_fine_tuning\\determination\\pipeline\\results\\pipeline_stages\\ngram_extraction_20250325_175721\\validation_with_ngram_extraction.csv"
+  },
+  "final_output": "c:\\Users\\shil6369\\cultural-law-interpretations\\immigration_fine_tuning\\determination\\pipeline\\results\\pipeline_stages\\ngram_extraction_20250325_175721\\validation_with_ngram_extraction.csv"
+}

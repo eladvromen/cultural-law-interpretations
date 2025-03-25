@@ -4,19 +4,17 @@ import os
 import sys
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-#!/usr/bin/env python3
 """
 Run basic extraction model on validation dataset.
 """
 
-import os
-import sys
 from pathlib import Path
 import logging
 import datetime
 import pandas as pd
 import json
 import ast
+from typing import Dict, Any, List, Optional, Union
 
 from core.determination_pipeline import DeterminationPipeline
 
@@ -74,10 +72,25 @@ class SectionBasedBasicExtractor:
             
         return [ext for ext in extractions if ext.get('score', 0) >= self.min_score]
     
-    def process_dataframe(self, df):
-        """Process dataframe with section-specific extraction."""
+    def process_dataframe(self, df, sections=None):
+        """
+        Process dataframe with section-specific extraction.
+        
+        Args:
+            df: Input dataframe
+            sections: List of text sections to process (default: standard sections)
+        """
         # First get the latest sparse extraction results if present
         logger.info("Processing with SectionBasedBasicExtractor...")
+        
+        # Use default sections if none provided
+        if sections is None:
+            sections = [
+                'decision_headers_text',
+                'analysis_headers_text',
+                'reasons_headers_text',
+                'conclusion_headers_text'
+            ]
         
         # Parse sparse extraction column if it exists
         if 'sparse_explicit_extraction' in df.columns:
@@ -92,14 +105,6 @@ class SectionBasedBasicExtractor:
             total_extractions = df['sparse_explicit_extraction_count'].sum()
             docs_with_extractions = (df['sparse_explicit_extraction_count'] > 0).sum()
             logger.info(f"Found {total_extractions} sparse extractions in {docs_with_extractions} documents")
-        
-        # Define the sections to process
-        sections = [
-            'decision_headers_text', 
-            'analysis_headers_text', 
-            'reasons_headers_text',  # Note: corrected from 'reasoning_headers_text'
-            'conclusion_headers_text'
-        ]
         
         # Track extraction statistics
         stats = {
@@ -186,157 +191,236 @@ class SectionBasedBasicExtractor:
         
         return df, stats
 
-
-def find_latest_sparse_run():
-    """Find the latest sparse extraction run directory."""
-    base_dir = Path(__file__).parent.parent.parent.parent  # go up to immigration_fine_tuning
-    pipeline_dir = base_dir / "determination" / "pipeline"
-    pipeline_stages_dir = pipeline_dir / "results" / "pipeline_stages"
+class BasicExtractionRunner:
+    """Runner for the basic extraction pipeline stage."""
     
-    if not pipeline_stages_dir.exists():
-        return None
+    def find_latest_sparse_run(self):
+        """Find the latest sparse extraction run directory."""
+        base_dir = Path(__file__).parent.parent.parent.parent
+        pipeline_stages_dir = base_dir / "determination" / "pipeline" / "results" / "pipeline_stages"
+        
+        if not pipeline_stages_dir.exists():
+            return None
+        
+        # Find directories that start with sparse_extraction
+        sparse_runs = [d for d in pipeline_stages_dir.iterdir() 
+                      if d.is_dir() and d.name.startswith("sparse_extraction_")]
+        
+        if not sparse_runs:
+            return None
+        
+        # Sort by name (which includes timestamp) and return latest
+        return sorted(sparse_runs)[-1]
     
-    # Find directories that start with sparse_extraction
-    sparse_runs = [d for d in pipeline_stages_dir.iterdir() 
-                  if d.is_dir() and d.name.startswith("sparse_extraction_")]
-    
-    if not sparse_runs:
-        return None
-    
-    # Sort by name (which includes timestamp) and return latest
-    return sorted(sparse_runs)[-1]
-
+    def run(self, input_file: Union[str, Path], train_data: Union[str, Path], 
+            test_data: Union[str, Path], timestamp: Optional[str] = None,
+            config: Optional[Dict[str, Any]] = None, sections: Optional[List[str]] = None,
+            min_score: float = 5.0) -> Path:
+        """
+        Run basic extraction pipeline.
+        
+        Args:
+            input_file: Path to input file 
+            train_data: Path to training data
+            test_data: Path to test data
+            timestamp: Timestamp for this run (default: generate new)
+            config: Configuration dictionary
+            sections: List of sections to process
+            min_score: Minimum score threshold for extractions
+            
+        Returns:
+            Path to output file
+        """
+        # Convert paths to Path objects
+        input_file = Path(input_file)
+        train_data = Path(train_data)
+        test_data = Path(test_data)
+        
+        if timestamp is None:
+            timestamp = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
+        
+        config = config or {}
+        min_score = config.get('min_score', min_score)
+        
+        # Set default sections if none provided
+        if sections is None:
+            sections = [
+                'decision_headers_text',
+                'analysis_headers_text',
+                'reasons_headers_text',
+                'conclusion_headers_text'
+            ]
+        
+        # Define base paths
+        base_dir = Path(__file__).parent.parent.parent.parent
+        pipeline_dir = base_dir / "determination" / "pipeline"
+        
+        # Create pipeline_stages directory if it doesn't exist
+        pipeline_stages_dir = pipeline_dir / "results" / "pipeline_stages"
+        pipeline_stages_dir.mkdir(parents=True, exist_ok=True)
+        
+        # Create a timestamped folder for this run
+        run_dir = pipeline_stages_dir / f"basic_extraction_{timestamp}"
+        run_dir.mkdir(exist_ok=True)
+        
+        # Set output file path in the new directory
+        output_path = run_dir / "validation_with_basic_extraction.csv"
+        
+        # Add log file to the run directory
+        file_handler = logging.FileHandler(run_dir / "basic_extraction.log")
+        file_handler.setFormatter(logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s'))
+        logger.addHandler(file_handler)
+        
+        # Find input file - either directly specified or from latest sparse run
+        previous_stage = None
+        if not input_file.exists():
+            latest_sparse_run = self.find_latest_sparse_run()
+            if latest_sparse_run:
+                previous_stage = str(latest_sparse_run)
+                sparse_output_files = list(latest_sparse_run.glob("validation_with_sparse_extraction.csv"))
+                if sparse_output_files:
+                    input_file = sparse_output_files[0]
+                    logger.info(f"Using sparse extraction results: {input_file}")
+        
+        if not input_file.exists():
+            logger.error(f"Input file not found: {input_file}")
+            return None
+            
+        logger.info(f"Using input file: {input_file}")
+        logger.info(f"Using training data: {train_data}")
+        logger.info(f"Using test data: {test_data}")
+        logger.info(f"Results will be saved to: {output_path}")
+        logger.info(f"Processing sections: {sections}")
+        logger.info(f"Using minimum score threshold: {min_score}")
+        
+        # Load data from previous stage
+        logger.info(f"Loading data from {input_file}")
+        df = pd.read_csv(input_file)
+        logger.info(f"Loaded {len(df)} records")
+        
+        # Create pipeline with only basic extractor
+        pipeline_config = {'use_basic_extractor': True, 'use_ngram_extractor': False}
+        pipeline_config.update(config.get('pipeline_config', {}))
+        
+        pipeline = DeterminationPipeline(pipeline_config)
+        
+        # Load training data
+        pipeline.load_training_data(str(train_data), str(test_data))
+        
+        # Create section processor with configured score threshold
+        section_processor = SectionBasedBasicExtractor(pipeline, min_score=min_score)
+        
+        # Process data with configured sections
+        logger.info("Processing data with section-based basic extractor...")
+        results_df, stats = section_processor.process_dataframe(df, sections=sections)
+        
+        # Save results
+        logger.info(f"Saving results to {output_path}")
+        results_df.to_csv(output_path, index=False)
+        
+        # Save a config file with information about this run
+        run_config = {
+            "run_timestamp": timestamp,
+            "previous_stage": previous_stage,
+            "extractors_used": ["basic_determination_extraction"],
+            "min_score_threshold": min_score,
+            "sections_processed": sections,
+            "filtering_stats": stats,
+            "input_file": str(input_file),
+            "output_file": str(output_path),
+            "train_data": str(train_data),
+            "test_data": str(test_data),
+            "config": config
+        }
+        
+        with open(run_dir / "run_config.json", 'w') as f:
+            json.dump(run_config, f, indent=2)
+        
+        # Log summary of extraction counts
+        logger.info("Extraction count summary:")
+        if 'sparse_explicit_extraction_count' in results_df.columns:
+            total_sparse = results_df['sparse_explicit_extraction_count'].sum()
+            avg_sparse = results_df['sparse_explicit_extraction_count'].mean()
+            docs_with_sparse = (results_df['sparse_explicit_extraction_count'] > 0).sum()
+            
+            logger.info(f"  Sparse explicit extraction:")
+            logger.info(f"    Total extractions: {total_sparse}")
+            logger.info(f"    Avg per document: {avg_sparse:.2f}")
+            logger.info(f"    Documents with extractions: {docs_with_sparse} ({docs_with_sparse/len(results_df):.1%})")
+        
+        for section in [s.replace('_headers_text', '') for s in sections]:
+            count_col = f"{section}_basic_extraction_count"
+            raw_count_col = f"{section}_basic_extraction_raw_count"
+            
+            if count_col in results_df.columns and raw_count_col in results_df.columns:
+                total_count = results_df[count_col].sum()
+                raw_count = results_df[raw_count_col].sum()
+                avg_count = results_df[count_col].mean()
+                docs_with_extractions = (results_df[count_col] > 0).sum()
+                
+                logger.info(f"  {section.capitalize()} basic extraction:")
+                logger.info(f"    Raw extractions: {raw_count}")
+                logger.info(f"    Filtered extractions: {total_count}")
+                logger.info(f"    Avg per document: {avg_count:.2f}")
+                logger.info(f"    Documents with extractions: {docs_with_extractions} ({docs_with_extractions/len(results_df):.1%})")
+        
+        # Remove the file handler to avoid duplicate logs in future pipeline stages
+        logger.removeHandler(file_handler)
+        
+        logger.info(f"Completed processing. Results saved to {output_path}")
+        logger.info(f"Run information saved to {run_dir}")
+        
+        return output_path
 
 def main():
-    """Run basic extraction pipeline on the validation dataset."""
-    # Find latest sparse extraction run
-    latest_sparse_run = find_latest_sparse_run()
-    if not latest_sparse_run:
-        logger.error("No previous sparse extraction run found. Please run sparse extraction first.")
-        return
-        
-    logger.info(f"Found latest sparse extraction run: {latest_sparse_run}")
+    """Run basic extraction pipeline from command line."""
+    import argparse
     
-    # Find sparse extraction output file
-    sparse_output_files = list(latest_sparse_run.glob("validation_with_sparse_extraction.csv"))
-    if not sparse_output_files:
-        logger.error(f"No sparse extraction output file found in {latest_sparse_run}")
-        return
+    parser = argparse.ArgumentParser(description="Run basic extraction pipeline")
+    parser.add_argument("--input", "-i", help="Input file path")
+    parser.add_argument("--train", "-t", help="Training data path")
+    parser.add_argument("--test", "-e", help="Test data path")
+    parser.add_argument("--config", "-c", help="Configuration file (JSON)")
+    parser.add_argument("--min-score", "-m", type=float, default=5.0, help="Minimum score threshold")
+    parser.add_argument("--sections", "-s", help="Comma-separated list of sections to process")
+    args = parser.parse_args()
     
-    input_file = sparse_output_files[0]
-    logger.info(f"Using sparse extraction results: {input_file}")
+    # Load config if provided
+    config = {}
+    if args.config:
+        with open(args.config, 'r') as f:
+            config = json.load(f)
     
-    # Define base paths
-    base_dir = Path(__file__).parent.parent.parent.parent  # go up to immigration_fine_tuning
-    pipeline_dir = base_dir / "determination" / "pipeline"
+    # Set default paths if not provided
+    base_dir = Path(__file__).parent.parent.parent.parent
+    input_file = args.input or "auto"  # Will auto-detect from latest sparse run
+    train_data = args.train or base_dir / "data" / "merged" / "train_enriched.csv"
+    test_data = args.test or base_dir / "data" / "merged" / "test_enriched.csv"
     
-    # Create pipeline_stages directory if it doesn't exist
-    pipeline_stages_dir = pipeline_dir / "results" / "pipeline_stages"
-    pipeline_stages_dir.mkdir(parents=True, exist_ok=True)
+    # Parse sections if provided
+    sections = None
+    if args.sections:
+        sections = args.sections.split(",")
     
-    # Create a timestamped folder for this run
-    timestamp = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
-    run_dir = pipeline_stages_dir / f"basic_extraction_{timestamp}"
-    run_dir.mkdir(exist_ok=True)
+    # Update config with command line arguments
+    if args.min_score is not None:
+        config['min_score'] = args.min_score
     
-    # Set output file path in the new directory
-    output_path = run_dir / "validation_with_basic_extraction.csv"
+    # Run pipeline
+    runner = BasicExtractionRunner()
+    output_path = runner.run(
+        input_file=input_file,
+        train_data=train_data,
+        test_data=test_data,
+        config=config,
+        sections=sections,
+        min_score=args.min_score
+    )
     
-    # Add log file to the run directory
-    file_handler = logging.FileHandler(run_dir / "basic_extraction.log")
-    file_handler.setFormatter(logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s'))
-    logger.addHandler(file_handler)
-    
-    # Find training data paths
-    train_path = base_dir / "data" / "merged" / "train_enriched.csv"
-    test_path = base_dir / "data" / "merged" / "test_enriched.csv"
-    
-    # Check if paths exist
-    if not train_path.exists():
-        logger.warning(f"Train data not found at {train_path}")
-        # Try windows-specific path
-        train_path = Path("C:/Users/shil6369/cultural-law-interpretations/immigration_fine_tuning/data/merged/train_enriched.csv")
-        test_path = Path("C:/Users/shil6369/cultural-law-interpretations/immigration_fine_tuning/data/merged/test_enriched.csv")
-    
-    logger.info(f"Using training data: {train_path}")
-    logger.info(f"Using test data: {test_path}")
-    logger.info(f"Results will be saved to: {output_path}")
-    
-    # Load data from previous stage
-    logger.info(f"Loading data from {input_file}")
-    df = pd.read_csv(input_file)
-    logger.info(f"Loaded {len(df)} records")
-    
-    # Create pipeline with only basic extractor
-    config = {'use_basic_extractor': True, 'use_ngram_extractor': False}
-    pipeline = DeterminationPipeline(config)
-    
-    # Load training data
-    pipeline.load_training_data(str(train_path), str(test_path))
-    
-    # Create section processor with score threshold of 5.0
-    section_processor = SectionBasedBasicExtractor(pipeline, min_score=5.0)
-    
-    # Process data
-    logger.info("Processing data with section-based basic extractor...")
-    results_df, stats = section_processor.process_dataframe(df)
-    
-    # Save results
-    logger.info(f"Saving results to {output_path}")
-    results_df.to_csv(output_path, index=False)
-    
-    # Save a config file with information about this run
-    config_info = {
-        "run_timestamp": timestamp,
-        "previous_stage": str(latest_sparse_run),
-        "extractors_used": ["basic_determination_extraction"],
-        "min_score_threshold": 5.0,
-        "sections_processed": [
-            "decision_headers_text", 
-            "analysis_headers_text", 
-            "reasons_headers_text", 
-            "conclusion_headers_text"
-        ],
-        "filtering_stats": stats,
-        "input_file": str(input_file),
-        "output_file": str(output_path),
-        "train_data": str(train_path),
-        "test_data": str(test_path)
-    }
-    
-    with open(run_dir / "run_config.json", 'w') as f:
-        json.dump(config_info, f, indent=2)
-    
-    # Log summary of extraction counts
-    logger.info("Extraction count summary:")
-    if 'sparse_explicit_extraction_count' in results_df.columns:
-        total_sparse = results_df['sparse_explicit_extraction_count'].sum()
-        avg_sparse = results_df['sparse_explicit_extraction_count'].mean()
-        docs_with_sparse = (results_df['sparse_explicit_extraction_count'] > 0).sum()
-        
-        logger.info(f"  Sparse explicit extraction:")
-        logger.info(f"    Total extractions: {total_sparse}")
-        logger.info(f"    Avg per document: {avg_sparse:.2f}")
-        logger.info(f"    Documents with extractions: {docs_with_sparse} ({docs_with_sparse/len(results_df):.1%})")
-    
-    for section in ['decision', 'analysis', 'reasons', 'conclusion']:
-        count_col = f"{section}_basic_extraction_count"
-        raw_count_col = f"{section}_basic_extraction_raw_count"
-        
-        if count_col in results_df.columns and raw_count_col in results_df.columns:
-            total_count = results_df[count_col].sum()
-            raw_count = results_df[raw_count_col].sum()
-            avg_count = results_df[count_col].mean()
-            docs_with_extractions = (results_df[count_col] > 0).sum()
-            
-            logger.info(f"  {section.capitalize()} basic extraction:")
-            logger.info(f"    Raw extractions: {raw_count}")
-            logger.info(f"    Filtered extractions: {total_count}")
-            logger.info(f"    Avg per document: {avg_count:.2f}")
-            logger.info(f"    Documents with extractions: {docs_with_extractions} ({docs_with_extractions/len(results_df):.1%})")
-    
-    logger.info(f"Completed processing. Results saved to {output_path}")
-    logger.info(f"Run information saved to {run_dir}")
+    if output_path:
+        print(f"Output saved to: {output_path}")
+    else:
+        print("Pipeline execution failed")
 
 if __name__ == "__main__":
     main() 

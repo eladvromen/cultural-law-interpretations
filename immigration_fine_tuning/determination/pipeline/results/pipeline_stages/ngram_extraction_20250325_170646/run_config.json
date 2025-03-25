@@ -1,0 +1,95 @@
+{
+  "run_timestamp": "20250325_170646",
+  "previous_stage": "c:\\Users\\shil6369\\cultural-law-interpretations\\immigration_fine_tuning\\determination\\pipeline\\results\\pipeline_stages\\basic_extraction_20250325_170623",
+  "extractors_used": [
+    "ngram_determination_extraction"
+  ],
+  "min_score_threshold": 15.0,
+  "ngram_config": {
+    "min_ngram_size": 2,
+    "max_ngram_size": 4,
+    "match_threshold": 0.65
+  },
+  "sections_processed": [
+    "decision_headers_text",
+    "analysis_headers_text",
+    "reasons_headers_text",
+    "conclusion_headers_text"
+  ],
+  "filtering_stats": {
+    "total_extractions": 3580,
+    "filtered_extractions": 3580,
+    "section_stats": {
+      "decision": {
+        "total": 1504,
+        "filtered": 1504,
+        "documents_with_extractions": 731
+      },
+      "analysis": {
+        "total": 425,
+        "filtered": 425,
+        "documents_with_extractions": 220
+      },
+      "reasons": {
+        "total": 1129,
+        "filtered": 1129,
+        "documents_with_extractions": 507
+      },
+      "conclusion": {
+        "total": 522,
+        "filtered": 522,
+        "documents_with_extractions": 414
+      }
+    }
+  },
+  "input_file": "c:\\Users\\shil6369\\cultural-law-interpretations\\immigration_fine_tuning\\determination\\pipeline\\results\\pipeline_stages\\basic_extraction_20250325_170623\\validation_with_basic_extraction.csv",
+  "output_file": "c:\\Users\\shil6369\\cultural-law-interpretations\\immigration_fine_tuning\\determination\\pipeline\\results\\pipeline_stages\\ngram_extraction_20250325_170646\\validation_with_ngram_extraction.csv",
+  "train_data": "c:\\Users\\shil6369\\cultural-law-interpretations\\immigration_fine_tuning\\data\\merged\\train_enriched.csv",
+  "test_data": "c:\\Users\\shil6369\\cultural-law-interpretations\\immigration_fine_tuning\\data\\merged\\test_enriched.csv",
+  "extraction_summary": {
+    "sparse": {
+      "total": 3956,
+      "docs_with_extractions": 1026
+    },
+    "basic": {
+      "decision": {
+        "total": 1452,
+        "docs_with_extractions": 735
+      },
+      "analysis": {
+        "total": 835,
+        "docs_with_extractions": 414
+      },
+      "reasons": {
+        "total": 1109,
+        "docs_with_extractions": 566
+      },
+      "conclusion": {
+        "total": 559,
+        "docs_with_extractions": 445
+      }
+    },
+    "ngram": {
+      "decision": {
+        "total": 1504,
+        "docs_with_extractions": 731,
+        "total_raw": 1504
+      },
+      "analysis": {
+        "total": 425,
+        "docs_with_extractions": 220,
+        "total_raw": 425
+      },
+      "reasons": {
+        "total": 1129,
+        "docs_with_extractions": 507,
+        "total_raw": 1129
+      },
+      "conclusion": {
+        "total": 522,
+        "docs_with_extractions": 414,
+        "total_raw": 522
+      }
+    }
+  }
+}
