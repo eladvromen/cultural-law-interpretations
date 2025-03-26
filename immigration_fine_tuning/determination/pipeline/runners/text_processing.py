@@ -41,14 +41,14 @@ HEADER_CATEGORIES = {
             'decision_headers': [
                 'NOTICE OF DECISION', 'DECISION AND REASONS', 'DECISION AND ORDER',
                 'NOTICE OF DECISION AND REASONS', 'DECISION', 'DISPOSITION',
-                'NOTICE', 'ORDER'
+                'NOTICE', 'ORDER', 'THE DECISION'
             ],
             
             # Determination headers (explicit determination statements)
             'determination_headers': [
                 'DETERMINATION', 'DETERMINATIVE ISSUE', 'DETERMINATION OF THE APPEAL',
                 'RAD DETERMINATION', 'RPD DETERMINATION', 'FINDINGS',
-                'DETERMINATION OF THE APPLICATION'
+                'DETERMINATION OF THE APPLICATION', 'THE DETERMINATION'
             ],
             
             # Analysis headers (focused on analysis)
@@ -66,7 +66,7 @@ HEADER_CATEGORIES = {
             
             # Conclusion headers
             'conclusion_headers': [
-                'CONCLUSION', 'CONCLUSIONS', 'SUMMARY AND DETERMINATION'
+                'CONCLUSION', 'CONCLUSIONS', 'SUMMARY AND DETERMINATION', 'THE CONCLUSION'
             ]
         }
         
@@ -226,6 +226,14 @@ class HeaderDetector:
     def __init__(self):
         # Generate flexible regex patterns for each header term
         self.header_patterns = self._generate_header_patterns()
+        
+        # Create a quick lookup set of all header terms for fast checking
+        self.header_terms_set = set()
+        for category_terms in HEADER_CATEGORIES.values():
+            for term in category_terms:
+                self.header_terms_set.add(term.upper())
+                # Also add without spaces for faster checking
+                self.header_terms_set.add(term.upper().replace(' ', ''))
     
     def _generate_header_patterns(self) -> Dict[str, Dict[str, List[Pattern]]]:
         """
@@ -257,7 +265,7 @@ class HeaderDetector:
                             base_pattern += r'\s*'  # Optional space between chars
                         base_pattern += re.escape(char)
                 
-                # Create variations
+                # Create variations - compile patterns only once for better performance
                 term_patterns.append(re.compile(base_pattern + r'\s*$', re.IGNORECASE))  # Exact match
                 term_patterns.append(re.compile(base_pattern + r'\s+.*$', re.IGNORECASE))  # With suffix
                 
@@ -267,6 +275,15 @@ class HeaderDetector:
                 
                 # Add pattern for numbered headers (e.g., "2 Analysis", "8 CONCLUSION")
                 term_patterns.append(re.compile(r'^\s*\d+\s+' + base_pattern + r'\s*$', re.IGNORECASE))
+                
+                # Add pattern for headers that appear at the end of sentences (e.g., "She also fears imprisonment if she returns to Tunisia. DECISION")
+                term_patterns.append(re.compile(r'.*[\.!\?]\s+' + base_pattern + r'\s*$', re.IGNORECASE))
+                
+                # Add pattern for headers in square brackets with numbers (e.g., "DETERMINATION\\n\\n[6]")
+                term_patterns.append(re.compile(base_pattern + r'\s*\n\s*\[\d+\]', re.IGNORECASE))
+                
+                # Add pattern for headers followed by text in square brackets (e.g., "CONCLUSION [18]")
+                term_patterns.append(re.compile(base_pattern + r'\s*\[\d+\]', re.IGNORECASE))
                 
                 category_patterns[term] = term_patterns
             
@@ -300,6 +317,7 @@ class HeaderDetector:
         return text
     
     @staticmethod
+    @lru_cache(maxsize=1024)  # Add caching for significant performance improvement
     def preprocess_line(line: str) -> str:
         """
         Preprocess a line to handle special characters and formatting.
@@ -322,8 +340,25 @@ class HeaderDetector:
             # Extract the header text without the number
             return match.group(1).strip()
         
+        # Quick check to see if we need to do expensive operations
+        line_upper = line.upper()
+        key_terms = ["DECISION", "DETERMINATION", "CONCLUSION", "ANALYSIS", "REASONS"]
+        if not any(term in line_upper for term in key_terms):
+            return line.strip()
+            
+        # Check for headers at the end of sentences (e.g., "... returns to Tunisia. DECISION")
+        for category in HEADER_CATEGORIES.values():
+            for term in category:
+                # Only check if term might be present in the line (performance optimization)
+                if term in line_upper:
+                    pattern = re.compile(r'(.*?[\.!\?]\s+)(' + re.escape(term) + r')(\s*$|\s*\[\d+\])', re.IGNORECASE)
+                    match = pattern.match(line)
+                    if match:
+                        return match.group(2).strip()  # Return just the header term
+        
         return line.strip()
     
+    @lru_cache(maxsize=1024)  # Add caching for significant performance improvement
     def match_header(self, text: str) -> Tuple[Optional[str], Optional[str]]:
         """
         Match a line of text to a header category and term.
@@ -334,15 +369,43 @@ class HeaderDetector:
         Returns:
             Tuple of (category, term) if matched, else (None, None)
         """
-        # Preprocess the line to handle special characters
+        # Quick check if this might be a header line
+        text_upper = text.upper()
+        text_upper_no_spaces = text_upper.replace(' ', '')
+        
+        # Fast initial check - if none of the common header keywords are present, skip expensive checks
+        key_terms = ["DECISION", "DETERMINATION", "CONCLUSION", "ANALYSIS", "REASONS"]
+        if not any(term in text_upper for term in key_terms):
+            return None, None
+        
+        # Special case for lines ending with known headers (very common pattern)
+        for category, terms in HEADER_CATEGORIES.items():
+            for term in terms:
+                term_upper = term.upper()
+                # Check for exact match at the end of the line
+                if text_upper.endswith(term_upper):
+                    return category, term
+                # Check for header with brackets
+                if term_upper in text_upper and re.search(rf'{re.escape(term_upper)}\s*\[\d+\]', text_upper):
+                    return category, term
+        
+        # If the quick check passed but special cases didn't match, do full preprocessing
         preprocessed_text = self.preprocess_line(text)
         normalized_text = self.normalize_header_text(preprocessed_text)
         
+        # Now go through all patterns, but in a more efficient order
+        # Process single-word headers first (faster to check)
         for category, term_patterns in self.header_patterns.items():
             for term, patterns in term_patterns.items():
-                for pattern in patterns:
-                    if pattern.match(normalized_text):
-                        return category, term
+                # Skip patterns if the term is definitely not in the text
+                # This avoids unnecessary regex operations
+                term_upper = term.upper()
+                term_upper_no_spaces = term_upper.replace(' ', '')
+                
+                if term_upper in text_upper or term_upper_no_spaces in text_upper_no_spaces:
+                    for pattern in patterns:
+                        if pattern.search(normalized_text):
+                            return category, term
         
         return None, None
     
@@ -370,15 +433,66 @@ class HeaderDetector:
             headers['by_category'][category] = []
         
         # Process each line to identify headers
-        for i, line in enumerate(lines):
-            line_text = line.strip()
+        i = 0
+        while i < len(lines):
+            line_text = lines[i].strip()
             if not line_text:
+                i += 1
                 continue
             
-            # Match header
+            # Quick check for potential header content
+            line_upper = line_text.upper()
+            if not any(term in line_upper for term in ["DECISION", "DETERMINATION", "CONCLUSION", "ANALYSIS", "REASONS"]):
+                i += 1
+                continue
+            
+            # Check for multi-line header patterns only if the line might be a header
+            multi_line_header = False
+            if i < len(lines) - 2 and any(header_term in line_upper for header_term in ["DETERMINATION", "CONCLUSION", "DECISION"]):
+                next_line = lines[i+1].strip()
+                
+                # Only check multi-line patterns if the next line contains brackets or is very short
+                if next_line.startswith('[') or len(next_line) < 20:
+                    two_line_text = line_text + '\n' + next_line
+                    
+                    # Only check 3 lines if needed
+                    three_line_text = None
+                    if i < len(lines) - 3:
+                        next_next_line = lines[i+2].strip()
+                        if next_next_line.startswith('[') or len(next_next_line) < 20:
+                            three_line_text = two_line_text + '\n' + next_next_line
+                    
+                    # Try matching with the combined text
+                    for combined_text in [two_line_text, three_line_text] if three_line_text else [two_line_text]:
+                        if combined_text is None:
+                            continue
+                            
+                        category, term = self.match_header(combined_text)
+                        if category:
+                            header_info = {
+                                'line_number': i,
+                                'text': combined_text,
+                                'normalized_text': self.normalize_header_text(combined_text),
+                                'category': category,
+                                'term': term
+                            }
+                            
+                            headers['by_line'].append(header_info)
+                            headers['by_category'][category].append(header_info)
+                            
+                            if category in DETERMINATION_RELATED_HEADERS:
+                                headers['determination_related'].add(i)
+                            
+                            multi_line_header = True
+                            i += 2 if combined_text == two_line_text else 3
+                            break
+                    
+                    if multi_line_header:
+                        continue
+            
+            # Single line matching
             category, term = self.match_header(line_text)
             if category:
-                # Create header info
                 header_info = {
                     'line_number': i,
                     'text': line_text,
@@ -387,13 +501,13 @@ class HeaderDetector:
                     'term': term
                 }
                 
-                # Add to results
                 headers['by_line'].append(header_info)
                 headers['by_category'][category].append(header_info)
                 
-                # Track determination-related headers
                 if category in DETERMINATION_RELATED_HEADERS:
                     headers['determination_related'].add(i)
+            
+            i += 1
         
         # Sort headers by line number
         headers['by_line'].sort(key=lambda x: x['line_number'])
@@ -868,8 +982,8 @@ def main():
     # Define validation file path
        # Use the correct path to validation_set.csv in pipeline/data directory
     base_dir = Path(__file__).parent.parent
-    validation_path =  base_dir / "data" / "validation_set.csv"
-    output_path = base_dir / "data" / "preprocessed_validation_set.csv"
+    validation_path =  base_dir / "data" / "determination_extraction_set.csv"
+    output_path = base_dir / "data" / "preprocessed_determination_extraction_set.csv"
     
     process_validation_set(validation_path, output_path)
         

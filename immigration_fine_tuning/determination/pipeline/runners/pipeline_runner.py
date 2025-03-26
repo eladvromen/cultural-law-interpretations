@@ -290,7 +290,7 @@ def load_config(config_file: Optional[Union[str, Path]] = None) -> Dict[str, Any
     default_run_name = f"pipeline_run_{default_timestamp}"
     
     default_config = {
-        "run_name": "determination_extraction_pipeline_high_recall",
+        "run_name": "determination_extraction_pipeline_high_recall_test_headers",
         "input_file": "data/determination_extraction_set.csv",
         "train_data": "data/merged/train_enriched.csv",
         "test_data": "data/merged/test_enriched.csv",
