@@ -1,0 +1,60 @@
+{
+  "run_timestamp": "20250328_175448",
+  "previous_stage": null,
+  "extractors_used": [
+    "basic_determination_extraction"
+  ],
+  "min_score_threshold": 5.0,
+  "sections_processed": [
+    "decision_headers_text",
+    "analysis_headers_text",
+    "reasons_headers_text",
+    "conclusion_headers_text",
+    "suspected_last_case_paragraph"
+  ],
+  "filtering_stats": {
+    "total_extractions": 13398,
+    "filtered_extractions": 7641,
+    "section_stats": {
+      "decision": {
+        "total": 2379,
+        "filtered": 1871,
+        "documents_with_extractions": 926
+      },
+      "analysis": {
+        "total": 2648,
+        "filtered": 1565,
+        "documents_with_extractions": 737
+      },
+      "reasons": {
+        "total": 2723,
+        "filtered": 970,
+        "documents_with_extractions": 586
+      },
+      "conclusion": {
+        "total": 2262,
+        "filtered": 1154,
+        "documents_with_extractions": 815
+      },
+      "suspected_last_case_paragraph": {
+        "total": 3386,
+        "filtered": 2081,
+        "documents_with_extractions": 1149
+      }
+    }
+  },
+  "input_file": "c:\\Users\\shil6369\\cultural-law-interpretations\\immigration_fine_tuning\\determination\\pipeline\\results\\pipeline_stages\\sparse_extraction_20250328_175448\\validation_with_sparse_extraction.csv",
+  "output_file": "c:\\Users\\shil6369\\cultural-law-interpretations\\immigration_fine_tuning\\determination\\pipeline\\results\\pipeline_stages\\basic_extraction_20250328_175448\\validation_with_basic_extraction.csv",
+  "train_data": "c:\\Users\\shil6369\\cultural-law-interpretations\\immigration_fine_tuning\\data\\merged\\train_enriched.csv",
+  "test_data": "c:\\Users\\shil6369\\cultural-law-interpretations\\immigration_fine_tuning\\data\\merged\\test_enriched.csv",
+  "config": {
+    "min_score": 5.0,
+    "sections": [
+      "decision_headers_text",
+      "analysis_headers_text",
+      "reasons_headers_text",
+      "conclusion_headers_text",
+      "suspected_last_case_paragraph"
+    ]
+  }
+}

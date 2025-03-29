@@ -1,0 +1,40 @@
+{
+  "run_name": "determination_extraction_pipeline_high_recall_test_headers",
+  "input_file": "data/preprocessed_determination_extraction_set.csv",
+  "train_data": "data/merged/train_enriched.csv",
+  "test_data": "data/merged/test_enriched.csv",
+  "active_stages": [
+    "sparse",
+    "basic",
+    "ngram"
+  ],
+  "stages": {
+    "text_processing": {
+      "sample_size": 0,
+      "batch_size": 50
+    },
+    "sparse": {},
+    "basic": {
+      "min_score": 5.0,
+      "sections": [
+        "decision_headers_text",
+        "analysis_headers_text",
+        "reasons_headers_text",
+        "conclusion_headers_text",
+        "suspected_last_case_paragraph"
+      ]
+    },
+    "ngram": {
+      "min_score": 10.0,
+      "min_ngram_size": 2,
+      "max_ngram_size": 4,
+      "ngram_threshold": 0.65,
+      "sections": [
+        "decision_headers_text",
+        "analysis_headers_text",
+        "reasons_headers_text",
+        "conclusion_headers_text"
+      ]
+    }
+  }
+}

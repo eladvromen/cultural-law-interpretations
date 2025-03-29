@@ -1,0 +1,55 @@
+{
+  "run_timestamp": "20250329_151359",
+  "previous_stage": null,
+  "extractors_used": [
+    "basic_determination_extraction"
+  ],
+  "min_score_threshold": 5.0,
+  "sections_processed": [
+    "decision_headers_text",
+    "analysis_headers_text",
+    "reasons_headers_text",
+    "conclusion_headers_text",
+    "suspected_last_case_paragraph"
+  ],
+  "filtering_stats": {
+    "total_extractions": 75308,
+    "filtered_extractions": 35321,
+    "section_stats": {
+      "decision": {
+        "total": 16531,
+        "filtered": 9799,
+        "documents_with_extractions": 6634
+      },
+      "analysis": {
+        "total": 22288,
+        "filtered": 11562,
+        "documents_with_extractions": 5534
+      },
+      "reasons": {
+        "total": 23085,
+        "filtered": 6809,
+        "documents_with_extractions": 4592
+      },
+      "conclusion": {
+        "total": 13404,
+        "filtered": 7151,
+        "documents_with_extractions": 6101
+      }
+    }
+  },
+  "input_file": "c:\\Users\\shil6369\\cultural-law-interpretations\\immigration_fine_tuning\\determination\\pipeline\\results\\pipeline_stages\\sparse_extraction_20250329_151359\\validation_with_sparse_extraction.csv",
+  "output_file": "c:\\Users\\shil6369\\cultural-law-interpretations\\immigration_fine_tuning\\determination\\pipeline\\results\\pipeline_stages\\basic_extraction_20250329_151359\\validation_with_basic_extraction.csv",
+  "train_data": "c:\\Users\\shil6369\\cultural-law-interpretations\\immigration_fine_tuning\\data\\merged\\train_enriched.csv",
+  "test_data": "c:\\Users\\shil6369\\cultural-law-interpretations\\immigration_fine_tuning\\data\\merged\\test_enriched.csv",
+  "config": {
+    "min_score": 5.0,
+    "sections": [
+      "decision_headers_text",
+      "analysis_headers_text",
+      "reasons_headers_text",
+      "conclusion_headers_text",
+      "suspected_last_case_paragraph"
+    ]
+  }
+}

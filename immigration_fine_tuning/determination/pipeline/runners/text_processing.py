@@ -8,6 +8,11 @@ import time
 from tqdm import tqdm
 from dataclasses import dataclass
 from functools import lru_cache
+import threading
+import multiprocessing
+from memory_profiler import profile
+import gc
+import psutil
 
 # Module level constants
 PAGE_POINTER_PATTERNS = [
@@ -133,34 +138,52 @@ class TextCleaner:
     Handles text cleaning operations like removing page numbers and French content.
     """
     
-    @staticmethod
-    def remove_page_pointers(text: str) -> str:
-        """Remove page pointers and file numbers using multiple patterns."""
-        for pattern in PAGE_POINTER_PATTERNS:
-            text = pattern.sub('', text)
-        return text
+    def __init__(self):
+        # Compile patterns once during initialization
+        self.page_pointer_patterns = [re.compile(pattern) for pattern in PAGE_POINTER_PATTERNS]
+        self.metadata_patterns = [re.compile(pattern) for pattern in METADATA_PATTERNS]
+        self.french_patterns = [re.compile(pattern) for pattern in FRENCH_PATTERNS]
+        
+        # Create a set for faster lookups
+        self.french_indicators_set = set(FRENCH_INDICATORS)
+        
+        # Initialize thread-local storage for caching
+        self._local = threading.local()
+    
+    @property
+    def _cache(self):
+        if not hasattr(self._local, 'cache'):
+            self._local.cache = {}
+        return self._local.cache
+    
+    def remove_page_pointers(self, text: str) -> str:
+        """Optimized page pointer removal with caching."""
+        cache_key = hash(text)
+        if cache_key in self._cache:
+            return self._cache[cache_key]
+            
+        result = text
+        for pattern in self.page_pointer_patterns:
+            result = pattern.sub('', result)
+        
+        self._cache[cache_key] = result
+        return result
     
     @staticmethod
     @lru_cache(maxsize=1024)
     def is_french_line(line: str) -> bool:
-        """Check if a line is likely in French using pattern matching."""
+        """Optimized French line detection."""
         if not line.strip():
             return False
             
-        for pattern in FRENCH_PATTERNS:
-            if pattern.search(line):
-                return True
-        
-        # Additional heuristics for French detection
-        words = re.findall(r'\b\w+\b', line.lower())
-        
-        # If more than 30% of words are French indicators, likely French
-        if words and len(words) > 3:
-            french_count = sum(1 for word in words if word in FRENCH_INDICATORS)
-            if french_count / len(words) > 0.3:
-                return True
-        
-        return False
+        # Quick check using set membership
+        words = line.lower().split()
+        french_word_count = sum(1 for word in words if word in FRENCH_INDICATORS)
+        if french_word_count / len(words) > 0.3:
+            return True
+            
+        # Only check patterns if quick check fails
+        return any(pattern.search(line) for pattern in FRENCH_PATTERNS)
     
     @classmethod
     def remove_french_content(cls, text: str) -> str:
@@ -285,6 +308,30 @@ class HeaderDetector:
                 # Add pattern for headers followed by text in square brackets (e.g., "CONCLUSION [18]")
                 term_patterns.append(re.compile(base_pattern + r'\s*\[\d+\]', re.IGNORECASE))
                 
+                # Add pattern for headers with optional "THE" prefix
+                term_patterns.append(re.compile(r'^\s*THE\s+' + base_pattern + r'\s*$', re.IGNORECASE))
+                
+                # Add pattern for headers with optional "THE" prefix and suffix
+                term_patterns.append(re.compile(r'^\s*THE\s+' + base_pattern + r'\s+.*$', re.IGNORECASE))
+                
+                # Add pattern for headers with optional "THE" prefix and brackets
+                term_patterns.append(re.compile(r'^\s*THE\s+' + base_pattern + r'\s*\[\d+\]', re.IGNORECASE))
+                
+                # Add pattern for headers with optional "THE" prefix at end of sentence
+                term_patterns.append(re.compile(r'.*[\.!\?]\s+THE\s+' + base_pattern + r'\s*$', re.IGNORECASE))
+                
+                # Add pattern for headers with optional "THE" prefix and "AND REASONS" suffix
+                term_patterns.append(re.compile(base_pattern + r'\s+AND\s+REASONS\s*$', re.IGNORECASE))
+                
+                # Add pattern for headers with optional "THE" prefix and "AND REASONS" suffix
+                term_patterns.append(re.compile(r'^\s*THE\s+' + base_pattern + r'\s+AND\s+REASONS\s*$', re.IGNORECASE))
+                
+                # Add pattern for headers with optional "THE" prefix and "AND REASONS" suffix and brackets
+                term_patterns.append(re.compile(r'^\s*THE\s+' + base_pattern + r'\s+AND\s+REASONS\s*\[\d+\]', re.IGNORECASE))
+                
+                # Add pattern for headers with optional "THE" prefix and "AND REASONS" suffix at end of sentence
+                term_patterns.append(re.compile(r'.*[\.!\?]\s+THE\s+' + base_pattern + r'\s+AND\s+REASONS\s*$', re.IGNORECASE))
+                
                 category_patterns[term] = term_patterns
             
             patterns[category] = category_patterns
@@ -388,6 +435,18 @@ class HeaderDetector:
                 # Check for header with brackets
                 if term_upper in text_upper and re.search(rf'{re.escape(term_upper)}\s*\[\d+\]', text_upper):
                     return category, term
+                # Check for header in the middle of a sentence (e.g., "She also fears imprisonment if she returns to Tunisia. DECISION")
+                if term_upper in text_upper and re.search(rf'.*[\.!\?]\s+{re.escape(term_upper)}', text_upper):
+                    return category, term
+                # Check for header with optional "THE" prefix
+                if text_upper.endswith("THE " + term_upper):
+                    return category, term
+                # Check for header with optional "THE" prefix and brackets
+                if re.search(rf'THE\s+{re.escape(term_upper)}\s*\[\d+\]', text_upper):
+                    return category, term
+                # Check for header with optional "THE" prefix at end of sentence
+                if re.search(rf'.*[\.!\?]\s+THE\s+{re.escape(term_upper)}', text_upper):
+                    return category, term
         
         # If the quick check passed but special cases didn't match, do full preprocessing
         preprocessed_text = self.preprocess_line(text)
@@ -402,7 +461,13 @@ class HeaderDetector:
                 term_upper = term.upper()
                 term_upper_no_spaces = term_upper.replace(' ', '')
                 
-                if term_upper in text_upper or term_upper_no_spaces in text_upper_no_spaces:
+                # More thorough check for term presence
+                if (term_upper in text_upper or 
+                    term_upper_no_spaces in text_upper_no_spaces or
+                    any(word in text_upper for word in term_upper.split()) or
+                    "THE " + term_upper in text_upper or
+                    term_upper + " AND REASONS" in text_upper or
+                    "REASONS FOR " + term_upper in text_upper):
                     for pattern in patterns:
                         if pattern.search(normalized_text):
                             return category, term
@@ -706,111 +771,98 @@ class DatasetProcessor:
     def __init__(self, text_column: str = 'full_text'):
         self.preprocessor = LegalTextPreprocessor()
         self.text_column = text_column
+        self.pool = None  # Will be initialized when needed
     
+    def _initialize_pool(self):
+        """Initialize process pool if not already done."""
+        if self.pool is None:
+            self.pool = multiprocessing.Pool(processes=multiprocessing.cpu_count())
+    
+    def _process_batch(self, batch_data: List[Tuple[int, str]]) -> List[Tuple[int, Dict[str, Any]]]:
+        """Process a batch of documents in parallel."""
+        self._initialize_pool()
+        return self.pool.map(self._process_single_document, batch_data)
+    
+    @staticmethod
+    def _process_single_document(data: Tuple[int, str]) -> Tuple[int, Dict[str, Any]]:
+        """Process a single document."""
+        idx, text = data
+        preprocessor = LegalTextPreprocessor()  # Create new instance for thread safety
+        result = preprocessor.preprocess(text)
+        return idx, result
+    
+    @profile
     def process_dataframe(self, df: pd.DataFrame, batch_size: int = 50) -> pd.DataFrame:
-        """
-        Preprocess all texts in a dataframe with batching for better performance.
-
-        Args:
-            df: Input dataframe
-            batch_size: Number of documents to process in each batch
-            
-        Returns:
-            Dataframe with added preprocessing columns
-        """
-        # Create new columns for preprocessed data
-        df['cleaned_text'] = None
-        df['case_metadata'] = None
-        df['general_metadata'] = None  # New column for CA IRB metadata
-
-        # Create columns for key section categories
-        essential_categories = [
-            'decision_headers',
-            'determination_headers',
-            'analysis_headers',
-            'reasons_headers',
-            'conclusion_headers'
-        ]
-
-        # Add binary flag columns for each category
-        for category in essential_categories:
-            df[f'has_{category}'] = False
-            df[f'{category}_text'] = None
-
-        # Add columns for decision outcomes
-        df['decision_outcome'] = None
-        df['decision_text'] = None
-
-        # Process in batches
-        total_rows = len(df)
-        num_batches = (total_rows + batch_size - 1) // batch_size
-
         start_time = time.time()
-
-        for batch_idx in tqdm(range(num_batches), desc="Processing batches"):
-            start_row = batch_idx * batch_size
-            end_row = min(start_row + batch_size, total_rows)
-            
-            # Process each row in the batch
-            for idx in range(start_row, end_row):
-                row = df.iloc[idx]
-                
-                if pd.isna(row[self.text_column]) or not isinstance(row[self.text_column], str):
-                    continue
-                
-                # Preprocess the text
-                result = self.preprocessor.preprocess(row[self.text_column])
-            
-                # Update basic columns
-                df.at[idx, 'cleaned_text'] = result['cleaned_text']
-                df.at[idx, 'case_metadata'] = result['metadata']
-                
-                # Update section category columns and binary flags
-                sections_by_category = result.get('sections', {}).get('by_category', {})
-                for category in essential_categories:
-                    category_sections = sections_by_category.get(category, {})
-                    if category_sections:
-                        df.at[idx, f'has_{category}'] = True
-                        df.at[idx, f'{category}_text'] = json.dumps(category_sections)
-                
-                # Update decision outcome columns
-                decision_outcomes = result.get('decision_outcomes')
-                if decision_outcomes:
-                    # Determine the primary outcome
-                    primary_outcome = None
-                    for outcome in ['allowed', 'dismissed', 'set_aside', 'granted', 'refused']:
-                        if getattr(decision_outcomes, outcome, False):
-                            primary_outcome = outcome
-                            break
-                    
-                    if primary_outcome:
-                        df.at[idx, 'decision_outcome'] = primary_outcome
-                        df.at[idx, 'decision_text'] = decision_outcomes.outcome_text or ''
-            
-            # Print progress every few batches
-            if (batch_idx + 1) % 5 == 0 or batch_idx == num_batches - 1:
-                elapsed = time.time() - start_time
-                docs_per_sec = (batch_idx + 1) * batch_size / elapsed
-                print(f"Processed {min((batch_idx + 1) * batch_size, total_rows)} documents in {elapsed:.2f}s ({docs_per_sec:.2f} docs/sec)")
+        total_memory = psutil.Process().memory_info().rss / 1024 / 1024
         
-        # After all regular processing is done, extract general metadata
-        self._extract_general_metadata(df)
+        # Prepare batches for parallel processing
+        batches = []
+        for i in range(0, len(df), batch_size):
+            batch = [(idx, row[self.text_column]) 
+                    for idx, row in df.iloc[i:i+batch_size].iterrows() 
+                    if pd.notna(row[self.text_column])]
+            if batch:
+                batches.append(batch)
         
-        self._print_statistics(df, essential_categories)
+        # Process batches in parallel
+        results = []
+        with tqdm(total=len(df), desc="Processing documents") as pbar:
+            for batch in batches:
+                batch_results = self._process_batch(batch)
+                results.extend(batch_results)
+                pbar.update(len(batch))
+        
+        # Update dataframe with results
+        for idx, result in results:
+            self._update_dataframe_row(df, idx, result)
+        
+        end_time = time.time()
+        final_memory = psutil.Process().memory_info().rss / 1024 / 1024
+        print(f"Processing completed in {end_time - start_time:.2f}s")
+        print(f"Memory usage: {final_memory - total_memory:.2f}MB")
         
         return df
     
+    def _update_dataframe_row(self, df: pd.DataFrame, idx: int, result: Dict[str, Any]):
+        """Update a single row in the dataframe with processed results."""
+        df.at[idx, 'cleaned_text'] = result['cleaned_text']
+        df.at[idx, 'case_metadata'] = result['metadata']
+        
+        # Update section categories
+        sections_by_category = result.get('sections', {}).get('by_category', {})
+        for category in HEADER_CATEGORIES:
+            category_sections = sections_by_category.get(category, {})
+            if category_sections:
+                df.at[idx, f'has_{category}'] = True
+                df.at[idx, f'{category}_text'] = json.dumps(category_sections)
+        
+        # Update decision outcomes
+        if result.get('decision_outcomes'):
+            outcomes = result['decision_outcomes']
+            for outcome in ['allowed', 'dismissed', 'set_aside', 'granted', 'refused']:
+                if getattr(outcomes, outcome, False):
+                    df.at[idx, 'decision_outcome'] = outcome
+                    df.at[idx, 'decision_text'] = outcomes.outcome_text or ''
+                    break
+    
     def _extract_general_metadata(self, df: pd.DataFrame) -> None:
         """
-        Extract general metadata and suspected first case paragraph by finding text before/after 
-        first occurrence of "(CA IRB)". This runs after all other processing to avoid 
+        Extract general metadata and suspected first/last case paragraphs by finding text before/after 
+        first and last occurrences of "(CA IRB)". This runs after all other processing to avoid 
         interference with pattern matching.
         """
         # Initialize counters for statistics
         ca_irb_found_count = 0
         extracted_sentence_counts = []
+        last_paragraph_found_count = 0
+        last_paragraph_lengths = []
+        last_paragraph_sources = {'two_last': 0, 'three_last': 0}
         
-        print("\nExtracting general metadata and suspected first case paragraph...")
+        # Minimum length for a meaningful paragraph
+        MIN_PARAGRAPH_LENGTH = 250
+        
+        print("\nExtracting general metadata and suspected paragraphs...")
         for idx in tqdm(range(len(df)), desc="Scanning for (CA IRB)"):
             row = df.iloc[idx]
             
@@ -824,10 +876,10 @@ class DatasetProcessor:
             # Split into sentences (simple heuristic split on periods followed by spaces)
             sentences = re.split(r'(?<=[.!?])\s+', original_text)
             
-            # Limit to first 50 sentences for search
-            first_sentences = sentences[:50]
+            # Process first occurrence of (CA IRB) for general metadata
+            first_sentences = sentences[:50]  # Limit to first 50 sentences for search
             
-            # Scan for "(CA IRB)"
+            # Scan for first "(CA IRB)"
             found_idx = -1
             for i, sentence in enumerate(first_sentences):
                 if "(CA IRB)" in sentence:
@@ -835,7 +887,7 @@ class DatasetProcessor:
                     ca_irb_found_count += 1
                     break
             
-            # Process if "(CA IRB)" was found
+            # Process if first "(CA IRB)" was found
             if found_idx >= 0:
                 # Split the sentence containing "(CA IRB)" at the exact position
                 ca_irb_sentence = sentences[found_idx]
@@ -858,29 +910,60 @@ class DatasetProcessor:
                 next_sentences = sentences[found_idx+1:found_idx+8]  # Get 7 sentences after the (CA IRB) sentence
                 suspected_first_para = from_ca_irb + " " + " ".join(next_sentences).strip()
                 df.at[idx, 'suspected_first_case_paragraph'] = suspected_first_para.strip()
+            
+            # Process last occurrence of (CA IRB) for suspected last paragraph
+            # Find all occurrences of (CA IRB) in the document
+            ca_irb_positions = []
+            for i, sentence in enumerate(sentences):
+                if "(CA IRB)" in sentence:
+                    ca_irb_positions.append(i)
+            
+            if len(ca_irb_positions) >= 2:
+                # Get the last two positions
+                last_pos = ca_irb_positions[-1]
+                second_last_pos = ca_irb_positions[-2]
                 
-                # 3. Remove all sentences up to and including the part before "(CA IRB)"
-                if 'cleaned_text' in df.columns and not pd.isna(row['cleaned_text']):
-                    # Get cleaned text
-                    cleaned_text = row['cleaned_text']
+                # Extract text between the last two (CA IRB) occurrences
+                text_between = " ".join(sentences[second_last_pos+1:last_pos+1]).strip()
+                
+                if len(text_between) >= MIN_PARAGRAPH_LENGTH:
+                    # If the text between last two (CA IRB) is long enough, use it
+                    df.at[idx, 'suspected_last_case_paragraph'] = text_between
+                    last_paragraph_found_count += 1
+                    last_paragraph_lengths.append(len(text_between))
+                    last_paragraph_sources['two_last'] += 1
+                elif len(ca_irb_positions) >= 3:
+                    # If text is too short, try with the third last (CA IRB)
+                    third_last_pos = ca_irb_positions[-3]
+                    text_between = " ".join(sentences[third_last_pos+1:last_pos+1]).strip()
+                    if len(text_between) >= MIN_PARAGRAPH_LENGTH:
+                        df.at[idx, 'suspected_last_case_paragraph'] = text_between
+                        last_paragraph_found_count += 1
+                        last_paragraph_lengths.append(len(text_between))
+                        last_paragraph_sources['three_last'] += 1
+            
+            # 3. Remove all sentences up to and including the part before "(CA IRB)"
+            if 'cleaned_text' in df.columns and not pd.isna(row['cleaned_text']):
+                # Get cleaned text
+                cleaned_text = row['cleaned_text']
+                
+                # Try to find the general metadata text in the cleaned text
+                if general_metadata and general_metadata in cleaned_text:
+                    new_text = cleaned_text.replace(general_metadata, '', 1).strip()
                     
-                    # Try to find the general metadata text in the cleaned text
-                    if general_metadata and general_metadata in cleaned_text:
-                        new_text = cleaned_text.replace(general_metadata, '', 1).strip()
-                        
-                        # If the remaining text starts with the (CA IRB) part, it worked properly
-                        if new_text.startswith(from_ca_irb):
-                            df.at[idx, 'cleaned_text'] = new_text
-                        else:
-                            # Fall back to simpler approach - look for (CA IRB) in the text
-                            ca_irb_pos = cleaned_text.find("(CA IRB)")
-                            if ca_irb_pos > 0:
-                                df.at[idx, 'cleaned_text'] = cleaned_text[ca_irb_pos:].strip()
+                    # If the remaining text starts with the (CA IRB) part, it worked properly
+                    if new_text.startswith(from_ca_irb):
+                        df.at[idx, 'cleaned_text'] = new_text
                     else:
                         # Fall back to simpler approach - look for (CA IRB) in the text
                         ca_irb_pos = cleaned_text.find("(CA IRB)")
                         if ca_irb_pos > 0:
                             df.at[idx, 'cleaned_text'] = cleaned_text[ca_irb_pos:].strip()
+                else:
+                    # Fall back to simpler approach - look for (CA IRB) in the text
+                    ca_irb_pos = cleaned_text.find("(CA IRB)")
+                    if ca_irb_pos > 0:
+                        df.at[idx, 'cleaned_text'] = cleaned_text[ca_irb_pos:].strip()
         
         # Calculate and display statistics
         not_found_count = len(df) - ca_irb_found_count
@@ -888,8 +971,21 @@ class DatasetProcessor:
         print(f"  Documents with (CA IRB) found: {ca_irb_found_count} ({ca_irb_found_count/len(df):.1%})")
         print(f"  Documents without (CA IRB) in first 50 sentences: {not_found_count} ({not_found_count/len(df):.1%})")
         
+        print(f"\nLast Paragraph Statistics:")
+        print(f"  Documents with suspected last paragraph found: {last_paragraph_found_count} ({last_paragraph_found_count/len(df):.1%})")
+        if last_paragraph_lengths:
+            avg_length = sum(last_paragraph_lengths) / len(last_paragraph_lengths)
+            min_length = min(last_paragraph_lengths)
+            max_length = max(last_paragraph_lengths)
+            print(f"  Average paragraph length: {avg_length:.0f} characters")
+            print(f"  Min paragraph length: {min_length:.0f} characters")
+            print(f"  Max paragraph length: {max_length:.0f} characters")
+            print(f"  Paragraphs from last two (CA IRB): {last_paragraph_sources['two_last']}")
+            print(f"  Paragraphs from last three (CA IRB): {last_paragraph_sources['three_last']}")
+        
         if extracted_sentence_counts:
             avg_sentences = sum(extracted_sentence_counts) / len(extracted_sentence_counts)
+            print(f"\nFirst Paragraph Statistics:")
             print(f"  Average sentences extracted: {avg_sentences:.2f}")
             
             # Plot histogram if matplotlib is available

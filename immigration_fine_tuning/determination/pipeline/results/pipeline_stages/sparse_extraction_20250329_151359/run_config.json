@@ -1,0 +1,11 @@
+{
+  "run_timestamp": "20250329_151359",
+  "extractors_used": [
+    "sparse_explicit_extraction"
+  ],
+  "input_file": "c:\\Users\\shil6369\\cultural-law-interpretations\\immigration_fine_tuning\\determination\\pipeline\\data\\preprocessed_validation_20250329_151359.csv",
+  "output_file": "c:\\Users\\shil6369\\cultural-law-interpretations\\immigration_fine_tuning\\determination\\pipeline\\results\\pipeline_stages\\sparse_extraction_20250329_151359\\validation_with_sparse_extraction.csv",
+  "train_data": "c:\\Users\\shil6369\\cultural-law-interpretations\\immigration_fine_tuning\\data\\merged\\train_enriched.csv",
+  "test_data": "c:\\Users\\shil6369\\cultural-law-interpretations\\immigration_fine_tuning\\data\\merged\\test_enriched.csv",
+  "config": {}
+}

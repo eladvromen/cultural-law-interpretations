@@ -290,8 +290,8 @@ def load_config(config_file: Optional[Union[str, Path]] = None) -> Dict[str, Any
     default_run_name = f"pipeline_run_{default_timestamp}"
     
     default_config = {
-        "run_name": "determination_extraction_pipeline_high_recall_test_headers",
-        "input_file": "data/determination_extraction_set.csv",
+        "run_name": "determination_extraction_pipeline_train",
+        "input_file": "C:/Users/shil6369/cultural-law-interpretations/immigration_fine_tuning/data/merged/train_1_half.csv",
         "train_data": "data/merged/train_enriched.csv",
         "test_data": "data/merged/test_enriched.csv",
         "active_stages": ["text_processing", "sparse", "basic", "ngram"],
@@ -302,19 +302,20 @@ def load_config(config_file: Optional[Union[str, Path]] = None) -> Dict[str, Any
             },
             "sparse": {},
             "basic": {
-                "min_score": 3.0,
+                "min_score": 5.0,
                 "sections": [
                     'decision_headers_text', 
                     'analysis_headers_text', 
                     'reasons_headers_text',
-                    'conclusion_headers_text'
+                    'conclusion_headers_text',
+                    'suspected_last_case_paragraph'
                 ]
             },
             "ngram": {
                 "min_score": 10.0,
                 "min_ngram_size": 2,
-                "max_ngram_size": 7,
-                "ngram_threshold": 0.55,
+                "max_ngram_size": 4,
+                "ngram_threshold": 0.65,
                 "sections": [
                     'decision_headers_text', 
                     'analysis_headers_text', 
