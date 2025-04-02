@@ -13,6 +13,7 @@ import multiprocessing
 from memory_profiler import profile
 import gc
 import psutil
+import csv
 
 # Module level constants
 PAGE_POINTER_PATTERNS = [
@@ -1067,7 +1068,14 @@ def process_validation_set(validation_path: Path, output_path: Optional[Path] = 
     
     # Save the preprocessed dataframe if output path provided
     if output_path:
-        processed_df.to_csv(output_path, index=False)
+        processed_df.to_csv(
+            output_path,
+            index=False,
+            encoding='utf-8',
+            quoting=csv.QUOTE_ALL,
+            escapechar='\\',
+            lineterminator='\n'  # Changed from line_terminator to lineterminator
+        )
         print(f"Saved preprocessed validation set to {output_path}")
     
     return processed_df

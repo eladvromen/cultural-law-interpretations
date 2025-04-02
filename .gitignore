@@ -69,4 +69,35 @@ wandb/
 .DS_Store
 Thumbs.db
 
+# Model directories
+immigration_fine_tuning/models/
+**/models/
+*.pt
+*.pth
+*.bin
+*.ckpt
+
+# Common Python/ML artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+.env
+.venv
+env/
+venv/
+ENV/
+*.log
+
+# Jupyter Notebook
+.ipynb_checkpoints
+*.ipynb
+
+# OS generated files
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
 
