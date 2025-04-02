@@ -61,15 +61,75 @@ class SectionBasedTransformerExtractor:
             device: Device to run the model on (default: auto-detect)
             batch_size: Batch size for inference
         """
-        self.device = device or ('cuda' if torch.cuda.is_available() else 'cpu')
+        # Explicitly import torch again in this method to avoid any shadowing issues
+        import torch as torch_lib
+        self.device = device or ('cuda' if torch_lib.cuda.is_available() else 'cpu')
         self.batch_size = batch_size
         
         logger.info(f"Loading model from {model_path}")
         logger.info(f"Using device: {self.device}")
         
-        # Load model and tokenizer
-        self.model = AutoModelForSequenceClassification.from_pretrained(model_path)
-        self.tokenizer = AutoTokenizer.from_pretrained(model_path)
+        # First try to load model config to identify model type
+        try:
+            from transformers import AutoConfig
+            config = AutoConfig.from_pretrained(model_path)
+            model_type = getattr(config, "model_type", "unknown")
+            logger.info(f"Detected model type: {model_type}")
+            
+            # Load model based on detected type
+            if model_type == "roberta":
+                # Try direct loading first
+                try:
+                    from transformers import RobertaTokenizer, RobertaForSequenceClassification
+                    self.tokenizer = RobertaTokenizer.from_pretrained(model_path)
+                    self.model = RobertaForSequenceClassification.from_pretrained(model_path)
+                    logger.info("Successfully loaded RoBERTa model directly")
+                except Exception as e1:
+                    logger.warning(f"Direct loading failed: {e1}")
+                    # Try with base model first, then load vocab files
+                    from transformers import RobertaTokenizer, RobertaForSequenceClassification
+                    logger.info("Falling back to base RoBERTa tokenizer")
+                    self.tokenizer = RobertaTokenizer.from_pretrained("roberta-base")
+                    # Still load the actual model
+                    self.model = RobertaForSequenceClassification.from_pretrained(model_path)
+                    logger.info("Used base tokenizer with fine-tuned model")
+            elif model_type == "bert":
+                from transformers import BertTokenizer, BertForSequenceClassification
+                self.tokenizer = BertTokenizer.from_pretrained(model_path)
+                self.model = BertForSequenceClassification.from_pretrained(model_path)
+                logger.info("Successfully loaded BERT model")
+            else:
+                # Fallback to Auto classes
+                logger.info(f"Using AutoTokenizer/AutoModel for {model_type} model")
+                from transformers import AutoTokenizer, AutoModelForSequenceClassification
+                # Try slow tokenizer if fast fails
+                try:
+                    self.tokenizer = AutoTokenizer.from_pretrained(model_path, use_fast=False)
+                except:
+                    logger.warning("Fast tokenizer failed, trying slow implementation")
+                    self.tokenizer = AutoTokenizer.from_pretrained(model_path, use_fast=False)
+                
+                self.model = AutoModelForSequenceClassification.from_pretrained(model_path)
+        except Exception as e:
+            logger.error(f"Error loading model or tokenizer: {str(e)}")
+            # Final desperate fallback - try with minimum version requirements
+            try:
+                logger.info("Attempting final fallback loading method...")
+                from transformers import AutoModelForSequenceClassification
+                import torch
+                
+                # Try to load model directly with PyTorch
+                if Path(model_path).joinpath("model.safetensors").exists():
+                    self.model = AutoModelForSequenceClassification.from_pretrained(model_path)
+                    # Create a minimal tokenizer
+                    self.tokenizer = MinimalTokenizer(model_path)
+                    logger.info("Loaded model with minimal tokenizer")
+                else:
+                    raise RuntimeError("No usable model format found")
+            except Exception as e2:
+                logger.error(f"All loading attempts failed: {str(e2)}")
+                raise RuntimeError(f"Failed to load model after multiple attempts: {str(e)}")
+        
         self.model.to(self.device)
         self.model.eval()
     
@@ -450,6 +510,76 @@ class TransformerExtractionRunner:
         logger.info(f"Run information saved to {run_dir}")
         
         return output_path
+
+# Define a minimal tokenizer for emergency use
+class MinimalTokenizer:
+    """Minimal tokenizer implementation when regular loading fails"""
+    
+    def __init__(self, model_path):
+        self.model_path = model_path
+        self.max_length = 512
+        logger.warning("Using minimal tokenizer - limited functionality!")
+        
+        # Try to load vocab if possible
+        vocab_path = Path(model_path) / "vocab.json"
+        if vocab_path.exists():
+            import json
+            with open(vocab_path, 'r') as f:
+                self.vocab = json.load(f)
+        else:
+            self.vocab = {}
+    
+    def __call__(self, texts, padding=True, truncation=True, max_length=512, return_tensors=None):
+        """Minimal implementation that splits on whitespace and assigns tokens"""
+        import torch
+        
+        if isinstance(texts, str):
+            texts = [texts]
+            
+        # Simple tokenize by whitespace
+        all_tokens = []
+        for text in texts:
+            tokens = text.split()
+            if truncation and len(tokens) > max_length:
+                tokens = tokens[:max_length]
+            all_tokens.append(tokens)
+        
+        # Find max length for padding
+        if padding:
+            max_len = max(len(tokens) for tokens in all_tokens)
+        else:
+            max_len = 0
+            
+        # Create input tensors
+        input_ids = []
+        attention_mask = []
+        
+        for tokens in all_tokens:
+            # Convert tokens to IDs (assign 1 for unknown)
+            ids = [self.vocab.get(token, 1) for token in tokens]
+            
+            # Create attention mask (1 for real tokens)
+            mask = [1] * len(ids)
+            
+            # Pad sequences
+            if padding and len(ids) < max_len:
+                ids = ids + [0] * (max_len - len(ids))
+                mask = mask + [0] * (max_len - len(mask))
+                
+            input_ids.append(ids)
+            attention_mask.append(mask)
+            
+        # Convert to tensors if requested
+        if return_tensors == "pt":
+            return {
+                "input_ids": torch.tensor(input_ids),
+                "attention_mask": torch.tensor(attention_mask)
+            }
+        else:
+            return {
+                "input_ids": input_ids,
+                "attention_mask": attention_mask
+            }
 
 def main():
     """Run transformer extraction pipeline from command line."""

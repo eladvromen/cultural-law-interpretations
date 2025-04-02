@@ -1,0 +1,26 @@
+{
+  "run_timestamp": "20250402_133629",
+  "model_path": "immigration_fine_tuning/models/anomaly_run_20250330_171154/best_model",
+  "batch_size": 32,
+  "sections_processed": [
+    "decision_headers_text"
+  ],
+  "extraction_stats": {
+    "total_sentences": 11396,
+    "total_extractions": 1696,
+    "section_stats": {
+      "decision": {
+        "total_sentences": 11396,
+        "total_extractions": 1696,
+        "documents_with_extractions": 872
+      }
+    }
+  },
+  "input_file": "/data/shil6369/cultural-law-interpretations/immigration_fine_tuning/determination/pipeline/data/preprocessed_determination_extraction_set.csv",
+  "output_file": "/data/shil6369/cultural-law-interpretations/immigration_fine_tuning/determination/pipeline/results/pipeline_stages/transformer_extraction_20250402_133629/validation_with_transformer_extraction.csv",
+  "train_data": "/data/shil6369/cultural-law-interpretations/immigration_fine_tuning/data/merged/train_enriched.csv",
+  "test_data": "/data/shil6369/cultural-law-interpretations/immigration_fine_tuning/data/merged/test_enriched.csv",
+  "config": {
+    "batch_size": 32
+  }
+}
