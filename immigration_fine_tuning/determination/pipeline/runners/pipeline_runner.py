@@ -439,7 +439,7 @@ def load_config(config_file: Optional[Union[str, Path]] = None) -> Dict[str, Any
     #     }
     # }
     default_config = {
-            "run_name": "pipeline_with_all_models",
+            "run_name": "pipeline_with_all_models_final",
             "input_file": "/data/shil6369/cultural-law-interpretations/immigration_fine_tuning/determination/pipeline/data/preprocessed_determination_extraction_set.csv",
             "active_stages": ["sparse", "basic","transformer_bert", "transformer_roberta"],
             "stages": {
@@ -450,6 +450,7 @@ def load_config(config_file: Optional[Union[str, Path]] = None) -> Dict[str, Any
                 "basic": {
                     "min_score": 5.0,
                     "sections": [
+                        'cleaned_text',
                         'decision_headers_text', 
                         'analysis_headers_text', 
                         'reasons_headers_text',
@@ -463,6 +464,7 @@ def load_config(config_file: Optional[Union[str, Path]] = None) -> Dict[str, Any
                     "max_ngram_size": 4,
                     "ngram_threshold": 0.65,
                     "sections": [
+                        'cleaned_text',
                         'decision_headers_text', 
                         'analysis_headers_text', 
                         'reasons_headers_text',

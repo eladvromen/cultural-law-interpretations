@@ -17,7 +17,6 @@ import ast
 from typing import Dict, Any, List, Optional, Union
 
 from core.determination_pipeline import DeterminationPipeline
-from utils.text_cleaning import clean_text
 
 # Configure logging
 logging.basicConfig(
@@ -146,11 +145,8 @@ class SectionBasedBasicExtractor:
                     raw_counts.append(0)
                     continue
                     
-                # Clean text before processing
-                cleaned_text = clean_text(text)
-                    
                 # Get extractions
-                result = self.basic_extractor.process_case(cleaned_text)
+                result = self.basic_extractor.process_case(text)
                 raw_extractions = result.get('extracted_determinations', [])
                 
                 # Count before filtering

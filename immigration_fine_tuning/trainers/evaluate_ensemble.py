@@ -174,7 +174,7 @@ def main():
     # Example usage
     checkpoint_configs = [
         {'path': '/data/shil6369/cultural-law-interpretations/immigration_fine_tuning/models/anomaly_run_20250330_171154', 'threshold': 0.29, 'name': 'anomaly'},
-        {'path': '/data/shil6369/cultural-law-interpretations/immigration_fine_tuning/models/balanced_legal_roberta_base_20250331_162411', 'threshold': 0.42, 'name': 'balanced'},
+        {'path': '/data/shil6369/cultural-law-interpretations/immigration_fine_tuning/models/balanced_legal_roberta_base_20250331_162411', 'threshold': 0.23, 'name': 'balanced'},
         {'path': '/data/shil6369/cultural-law-interpretations/immigration_fine_tuning/models/high_recall_legal_roberta_base_20250331_155951', 'threshold': 0.2, 'name': 'recall'}
     ]
     
