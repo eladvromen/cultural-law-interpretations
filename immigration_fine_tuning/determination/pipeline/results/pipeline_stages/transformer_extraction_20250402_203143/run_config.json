@@ -1,0 +1,66 @@
+{
+  "run_timestamp": "20250402_203143",
+  "model_path": "/data/shil6369/cultural-law-interpretations/immigration_fine_tuning/models/balanced_legal_roberta_base_20250331_162411/best_model",
+  "batch_size": 32,
+  "sections_processed": [
+    "cleaned_text",
+    "decision_headers_text",
+    "determination_headers_text",
+    "analysis_headers_text",
+    "reasons_headers_text",
+    "conclusion_headers_text"
+  ],
+  "extraction_stats": {
+    "total_sentences": 212336,
+    "total_extractions": 184033,
+    "section_stats": {
+      "cleaned_text": {
+        "total_sentences": 112135,
+        "total_extractions": 97414,
+        "documents_with_extractions": 1700
+      },
+      "decision": {
+        "total_sentences": 15550,
+        "total_extractions": 13681,
+        "documents_with_extractions": 1042
+      },
+      "determination": {
+        "total_sentences": 17089,
+        "total_extractions": 15017,
+        "documents_with_extractions": 629
+      },
+      "analysis": {
+        "total_sentences": 36122,
+        "total_extractions": 30667,
+        "documents_with_extractions": 977
+      },
+      "reasons": {
+        "total_sentences": 26601,
+        "total_extractions": 22819,
+        "documents_with_extractions": 1209
+      },
+      "conclusion": {
+        "total_sentences": 4839,
+        "total_extractions": 4435,
+        "documents_with_extractions": 961
+      }
+    }
+  },
+  "input_file": "/data/shil6369/cultural-law-interpretations/immigration_fine_tuning/determination/pipeline/results/pipeline_stages/transformer_extraction_20250402_203143/validation_with_transformer_extraction.csv",
+  "output_file": "/data/shil6369/cultural-law-interpretations/immigration_fine_tuning/determination/pipeline/results/pipeline_stages/transformer_extraction_20250402_203143/validation_with_transformer_extraction.csv",
+  "train_data": "data/merged/train_enriched.csv",
+  "test_data": "data/merged/test_enriched.csv",
+  "config": {
+    "model_path": "/data/shil6369/cultural-law-interpretations/immigration_fine_tuning/models/balanced_legal_roberta_base_20250331_162411/best_model",
+    "batch_size": 32,
+    "threshold": 0.23,
+    "sections": [
+      "cleaned_text",
+      "decision_headers_text",
+      "determination_headers_text",
+      "analysis_headers_text",
+      "reasons_headers_text",
+      "conclusion_headers_text"
+    ]
+  }
+}

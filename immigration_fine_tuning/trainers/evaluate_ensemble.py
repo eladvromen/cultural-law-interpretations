@@ -7,9 +7,6 @@ from torch.utils.data import DataLoader
 from transformers import AutoTokenizer, AutoModelForSequenceClassification
 from sklearn.metrics import accuracy_score, precision_recall_fscore_support
 from evaluate_checkpoint import DeterminationDataset, evaluate
-import matplotlib.pyplot as plt
-import seaborn as sns
-from matplotlib.backends.backend_pdf import PdfPages
 
 class EnsembleEvaluator:
     def __init__(self, checkpoint_configs, test_path, batch_size=32):
@@ -177,7 +174,7 @@ def main():
     # Example usage
     checkpoint_configs = [
         {'path': '/data/shil6369/cultural-law-interpretations/immigration_fine_tuning/models/anomaly_run_20250330_171154', 'threshold': 0.29, 'name': 'anomaly'},
-        {'path': '/data/shil6369/cultural-law-interpretations/immigration_fine_tuning/models/balanced_legal_roberta_base_20250331_162411', 'threshold': 0.23, 'name': 'balanced'},
+        {'path': '/data/shil6369/cultural-law-interpretations/immigration_fine_tuning/models/balanced_legal_roberta_base_20250331_162411', 'threshold': 0.42, 'name': 'balanced'},
         {'path': '/data/shil6369/cultural-law-interpretations/immigration_fine_tuning/models/high_recall_legal_roberta_base_20250331_155951', 'threshold': 0.2, 'name': 'recall'}
     ]
     
@@ -204,108 +201,6 @@ def main():
     
     # Save detailed results
     evaluator.save_results(all_predictions, all_probabilities, output_dir)
-
-def analyze_ensemble_comparison(results_path, model_name='anomaly', output_dir='analysis_results'):
-    """
-    Analyze and compare ensemble results with a specific model's results.
-    
-    Args:
-        results_path: Path to the ensemble_results.xlsx file
-        model_name: Name of the model to compare with ensemble
-        output_dir: Directory to save the PDF report
-    """
-    # Read the results
-    df = pd.read_excel(results_path)
-    
-    # Create output directory if it doesn't exist
-    os.makedirs(output_dir, exist_ok=True)
-    
-    with PdfPages(os.path.join(output_dir, f'ensemble_vs_{model_name}_analysis.pdf')) as pdf:
-        # 1. Create summary page
-        plt.figure(figsize=(12, 8))
-        plt.title(f'Comparison Summary: Ensemble vs {model_name}')
-        
-        # Calculate agreement statistics
-        total_samples = len(df)
-        both_correct = sum((df['Majority_Vote'] == df['True Label']) & 
-                         (df[f'{model_name}_prediction'] == df['True Label']))
-        both_wrong = sum((df['Majority_Vote'] != df['True Label']) & 
-                       (df[f'{model_name}_prediction'] != df['True Label']))
-        ensemble_only_correct = sum((df['Majority_Vote'] == df['True Label']) & 
-                                 (df[f'{model_name}_prediction'] != df['True Label']))
-        model_only_correct = sum((df['Majority_Vote'] != df['True Label']) & 
-                               (df[f'{model_name}_prediction'] == df['True Label']))
-        
-        # Create summary text
-        summary_text = (
-            f"Total Samples: {total_samples}\n\n"
-            f"Both Correct: {both_correct} ({both_correct/total_samples*100:.1f}%)\n"
-            f"Both Wrong: {both_wrong} ({both_wrong/total_samples*100:.1f}%)\n"
-            f"Only Ensemble Correct: {ensemble_only_correct} ({ensemble_only_correct/total_samples*100:.1f}%)\n"
-            f"Only {model_name} Correct: {model_only_correct} ({model_only_correct/total_samples*100:.1f}%)\n"
-        )
-        
-        plt.text(0.1, 0.5, summary_text, fontsize=12, va='center')
-        plt.axis('off')
-        pdf.savefig()
-        plt.close()
-        
-        # 2. Create confusion matrix heatmap
-        plt.figure(figsize=(10, 8))
-        confusion_data = pd.crosstab(df['Majority_Vote'], df[f'{model_name}_prediction'],
-                                   margins=True)
-        sns.heatmap(confusion_data, annot=True, fmt='d', cmap='YlOrRd')
-        plt.title(f'Prediction Comparison: Ensemble vs {model_name}')
-        plt.xlabel(f'{model_name} Predictions')
-        plt.ylabel('Ensemble Predictions')
-        pdf.savefig()
-        plt.close()
-        
-        # 3. Create disagreement analysis
-        disagreements = df[df['Majority_Vote'] != df[f'{model_name}_prediction']]
-        
-        if len(disagreements) > 0:
-            plt.figure(figsize=(12, 8))
-            plt.title('Disagreement Analysis')
-            
-            # Calculate accuracy for disagreement cases
-            ensemble_correct = sum(disagreements['Majority_Vote'] == disagreements['True Label'])
-            model_correct = sum(disagreements[f'{model_name}_prediction'] == disagreements['True Label'])
-            
-            disagreement_text = (
-                f"Total Disagreements: {len(disagreements)}\n\n"
-                f"In disagreement cases:\n"
-                f"Ensemble Correct: {ensemble_correct} ({ensemble_correct/len(disagreements)*100:.1f}%)\n"
-                f"{model_name} Correct: {model_correct} ({model_correct/len(disagreements)*100:.1f}%)\n"
-            )
-            
-            plt.text(0.1, 0.5, disagreement_text, fontsize=12, va='center')
-            plt.axis('off')
-            pdf.savefig()
-            plt.close()
-        
-        # 4. Save detailed disagreements table
-        if len(disagreements) > 0:
-            fig, ax = plt.subplots(figsize=(12, 8))
-            ax.axis('tight')
-            ax.axis('off')
-            
-            # Create table with relevant columns
-            table_data = disagreements[['Text', 'True Label', 'Majority_Vote', 
-                                      f'{model_name}_prediction']].head(20)
-            
-            table = ax.table(cellText=table_data.values,
-                           colLabels=table_data.columns,
-                           cellLoc='left',
-                           loc='center')
-            
-            table.auto_set_font_size(False)
-            table.set_fontsize(8)
-            table.auto_set_column_width(col=list(range(len(table_data.columns))))
-            
-            plt.title('Sample Disagreements (First 20 cases)')
-            pdf.savefig()
-            plt.close()
 
 if __name__ == "__main__":
     main() 

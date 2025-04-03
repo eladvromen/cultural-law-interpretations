@@ -2,29 +2,35 @@
 
 Quick guide for running determination extraction models and experiments.
 
+## Pipeline Components
+
+### 1. Basic Extraction Pipeline
+- `text_processing` - Extracts headers (requires validation_set.csv in pipeline.data)
+- `run_sparse_extraction.py` - High precision extraction from all text
+- `run_basic_extraction.py` - Header-based extraction with moderate precision
+- `run_ngram_extraction.py` - Loose header-based extraction
+
+### 2. Transformer Data Processing
+Located in `transformer_data_processor/`:
+- `determination_train_set_processor.py` - Processes pipeline output into training data for transformer models
+- `determination_test_set_processor.py` - Processes test data for transformer evaluation
+- `fine_tuning_data_creator.py` - Creates formatted data for transformer fine-tuning
+
 ## Running Models & Experiments
-### main pipeline: 
-- text_processing (given you already have a validation_set.csv in pipeline.data) - for extracting headers
-- run_sparse_extraction.py - for high prescion extraction from all text
-- run_basic_extraction.py - for headers only more loose extraction
-- run_ngram_extraction.py - even more loose on headers. 
-### Option 1: fill pipeline 
-run pipeline_runner.py
+
+### Option 1: Full Pipeline
+Run `pipeline_runner.py`
 
 ### Option 2: Direct Model Running
-
-Run any model directly using model runners
+Run any model directly using model runners:
+```bash
 python basic_runner.py
 python ngram_runner.py
 python sparse_runner.py
+```
 
 ### Option 3: Configurable Experiments
 From `pipeline/utils/experiment_runner.py`:
-```python
-# Run experiments with different configurations
-
-```
-Example configuration:
 ```python
 config = ExperimentConfig(
     model_name='sparse',  # or 'ngram', 'basic'
@@ -33,5 +39,9 @@ config = ExperimentConfig(
     description='Custom experiment'
 )
 ```
-with this option, you can get ana evaluation analysis
+
+## Data Flow
+1. Basic pipeline components process raw text and extract determinations
+2. Output files from pipeline are processed by transformer_data_processor
+3. Processed data is formatted for transformer model training/evaluation
 

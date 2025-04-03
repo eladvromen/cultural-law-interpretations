@@ -1,0 +1,39 @@
+{
+  "run_name": "pipeline_with_two_transformers",
+  "input_file": "/data/shil6369/cultural-law-interpretations/immigration_fine_tuning/determination/pipeline/data/preprocessed_determination_extraction_set.csv",
+  "active_stages": [
+    "transformer_bert",
+    "transformer_roberta"
+  ],
+  "stages": {
+    "text_processing": {
+      "sample_size": 0
+    },
+    "transformer_bert": {
+      "model_path": "/data/shil6369/cultural-law-interpretations/immigration_fine_tuning/models/anomaly_run_20250330_171154/best_model",
+      "batch_size": 32,
+      "threshold": 0.29,
+      "sections": [
+        "cleaned_text",
+        "decision_headers_text",
+        "determination_headers_text",
+        "analysis_headers_text",
+        "reasons_headers_text",
+        "conclusion_headers_text"
+      ]
+    },
+    "transformer_roberta": {
+      "model_path": "/data/shil6369/cultural-law-interpretations/immigration_fine_tuning/models/balanced_legal_roberta_base_20250331_162411/best_model",
+      "batch_size": 32,
+      "threshold": 0.23,
+      "sections": [
+        "cleaned_text",
+        "decision_headers_text",
+        "determination_headers_text",
+        "analysis_headers_text",
+        "reasons_headers_text",
+        "conclusion_headers_text"
+      ]
+    }
+  }
+}

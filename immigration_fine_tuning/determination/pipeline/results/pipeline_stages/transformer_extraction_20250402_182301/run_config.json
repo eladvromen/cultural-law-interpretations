@@ -1,0 +1,28 @@
+{
+  "run_timestamp": "20250402_182301",
+  "model_path": "immigration_fine_tuning/models/high_recall_legal_roberta_base_20250331_155951/best_model",
+  "batch_size": 32,
+  "sections_processed": [
+    "cleaned_text"
+  ],
+  "extraction_stats": {
+    "total_sentences": 4982,
+    "total_extractions": 4729,
+    "section_stats": {
+      "cleaned_text": {
+        "total_sentences": 4982,
+        "total_extractions": 4729,
+        "documents_with_extractions": 100
+      }
+    }
+  },
+  "input_file": "/data/shil6369/cultural-law-interpretations/immigration_fine_tuning/determination/pipeline/data/preprocessed_determination_extraction_set.csv",
+  "output_file": "/data/shil6369/cultural-law-interpretations/immigration_fine_tuning/determination/pipeline/results/pipeline_stages/transformer_extraction_20250402_182301/validation_with_transformer_extraction.csv",
+  "train_data": "/data/shil6369/cultural-law-interpretations/immigration_fine_tuning/data/merged/train_enriched.csv",
+  "test_data": "/data/shil6369/cultural-law-interpretations/immigration_fine_tuning/data/merged/test_enriched.csv",
+  "config": {
+    "batch_size": 32,
+    "limit": 100,
+    "threshold": 0.2
+  }
+}

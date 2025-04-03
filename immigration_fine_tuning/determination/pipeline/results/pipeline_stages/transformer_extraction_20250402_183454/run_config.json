@@ -1,0 +1,58 @@
+{
+  "run_timestamp": "20250402_183454",
+  "model_path": "immigration_fine_tuning/models/balanced_legal_roberta_base_20250331_162411/best_model",
+  "batch_size": 32,
+  "sections_processed": [
+    "cleaned_text",
+    "decision_headers_text",
+    "determination_headers_text",
+    "analysis_headers_text",
+    "reasons_headers_text",
+    "conclusion_headers_text"
+  ],
+  "extraction_stats": {
+    "total_sentences": 8924,
+    "total_extractions": 6986,
+    "section_stats": {
+      "cleaned_text": {
+        "total_sentences": 4982,
+        "total_extractions": 4239,
+        "documents_with_extractions": 100
+      },
+      "decision": {
+        "total_sentences": 761,
+        "total_extractions": 573,
+        "documents_with_extractions": 82
+      },
+      "determination": {
+        "total_sentences": 992,
+        "total_extractions": 693,
+        "documents_with_extractions": 43
+      },
+      "analysis": {
+        "total_sentences": 890,
+        "total_extractions": 584,
+        "documents_with_extractions": 54
+      },
+      "reasons": {
+        "total_sentences": 1052,
+        "total_extractions": 717,
+        "documents_with_extractions": 80
+      },
+      "conclusion": {
+        "total_sentences": 247,
+        "total_extractions": 180,
+        "documents_with_extractions": 50
+      }
+    }
+  },
+  "input_file": "/data/shil6369/cultural-law-interpretations/immigration_fine_tuning/determination/pipeline/data/preprocessed_determination_extraction_set.csv",
+  "output_file": "/data/shil6369/cultural-law-interpretations/immigration_fine_tuning/determination/pipeline/results/pipeline_stages/transformer_extraction_20250402_183454/validation_with_transformer_extraction.csv",
+  "train_data": "/data/shil6369/cultural-law-interpretations/immigration_fine_tuning/data/merged/train_enriched.csv",
+  "test_data": "/data/shil6369/cultural-law-interpretations/immigration_fine_tuning/data/merged/test_enriched.csv",
+  "config": {
+    "batch_size": 32,
+    "limit": 100,
+    "threshold": 0.23
+  }
+}

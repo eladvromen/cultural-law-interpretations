@@ -23,6 +23,8 @@ from nltk.tokenize import sent_tokenize
 from tqdm import tqdm
 import csv
 
+from utils.text_cleaning import clean_text
+
 # Configure logging
 logging.basicConfig(
     level=logging.INFO,
@@ -52,7 +54,7 @@ def parse_list_column(value):
 class SectionBasedTransformerExtractor:
     """Process specific text sections with the transformer model and store counts."""
     
-    def __init__(self, model_path: str, device: str = None, batch_size: int = 32):
+    def __init__(self, model_path: str, device: str = None, batch_size: int = 32, threshold: float = 0.5):
         """
         Initialize with a transformer model.
         
@@ -60,14 +62,16 @@ class SectionBasedTransformerExtractor:
             model_path: Path to the transformer model checkpoint
             device: Device to run the model on (default: auto-detect)
             batch_size: Batch size for inference
+            threshold: Probability threshold for positive classification (default: 0.5)
         """
-        # Explicitly import torch again in this method to avoid any shadowing issues
         import torch as torch_lib
         self.device = device or ('cuda' if torch_lib.cuda.is_available() else 'cpu')
         self.batch_size = batch_size
+        self.threshold = threshold
         
         logger.info(f"Loading model from {model_path}")
         logger.info(f"Using device: {self.device}")
+        logger.info(f"Using classification threshold: {self.threshold}")
         
         # First try to load model config to identify model type
         try:
@@ -133,18 +137,10 @@ class SectionBasedTransformerExtractor:
         self.model.to(self.device)
         self.model.eval()
     
-    def clean_text(self, text: str) -> str:
-        """Clean text for transformer input."""
-        # Remove extra whitespace
-        text = re.sub(r'\s+', ' ', text)
-        # Remove special characters but keep basic punctuation
-        text = re.sub(r'[^\w\s.,!?;:]', '', text)
-        return text.strip()
-    
     def split_into_sentences(self, text: str) -> List[str]:
         """Split text into sentences using regex patterns."""
-        # Clean the text first
-        text = self.clean_text(text)
+        # Clean the text first using shared cleaning function
+        text = clean_text(text)
         
         # Split on common sentence boundaries
         sentences = re.split(r'(?<=[.!?])\s+(?=[A-Z])', text)
@@ -186,22 +182,28 @@ class SectionBasedTransformerExtractor:
         # Get predictions
         with torch.no_grad():
             outputs = self.model(**inputs)
-            predictions = torch.argmax(outputs.logits, dim=1)
+            # Apply softmax to get probabilities
+            probs = torch.nn.functional.softmax(outputs.logits, dim=1)
+            # Get probability of positive class (index 1)
+            positive_probs = probs[:, 1]
+            # Apply threshold to get predictions
+            predictions = (positive_probs >= self.threshold).int()
         
         return predictions.cpu().numpy().tolist()
     
-    def process_dataframe(self, df: pd.DataFrame, sections: Optional[List[str]] = None) -> tuple:
+    def process_dataframe(self, df: pd.DataFrame, sections: Optional[List[str]] = None, column_suffix_id: str = "transformer") -> tuple:
         """
         Process dataframe with section-specific extraction.
         
         Args:
             df: Input dataframe
             sections: List of text sections to process (default: standard sections)
+            column_suffix_id: The identifier used for unique column naming (from config 'name' or stage key)
             
         Returns:
             Tuple of (processed dataframe, statistics)
         """
-        logger.info("Processing with SectionBasedTransformerExtractor...")
+        logger.info(f"Processing with SectionBasedTransformerExtractor (Identifier: {column_suffix_id})...")
         
         # Use default sections if none provided
         if sections is None:
@@ -222,11 +224,11 @@ class SectionBasedTransformerExtractor:
         # Process each section
         for section in sections:
             if section not in df.columns:
-                logger.warning(f"Section {section} not found in dataframe, skipping")
+                logger.warning(f"Identifier '{column_suffix_id}': Section {section} not found in dataframe, skipping")
                 continue
                 
-            logger.info(f"Processing section: {section}")
-            section_key = section.replace('_headers_text', '')
+            logger.info(f"Identifier '{column_suffix_id}': Processing section: {section}")
+            section_key = section.replace('_headers_text', '').replace('_text','') # Clean up section key
             
             # Initialize section stats
             stats['section_stats'][section_key] = {
@@ -235,15 +237,15 @@ class SectionBasedTransformerExtractor:
                 'documents_with_extractions': 0
             }
             
-            # Process section
-            output_column = f"{section_key}_transformer_extraction"
+            # Use column_suffix_id to ensure unique columns
+            output_column = f"{section_key}_{column_suffix_id}_extraction" 
             count_column = f"{output_column}_count"
             
             # Apply extractor to each row with progress bar
             section_results = []
             
             # Add progress bar for document processing
-            pbar = tqdm(df.iterrows(), total=len(df), desc=f"Processing {section_key}")
+            pbar = tqdm(df.iterrows(), total=len(df), desc=f"Identifier '{column_suffix_id}': Processing {section_key}")
             for _, row in pbar:
                 text = row.get(section, '')
                 if pd.isna(text) or not text:
@@ -290,12 +292,11 @@ class SectionBasedTransformerExtractor:
             
             pbar.close()
             
-            # Add results and counts to dataframe
+            # Add results and counts to dataframe (using the new unique names)
             df[output_column] = section_results
             df[count_column] = df[output_column].apply(len)
             
-            # Log section completion
-            logger.info(f"Completed processing {section_key} section")
+            logger.info(f"Identifier '{column_suffix_id}': Completed processing {section_key} section")
             if stats['section_stats'][section_key]['total_sentences'] > 0:
                 extraction_rate = (stats['section_stats'][section_key]['total_extractions'] / 
                                  stats['section_stats'][section_key]['total_sentences'])
@@ -333,7 +334,7 @@ class TransformerExtractionRunner:
     
     def run(self, input_file: Union[str, Path], train_data: Union[str, Path], test_data: Union[str, Path],
             timestamp: str = None, config: Dict = None, sections: List[str] = None,
-            batch_size: int = 32) -> Optional[Path]:
+            batch_size: int = 32, threshold: float = 0.5, column_suffix_id: str = "transformer") -> Optional[Path]:
         """
         Run transformer extraction pipeline.
         
@@ -345,10 +346,16 @@ class TransformerExtractionRunner:
             config: Configuration dictionary
             sections: List of sections to process
             batch_size: Batch size for inference
+            threshold: Probability threshold for positive classification
+            column_suffix_id: Identifier for column naming (from config 'name' or stage key).
             
         Returns:
             Path to output file
         """
+        # Get threshold from config if provided
+        threshold = config.get('threshold', threshold)
+        logger.info(f"Using classification threshold: {threshold}")
+        
         # Convert paths to Path objects
         input_file = Path(input_file)
         train_data = Path(train_data)
@@ -389,6 +396,7 @@ class TransformerExtractionRunner:
         file_handler.setFormatter(logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s'))
         logger.addHandler(file_handler)
         
+        logger.info(f"Runner invoked with column identifier: {column_suffix_id}") # Log the identifier
         logger.info(f"Using input file: {input_file}")
         logger.info(f"Using training data: {train_data}")
         logger.info(f"Using test data: {test_data}")
@@ -399,53 +407,55 @@ class TransformerExtractionRunner:
         # Load data with better error handling and logging
         logger.info(f"Loading data from {input_file}")
         try:
-            # First attempt: try reading with more robust settings
+            # --- Attempt 1: Use default C engine (like the working sparse run likely does) ---
+            logger.info("Attempting CSV read with default C engine...")
             df = pd.read_csv(
                 input_file,
                 encoding='utf-8',
-                engine='python',  # More forgiving engine
-                on_bad_lines='warn',
-                quoting=csv.QUOTE_ALL,  # Handle all quotes
-                escapechar='\\'
+                # engine='python', # Removed for first attempt
+                on_bad_lines='warn', # Keep warn for now
+                quoting=csv.QUOTE_ALL, 
+                escapechar='\\' 
             )
-            logger.info(f"Successfully loaded {len(df)} records with {len(df.columns)} columns")
-            logger.info(f"Columns: {', '.join(df.columns)}")
+            logger.info(f"DataFrame shape after initial read (C engine): {df.shape}")
+            logger.info(f"Successfully loaded {len(df)} records with {len(df.columns)} columns (C engine)")
             
             # Apply limit if specified
             if 'limit' in config:
                 limit = int(config['limit'])
                 logger.info(f"Limiting dataset to first {limit} records")
                 df = df.head(limit)
-                logger.info(f"Dataset limited to {len(df)} records")
-            
-        except Exception as e:
-            logger.error(f"Error reading CSV: {str(e)}")
-            logger.info("Attempting alternative reading method...")
+                logger.info(f"DataFrame shape after applying limit (if any): {df.shape}")
+
+        except Exception as e_c_engine:
+            logger.warning(f"Read with C engine failed or produced warning: {e_c_engine}")
+            logger.info("Falling back to Python engine...")
             try:
-                # Second attempt: chunk reading
-                chunks = []
-                for chunk in pd.read_csv(
+                # --- Attempt 2: Fallback to Python engine (original method) ---
+                 df = pd.read_csv(
                     input_file,
                     encoding='utf-8',
-                    engine='python',
-                    on_bad_lines='skip',
-                    chunksize=1000
-                ):
-                    chunks.append(chunk)
-                df = pd.concat(chunks, ignore_index=True)
-                logger.info(f"Successfully loaded {len(df)} records with {len(df.columns)} columns using chunk method")
-                logger.info(f"Columns: {', '.join(df.columns)}")
-                
-                # Apply limit if specified
-                if 'limit' in config:
-                    limit = int(config['limit'])
-                    logger.info(f"Limiting dataset to first {limit} records")
-                    df = df.head(limit)
-                    logger.info(f"Dataset limited to {len(df)} records")
-                
-            except Exception as e:
-                logger.error(f"Failed to read CSV file: {str(e)}")
-                return None
+                    engine='python', # Fallback to python engine
+                    on_bad_lines='warn',
+                    quoting=csv.QUOTE_ALL, 
+                    escapechar='\\'
+                )
+                 logger.info(f"DataFrame shape after initial read (Python engine): {df.shape}")
+                 logger.info(f"Successfully loaded {len(df)} records with {len(df.columns)} columns (Python engine)")
+
+                 # Apply limit if specified
+                 if 'limit' in config:
+                     limit = int(config['limit'])
+                     logger.info(f"Limiting dataset to first {limit} records")
+                     df = df.head(limit)
+                     logger.info(f"DataFrame shape after applying limit (if any) to chunked data: {df.shape}")
+
+            except Exception as e_py_engine:
+                 logger.error(f"Error reading CSV with Python engine fallback: {str(e_py_engine)}")
+                 # Consider the chunking fallback ONLY if Python engine also fails badly
+                 # logger.info("Attempting alternative chunking method...") 
+                 # ... (rest of original chunking code) ... # This part might not be needed if C engine works
+                 return None # Or handle error appropriately
 
         # Add CSV file validation
         logger.info(f"Validating dataset structure...")
@@ -455,16 +465,20 @@ class TransformerExtractionRunner:
             logger.error(f"Missing required columns: {missing_columns}")
             return None
 
-        # Create transformer extractor
+        # Create transformer extractor with threshold
         extractor = SectionBasedTransformerExtractor(
             model_path=str(self.model_path),
-            batch_size=batch_size
+            batch_size=batch_size,
+            threshold=threshold
         )
         
-        # Process data with configured sections
-        logger.info("Processing data with transformer extractor...")
-        results_df, stats = extractor.process_dataframe(df, sections=sections)
+        # Process data with configured sections, passing the column identifier
+        logger.info(f"Processing data with transformer extractor (Identifier: '{column_suffix_id}')...")
+        results_df, stats = extractor.process_dataframe(df, sections=sections, column_suffix_id=column_suffix_id)
         
+        # Log dataframe info before saving
+        logger.info(f"DataFrame shape before saving results: {results_df.shape}")
+
         # Save results with better error handling
         logger.info(f"Saving results to {output_path}")
         try:
@@ -479,7 +493,7 @@ class TransformerExtractionRunner:
                 encoding='utf-8',
                 quoting=csv.QUOTE_ALL,
                 escapechar='\\',
-                lineterminator='\n'  # Changed from line_terminator to lineterminator
+                lineterminator='\n'
             )
             logger.info("Successfully saved results")
         except Exception as e:
@@ -489,6 +503,7 @@ class TransformerExtractionRunner:
         # Save a config file with information about this run
         run_config = {
             "run_timestamp": timestamp,
+            "column_suffix_id": column_suffix_id, # Add identifier to run config
             "model_path": str(self.model_path),
             "batch_size": batch_size,
             "sections_processed": sections,
@@ -594,6 +609,7 @@ def main():
     parser.add_argument("--batch-size", "-b", type=int, default=32, help="Batch size for inference")
     parser.add_argument("--sections", "-s", help="Comma-separated list of sections to process")
     parser.add_argument("--limit", "-l", type=int, help="Limit processing to first N records")
+    parser.add_argument("--threshold", "-th", type=float, default=0.5, help="Probability threshold for positive classification")
     args = parser.parse_args()
     
     # Load config if provided
@@ -614,6 +630,8 @@ def main():
     if args.limit is not None:
         config['limit'] = args.limit
         logger.info(f"Setting processing limit to {args.limit} records")
+    if args.threshold is not None:
+        config['threshold'] = args.threshold
 
     # Parse sections if provided
     sections = None
@@ -628,7 +646,8 @@ def main():
         test_data=test_data,
         config=config,
         sections=sections,
-        batch_size=args.batch_size
+        batch_size=args.batch_size,
+        threshold=args.threshold
     )
     
     if output_path:
